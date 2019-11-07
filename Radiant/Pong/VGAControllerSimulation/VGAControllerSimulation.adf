@@ -1,0 +1,55 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=work
+[Library]
+VGAControllerSimulation=.\VGAControllerSimulation\VGAControllerSimulation.lib
+[Settings]
+AccessRead=1
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+PriorityLibNames=
+LibNames=ovi_ice40up
+[LocalVhdlSets]
+CompileWithDebug=0
+[$LibMap$]
+pmi=.
+vgacontrollersimulation=.
+work=.
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\VGAControllerSimulation\VGAControllerSimulation.adf
+[LocalVerilogDirs]
+Count=0
+[DefineMacro]
+Global=
+[Files]
+/..\..\..\..\..\..\..\..\..\..\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.v=-1
+/..\..\VGAController\VSync_Counter.v=-1
+/..\..\VGAController\HSync_Counter.v=-1
+/..\..\VGAController\Controller.v=-1
+/..\..\SimulationSource\Clock_Generator.v=-1
+[Files.Data]
+.\..\..\..\..\..\..\..\..\..\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.v=Verilog Source Code
+.\..\VGAController\VSync_Counter.v=Verilog Source Code
+.\..\VGAController\HSync_Counter.v=Verilog Source Code
+.\..\VGAController\Controller.v=Verilog Source Code
+.\..\SimulationSource\Clock_Generator.v=Verilog Source Code
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

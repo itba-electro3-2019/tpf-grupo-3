@@ -1,0 +1,10 @@
+<RadiantSimulationProject name="VGAControllerSimulation" path="." simType="Active-HDL" stage="0" language="1" version="2.0">
+    <Source type="VERILOG" include="none" path="VGAController/VSync_Counter.v" worklib="work"/>
+    <Source type="VERILOG" include="none" path="VGAController/HSync_Counter.v" worklib="work"/>
+    <Source type="VERILOG" include="none" path="VGAController/Controller.v" worklib="work"/>
+    <Source type="VERILOG" include="none" path="SimulationSource/Clock_Generator.v" worklib="work"/>
+    <SimLib value="ovi_ice40up"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <TopModule name="VGA_Test" instance="" language="VERILOG"/>
+</RadiantSimulationProject>

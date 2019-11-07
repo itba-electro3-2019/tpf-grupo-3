@@ -1,9 +1,0 @@
-<RadiantSimulationProject simType="Active-HDL" version="2.0" stage="0" path="." name="test" language="1">
-    <Source path="../RisingEdge_DFlipFlop.v" type="VERILOG" include="none" worklib="work"/>
-    <Source path="../clock.v" type="VERILOG" include="none" worklib="work"/>
-    <Source path="../Ej3.v" type="VERILOG" include="none" worklib="work"/>
-    <SimLib value="ovi_ice40up"/>
-    <GlbInc value=""/>
-    <Macro value=""/>
-    <TopModule instance="" name="driver" language="VERILOG"/>
-</RadiantSimulationProject>
