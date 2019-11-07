@@ -1,0 +1,10 @@
+#Start recording tcl command: 11/7/2019 11:42:32
+#Project Location: C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Testing; Project name: Testing
+prj_create -name "Testing" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/clock.v" "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/driver.v" "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Ej3.v" "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/RisingEdge_DFlipFlop.v"
+prj_remove_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/driver.v"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Testing/test/test.spf"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Testing/test/test.spf"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Testing/test/test.spf"
+#Stop recording: 11/7/2019 12:18:40

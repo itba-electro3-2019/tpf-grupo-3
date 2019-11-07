@@ -1,0 +1,16 @@
+V 000041 55 632 1573138020147 components
+(_unit VHDL(components 0 4)
+	(_version vde)
+	(_time 1573138020148 2019.11.07 11:47:00)
+	(_source(\C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.vhd\))
+	(_parameters tan)
+	(_code c8cdcf9d969fc8dfc8cf969b8d929cce9dcfcccfcbcecb)
+	(_object
+		(_type(_int ~STD_LOGIC_VECTOR{15~downto~0}~15 0 96(_array -3((_dto i 15 i 0)))))
+		(_type(_int ~STD_LOGIC_VECTOR{31~downto~0}~15 0 117(_array -3((_dto i 31 i 0)))))
+		(_type(_ext ~extstd.standard.INTEGER(0 INTEGER)))
+		(_type(_ext ~extstd.standard.CHARACTER(0 CHARACTER)))
+		(_type(_ext ~extieee.std_logic_1164.STD_LOGIC(1 STD_LOGIC)))
+	)
+	(_use(std(standard))(ieee(std_logic_1164)))
+)
