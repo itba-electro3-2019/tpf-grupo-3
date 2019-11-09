@@ -1,0 +1,138 @@
+designverincludedir -clear
+designverlibrarysim -PL -clear
+designverlibrarysim -L -clear
+designverlibrarysim ovi_ice40up
+designverdefinemacro -clear
+removefile -Y -D *
+addfile C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.v
+# Adding file C:\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/MapController.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\MapController.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/VSync_Counter.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\VGAController\VSync_Counter.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/HSync_Counter.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\VGAController\HSync_Counter.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/Controller.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\VGAController\Controller.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/SimulationSource/PatternSim.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\SimulationSource\PatternSim.v ... Done
+vlib C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAPatternSim/work
+# Warning: Library work already exists
+adel -all
+# Library contents cleared.
+vlib pmi
+# Warning: Library pmi already exists
+vcom -work pmi C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.vhd
+# Compile Package "components"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+vlog -dbg -work work C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.v
+# Pass 1. Scanning modules hierarchy.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Unit top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/MapController.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: map.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp map.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/VSync_Counter.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: VSync_Counter.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp map VSync_Counter.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/HSync_Counter.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: HSync_Counter.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp map VSync_Counter HSync_Counter.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/Controller.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module HSync_Counter found in current working library.
+# Info: VCP2113 Module VSync_Counter found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Controller.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp map Controller.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/SimulationSource/PatternSim.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module Controller found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: patterntest.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp map patterntest.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+module patterntest
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'patterntest' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+vsim +access +r patterntest -L ovi_ice40up
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'patterntest' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: Controller.v (20): Length of connection (11) does not match the length of port "hcount" (13) on instance "/patterntest/UUT/VGAHorizontalCounter".
+# SLP: Warning: Controller.v (21): Length of connection (11) does not match the length of port "vcount" (13) on instance "/patterntest/UUT/VGAVerticalCounter".
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 0 primitives and 6 (100.00%) other processes in SLP
+# SLP: 27 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5520 kB (elbread=1280 elab2=4107 kernel=133 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\VGAPatternSim\src\wave.asdb
+#  4:36 PM, Friday, November 8, 2019
+#  Simulation has been initialized
+add wave *
+# 9 signal(s) traced.
+run 1000ns
+# Waveform file 'untitled.awc' connected to 'C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAPatternSim/src/wave.asdb'.
+# KERNEL: stopped at time: 1 us

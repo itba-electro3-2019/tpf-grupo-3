@@ -1,0 +1,26 @@
+Active-HDL 10.5.216.6767 2019-11-08 16:36:42
+
+Elaboration top modules:
+Verilog Module                patterntest
+
+
+-----------------------------------------------------------------------------------------
+Verilog Module          | Library | Info | Compiler Version        | Compilation Options
+-----------------------------------------------------------------------------------------
+patterntest             | work    |      | 10.5.216.6767 (Windows) | -dbg -v2k5
+Controller              | work    |      | 10.5.216.6767 (Windows) | -dbg -v2k5
+HSync_Counter           | work    |      | 10.5.216.6767 (Windows) | -dbg -v2k5
+VSync_Counter           | work    |      | 10.5.216.6767 (Windows) | -dbg -v2k5
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+Library                 | Comment
+-----------------------------------------------------------------------------------------
+work                    | None
+-----------------------------------------------------------------------------------------
+
+
+Simulation Options: vsim +access +r patterntest -L ovi_ice40up
+
+
+The performance of simulation is reduced. Version Lattice Edition

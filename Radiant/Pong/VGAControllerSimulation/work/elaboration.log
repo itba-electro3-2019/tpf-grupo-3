@@ -1,4 +1,4 @@
-Active-HDL 10.5.216.6767 2019-11-07 15:56:33
+Active-HDL 10.5.216.6767 2019-11-08 16:20:14
 
 Elaboration top modules:
 Verilog Module                VGA_Test
@@ -18,3 +18,9 @@ Library                 | Comment
 -----------------------------------------------------------------------------------------
 work                    | None
 -----------------------------------------------------------------------------------------
+
+
+Simulation Options: vsim +access +r VGA_Test -L ovi_ice40up
+
+
+The performance of simulation is reduced. Version Lattice Edition

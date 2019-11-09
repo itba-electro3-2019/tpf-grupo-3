@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RadiantProject version="4.1" title="Pong" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" default_implementation="impl_1">
+    <Options/>
+    <Implementation title="impl_1" dir="impl_1" description="impl_1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="pong"/>
+        <Source name="VGAController/Controller.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="VGAController/VSync_Counter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="VGAController/HSync_Counter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Pong.v" type="Verilog" type_short="Verilog">
+            <Options top_module="pong"/>
+        </Source>
+        <Source name="pll/pll.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="DisplayController/DisplayController.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="DisplayController/TableModule.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="DisplayController/BallModule.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="DisplayController/PaddleModule.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="GameTickGenerator/GameTickGenerator.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Entities/BallController.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="mapping.pdc" type="Physical Constraints File" type_short="PDC">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1.ldc" type="LSE Design Constraints File" type_short="LDC">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="test/test.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="VGAControllerSimulation/VGAControllerSimulation.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="VGAPatternSim/VGAPatternSim.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="Pong1.sty"/>
+</RadiantProject>

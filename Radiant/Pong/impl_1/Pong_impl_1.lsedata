@@ -1,0 +1,3835 @@
+<top name = "pong"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "ref_clk"  type = "port" />
+    <clockitem name = "vga_clk"  type = "net" />
+    <clockitem name = "pll_module/lscc_pll_inst/outglobalb_o"  type = "net" />
+    <clockitem name = "pll_module/lscc_pll_inst/outcoreb_o"  type = "net" />
+    <clockitem name = "pll_module/outcore_o"  type = "net" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 5
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "generic">
+
+</library>
+
+<library name = "lsccsp">
+
+</library>
+
+<library name = "lsccspparam">
+
+</library>
+
+<library name = "work">
+
+<unit name = "pong">
+
+    <!--
+        Top Level Pins: 6
+    -->
+
+    <pins>
+        <pitem  name = "ref_clk"  direction = "in"  />
+        <pitem  name = "hsync"  direction = "out"  />
+        <pitem  name = "vsync"  direction = "out"  />
+        <pitem  name = "red"  direction = "out"  />
+        <pitem  name = "green"  direction = "out"  />
+        <pitem  name = "blue"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 126
+    -->
+
+    <instance  name = "vga_controller/xpix_9__I_0_16"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/hrange_1__N_29"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/xpix_9__I_0_17"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/hrange_1__N_32"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/xpix_9__I_0_18"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/hrange_1__N_33"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_13"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_32"  />
+        <nitem  name = "vga_controller/hrange_1__N_33"  />
+        <nitem  name = "vga_controller/hrange_1__N_31"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/xpix_9__I_0_19"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/hrange_1__N_36"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/xpix_9__I_0_20"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/hrange_1__N_37"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_15"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_36"  />
+        <nitem  name = "vga_controller/hrange_1__N_37"  />
+        <nitem  name = "vga_controller/hrange_1__N_35"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/xpix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/hrange_1__N_38"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/ypix_9__I_0_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/vrange_1__N_3"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/ypix_9__I_0_10"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/vrange_1__N_6"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/ypix_9__I_0_11"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/vrange_1__N_7"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_6"  />
+        <nitem  name = "vga_controller/vrange_1__N_7"  />
+        <nitem  name = "vga_controller/vrange_1__N_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/ypix_9__I_0_12"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/vrange_1__N_10"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/ypix_9__I_0_13"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/vrange_1__N_11"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_6"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_10"  />
+        <nitem  name = "vga_controller/vrange_1__N_11"  />
+        <nitem  name = "vga_controller/vrange_1__N_9"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/ypix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/vrange_1__N_12"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange[1]"  />
+        <nitem  name = "vga_controller/vrange[0]"  />
+        <nitem  name = "vga_controller/red_N_64"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange[1]"  />
+        <nitem  name = "vga_controller/hrange[0]"  />
+        <nitem  name = "vga_controller/red_N_65"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/red_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/red_N_64"  />
+        <nitem  name = "vga_controller/red_N_65"  />
+        <nitem  name = "vga_controller/red_N_63"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/pixval_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pixval"  />
+        <nitem  name = "red"  />
+        <nitem  name = "vga_controller/red_N_63"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_31_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_31"  />
+        <nitem  name = "vga_controller/hrange_1__N_41"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_16"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_29"  />
+        <nitem  name = "vga_controller/hrange_1__N_41"  />
+        <nitem  name = "vga_controller/hrange_1__N_39"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_28_I_0_21"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_42"  />
+        <nitem  name = "vga_controller/hrange_1__N_43"  />
+        <nitem  name = "vga_controller/hrange_1__N_28"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_35_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_35"  />
+        <nitem  name = "vga_controller/hrange_1__N_46"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_17"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_29"  />
+        <nitem  name = "vga_controller/hrange_1__N_43"  />
+        <nitem  name = "vga_controller/hrange_1__N_44"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_28_I_0_24"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hsync_N_53"  />
+        <nitem  name = "vga_controller/hrange_1__N_28"  />
+        <nitem  name = "vga_controller/hsync_N_54"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_14"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_35"  />
+        <nitem  name = "vga_controller/hrange_1__N_38"  />
+        <nitem  name = "vga_controller/hrange_1__N_34"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_9_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_9"  />
+        <nitem  name = "vga_controller/vrange_1__N_20"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_12"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_31"  />
+        <nitem  name = "vga_controller/hrange_1__N_34"  />
+        <nitem  name = "vga_controller/hrange_1__N_30"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_18"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "vga_controller/hrange_1__N_31"  />
+        <nitem  name = "vga_controller/hrange_1__N_46"  />
+        <nitem  name = "vga_controller/hrange_1__N_44"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_11"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_29"  />
+        <nitem  name = "vga_controller/hrange_1__N_30"  />
+        <nitem  name = "vga_controller/hrange_1__N_28"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_44_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "vga_controller/hrange_1__N_29"  />
+        <nitem  name = "vga_controller/hrange_1__N_44"  />
+        <nitem  name = "vga_controller/hsync_N_54"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_2_I_0_26"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vsync_N_58"  />
+        <nitem  name = "vga_controller/vrange_1__N_2"  />
+        <nitem  name = "vga_controller/vsync_N_59"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_5"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_9"  />
+        <nitem  name = "vga_controller/vrange_1__N_12"  />
+        <nitem  name = "vga_controller/vrange_1__N_8"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_5"  />
+        <nitem  name = "vga_controller/vrange_1__N_8"  />
+        <nitem  name = "vga_controller/vrange_1__N_4"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "vga_controller/vrange_1__N_5"  />
+        <nitem  name = "vga_controller/vrange_1__N_20"  />
+        <nitem  name = "vga_controller/vrange_1__N_18"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_3"  />
+        <nitem  name = "vga_controller/vrange_1__N_4"  />
+        <nitem  name = "vga_controller/vrange_1__N_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_18_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/pwr_2"  />
+        <nitem  name = "vga_controller/vrange_1__N_3"  />
+        <nitem  name = "vga_controller/vrange_1__N_18"  />
+        <nitem  name = "vga_controller/vsync_N_59"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_1"  />
+        <nitem  name = "vga_controller/vrange_1__N_2"  />
+        <nitem  name = "vga_controller/vrange_1__N_13"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_5_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_5"  />
+        <nitem  name = "vga_controller/vrange_1__N_15"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_0_28"  library = "work"  arch = ""  type = "seq">
+        <pins>
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange[1]"  />
+        <nitem  name = "vga_controller/hrange[0]"  />
+        <nitem  name = "vga_controller/hrange_1__N_27"  />
+        <nitem  name = "vga_controller/hrange_1__N_50"  />
+        <nitem  name = "vga_controller/hrange_1__N_42"  />
+        <nitem  name = "vga_controller/hrange_1__N_47"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        <nitem  name = "vga_controller/n99"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_7"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_3"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        <nitem  name = "vga_controller/vrange_1__N_15"  />
+        <nitem  name = "vga_controller/vrange_1__N_13"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_2_I_0_14"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_16"  />
+        <nitem  name = "vga_controller/vrange_1__N_2"  />
+        <nitem  name = "vga_controller/vrange_1__N_17"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_0_27"  library = "work"  arch = ""  type = "seq">
+        <pins>
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange[1]"  />
+        <nitem  name = "vga_controller/vrange[0]"  />
+        <nitem  name = "vga_controller/vrange_1__N_24"  />
+        <nitem  name = "vga_controller/vrange_1__N_16"  />
+        <nitem  name = "vga_controller/vrange_1__N_21"  />
+        <nitem  name = "vga_controller/vrange_1__N_1"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        <nitem  name = "vga_controller/n99"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__I_8"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_3"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        <nitem  name = "vga_controller/vrange_1__N_18"  />
+        <nitem  name = "vga_controller/vrange_1__N_17"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__I_10"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_27"  />
+        <nitem  name = "vga_controller/hrange_1__N_39"  />
+        <nitem  name = "vga_controller/hrange_1__N_28"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_39_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_39"  />
+        <nitem  name = "vga_controller/hrange_1__N_49"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_28_I_0_22"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_47"  />
+        <nitem  name = "vga_controller/hrange_1__N_49"  />
+        <nitem  name = "vga_controller/hrange_1__N_28"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_43_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_52"  />
+        <nitem  name = "vga_controller/hrange_1__N_43"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_28_I_0_23"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hrange_1__N_50"  />
+        <nitem  name = "vga_controller/hrange_1__N_52"  />
+        <nitem  name = "vga_controller/hrange_1__N_28"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hsync_N_54_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hsync_N_57"  />
+        <nitem  name = "vga_controller/hsync_N_54"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hrange_1__N_28_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/hsync_N_55"  />
+        <nitem  name = "vga_controller/hsync_N_57"  />
+        <nitem  name = "vga_controller/hrange_1__N_28"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/hsync_I_0"  library = "work"  arch = ""  type = "seq">
+        <pins>
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "gate"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "hsync"  />
+        <nitem  name = "vga_controller/hsync_N_55"  />
+        <nitem  name = "vga_controller/hsync_N_53"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        <nitem  name = "vga_controller/n99"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vsync_N_59_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vsync_N_62"  />
+        <nitem  name = "vga_controller/vsync_N_59"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_2_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vsync_N_60"  />
+        <nitem  name = "vga_controller/vsync_N_62"  />
+        <nitem  name = "vga_controller/vrange_1__N_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vsync_I_0"  library = "work"  arch = ""  type = "seq">
+        <pins>
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "gate"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vsync"  />
+        <nitem  name = "vga_controller/vsync_N_60"  />
+        <nitem  name = "vga_controller/vsync_N_58"  />
+        <nitem  name = "vga_controller/gnd_5"  />
+        <nitem  name = "vga_controller/n99"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_13_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_23"  />
+        <nitem  name = "vga_controller/vrange_1__N_13"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_2_I_0_15"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_21"  />
+        <nitem  name = "vga_controller/vrange_1__N_23"  />
+        <nitem  name = "vga_controller/vrange_1__N_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_17_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_26"  />
+        <nitem  name = "vga_controller/vrange_1__N_17"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/vrange_1__N_2_I_0_25"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/vrange_1__N_24"  />
+        <nitem  name = "vga_controller/vrange_1__N_26"  />
+        <nitem  name = "vga_controller/vrange_1__N_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/pixval_tabledriven_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/pixval_tabledriven"  />
+        <nitem  name = "display_controller/pixval_balldriven"  />
+        <nitem  name = "display_controller/pixval_N_108"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/pixval_I_19"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/pixval_paddleAdriven"  />
+        <nitem  name = "display_controller/pixval_N_108"  />
+        <nitem  name = "display_controller/pixval_N_107"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/pixval_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pixval"  />
+        <nitem  name = "display_controller/pixval_paddleBdriven"  />
+        <nitem  name = "display_controller/pixval_N_107"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_tick_gen/game_clk_I_26"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_tick_gen/game_clk"  />
+        <nitem  name = "game_tick_gen/counter_12__N_193"  />
+        <nitem  name = "game_tick_gen/game_clk_N_194"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_tick_gen/counter_12__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_tick_gen/gnd"  />
+        <nitem  name = "game_tick_gen/pwr"  />
+        <nitem  name = "game_tick_gen/counter[12]"  />
+        <nitem  name = "game_tick_gen/counter[11]"  />
+        <nitem  name = "game_tick_gen/counter[10]"  />
+        <nitem  name = "game_tick_gen/counter[9]"  />
+        <nitem  name = "game_tick_gen/counter[8]"  />
+        <nitem  name = "game_tick_gen/counter[7]"  />
+        <nitem  name = "game_tick_gen/counter[6]"  />
+        <nitem  name = "game_tick_gen/counter[5]"  />
+        <nitem  name = "game_tick_gen/counter[4]"  />
+        <nitem  name = "game_tick_gen/counter[3]"  />
+        <nitem  name = "game_tick_gen/counter[2]"  />
+        <nitem  name = "game_tick_gen/counter[1]"  />
+        <nitem  name = "game_tick_gen/counter[0]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_193"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_tick_gen/add_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_tick_gen/gnd"  />
+        <nitem  name = "game_tick_gen/pwr"  />
+        <nitem  name = "game_tick_gen/counter[12]"  />
+        <nitem  name = "game_tick_gen/counter[11]"  />
+        <nitem  name = "game_tick_gen/counter[10]"  />
+        <nitem  name = "game_tick_gen/counter[9]"  />
+        <nitem  name = "game_tick_gen/counter[8]"  />
+        <nitem  name = "game_tick_gen/counter[7]"  />
+        <nitem  name = "game_tick_gen/counter[6]"  />
+        <nitem  name = "game_tick_gen/counter[5]"  />
+        <nitem  name = "game_tick_gen/counter[4]"  />
+        <nitem  name = "game_tick_gen/counter[3]"  />
+        <nitem  name = "game_tick_gen/counter[2]"  />
+        <nitem  name = "game_tick_gen/counter[1]"  />
+        <nitem  name = "game_tick_gen/counter[0]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[12]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[11]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[10]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[9]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[8]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[7]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[6]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[5]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[4]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[3]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[2]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[1]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_tick_gen/counter_12__I_0_31"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_tick_gen/gnd"  />
+        <nitem  name = "game_tick_gen/counter_12__N_193"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[12]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[11]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[10]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[9]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[8]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[7]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[6]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[5]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[4]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[3]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[2]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[1]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_180[0]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[12]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[11]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[10]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[9]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[8]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[7]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[6]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[5]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[4]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[3]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[2]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[1]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_tick_gen/game_clk"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_tick_gen/gnd"  />
+        <nitem  name = "game_tick_gen/game_clk"  />
+        <nitem  name = "game_tick_gen/slow_clk"  />
+        <nitem  name = "game_tick_gen/game_clk_N_194"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_tick_gen/counter"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[12]"  direction = "in"  />
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[12]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[12]"  direction = "out"  />
+        <pitem  name = "q[11]"  direction = "out"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[12]"  direction = "in"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_tick_gen/gnd"  />
+        <nitem  name = "game_tick_gen/slow_clk"  />
+        <nitem  name = "game_tick_gen/counter[12]"  />
+        <nitem  name = "game_tick_gen/counter[11]"  />
+        <nitem  name = "game_tick_gen/counter[10]"  />
+        <nitem  name = "game_tick_gen/counter[9]"  />
+        <nitem  name = "game_tick_gen/counter[8]"  />
+        <nitem  name = "game_tick_gen/counter[7]"  />
+        <nitem  name = "game_tick_gen/counter[6]"  />
+        <nitem  name = "game_tick_gen/counter[5]"  />
+        <nitem  name = "game_tick_gen/counter[4]"  />
+        <nitem  name = "game_tick_gen/counter[3]"  />
+        <nitem  name = "game_tick_gen/counter[2]"  />
+        <nitem  name = "game_tick_gen/counter[1]"  />
+        <nitem  name = "game_tick_gen/counter[0]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[12]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[11]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[10]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[9]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[8]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[7]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[6]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[5]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[4]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[3]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[2]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[1]"  />
+        <nitem  name = "game_tick_gen/counter_12__N_167[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAHorizontalCounter/hcount_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/VGAHorizontalCounter/gnd"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/pwr"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/ypix_enable"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAHorizontalCounter/hcount_9__I_0_30"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/VGAHorizontalCounter/gnd"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/pwr"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_86"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAHorizontalCounter/add_5"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/VGAHorizontalCounter/gnd"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/pwr"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[9]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[8]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[7]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[6]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[5]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[4]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[3]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[2]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[1]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAHorizontalCounter/hcount_9__I_0_29"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/VGAHorizontalCounter/gnd"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_86"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[9]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[8]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[7]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[6]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[5]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[4]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[3]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[2]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[1]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_76[0]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[9]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[8]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[7]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[6]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[5]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[4]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[3]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[2]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[1]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAHorizontalCounter/hcount"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/VGAHorizontalCounter/gnd"  />
+        <nitem  name = "vga_clk"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[9]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[8]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[7]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[6]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[5]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[4]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[3]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[2]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[1]"  />
+        <nitem  name = "vga_controller/VGAHorizontalCounter/hcount_9__N_66[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAVerticalCounter/LessThan_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/VGAVerticalCounter/gnd"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/pwr"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAVerticalCounter/add_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/VGAVerticalCounter/gnd"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/pwr"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n27"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n28"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n29"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n30"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n31"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n32"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n33"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n34"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n35"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n36"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAVerticalCounter/mux_5"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/VGAVerticalCounter/gnd"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n2"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n27"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n28"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n29"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n30"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n31"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n32"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n33"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n34"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n35"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/n36"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[9]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[8]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[7]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[6]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[5]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[4]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[3]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[2]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[1]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAVerticalCounter/vcount_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/ypix_enable"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[9]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[8]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[7]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[6]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[5]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[4]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[3]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[2]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[1]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_97[0]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[9]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[8]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[7]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[6]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[5]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[4]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[3]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[2]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[1]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_controller/VGAVerticalCounter/vcount"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_controller/VGAVerticalCounter/gnd"  />
+        <nitem  name = "vga_clk"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[9]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[8]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[7]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[6]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[5]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[4]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[3]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[2]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[1]"  />
+        <nitem  name = "vga_controller/VGAVerticalCounter/vcount_9__N_87[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_ball/x_ball_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_ball/pwr"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_117"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_ball/add_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_ball/gnd"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[9]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[8]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[7]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[6]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[5]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[4]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[3]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[2]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[1]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_ball/xpix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_ball/gnd"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[9]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[8]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[7]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[6]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[5]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[4]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[3]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[2]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[1]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_119[0]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_118"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_ball/pixval_I_23"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_ball/pixval_N_117"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_118"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_116"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_ball/y_ball_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_ball/pwr"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_129"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_ball/pixval_I_22"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_ball/pixval_N_116"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_129"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_115"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_ball/add_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_ball/gnd"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[9]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[8]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[7]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[6]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[5]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[4]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[3]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[2]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[1]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_ball/ypix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_ball/gnd"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[9]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[8]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[7]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[6]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[5]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[4]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[3]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[2]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[1]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_131[0]"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_130"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_ball/pixval_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/pixval_balldriven"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_115"  />
+        <nitem  name = "display_controller/disp_ball/pixval_N_130"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleA/x_paddle_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleA/pwr"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_143"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleA/add_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleA/gnd"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[9]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[8]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[7]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[6]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[5]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[4]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[3]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[2]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[1]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleA/xpix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleA/gnd"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[9]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[8]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[7]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[6]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[5]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[4]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[3]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[2]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[1]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_145[0]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_144"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleA/pixval_I_25"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_143"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_144"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_142"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleA/y_paddle_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleA/pwr"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_155"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleA/pixval_I_24"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_142"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_155"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_141"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleA/add_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleA/gnd"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[9]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[8]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[7]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[6]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[5]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[4]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[3]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[2]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[1]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleA/ypix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleA/gnd"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[9]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[8]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[7]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[6]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[5]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[4]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[3]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[2]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[1]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_157[0]"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_156"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleA/pixval_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/pixval_paddleAdriven"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_141"  />
+        <nitem  name = "display_controller/disp_paddleA/pixval_N_156"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleB/x_paddle_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleB/pwr"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_143"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleB/add_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleB/gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[9]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[8]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[7]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[6]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[5]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[4]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[3]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[2]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[1]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleB/xpix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleB/gnd"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[9]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[8]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[7]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[6]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[5]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[4]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[3]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[2]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[1]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_145[0]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_144"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleB/pixval_I_25"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_143"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_144"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_142"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleB/y_paddle_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleB/pwr"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_155"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleB/pixval_I_24"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_142"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_155"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_141"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleB/add_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleB/gnd"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[9]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[8]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[7]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[6]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[5]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[4]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[3]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[2]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[1]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleB/ypix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_paddleB/gnd"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[9]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[8]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[7]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[6]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[5]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[4]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[3]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[2]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[1]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_157[0]"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_156"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_paddleB/pixval_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/pixval_paddleBdriven"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_141"  />
+        <nitem  name = "display_controller/disp_paddleB/pixval_N_156"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pll_module/lscc_pll_inst/u_PLL_B"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "DYNAMICDELAY4"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY5"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY6"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY7"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY0"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY1"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY2"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY3"  direction = "in"  />
+        <pitem  name = "REFERENCECLK"  direction = "in"  />
+        <pitem  name = "RESET_N"  direction = "in"  />
+        <pitem  name = "BYPASS"  direction = "in"  />
+        <pitem  name = "LATCH"  direction = "in"  />
+        <pitem  name = "LOCK"  direction = "out"  />
+        <pitem  name = "OUTCORE"  direction = "out"  />
+        <pitem  name = "OUTGLOBAL"  direction = "out"  />
+        <pitem  name = "OUTCOREB"  direction = "out"  />
+        <pitem  name = "OUTGLOBALB"  direction = "out"  />
+        <pitem  name = "SCLK"  direction = "in"  />
+        <pitem  name = "SDI"  direction = "in"  />
+        <pitem  name = "SDO"  direction = "out"  />
+        <pitem  name = "INTFBOUT"  direction = "out"  />
+        <pitem  name = "FEEDBACK"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pll_module/lscc_pll_inst/gnd"  />
+        <nitem  name = "ref_clk"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "pll_module/gnd"  />
+        <nitem  name = "pll_module/lscc_pll_inst/lock_o"  />
+        <nitem  name = "pll_module/outcore_o"  />
+        <nitem  name = "vga_clk"  />
+        <nitem  name = "pll_module/lscc_pll_inst/outcoreb_o"  />
+        <nitem  name = "pll_module/lscc_pll_inst/outglobalb_o"  />
+        <nitem  name = "pll_module/lscc_pll_inst/sclk_i"  />
+        <nitem  name = "pll_module/lscc_pll_inst/sdi_i"  />
+        <nitem  name = "pll_module/lscc_pll_inst/sdo_o"  />
+        <nitem  name = "pll_module/lscc_pll_inst/feedback_w"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_table/xpix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_table/gnd"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_111"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_table/x_rwall_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_table/gnd"  />
+        <nitem  name = "xpix[9]"  />
+        <nitem  name = "xpix[8]"  />
+        <nitem  name = "xpix[7]"  />
+        <nitem  name = "xpix[6]"  />
+        <nitem  name = "xpix[5]"  />
+        <nitem  name = "xpix[4]"  />
+        <nitem  name = "xpix[3]"  />
+        <nitem  name = "xpix[2]"  />
+        <nitem  name = "xpix[1]"  />
+        <nitem  name = "xpix[0]"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_112"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_table/pixval_I_21"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_table/pixval_N_111"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_112"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_110"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_table/ypix_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_table/gnd"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_113"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_table/pixval_I_20"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_table/pixval_N_110"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_113"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_109"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_table/y_floor_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/disp_table/gnd"  />
+        <nitem  name = "ypix[9]"  />
+        <nitem  name = "ypix[8]"  />
+        <nitem  name = "ypix[7]"  />
+        <nitem  name = "ypix[6]"  />
+        <nitem  name = "ypix[5]"  />
+        <nitem  name = "ypix[4]"  />
+        <nitem  name = "ypix[3]"  />
+        <nitem  name = "ypix[2]"  />
+        <nitem  name = "ypix[1]"  />
+        <nitem  name = "ypix[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_114"  />
+        </nets>
+    </instance>
+
+    <instance  name = "display_controller/disp_table/pixval_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "display_controller/pixval_tabledriven"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_109"  />
+        <nitem  name = "display_controller/disp_table/pixval_N_114"  />
+        </nets>
+    </instance>
+
+    <instance  name = "VGAHorizontalCounter"  />
+    <instance  name = "VGAVerticalCounter"  />
+    <instance  name = "disp_ball"  />
+    <instance  name = "disp_paddleA"  />
+    <instance  name = "disp_paddleB"  />
+    <instance  name = "disp_table"  />
+    <instance  name = "display_controller"  />
+    <instance  name = "game_tick_gen"  />
+    <instance  name = "lscc_pll_inst"  />
+    <instance  name = "pll_module"  />
+    <instance  name = "u_PLL_B"  />
+    <instance  name = "vga_controller"  />
+    <!--
+        REG instances in netlist: 4
+    -->
+
+    <regs>
+        <reg  name = "game_tick_gen/game_clk"  />
+        <reg  name = "game_tick_gen/counter"  />
+        <reg  name = "vga_controller/VGAHorizontalCounter/hcount"  />
+        <reg  name = "vga_controller/VGAVerticalCounter/vcount"  />
+    </regs>
+
+    <!--
+        Views in design "pong": 10
+    -->
+
+    <views>
+        <view  name = "DisplayController"  />
+        <view  name = "Display_Ball_Module"  />
+        <view  name = "Display_Paddle_Module"  />
+        <view  name = "Display_Table_Module"  />
+        <view  name = "GameTickGen"  />
+        <view  name = "HSync_Counter"  />
+        <view  name = "VGAController"  />
+        <view  name = "VSync_Counter"  />
+        <view  name = "pll"  />
+        <view  name = "pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")"  />
+    </views>
+
+</unit>
+
+</library>
+
+</top>

@@ -1,12 +1,12 @@
-5
+7
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 3 "./../../VGAController/Controller.v" 2 Controller
 ~A 1 "./../../VGAController/Controller.v" 2 Controller
 ~M 3 "./../../VGAController/HSync_Counter.v" 3 HSync_Counter
 ~A 1 "./../../VGAController/HSync_Counter.v" 3 HSync_Counter
-~M 3 "./../../SimulationSource/Clock_Generator.v" 2 VGA_Test
-~A 1 "./../../SimulationSource/Clock_Generator.v" 2 VGA_Test
+~M 3 "./../../SimulationSource/VGATest.v" 2 VGA_Test
+~A 1 "./../../SimulationSource/VGATest.v" 2 VGA_Test
 ~M 3 "./../../VGAController/VSync_Counter.v" 4 VSync_Counter
 ~A 1 "./../../VGAController/VSync_Counter.v" 4 VSync_Counter
 ~M 1 "./../../../../../../../../../../lscc/radiant/1.1/ip/common/adder_subtractor/rtl/lscc_add_sub.v" 94 lscc_add_sub
@@ -49,6 +49,10 @@
 ~A 1 "./../../../../../../../../../../lscc/radiant/1.1/ip/common/rom/rtl/lscc_rom.v" 56 lscc_rom
 ~M 1 "./../../../../../../../../../../lscc/radiant/1.1/ip/common/subtractor/rtl/lscc_subtractor.v" 60 lscc_subtractor
 ~A 1 "./../../../../../../../../../../lscc/radiant/1.1/ip/common/subtractor/rtl/lscc_subtractor.v" 60 lscc_subtractor
+~M 3 "./../../MapController.v" 2 map
+~A 1 "./../../MapController.v" 2 map
+~M 3 "./../../SimulationSource/PatternSim.v" 1 patterntest
+~A 1 "./../../SimulationSource/PatternSim.v" 1 patterntest
 ~M 3 "./../../../../../../../../../../lscc/radiant/1.1/ip/pmi/pmi_add.v" 52 pmi_add
 ~A 1 "./../../../../../../../../../../lscc/radiant/1.1/ip/pmi/pmi_add.v" 52 pmi_add
 ~M 3 "./../../../../../../../../../../lscc/radiant/1.1/ip/pmi/pmi_addsub.v" 42 pmi_addsub

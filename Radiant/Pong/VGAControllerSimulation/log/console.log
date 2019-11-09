@@ -11,8 +11,12 @@ addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGACont
 # Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\VGAController\HSync_Counter.v ... Done
 addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/Controller.v
 # Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\VGAController\Controller.v ... Done
-addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/SimulationSource/Clock_Generator.v
-# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\SimulationSource\Clock_Generator.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/SimulationSource/VGATest.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\SimulationSource\VGATest.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/MapController.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\MapController.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/SimulationSource/PatternSim.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\SimulationSource\PatternSim.v ... Done
 vlib C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAControllerSimulation/work
 # Warning: Library work already exists
 adel -all
@@ -23,7 +27,7 @@ vcom -work pmi C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: C:\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.vhd
 # Compile Package "components"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
 vlog -dbg -work work C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.v
 # Pass 1. Scanning modules hierarchy.
 # Pass 2. Processing instantiations.
@@ -53,7 +57,7 @@ vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant
 # Info: VCP2113 Module \$root found in current working library.
 # Unit top modules: HSync_Counter.
 # $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp VSync_Counter HSync_Counter.
-# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
 # done
 vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/Controller.v
 # Pass 1. Scanning modules hierarchy.
@@ -68,7 +72,7 @@ vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant
 # $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp Controller.
 # Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
 # done
-vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/SimulationSource/Clock_Generator.v
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/SimulationSource/VGATest.v
 # Pass 1. Scanning modules hierarchy.
 # Info: VCP2113 Module \$root found in current working library.
 # Info: VCP2113 Module Controller found in current working library.
@@ -78,6 +82,29 @@ vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant
 # Info: VCP2113 Module \$root found in current working library.
 # Unit top modules: VGA_Test.
 # $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp VGA_Test.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/MapController.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: map.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp VGA_Test map.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/SimulationSource/PatternSim.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module Controller found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: patterntest.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp VGA_Test map patterntest.
 # Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
 # done
 module VGA_Test
@@ -97,297 +124,26 @@ vsim +access +r VGA_Test -L ovi_ice40up
 # ELAB2: Create instances complete.
 # SLP: Started
 # SLP: Elaboration phase ...
+# SLP: Warning: Controller.v (20): Length of connection (11) does not match the length of port "hcount" (13) on instance "/VGA_Test/UUT/VGAHorizontalCounter".
+# SLP: Warning: Controller.v (21): Length of connection (11) does not match the length of port "vcount" (13) on instance "/VGA_Test/UUT/VGAVerticalCounter".
 # SLP: Elaboration phase ... done : 0.0 [s]
 # SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.4 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 0 primitives and 4 (100.00%) other processes in SLP
-# SLP: 19 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.5 [s].
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 5 (100.00%) other processes in SLP
+# SLP: 27 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5517 kB (elbread=1280 elab2=4104 kernel=133 sdf=0)
+# Allocation: Simulator allocated 5520 kB (elbread=1280 elab2=4106 kernel=133 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\VGAControllerSimulation\src\wave.asdb
-#  3:55 PM, Thursday, November 7, 2019
+#  4:20 PM, Friday, November 8, 2019
 #  Simulation has been initialized
 add wave *
-# 5 signal(s) traced.
+# 9 signal(s) traced.
 run 1000ns
 # Waveform file 'untitled.awc' connected to 'C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAControllerSimulation/src/wave.asdb'.
 # KERNEL: stopped at time: 1 us
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 0 primitives and 4 (100.00%) other processes in SLP
-# SLP: 19 (100.00%) signals in SLP and 0 interface signals
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5517 kB (elbread=1280 elab2=4104 kernel=133 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\VGAControllerSimulation\src\wave.asdb
-#  3:56 PM, Thursday, November 7, 2019
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAControllerSimulation/src/wave.asdb'.
-# KERNEL: stopped at time: 100 ns
-# KERNEL: stopped at time: 200 ns
-# KERNEL: stopped at time: 300 ns
-# KERNEL: stopped at time: 400 ns
-# KERNEL: stopped at time: 500 ns
-# KERNEL: stopped at time: 600 ns
-# KERNEL: stopped at time: 700 ns
-# KERNEL: stopped at time: 800 ns
-# KERNEL: stopped at time: 900 ns
-# KERNEL: stopped at time: 1 us
-# KERNEL: stopped at time: 1100 ns
-# KERNEL: stopped at time: 1200 ns
-# KERNEL: stopped at time: 1300 ns
-# KERNEL: stopped at time: 1400 ns
-# KERNEL: stopped at time: 1500 ns
-# KERNEL: stopped at time: 1600 ns
-# KERNEL: stopped at time: 1700 ns
-# KERNEL: stopped at time: 1800 ns
-# KERNEL: stopped at time: 1900 ns
-# KERNEL: stopped at time: 2 us
-# KERNEL: stopped at time: 2100 ns
-# KERNEL: stopped at time: 2200 ns
-# KERNEL: stopped at time: 2300 ns
-# KERNEL: stopped at time: 2400 ns
-# KERNEL: stopped at time: 2500 ns
-# KERNEL: stopped at time: 2600 ns
-# KERNEL: stopped at time: 2700 ns
-# KERNEL: stopped at time: 2800 ns
-# KERNEL: stopped at time: 2900 ns
-# KERNEL: stopped at time: 3 us
-# KERNEL: stopped at time: 3100 ns
-# KERNEL: stopped at time: 3200 ns
-# KERNEL: stopped at time: 3300 ns
-# KERNEL: stopped at time: 3400 ns
-# KERNEL: stopped at time: 3500 ns
-# KERNEL: stopped at time: 3600 ns
-# KERNEL: stopped at time: 3700 ns
-# KERNEL: stopped at time: 3800 ns
-# KERNEL: stopped at time: 3900 ns
-# KERNEL: stopped at time: 4 us
-# KERNEL: stopped at time: 4100 ns
-# KERNEL: stopped at time: 5100 ns
-# KERNEL: stopped at time: 6100 ns
-# KERNEL: stopped at time: 7100 ns
-# KERNEL: stopped at time: 8100 ns
-# KERNEL: stopped at time: 9100 ns
-# KERNEL: stopped at time: 10100 ns
-# KERNEL: stopped at time: 11100 ns
-# KERNEL: stopped at time: 12100 ns
-# KERNEL: stopped at time: 13100 ns
-# KERNEL: stopped at time: 14100 ns
-# KERNEL: stopped at time: 15100 ns
-# KERNEL: stopped at time: 16100 ns
-# KERNEL: stopped at time: 17100 ns
-# KERNEL: stopped at time: 18100 ns
-# KERNEL: stopped at time: 19100 ns
-# KERNEL: stopped at time: 20100 ns
-# KERNEL: stopped at time: 21100 ns
-# KERNEL: stopped at time: 22100 ns
-# KERNEL: stopped at time: 23100 ns
-# KERNEL: stopped at time: 24100 ns
-# KERNEL: stopped at time: 25100 ns
-# KERNEL: stopped at time: 26100 ns
-# KERNEL: stopped at time: 27100 ns
-# KERNEL: stopped at time: 28100 ns
-# KERNEL: stopped at time: 29100 ns
-# KERNEL: stopped at time: 30100 ns
-# KERNEL: stopped at time: 31100 ns
-# KERNEL: stopped at time: 31200 ns
-# KERNEL: stopped at time: 31300 ns
-# KERNEL: stopped at time: 31400 ns
-# KERNEL: stopped at time: 31500 ns
-# KERNEL: stopped at time: 31600 ns
-# KERNEL: stopped at time: 31700 ns
-# KERNEL: stopped at time: 31800 ns
-# KERNEL: stopped at time: 31900 ns
-# KERNEL: stopped at time: 32 us
-# KERNEL: stopped at time: 32100 ns
-# KERNEL: stopped at time: 32200 ns
-# KERNEL: stopped at time: 32300 ns
-# KERNEL: stopped at time: 32400 ns
-# KERNEL: stopped at time: 32500 ns
-# KERNEL: stopped at time: 32600 ns
-# KERNEL: stopped at time: 32700 ns
-# KERNEL: stopped at time: 32800 ns
-# KERNEL: stopped at time: 32900 ns
-# KERNEL: stopped at time: 33 us
-# KERNEL: stopped at time: 33100 ns
-# KERNEL: stopped at time: 33200 ns
-# KERNEL: stopped at time: 33300 ns
-# KERNEL: stopped at time: 33400 ns
-# KERNEL: stopped at time: 33500 ns
-# KERNEL: stopped at time: 33600 ns
-# KERNEL: stopped at time: 33700 ns
-# KERNEL: stopped at time: 33800 ns
-# KERNEL: stopped at time: 33900 ns
-# KERNEL: stopped at time: 34 us
-# KERNEL: stopped at time: 34100 ns
-# KERNEL: stopped at time: 34200 ns
-# KERNEL: stopped at time: 34300 ns
-# KERNEL: stopped at time: 35300 ns
-# KERNEL: stopped at time: 36300 ns
-# KERNEL: stopped at time: 37300 ns
-# KERNEL: stopped at time: 38300 ns
-# KERNEL: stopped at time: 39300 ns
-# KERNEL: stopped at time: 40300 ns
-# KERNEL: stopped at time: 41300 ns
-# KERNEL: stopped at time: 42300 ns
-# KERNEL: stopped at time: 43300 ns
-# KERNEL: stopped at time: 44300 ns
-# KERNEL: stopped at time: 45300 ns
-# KERNEL: stopped at time: 46300 ns
-# KERNEL: stopped at time: 47300 ns
-# KERNEL: stopped at time: 48300 ns
-# KERNEL: stopped at time: 49300 ns
-# KERNEL: stopped at time: 50300 ns
-# KERNEL: stopped at time: 51300 ns
-# KERNEL: stopped at time: 52300 ns
-# KERNEL: stopped at time: 53300 ns
-# KERNEL: stopped at time: 54300 ns
-# KERNEL: stopped at time: 55300 ns
-# KERNEL: stopped at time: 56300 ns
-# KERNEL: stopped at time: 57300 ns
-# KERNEL: stopped at time: 58300 ns
-# KERNEL: stopped at time: 59300 ns
-# KERNEL: stopped at time: 60300 ns
-# KERNEL: stopped at time: 61300 ns
-# KERNEL: stopped at time: 62300 ns
-# KERNEL: stopped at time: 63300 ns
-# KERNEL: stopped at time: 64300 ns
-# KERNEL: stopped at time: 65300 ns
-# KERNEL: stopped at time: 66300 ns
-# KERNEL: stopped at time: 67300 ns
-# KERNEL: stopped at time: 67400 ns
-# KERNEL: stopped at time: 67500 ns
-# KERNEL: stopped at time: 77500 ns
-# KERNEL: stopped at time: 87500 ns
-# KERNEL: stopped at time: 97500 ns
-# KERNEL: stopped at time: 107500 ns
-# KERNEL: stopped at time: 117500 ns
-# KERNEL: stopped at time: 127500 ns
-# KERNEL: stopped at time: 137500 ns
-# KERNEL: stopped at time: 147500 ns
-# KERNEL: stopped at time: 197500 ns
-# KERNEL: stopped at time: 247500 ns
-# KERNEL: stopped at time: 297500 ns
-# KERNEL: stopped at time: 347500 ns
-# KERNEL: stopped at time: 397500 ns
-# KERNEL: stopped at time: 447500 ns
-# KERNEL: stopped at time: 497500 ns
-# KERNEL: stopped at time: 547500 ns
-# KERNEL: stopped at time: 597500 ns
-# KERNEL: stopped at time: 647500 ns
-# KERNEL: stopped at time: 697500 ns
-# KERNEL: stopped at time: 747500 ns
-# KERNEL: stopped at time: 797500 ns
-# KERNEL: stopped at time: 847500 ns
-# KERNEL: stopped at time: 897500 ns
-# KERNEL: stopped at time: 947500 ns
-# KERNEL: stopped at time: 997500 ns
-# KERNEL: stopped at time: 1047500 ns
-# KERNEL: stopped at time: 1097500 ns
-# KERNEL: stopped at time: 1147500 ns
-# KERNEL: stopped at time: 1197500 ns
-# KERNEL: stopped at time: 1247500 ns
-# KERNEL: stopped at time: 1297500 ns
-# KERNEL: stopped at time: 1347500 ns
-# KERNEL: stopped at time: 1397500 ns
-# KERNEL: stopped at time: 1447500 ns
-# KERNEL: stopped at time: 1497500 ns
-# KERNEL: stopped at time: 1547500 ns
-# KERNEL: stopped at time: 1597500 ns
-# KERNEL: stopped at time: 1647500 ns
-# KERNEL: stopped at time: 1697500 ns
-# KERNEL: stopped at time: 1747500 ns
-# KERNEL: stopped at time: 1797500 ns
-# KERNEL: stopped at time: 1847500 ns
-# KERNEL: stopped at time: 1897500 ns
-# KERNEL: stopped at time: 1947500 ns
-# KERNEL: stopped at time: 1997500 ns
-# KERNEL: stopped at time: 2047500 ns
-# KERNEL: stopped at time: 2097500 ns
-# KERNEL: stopped at time: 2147500 ns
-# KERNEL: stopped at time: 2197500 ns
-# KERNEL: stopped at time: 2247500 ns
-# KERNEL: stopped at time: 2297500 ns
-# KERNEL: stopped at time: 2347500 ns
-# KERNEL: stopped at time: 2397500 ns
-# KERNEL: stopped at time: 2447500 ns
-# KERNEL: stopped at time: 2947500 ns
-# KERNEL: stopped at time: 3447500 ns
-# KERNEL: stopped at time: 3947500 ns
-# KERNEL: stopped at time: 4447500 ns
-# KERNEL: stopped at time: 4947500 ns
-# KERNEL: stopped at time: 5447500 ns
-# KERNEL: stopped at time: 5947500 ns
-# KERNEL: stopped at time: 6447500 ns
-# KERNEL: stopped at time: 6947500 ns
-# KERNEL: stopped at time: 7447500 ns
-# KERNEL: stopped at time: 7947500 ns
-# KERNEL: stopped at time: 8447500 ns
-# KERNEL: stopped at time: 8947500 ns
-# KERNEL: stopped at time: 9447500 ns
-# KERNEL: stopped at time: 9947500 ns
-# KERNEL: stopped at time: 10447500 ns
-# KERNEL: stopped at time: 10947500 ns
-# KERNEL: stopped at time: 11447500 ns
-# KERNEL: stopped at time: 11947500 ns
-# KERNEL: stopped at time: 12447500 ns
-# KERNEL: stopped at time: 12947500 ns
-# KERNEL: stopped at time: 13447500 ns
-# KERNEL: stopped at time: 13947500 ns
-# KERNEL: stopped at time: 14447500 ns
-# KERNEL: stopped at time: 14947500 ns
-# KERNEL: stopped at time: 15447500 ns
-# KERNEL: stopped at time: 15947500 ns
-# KERNEL: stopped at time: 16447500 ns
-# KERNEL: stopped at time: 16947500 ns
-# KERNEL: stopped at time: 16997500 ns
-# KERNEL: stopped at time: 17047500 ns
-# KERNEL: stopped at time: 17097500 ns
-# KERNEL: stopped at time: 17147500 ns
-# KERNEL: stopped at time: 17197500 ns
-# KERNEL: stopped at time: 17247500 ns
-# KERNEL: stopped at time: 17297500 ns
-# KERNEL: stopped at time: 17347500 ns
-# KERNEL: stopped at time: 17397500 ns
-# KERNEL: stopped at time: 17447500 ns
-# KERNEL: stopped at time: 17497500 ns
-# KERNEL: stopped at time: 17547500 ns
-# KERNEL: stopped at time: 17597500 ns
-# KERNEL: stopped at time: 17647500 ns
-# KERNEL: stopped at time: 17697500 ns
-# KERNEL: stopped at time: 17747500 ns
-# KERNEL: stopped at time: 17797500 ns
-# KERNEL: stopped at time: 17847500 ns
-# KERNEL: stopped at time: 17897500 ns
-# KERNEL: stopped at time: 17947500 ns
-# KERNEL: stopped at time: 17997500 ns
-# KERNEL: stopped at time: 18047500 ns
-# KERNEL: stopped at time: 18097500 ns
-# KERNEL: stopped at time: 23097500 ns
-# KERNEL: stopped at time: 28097500 ns
-# KERNEL: stopped at time: 29097500 ns
-# KERNEL: stopped at time: 49097500 ns

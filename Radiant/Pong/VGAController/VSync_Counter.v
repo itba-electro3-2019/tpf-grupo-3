@@ -5,17 +5,16 @@ module VSync_Counter(
 
 input wire clk,
 input wire enable,
-output reg [12:0] vcount=0
+output reg [9:0] vcount=0
 
 );
 
 	always@(posedge clk) begin
 		if ( enable )
 			if(vcount < 524)			//Cuenta hasta 525
-				vcount = vcount + 1;
+				vcount <= vcount + 1;
 			else begin
-				vcount = 0;				//Reseteo
+				vcount <= 0;				//Reseteo
 			end
 	end
-
 endmodule

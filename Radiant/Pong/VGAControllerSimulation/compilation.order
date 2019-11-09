@@ -2,4 +2,6 @@
 .\..\VGAController\VSync_Counter.v
 .\..\VGAController\HSync_Counter.v
 .\..\VGAController\Controller.v
-.\..\SimulationSource\Clock_Generator.v
+.\..\SimulationSource\VGATest.v
+.\..\MapController.v
+.\..\SimulationSource\PatternSim.v
