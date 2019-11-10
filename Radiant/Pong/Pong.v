@@ -1,14 +1,17 @@
 `timescale 1ns / 1ps
 module pong (
-input ref_clk,
-output hsync,
-output vsync,
-output red,
-output green,
-output blue
+input ref_clk,	//Pin 35 12MHz clock
+output hsync,	//VGA
+output vsync,	//VGA
+output red,		//VGA
+output green,	//VGA
+output blue		//VGA
 );
 
+
+
 //Cables varios
+wire reset;
 wire vga_clk;
 wire pixval;
 wire [9:0] xpix;
@@ -19,25 +22,29 @@ wire x_ball_dir;
 wire y_ball_dir;
 
 //Definiciones del juego
-reg [9:0] y_floor = 475;
-reg [9:0] y_ceil = 5;
-reg [9:0] x_lwall = 5;
-reg [9:0] x_rwall = 635;
-reg [4:0] height_ball = 10;
-reg [4:0] width_ball = 10;
-reg [7:0] height_paddle = 100;
-reg [7:0] width_paddle = 12;
+reg[9:0] y_floor = 475;reg[9:0] y_ceil = 5;
+reg[9:0] x_lwall = 5;
+reg[9:0] x_rwall = 635;
+reg[4:0] height_ball = 10;
+reg[4:0] width_ball = 10;
+reg[7:0] height_paddle = 100;
+reg[7:0] width_paddle = 12;
 
 //faltan sacar cuando se complete la logica
-reg [9:0] x_paddleA = 20;
-reg [9:0] y_paddleA = 200;
-reg [9:0] x_paddleB = 600;
-reg [9:0] y_paddleB = 200;
-reg [3:0] y_ball_vel;
-reg [3:0] x_ball_vel;
-
+wire [9:0] x_paddleA;
+wire [9:0] y_paddleA;
+wire [9:0] x_paddleB;
+wire [9:0] y_paddleB;
+reg [3:0] y_ball_vel = 1;
+reg [3:0] x_ball_vel = 1;
+reg [3:0] y_paddle_vel = 1;
+reg [3:0] x_paddle_vel = 1;
+reg inputA_up=0;
+reg inputA_down=0;
+reg inputB_up=0;
+reg inputB_down=0;
 //Modulo PLL, da el clock de VGA de 25.175MHz a partir de ref_clock de 12MHz.
-pll pll_module(ref_clk, 1, , , vga_clk);
+pll pll_module(ref_clk, 1, pll_lock, , vga_clk);
 
 //Modulo controlador de VGA. Da las señales de VGA al exterior y además qué pixel esta dibujando en este momento
 //con xpix y ypix. La entrada es pixval y es el valor que tendrá el pixel que se esta dibujando actualmente.
@@ -52,10 +59,18 @@ DisplayController display_controller(y_floor,y_ceil,x_lwall,x_rwall,x_ball,y_bal
 //Modulo generador de game ticks. Toma de referencia el clock de VGA y lo divide para obtener un clock de un par de Hz.
 GameTickGen game_tick_gen(vga_clk,game_clk);
 
+//Genera una señal de reset que dura 7 game clocks cuando pulse se activa.
+ResetGenerator reset_generator(game_clk, pll_lock, reset);
+
 //Modulo de collisiones. Es la lógica per se del juego. Su entradas son definiciones del mapa, pelota y paletas y las salidas
 //son las variables de estado de estas entidades. Guarda la memoria de estas variables en registros.
-CollisionController collision_controller(reset, game_clk, y_floor, y_ceil, x_lwall, x_rwall, height_ball, width_ball,
-											x_ball_vel, y_ball_vel, x_ball, y_ball, x_ball_dir, y_ball_dir);
+CollisionController collision_controller(reset, game_clk, inputA_up, inputA_down, inputB_up, inputB_down, y_floor, y_ceil,
+											x_lwall, x_rwall, height_ball, width_ball, height_paddle, x_ball_vel, y_ball_vel,
+											y_paddle_vel, y_paddleA, x_paddleA, y_paddleB, x_paddleB, x_ball, y_ball, x_ball_dir, y_ball_dir);
+
+//initial begin
+	//pulse <= 1;
+//end
 
 //GameTickGen game_tick_gen(sim_clk,game_clk);
 //reg sim_clk=0;

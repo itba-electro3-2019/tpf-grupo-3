@@ -18,7 +18,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/Pong_impl_1.bin</File>
-			<FileTime>11/08/19 20:37:10</FileTime>
+			<FileTime>11/10/19 16:46:32</FileTime>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
@@ -46,6 +46,7 @@
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
 						<IOState>HighZ</IOState>
+						<IOVectorData>@</IOVectorData>
 						<AccessMode>Direct Programming</AccessMode>
 					</Option>
 				</Device>
@@ -99,5 +100,6 @@
 	<CableOptions>
 		<CableName>USB2</CableName>
 		<PortAdd>FTUSB-0</PortAdd>
+		<USBID>Single RS232-HS Location 0000 Serial </USBID>
 	</CableOptions>
 </ispXCF>

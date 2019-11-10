@@ -42,7 +42,7 @@
         <Source name="Collisions/PaddleCollisionController.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="ResetGenerator.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+        <Source name="ResetGenerator.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="asf/asf.spf" type="Simulation Project File" type_short="SPF">

@@ -12,47 +12,30 @@ input [4:0] width_ball,
 input [3:0] x_ball_vel,
 input [3:0] y_ball_vel,
 
-output [9:0] x_ball,
-output [9:0] y_ball,
+output reg [9:0] x_ball,
+output reg [9:0] y_ball,
 output reg x_ball_dir,
 output reg y_ball_dir
 );
 
-reg [9:0] x_pos;
-reg [9:0] y_pos;
 parameter OFFSET = 4;
 
-reg init;
-initial init = 1;
-
-assign x_ball = init? 200 : x_pos;
-assign y_ball = init? 200 : y_pos;
-
-always@(posedge game_clk) begin
+always@(posedge game_clk) begin	
 	
-	if(init)
-		init<=0;
-	//if(reset) begin
-		//x_ball <= 10'd200;
-		//y_ball <= 10'd200;
-		//x_ball_dir <= 1'b1;
-		//y_ball_dir <= 1'b1;
-	//end
-	
-	//if(x_ball > 640 || y_ball > 480 || x_ball ==0 || y_ball == 0) begin
-		//x_ball <= 200;
-		//y_ball <= 200;
-		//end
+	if(reset) begin
+		y_ball <= 10'd250;
+		x_ball <= 10'd300;
+	end
 	
 	//Logica que mueve la pelota por cada game tick constantemente
 	if(x_ball_dir == 0)
-		x_pos <= (x_pos - x_ball_vel);
+		x_ball <= (x_ball - x_ball_vel);
 	if(x_ball_dir == 1)
-		x_pos <= (x_pos + x_ball_vel);
+		x_ball <= (x_ball + x_ball_vel);
 	if(y_ball_dir == 0)
-		y_pos <= (y_pos - y_ball_vel);
+		y_ball <= (y_ball - y_ball_vel);
 	if(y_ball_dir == 1)
-		y_pos <= (y_pos + y_ball_vel);
+		y_ball <= (y_ball + y_ball_vel);
 	
 	//Colisiones con el techo y piso
 	if((y_ball-OFFSET < y_ceil) && (y_ball_dir == 0)) //Ceiling collision

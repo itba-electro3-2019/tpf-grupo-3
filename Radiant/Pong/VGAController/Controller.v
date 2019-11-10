@@ -61,14 +61,14 @@ always @(xpix,ypix) begin
 		vrange<=BACK_PORCH;
 	end
 	
-	if(vrange == 0 && hrange == 0) begin
-		red <= pixval;
-		green <= pixval;
-		blue <= pixval;
+	if(vrange == VISIBLE_RANGE && hrange == VISIBLE_RANGE) begin
+		red <= pixval;					//Prendido es rojo
+		green <= pixval? 0 : 1;			//Apagado es cyan
+		blue <= pixval? 0 : 1;			// 		"
 	end
 	else begin
 		red <= 0;
-		green <= 0;
+		green <= 0;					//Afuera de la pantalla se pone negro
 		blue <= 0;
 	end	
 end

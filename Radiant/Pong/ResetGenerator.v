@@ -1,16 +1,21 @@
 module ResetGenerator(
 	input clk,
-	output reg rst
+	input pulse,
+	output reg rst = 1
 	);
 	
-localparam N = 8;
+reg [3:0] rst_counter;
 
-reg[N-1:0] rst_r;
-
-always@(posedge clk)
-	rst_r <= {rst_r[N-2:0], 1'b1};
+always@(posedge clk) begin
 	
-always@(posedge clk)
-	rst <= ~rst_r[N-1];
+	rst<=(rst_counter != 15);
+	
+	if(~pulse)
+		rst_counter <= 0;
+	
+	if(rst_counter < 15) begin
+		rst_counter <= rst_counter + 1;
+	end
+end
 	
 endmodule

@@ -3,54 +3,49 @@ Report for cell pong
    Instance path: pong
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         73        100.0
+                                  LUT4	        317        100.0
                                  IOBUF	          6        100.0
-                                PFUREG	         20        100.0
+                                PFUREG	         72        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                     DisplayController	          1         2.7
-                         VGAController	          1        93.2
+                   CollisionController	          1        28.7
+                     DisplayController	          1        30.6
+                           GameTickGen	          1         8.5
+                        ResetGenerator	          1         2.2
+                         VGAController	          1        20.2
                                    pll	          1         0.0
+---------------------------------------------------
+Report for cell ResetGenerator
+   Instance path: pong/reset_generator
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         2.2
+                                PFUREG	          5         6.9
 ---------------------------------------------------
 Report for cell VGAController
    Instance path: pong/vga_controller
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         68        93.2
-                                PFUREG	         20        100.0
+                                  LUT4	         64        20.2
+                                PFUREG	         20        27.8
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                         HSync_Counter	          1        42.5
-                         VSync_Counter	          1        31.5
+                         HSync_Counter	          1         7.9
+                         VSync_Counter	          1         4.7
 ---------------------------------------------------
 Report for cell VSync_Counter
    Instance path: pong/vga_controller/VGAVerticalCounter
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         23        31.5
-                                PFUREG	         10        50.0
+                                  LUT4	         15         4.7
+                                PFUREG	         10        13.9
 ---------------------------------------------------
 Report for cell HSync_Counter
    Instance path: pong/vga_controller/VGAHorizontalCounter
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         31        42.5
-                                PFUREG	         10        50.0
----------------------------------------------------
-Report for cell DisplayController
-   Instance path: pong/display_controller
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          2         2.7
-SUB MODULES
-                                  cell	      count    LUT4 Usage(%)
-                 Display_Paddle_Module	          1         2.7
----------------------------------------------------
-Report for cell Display_Paddle_Module
-   Instance path: pong/display_controller/disp_paddleB
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          2         2.7
+                                  LUT4	         25         7.9
+                                PFUREG	         10        13.9
 ---------------------------------------------------
 Report for cell pll
    Instance path: pong/pll_module
@@ -64,3 +59,70 @@ Report for cell pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",
    Instance path: pong/pll_module/lscc_pll_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell GameTickGen
+   Instance path: pong/game_tick_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         27         8.5
+                                PFUREG	         19        26.4
+---------------------------------------------------
+Report for cell CollisionController
+   Instance path: pong/collision_controller
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         91        28.7
+                                PFUREG	         28        38.9
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+               BallCollisionController	          1        28.7
+             PaddleCollisionController	          1         0.0
+          PaddleCollisionController_U1	          1         0.0
+---------------------------------------------------
+Report for cell PaddleCollisionController
+   Instance path: pong/collision_controller/paddleB_collision_controler
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          3         4.2
+---------------------------------------------------
+Report for cell PaddleCollisionController_U1
+   Instance path: pong/collision_controller/paddleA_collision_controler
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          3         4.2
+---------------------------------------------------
+Report for cell BallCollisionController
+   Instance path: pong/collision_controller/ball_collision_controller
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         91        28.7
+                                PFUREG	         22        30.6
+---------------------------------------------------
+Report for cell DisplayController
+   Instance path: pong/display_controller
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         97        30.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                   Display_Ball_Module	          1        21.5
+                 Display_Paddle_Module	          1         4.4
+              Display_Paddle_Module_U0	          1         2.8
+---------------------------------------------------
+Report for cell Display_Paddle_Module
+   Instance path: pong/display_controller/disp_paddleB
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         14         4.4
+---------------------------------------------------
+Report for cell Display_Paddle_Module_U0
+   Instance path: pong/display_controller/disp_paddleA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9         2.8
+---------------------------------------------------
+Report for cell Display_Ball_Module
+   Instance path: pong/display_controller/disp_ball
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         68        21.5
