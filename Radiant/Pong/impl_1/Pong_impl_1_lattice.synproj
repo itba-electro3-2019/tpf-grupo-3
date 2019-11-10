@@ -33,6 +33,7 @@
 
 -use_io_insertion 1
 -resolve_mixed_drivers 0
+-sdc "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/source/impl_1.ldc"
 -path "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/pll"
 -path "C:/lscc/radiant/1.1/ispfpga/ice40tp/data" "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1" "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong"
 -ver "C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.v"
@@ -47,6 +48,9 @@
 "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/BallModule.v"
 "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/PaddleModule.v"
 "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/GameTickGenerator/GameTickGenerator.v"
+"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Collisions/CollisionController.v"
+"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Collisions/BallCollisionController.v"
+"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Collisions/PaddleCollisionController.v"
 
 
 -path "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong"

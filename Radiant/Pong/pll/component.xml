@@ -21,6 +21,13 @@
                 </ipxact:wire>
             </ipxact:port>
             <ipxact:port>
+                <ipxact:name>lock_o</ipxact:name>
+                <ipxact:displayName>lock_o</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>out</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
                 <ipxact:name>outcore_o</ipxact:name>
                 <ipxact:displayName>outcore_o</ipxact:displayName>
                 <ipxact:wire>
@@ -50,10 +57,6 @@
             <ipxact:file>
                 <ipxact:name>misc/pll_tmpl.vhd</ipxact:name>
                 <ipxact:fileType user="template_vhdl">user</ipxact:fileType>
-            </ipxact:file>
-            <ipxact:file>
-                <ipxact:name>component.xml</ipxact:name>
-                <ipxact:fileType user="IP-XACT_output_file">user</ipxact:fileType>
             </ipxact:file>
             <ipxact:file>
                 <ipxact:name>pll.cfg</ipxact:name>

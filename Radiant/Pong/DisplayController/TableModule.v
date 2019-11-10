@@ -12,6 +12,7 @@ output pixval
 
 );
 
-assign pixval = (xpix<x_lwall || xpix>x_rwall || ypix < y_ceil || ypix >y_floor);
+assign pixval = 0;
+//assign pixval = (xpix<x_lwall || xpix>x_rwall || ypix < y_ceil || ypix >y_floor);
 
 endmodule

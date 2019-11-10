@@ -1,0 +1,41 @@
+Active-HDL 10.5.216.6767 2019-11-09 18:30:26
+
+Elaboration top modules:
+Verilog Module                pong
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Verilog Module                 | Library     | Info | Compiler Version        | Compilation Options
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+pong                           | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+pll                            | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+VGAController                  | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+DisplayController              | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+GameTickGen                    | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+CollisionController            | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+pll_ipgen_lscc_pll             | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+PLL_B                          | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+PLL40_2F_CORE                  | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+t_DS_PLL40                     | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+pllcfg_dynamicsetting_shiftreg | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+ShiftReg427_DS                 | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+mux4to1                        | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+FineDlyAdj                     | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+ABIWTCZ4                       | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+Delay4Buf                      | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+tSPLL40                        | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+ShiftReg427                    | ovi_ice40up |      | 10.5.216.6767 (Windows) | -v2k5 -vendor lattice +incdir+D:\diamondng_build1_1\env\fpga\primlib\simulation\active_hdl\scripts\ovi_iCE40UP\src\
+HSync_Counter                  | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+VSync_Counter                  | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+Display_Table_Module           | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+Display_Ball_Module            | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+Display_Paddle_Module          | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+BallCollisionController        | work        |      | 10.5.216.6767 (Windows) | -O2 -v2k5
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Library                        | Comment
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ovi_ice40up                    | LATTICE Radiant 1.1, iCE40UP VERILOG LIBRARY
+work                           | None
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

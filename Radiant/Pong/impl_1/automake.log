@@ -1,183 +1,80 @@
 
-synthesis -comp -f "Pong_impl_1_lattice.synproj"
-synthesis:  version Radiant Software (64-bit) 1.1.0.165.1
+bitgen -w "Pong_impl_1.udb" -f "Pong_impl_1.t2b" 
+Loading Pong_impl_1.udb ...
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.1/ispfpga.
+Design:  pong
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading udb from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
 
+
+
+BITGEN: Bitstream Generator Radiant Software (64-bit) 1.1.0.165.1
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Nov 09 13:32:32 2019
 
 
-Command Line:  synthesis -comp -f Pong_impl_1_lattice.synproj -gui 
+Running DRC.
+DRC detected 0 errors and 0 warnings.
 
-INFO - synthesis: Lattice Synthesis Engine Launched.
-Synthesis options:
-The -a option is iCE40UP.
-The -t option is SG48.
-The -sp option is High-Performance_1.2V.
-The -p option is iCE40UP5K.
-                                                          
-
-
-##########################################################
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
 
 
-### Lattice Family     : iCE40UP
+Creating bit map...
+Saving bit stream in "C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\impl_1\Pong_impl_1.bin".
+
+ibisgen "Pong_impl_1.udb" "C:/lscc/radiant/1.1/cae_library/ibis/iCE40UP.ibs"
+IBIS Models Generator: Lattice Radiant Software (64-bit) 1.1.0.165.1
+
+Sat Nov 09 21:28:29 2019
+
+Loading Pong_impl_1.udb ...
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.1/ispfpga.
+Design:  pong
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading udb from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+Created design models.
 
 
-### Device             : iCE40UP5K
+Generating: C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\impl_1\IBIS\Pong_impl_1.ibs
 
 
-### Package            : SG48
+    <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
 
+backanno "Pong_impl_1.udb"  -o "Pong_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
+backanno: version Radiant Software (64-bit) 1.1.0.165.1
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
 
-### Performance Grade  : High-Performance_1.2V
+Loading Pong_impl_1.udb ...
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.1/ispfpga.
+Design:  pong
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Writing a verilog netlist based on the Pong_impl_1 design file.
 
-
-                                                         
-
-
-    <postMsg mid="35001786" type="Info" dynamic="0" navigation="0"  />
-Optimization goal = Area
-Top-level module name = pong.
-Target frequency = 1.000000 MHz.
-Maximum fanout = 1000.
-Timing path count = 3
-RWCheckOnRam = 0
-
-BRAM utilization = 100.000000 %
-DSP usage = true
-DSP utilization = 100.000000 %
-fsm_encoding_style = auto
-resolve_mixed_drivers = 0
-fix_gated_clocks = 1
-
-
-Mux style = auto (Default)
-Use Carry Chain = true
-carry_chain_length = 0
-Loop Limit = 1950.
-Use IO Insertion = TRUE
-Use IO Reg = AUTO
-
-Resource Sharing = TRUE
-Propagate Constants = TRUE
-Remove Duplicate Registers = TRUE
-Output HDL file name = Pong_impl_1.vm.
-ROM style = auto
-RAM style = auto
-The -comp option is TRUE.
-The -syn option is FALSE.
--path C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong (searchpath added)
--path C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1 (searchpath added)
--path C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/pll (searchpath added)
--path C:/lscc/radiant/1.1/ispfpga/ice40tp/data (searchpath added)
-Mixed language design
-Verilog design file = C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/Controller.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/VSync_Counter.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/VGAController/HSync_Counter.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Pong.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/pll/rtl/pll.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/DisplayController.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/TableModule.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/BallModule.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/PaddleModule.v
-Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/GameTickGenerator/GameTickGenerator.v
-VHDL library = pmi
-VHDL design file = C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.vhd
-The -r option is OFF. [ Remove LOC Properties is OFF. ]
-Compile design.
-Compile Design Begin
-Analyzing Verilog file c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v. VERI-1482
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(1): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_addsub.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="1"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_addsub.v(40): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_addsub.v" arg3="40"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(2): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_add.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="2"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_add.v(50): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/adder/rtl/lscc_adder.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_add.v" arg3="50"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(3): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_complex_mult.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="3"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_complex_mult.v(52): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_complex_mult.v" arg3="52"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(4): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_counter.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="4"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_counter.v(39): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/counter/rtl/lscc_cntr.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_counter.v" arg3="39"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(5): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_fifo.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="5"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_fifo.v(44): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/fifo/rtl/lscc_fifo.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_fifo.v" arg3="44"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(6): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_fifo_dc.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="6"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_fifo_dc.v(47): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/fifo_dc/rtl/lscc_fifo_dc.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_fifo_dc.v" arg3="47"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(7): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_mac.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="7"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_mac.v(52): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_mac.v" arg3="52"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(8): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_multaddsubsum.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="8"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_multaddsubsum.v(53): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_multaddsubsum.v" arg3="53"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(9): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_multaddsub.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="9"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_multaddsub.v(52): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_multaddsub.v" arg3="52"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(10): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_mult.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="10"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_mult.v(51): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_mult.v" arg3="51"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(11): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dp.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="11"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dp.v(48): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dp.v" arg3="48"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(12): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dq.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="12"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dq.v(45): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dq.v" arg3="45"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(13): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_rom.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="13"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_rom.v(45): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/rom/rtl/lscc_rom.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_rom.v" arg3="45"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(14): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_sub.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="14"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_sub.v(50): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_sub.v" arg3="50"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(15): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dp_be.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="15"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dp_be.v(49): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dp_be.v" arg3="49"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(16): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dq_be.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="16"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dq_be.v(45): " arg1="c:/lscc/radiant/1.1/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ram_dq_be.v" arg3="45"  />
-    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v(17): " arg1="c:/lscc/radiant/1.1/ip/pmi/pmi_dsp.v" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.v" arg3="17"  />
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v. VERI-1482
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/vsync_counter.v. VERI-1482
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/hsync_counter.v. VERI-1482
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v. VERI-1482
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v. VERI-1482
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/displaycontroller.v. VERI-1482
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/tablemodule.v. VERI-1482
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/ballmodule.v. VERI-1482
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/paddlemodule.v. VERI-1482
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v. VERI-1482
-Analyzing VHDL file c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
-    <postMsg mid="35921014" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.vhd(4): " arg1="components" arg2="c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.vhd" arg3="4"  />
-unit pong is not yet analyzed. VHDL-1485
-    <postMsg mid="35921504" type="Info" dynamic="2" navigation="0" arg0="" arg1="C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1"  />
-Top module language type = Verilog.
-Top module name (Verilog, mixed language): pong
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(1): " arg1="pong" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="1"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(30): " arg1="y_floor" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="30"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(31): " arg1="y_ceil" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="31"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(32): " arg1="x_lwall" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="32"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(33): " arg1="x_rwall" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="33"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(34): " arg1="x_ball" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="34"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(35): " arg1="y_ball" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="35"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(36): " arg1="height_ball" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="36"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(37): " arg1="width_ball" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="37"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(38): " arg1="x_paddleA" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="38"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(39): " arg1="y_paddleA" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="39"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(40): " arg1="x_paddleB" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="40"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(41): " arg1="y_paddleB" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="41"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(42): " arg1="height_paddle" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="42"  />
-    <postMsg mid="35901220" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(43): " arg1="width_paddle" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg3="43"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(10): " arg1="pll" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v" arg3="10"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(73): " arg1="pll_ipgen_lscc_pll(DIVR=&quot;0&quot;,DIVF=&quot;66&quot;,DIVQ=&quot;5&quot;,FILTER_RANGE=&quot;1&quot;,PLLOUT_SELECT_PORTA=&quot;GENCLK&quot;,PLLOUT_SELECT_PORTB=&quot;GENCLK&quot;,FREQUENCY_PIN_REFERENCECLK=&quot;12.000000&quot;)" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v" arg3="73"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="C:/lscc/radiant/1.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(428): " arg1="PLL_B(PLLOUT_SELECT_PORTA=&quot;GENCLK&quot;,PLLOUT_SELECT_PORTB=&quot;GENCLK&quot;,DIVF=&quot;66&quot;,DIVQ=&quot;5&quot;,FILTER_RANGE=&quot;1&quot;,FREQUENCY_PIN_REFERENCECLK=&quot;12.000000&quot;)" arg2="C:/lscc/radiant/1.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v" arg3="428"  />
-    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(16): " arg1="sclk_i" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v" arg3="16"  />
-    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(16): " arg1="sdi_i" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v" arg3="16"  />
-    <postMsg mid="35901330" type="Warning" dynamic="4" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(45): " arg1="32" arg2="1" arg3="rst_n_i" arg4="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v" arg5="45"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(2): " arg1="VGAController" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v" arg3="2"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/hsync_counter.v(3): " arg1="HSync_Counter" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/hsync_counter.v" arg3="3"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/hsync_counter.v(15): " arg1="32" arg2="10" arg3="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/hsync_counter.v" arg4="15"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/vsync_counter.v(4): " arg1="VSync_Counter" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/vsync_counter.v" arg3="4"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/vsync_counter.v(15): " arg1="32" arg2="10" arg3="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/vsync_counter.v" arg4="15"  />
-    <postMsg mid="35901221" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(58): " arg1="vrange" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v" arg3="58"  />
-    <postMsg mid="35901221" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(58): " arg1="hrange" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v" arg3="58"  />
-    <postMsg mid="35901221" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(59): " arg1="pixval" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v" arg3="59"  />
-    <postMsg mid="35901221" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(60): " arg1="pixval" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v" arg3="60"  />
-    <postMsg mid="35901221" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(61): " arg1="pixval" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v" arg3="61"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/displaycontroller.v(1): " arg1="DisplayController" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/displaycontroller.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/tablemodule.v(1): " arg1="Display_Table_Module" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/tablemodule.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/ballmodule.v(1): " arg1="Display_Ball_Module" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/ballmodule.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/paddlemodule.v(1): " arg1="Display_Paddle_Module" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/paddlemodule.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v(1): " arg1="GameTickGen" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v" arg3="1"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v(12): " arg1="32" arg2="13" arg3="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v" arg4="12"  />
-    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v(7): " arg1="slow_clk" arg2="c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v" arg3="7"  />
-LSE: Compile Design done
-
+Writing Verilog netlist to file Pong_impl_1_vo.vo
+Writing SDF timing to file Pong_impl_1_vo.sdf
+Backanno finished with 0 posted error messages.
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 89 MB

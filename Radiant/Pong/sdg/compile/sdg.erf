@@ -1,0 +1,93 @@
+MESSAGE "Pass 1. Scanning modules hierarchy."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+BEGINPROGRESS Compiling...
+UPDATEPROGRESS 2
+UPDATEPROGRESS 5
+UPDATEPROGRESS 7
+UPDATEPROGRESS 10
+UPDATEPROGRESS 12
+UPDATEPROGRESS 15
+UPDATEPROGRESS 17
+UPDATEPROGRESS 20
+UPDATEPROGRESS 22
+UPDATEPROGRESS 25
+UPDATEPROGRESS 27
+UPDATEPROGRESS 30
+UPDATEPROGRESS 32
+UPDATEPROGRESS 35
+MESSAGE "Pass 2. Processing instantiations."
+UPDATEPROGRESS 36
+UPDATEPROGRESS 37
+UPDATEPROGRESS 38
+UPDATEPROGRESS 39
+UPDATEPROGRESS 40
+UPDATEPROGRESS 41
+UPDATEPROGRESS 42
+UPDATEPROGRESS 43
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol pixval_tabledriven has not been declared in module DisplayController." "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/DisplayController.v" 27  99
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol pixval_balldriven has not been declared in module DisplayController." "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/DisplayController.v" 28  102
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol pixval_paddleAdriven has not been declared in module DisplayController." "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/DisplayController.v" 29  120
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol pixval_paddleBdriven has not been declared in module DisplayController." "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/DisplayController.v" 30  120
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol game_clk has not been declared in module pong." "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Pong.v" 45  43
+UPDATEPROGRESS 45
+MESSAGE "Pass 3. Processing behavioral statements."
+UPDATEPROGRESS 46
+UPDATEPROGRESS 47
+UPDATEPROGRESS 48
+UPDATEPROGRESS 49
+UPDATEPROGRESS 50
+UPDATEPROGRESS 51
+UPDATEPROGRESS 52
+UPDATEPROGRESS 53
+UPDATEPROGRESS 54
+UPDATEPROGRESS 55
+UPDATEPROGRESS 56
+UPDATEPROGRESS 57
+UPDATEPROGRESS 58
+UPDATEPROGRESS 59
+UPDATEPROGRESS 60
+UPDATEPROGRESS 61
+UPDATEPROGRESS 62
+UPDATEPROGRESS 63
+UPDATEPROGRESS 64
+UPDATEPROGRESS 65
+UPDATEPROGRESS 66
+UPDATEPROGRESS 67
+UPDATEPROGRESS 68
+UPDATEPROGRESS 69
+UPDATEPROGRESS 70
+UPDATEPROGRESS 71
+UPDATEPROGRESS 72
+UPDATEPROGRESS 73
+UPDATEPROGRESS 74
+UPDATEPROGRESS 75
+UPDATEPROGRESS 76
+UPDATEPROGRESS 80
+MESSAGE "Running Optimizer."
+MESSAGE "ELB/DAG code generating."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+UPDATEPROGRESS 81
+UPDATEPROGRESS 82
+UPDATEPROGRESS 83
+UPDATEPROGRESS 84
+UPDATEPROGRESS 85
+UPDATEPROGRESS 86
+UPDATEPROGRESS 87
+UPDATEPROGRESS 88
+UPDATEPROGRESS 89
+UPDATEPROGRESS 90
+UPDATEPROGRESS 91
+UPDATEPROGRESS 92
+UPDATEPROGRESS 93
+UPDATEPROGRESS 94
+UPDATEPROGRESS 95
+UPDATEPROGRESS 96
+UPDATEPROGRESS 97
+UPDATEPROGRESS 98
+UPDATEPROGRESS 99
+MESSAGE "Unit top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp pong PaddleCollisionController."
+MESSAGE "$root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp pong PaddleCollisionController."
+ENDPROGRESS Compiling...
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
+WARNING ALOG: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "done"

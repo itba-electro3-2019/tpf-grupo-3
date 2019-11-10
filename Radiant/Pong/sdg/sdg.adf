@@ -1,0 +1,74 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=work
+[Library]
+sdg=.\sdg\sdg.lib
+work=.\work\work.lib
+pmi=.\..\pmi\pmi.lib
+[Settings]
+AccessRead=1
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+PriorityLibNames=
+LibNames=ovi_ice40up
+[LocalVhdlSets]
+CompileWithDebug=0
+[$LibMap$]
+sdg=.
+work=.
+pmi=.
+[LocalVerilogDirs]
+Count=0
+[DefineMacro]
+Global=
+[Files]
+/..\..\..\..\..\..\..\..\..\..\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.v=-1
+/..\..\Collisions\BallCollisionController.v=-1
+/..\..\Collisions\CollisionController.v=-1
+/..\..\GameTickGenerator\GameTickGenerator.v=-1
+/..\..\DisplayController\PaddleModule.v=-1
+/..\..\DisplayController\BallModule.v=-1
+/..\..\DisplayController\TableModule.v=-1
+/..\..\DisplayController\DisplayController.v=-1
+/..\..\VGAController\VSync_Counter.v=-1
+/..\..\VGAController\HSync_Counter.v=-1
+/..\..\VGAController\Controller.v=-1
+/..\..\pll\rtl\pll.v=-1
+/..\..\Pong.v=-1
+/..\..\Collisions\PaddleCollisionController.v=-1
+[Files.Data]
+.\..\..\..\..\..\..\..\..\..\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.v=Verilog Source Code
+.\..\Collisions\BallCollisionController.v=Verilog Source Code
+.\..\Collisions\CollisionController.v=Verilog Source Code
+.\..\GameTickGenerator\GameTickGenerator.v=Verilog Source Code
+.\..\DisplayController\PaddleModule.v=Verilog Source Code
+.\..\DisplayController\BallModule.v=Verilog Source Code
+.\..\DisplayController\TableModule.v=Verilog Source Code
+.\..\DisplayController\DisplayController.v=Verilog Source Code
+.\..\VGAController\VSync_Counter.v=Verilog Source Code
+.\..\VGAController\HSync_Counter.v=Verilog Source Code
+.\..\VGAController\Controller.v=Verilog Source Code
+.\..\pll\rtl\pll.v=Verilog Source Code
+.\..\Pong.v=Verilog Source Code
+.\..\Collisions\PaddleCollisionController.v=Verilog Source Code
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

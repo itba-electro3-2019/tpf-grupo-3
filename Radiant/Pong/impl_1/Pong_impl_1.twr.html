@@ -46,7 +46,7 @@ if (a)
 <A name="timing_rpt_top">Timing Report</A><B><U><big></big></U></B>
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 1.1.0.165.1
 
-Sat Nov 09 13:03:07 2019
+Sat Nov 09 21:28:27 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -90,11 +90,11 @@ Performance:     High-Performance_1.2V
 <LI>            <A href=#Timing_rpt_StartEndPointsWithoutTimingConstraints>3.4.2  Start/End Points Without Timing Constraints</A></LI>
 <LI>    <A href=#Timing_rpt_DetailedReport>4  DETAILED REPORT</A></LI>
 <LI>        <A href=#Timing_rpt_SetupDetailedReport>4.1  Setup Detailed Report</A></LI>
-<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_1>4.1.1  Setup Path Details For Constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A></LI>
-<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_2>4.1.2  Setup Path Details For Constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]</A></LI>
+<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_1>4.1.1  Setup Path Details For Constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]</A></LI>
+<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_2>4.1.2  Setup Path Details For Constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A></LI>
 <LI>        <A href=#Timing_rpt_HoldDetailedReport>4.2  Hold Detailed Report</A></LI>
-<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_1>4.2.1  Hold Path Details For Constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A></LI>
-<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_2>4.2.2  Hold Path Details For Constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]</A></LI>
+<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_1>4.2.1  Hold Path Details For Constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]</A></LI>
+<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_2>4.2.2  Hold Path Details For Constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A></LI>
 
 =====================================================================
                     End of Table of Contents
@@ -114,22 +114,22 @@ create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_in
 Combinational Loops
 -------------------
 ++++ Loop1
-vga_controller/VGAVerticalCounter/i1_4_lut_adj_31/C	->	vga_controller/VGAVerticalCounter/i1_4_lut_adj_31/Z
+vga_controller/i470_4_lut/B	->	vga_controller/i470_4_lut/Z
 
 ++++ Loop2
-vga_controller/VGAVerticalCounter/i1_4_lut_adj_28/C	->	vga_controller/VGAVerticalCounter/i1_4_lut_adj_28/Z
+vga_controller/i14_4_lut/B	->	vga_controller/i14_4_lut/Z
 
 ++++ Loop3
-vga_controller/VGAVerticalCounter/i1_4_lut_adj_35/C	->	vga_controller/VGAVerticalCounter/i1_4_lut_adj_35/Z
+vga_controller/i13_4_lut/B	->	vga_controller/i13_4_lut/Z
 
 ++++ Loop4
-vga_controller/i1380_4_lut/B	->	vga_controller/i1380_4_lut/Z
+vga_controller/i2_4_lut/C	->	vga_controller/i2_4_lut/Z
 
 ++++ Loop5
-vga_controller/VGAVerticalCounter/i2_4_lut_adj_37/C	->	vga_controller/VGAVerticalCounter/i2_4_lut_adj_37/Z
+vga_controller/i1_4_lut/C	->	vga_controller/i1_4_lut/Z
 
 ++++ Loop6
-vga_controller/VGAVerticalCounter/i1_4_lut/C	->	vga_controller/VGAVerticalCounter/i1_4_lut/Z
+vga_controller/i1826_4_lut/C	->	vga_controller/i1826_4_lut/Z
 
 
 <A name="Timing_rpt_ClockSummary"></A><B><U><big>2  CLOCK SUMMARY</big></U></B>
@@ -161,7 +161,7 @@ Single Clock Domain
              Clock vga_clk              |                    |       Period       |     Frequency      
 -------------------------------------------------------------------------------------------------------
  From vga_clk                           |             Target |          39.800 ns |         25.126 MHz 
-                                        | Actual (all paths) |          15.801 ns |         63.287 MHz 
+                                        | Actual (all paths) |          14.846 ns |         67.358 MHz 
 -------------------------------------------------------------------------------------------------------
 
 Clock Domain Crossing
@@ -178,7 +178,7 @@ Clock Domain Crossing
 
 <A name="Timing_rpt_ConstraintCoverage"></A><B><U><big>3.1.1  Constraint Coverage</big></U></B>
 
-Constraint Coverage: 35%
+Constraint Coverage: 43.5294%
 
 <A name="Timing_rpt_Errors"></A><B><U><big>3.1.2  Timing Errors</big></U></B>
 
@@ -196,15 +196,15 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
              SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
 -------------------------------------------------------------------------------------------------------------------------------------------
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>create_generated_clock -name {vga_clk} </A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>-source [get_pins {pll_module/lscc_pll_</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>inst/u_PLL_B/REFERENCECLK}] -multiply_b</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>y 67 -divide_by 32 [get_pins {pll_modul</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A>   |   39.800 ns |   23.999 ns |    4   |   15.801 ns |  63.287 MHz |       38       |        0       
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>create_clock -name {ref_clk} -period 83</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>.3333333333333 -waveform {0.000 41.666}</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1> [get_ports ref_clk]</A>                    |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>create_clock -name {ref_clk} -period 83</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>.3333333333333 -waveform {0.000 41.666}</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2> [get_ports ref_clk]</A>                    |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>create_generated_clock -name {vga_clk} </A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>-source [get_pins {pll_module/lscc_pll_</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>inst/u_PLL_B/REFERENCECLK}] -multiply_b</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>y 67 -divide_by 32 [get_pins {pll_modul</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A>   |   39.800 ns |   24.954 ns |    4   |   14.846 ns |  67.358 MHz |       38       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 <A name="Timing_rpt_SetupCriticalEndpointSummary"></A><B><U><big>3.2.2  Setup Critical Endpoint Summary </big></U></B>
@@ -212,26 +212,26 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-{vga_controller/VGAVerticalCounter/vcount_34__i5/SR   vga_controller/VGAVerticalCounter/vcount_34__i6/SR}              
-                                         |   24.000 ns 
-{vga_controller/VGAVerticalCounter/vcount_34__i3/SR   vga_controller/VGAVerticalCounter/vcount_34__i4/SR}              
-                                         |   24.000 ns 
-{vga_controller/VGAVerticalCounter/vcount_34__i1/SR   vga_controller/VGAVerticalCounter/vcount_34__i2/SR}              
-                                         |   24.000 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i0/SR              
-                                         |   24.000 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i9/SR              
-                                         |   24.596 ns 
-{vga_controller/VGAVerticalCounter/vcount_34__i7/SR   vga_controller/VGAVerticalCounter/vcount_34__i8/SR}              
-                                         |   24.596 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i9/SP              
-                                         |   27.801 ns 
-{vga_controller/VGAVerticalCounter/vcount_34__i7/SP   vga_controller/VGAVerticalCounter/vcount_34__i8/SP}              
-                                         |   27.801 ns 
-{vga_controller/VGAVerticalCounter/vcount_34__i5/SP   vga_controller/VGAVerticalCounter/vcount_34__i6/SP}              
-                                         |   28.397 ns 
-{vga_controller/VGAVerticalCounter/vcount_34__i3/SP   vga_controller/VGAVerticalCounter/vcount_34__i4/SP}              
-                                         |   28.397 ns 
+vga_controller/VGAVerticalCounter/vcount_71__i9/SR              
+                                         |   24.955 ns 
+{vga_controller/VGAVerticalCounter/vcount_71__i7/SR   vga_controller/VGAVerticalCounter/vcount_71__i8/SR}              
+                                         |   24.955 ns 
+{vga_controller/VGAVerticalCounter/vcount_71__i5/SR   vga_controller/VGAVerticalCounter/vcount_71__i6/SR}              
+                                         |   24.955 ns 
+{vga_controller/VGAVerticalCounter/vcount_71__i3/SR   vga_controller/VGAVerticalCounter/vcount_71__i4/SR}              
+                                         |   24.955 ns 
+{vga_controller/VGAVerticalCounter/vcount_71__i1/SR   vga_controller/VGAVerticalCounter/vcount_71__i2/SR}              
+                                         |   24.955 ns 
+vga_controller/VGAVerticalCounter/vcount_71__i0/SR              
+                                         |   24.955 ns 
+vga_controller/VGAHorizontalCounter/hcount_69__i0/SR              
+                                         |   26.649 ns 
+{vga_controller/VGAHorizontalCounter/hcount_69__i5/SR   vga_controller/VGAHorizontalCounter/hcount_69__i6/SR}              
+                                         |   26.649 ns 
+{vga_controller/VGAHorizontalCounter/hcount_69__i3/SR   vga_controller/VGAHorizontalCounter/hcount_69__i4/SR}              
+                                         |   26.649 ns 
+{vga_controller/VGAHorizontalCounter/hcount_69__i1/SR   vga_controller/VGAHorizontalCounter/hcount_69__i2/SR}              
+                                         |   26.649 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -247,15 +247,15 @@ Setup # of endpoints with negative slack:|           0
              SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
 -------------------------------------------------------------------------------------------------------------------------------------------
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>create_generated_clock -name {vga_clk} </A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>-source [get_pins {pll_module/lscc_pll_</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>inst/u_PLL_B/REFERENCECLK}] -multiply_b</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>y 67 -divide_by 32 [get_pins {pll_modul</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A>   |    0.000 ns |    3.417 ns |    2   |        ---- |        ---- |       38       |        0       
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>create_clock -name {ref_clk} -period 83</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>.3333333333333 -waveform {0.000 41.666}</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1> [get_ports ref_clk]</A>                    |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>create_clock -name {ref_clk} -period 83</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>.3333333333333 -waveform {0.000 41.666}</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2> [get_ports ref_clk]</A>                    |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>create_generated_clock -name {vga_clk} </A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>-source [get_pins {pll_module/lscc_pll_</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>inst/u_PLL_B/REFERENCECLK}] -multiply_b</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>y 67 -divide_by 32 [get_pins {pll_modul</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A>   |    0.000 ns |    3.417 ns |    2   |        ---- |        ---- |       38       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 <A name="Timing_rpt_HoldCriticalEndpointSummary"></A><B><U><big>3.3.2  Hold Critical Endpoint Summary </big></U></B>
@@ -263,25 +263,25 @@ Setup # of endpoints with negative slack:|           0
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-vga_controller/VGAVerticalCounter/vcount_34__i3/D              
+vga_controller/VGAVerticalCounter/vcount_71__i9/D              
                                          |    3.417 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i7/D              
+vga_controller/VGAVerticalCounter/vcount_71__i7/D              
                                          |    3.417 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i9/D              
+vga_controller/VGAVerticalCounter/vcount_71__i8/D              
                                          |    3.417 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i8/D              
+vga_controller/VGAVerticalCounter/vcount_71__i1/D              
                                          |    3.417 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i2/D              
+vga_controller/VGAVerticalCounter/vcount_71__i5/D              
                                          |    3.417 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i0/D              
+vga_controller/VGAVerticalCounter/vcount_71__i6/D              
                                          |    3.417 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i4/D              
+vga_controller/VGAVerticalCounter/vcount_71__i4/D              
                                          |    3.417 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i5/D              
+vga_controller/VGAVerticalCounter/vcount_71__i0/D              
                                          |    3.417 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i6/D              
+vga_controller/VGAVerticalCounter/vcount_71__i3/D              
                                          |    3.417 ns 
-vga_controller/VGAVerticalCounter/vcount_34__i1/D              
+vga_controller/VGAVerticalCounter/vcount_71__i2/D              
                                          |    3.417 ns 
 -------------------------------------------------------
                                          |             
@@ -337,7 +337,18 @@ There is no instance satisfying reporting criteria
 
 <A name="Timing_rpt_DetailedReport"></A><B><U><big>4  DETAILED REPORT</big></U></B>
 <A name="Timing_rpt_SetupDetailedReport"></A><B><U><big>4.1  Setup Detailed Report</big></U></B>
-<A name="Timing_rpt_SetupDetailedConstraint_1"></A><A href=#Timing_rpt_SetupSummaryConstraint_1>4.1.1  Setup path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A>
+<A name="Timing_rpt_SetupDetailedConstraint_1"></A><A href=#Timing_rpt_SetupSummaryConstraint_1>4.1.1  Setup path details for constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]</A>
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+<A name="Timing_rpt_SetupDetailedConstraint_2"></A><A href=#Timing_rpt_SetupSummaryConstraint_2>4.1.2  Setup path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A>
 ----------------------------------------------------------------------
 38 endpoints scored, 0 timing errors detected.
 
@@ -347,15 +358,15 @@ There is no instance satisfying reporting criteria
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_34__i0/SR
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_71__i0/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 4
-Delay Ratio      : 82.1% (route), 17.9% (logic)
+Delay Ratio      : 80.9% (route), 19.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 23.999 ns  (Passed)
+Path Slack       : 24.954 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
@@ -368,9 +379,9 @@ End-of-path required time( ns )                   45.440
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           15.271
++ Data Path Delay                           14.316
 -----------------------------------------   ------
-End-of-path arrival time( ns )              21.441
+End-of-path arrival time( ns )              20.486
 
  
 Source Clock Path
@@ -386,7 +397,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
         "phy_name":"SLICE_9/CLK"
     },
     "path_sections":[
@@ -490,13 +501,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
         "phy_name":"SLICE_9/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/SR",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i0/SR",
         "phy_name":"SLICE_5/LSR"
     },
     "path_sections":[
@@ -504,12 +515,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
             "phy_name":"SLICE_9/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
             "phy_name":"SLICE_9/Q0"
         },
         "arrive":7.561,
@@ -519,86 +530,86 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[5]",
+            "phy_name":"vga_controller/xpix[5]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":10.832,
+        "delay":3.271
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C",
+            "phy_name":"SLICE_51/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z",
+            "phy_name":"SLICE_51/F1"
         },
-        "arrive":11.349,
+        "arrive":11.282,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
+            "log_name":"vga_controller/VGAHorizontalCounter/n1788",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n1788"
         },
-        "arrive":14.117,
-        "delay":2.768
+        "arrive":13.838,
+        "delay":2.556
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/C",
+            "phy_name":"SLICE_42/A1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/Z",
+            "phy_name":"SLICE_42/F1"
         },
-        "arrive":14.567,
+        "arrive":14.288,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/n554",
+            "phy_name":"vga_controller/n554"
         },
-        "arrive":17.057,
+        "arrive":16.778,
         "delay":2.490
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B",
-            "phy_name":"SLICE_57/B1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A",
+            "phy_name":"SLICE_32/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z",
-            "phy_name":"SLICE_57/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z",
+            "phy_name":"SLICE_32/F1"
         },
-        "arrive":17.507,
+        "arrive":17.228,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/n411",
-            "phy_name":"vga_controller/VGAVerticalCounter/n411"
+            "log_name":"vga_controller/n1375",
+            "phy_name":"vga_controller/n1375"
         },
-        "arrive":21.441,
-        "delay":3.934
+        "arrive":20.486,
+        "delay":3.258
     }
     ]
 }
@@ -606,18 +617,19 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        2.490        17.057  1       
-vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B->vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z
-                                          SLICE_R17C15B   B1_TO_F1_DELAY   0.450        17.507  6       
-vga_controller/VGAVerticalCounter/n411                    NET DELAY        3.934        21.441  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i5/CK   vga_controller/VGAHorizontalCounter/hcount_69__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+                                          SLICE_R16C22D   CLK_TO_Q0_DELAY  1.391         7.561  10      
+vga_controller/xpix[5]                                    NET DELAY        3.271        10.832  1       
+vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C->vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z
+                                          SLICE_R17C24D   B1_TO_F1_DELAY   0.450        11.282  2       
+vga_controller/VGAHorizontalCounter/n1788
+                                                          NET DELAY        2.556        13.838  1       
+vga_controller/VGAHorizontalCounter/i4_4_lut/C->vga_controller/VGAHorizontalCounter/i4_4_lut/Z
+                                          SLICE_R17C25A   A1_TO_F1_DELAY   0.450        14.288  7       
+vga_controller/n554                                       NET DELAY        2.490        16.778  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A->vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z
+                                          SLICE_R17C25B   B1_TO_F1_DELAY   0.450        17.228  6       
+vga_controller/n1375                                      NET DELAY        3.258        20.486  1       
 
 
 Destination Clock Path
@@ -633,7 +645,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i0/CK",
         "phy_name":"SLICE_5/CLK"
     },
     "path_sections":[
@@ -734,15 +746,15 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : {vga_controller/VGAVerticalCounter/vcount_34__i1/SR   vga_controller/VGAVerticalCounter/vcount_34__i2/SR}
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+Path End         : {vga_controller/VGAVerticalCounter/vcount_71__i1/SR   vga_controller/VGAVerticalCounter/vcount_71__i2/SR}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 4
-Delay Ratio      : 82.1% (route), 17.9% (logic)
+Delay Ratio      : 80.9% (route), 19.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 23.999 ns  (Passed)
+Path Slack       : 24.954 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
@@ -755,9 +767,9 @@ End-of-path required time( ns )                   45.440
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           15.271
++ Data Path Delay                           14.316
 -----------------------------------------   ------
-End-of-path arrival time( ns )              21.441
+End-of-path arrival time( ns )              20.486
 
  
 Source Clock Path
@@ -773,7 +785,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
         "phy_name":"SLICE_9/CLK"
     },
     "path_sections":[
@@ -877,13 +889,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
         "phy_name":"SLICE_9/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"{vga_controller/VGAVerticalCounter/vcount_34__i1/SR   vga_controller/VGAVerticalCounter/vcount_34__i2/SR}",
+        "log_name":"{vga_controller/VGAVerticalCounter/vcount_71__i1/SR   vga_controller/VGAVerticalCounter/vcount_71__i2/SR}",
         "phy_name":"SLICE_4/LSR"
     },
     "path_sections":[
@@ -891,12 +903,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
             "phy_name":"SLICE_9/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
             "phy_name":"SLICE_9/Q0"
         },
         "arrive":7.561,
@@ -906,86 +918,86 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[5]",
+            "phy_name":"vga_controller/xpix[5]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":10.832,
+        "delay":3.271
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C",
+            "phy_name":"SLICE_51/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z",
+            "phy_name":"SLICE_51/F1"
         },
-        "arrive":11.349,
+        "arrive":11.282,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
+            "log_name":"vga_controller/VGAHorizontalCounter/n1788",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n1788"
         },
-        "arrive":14.117,
-        "delay":2.768
+        "arrive":13.838,
+        "delay":2.556
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/C",
+            "phy_name":"SLICE_42/A1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/Z",
+            "phy_name":"SLICE_42/F1"
         },
-        "arrive":14.567,
+        "arrive":14.288,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/n554",
+            "phy_name":"vga_controller/n554"
         },
-        "arrive":17.057,
+        "arrive":16.778,
         "delay":2.490
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B",
-            "phy_name":"SLICE_57/B1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A",
+            "phy_name":"SLICE_32/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z",
-            "phy_name":"SLICE_57/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z",
+            "phy_name":"SLICE_32/F1"
         },
-        "arrive":17.507,
+        "arrive":17.228,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/n411",
-            "phy_name":"vga_controller/VGAVerticalCounter/n411"
+            "log_name":"vga_controller/n1375",
+            "phy_name":"vga_controller/n1375"
         },
-        "arrive":21.441,
-        "delay":3.934
+        "arrive":20.486,
+        "delay":3.258
     }
     ]
 }
@@ -993,18 +1005,19 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        2.490        17.057  1       
-vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B->vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z
-                                          SLICE_R17C15B   B1_TO_F1_DELAY   0.450        17.507  6       
-vga_controller/VGAVerticalCounter/n411                    NET DELAY        3.934        21.441  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i5/CK   vga_controller/VGAHorizontalCounter/hcount_69__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+                                          SLICE_R16C22D   CLK_TO_Q0_DELAY  1.391         7.561  10      
+vga_controller/xpix[5]                                    NET DELAY        3.271        10.832  1       
+vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C->vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z
+                                          SLICE_R17C24D   B1_TO_F1_DELAY   0.450        11.282  2       
+vga_controller/VGAHorizontalCounter/n1788
+                                                          NET DELAY        2.556        13.838  1       
+vga_controller/VGAHorizontalCounter/i4_4_lut/C->vga_controller/VGAHorizontalCounter/i4_4_lut/Z
+                                          SLICE_R17C25A   A1_TO_F1_DELAY   0.450        14.288  7       
+vga_controller/n554                                       NET DELAY        2.490        16.778  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A->vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z
+                                          SLICE_R17C25B   B1_TO_F1_DELAY   0.450        17.228  6       
+vga_controller/n1375                                      NET DELAY        3.258        20.486  1       
 
 
 Destination Clock Path
@@ -1020,7 +1033,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i1/CK",
         "phy_name":"SLICE_4/CLK"
     },
     "path_sections":[
@@ -1121,15 +1134,15 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : {vga_controller/VGAVerticalCounter/vcount_34__i3/SR   vga_controller/VGAVerticalCounter/vcount_34__i4/SR}
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+Path End         : {vga_controller/VGAVerticalCounter/vcount_71__i3/SR   vga_controller/VGAVerticalCounter/vcount_71__i4/SR}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 4
-Delay Ratio      : 82.1% (route), 17.9% (logic)
+Delay Ratio      : 80.9% (route), 19.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 23.999 ns  (Passed)
+Path Slack       : 24.954 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
@@ -1142,9 +1155,9 @@ End-of-path required time( ns )                   45.440
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           15.271
++ Data Path Delay                           14.316
 -----------------------------------------   ------
-End-of-path arrival time( ns )              21.441
+End-of-path arrival time( ns )              20.486
 
  
 Source Clock Path
@@ -1160,7 +1173,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
         "phy_name":"SLICE_9/CLK"
     },
     "path_sections":[
@@ -1264,13 +1277,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
         "phy_name":"SLICE_9/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"{vga_controller/VGAVerticalCounter/vcount_34__i3/SR   vga_controller/VGAVerticalCounter/vcount_34__i4/SR}",
+        "log_name":"{vga_controller/VGAVerticalCounter/vcount_71__i3/SR   vga_controller/VGAVerticalCounter/vcount_71__i4/SR}",
         "phy_name":"SLICE_3/LSR"
     },
     "path_sections":[
@@ -1278,12 +1291,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
             "phy_name":"SLICE_9/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
             "phy_name":"SLICE_9/Q0"
         },
         "arrive":7.561,
@@ -1293,86 +1306,86 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[5]",
+            "phy_name":"vga_controller/xpix[5]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":10.832,
+        "delay":3.271
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C",
+            "phy_name":"SLICE_51/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z",
+            "phy_name":"SLICE_51/F1"
         },
-        "arrive":11.349,
+        "arrive":11.282,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
+            "log_name":"vga_controller/VGAHorizontalCounter/n1788",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n1788"
         },
-        "arrive":14.117,
-        "delay":2.768
+        "arrive":13.838,
+        "delay":2.556
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/C",
+            "phy_name":"SLICE_42/A1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/Z",
+            "phy_name":"SLICE_42/F1"
         },
-        "arrive":14.567,
+        "arrive":14.288,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/n554",
+            "phy_name":"vga_controller/n554"
         },
-        "arrive":17.057,
+        "arrive":16.778,
         "delay":2.490
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B",
-            "phy_name":"SLICE_57/B1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A",
+            "phy_name":"SLICE_32/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z",
-            "phy_name":"SLICE_57/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z",
+            "phy_name":"SLICE_32/F1"
         },
-        "arrive":17.507,
+        "arrive":17.228,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/n411",
-            "phy_name":"vga_controller/VGAVerticalCounter/n411"
+            "log_name":"vga_controller/n1375",
+            "phy_name":"vga_controller/n1375"
         },
-        "arrive":21.441,
-        "delay":3.934
+        "arrive":20.486,
+        "delay":3.258
     }
     ]
 }
@@ -1380,18 +1393,19 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        2.490        17.057  1       
-vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B->vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z
-                                          SLICE_R17C15B   B1_TO_F1_DELAY   0.450        17.507  6       
-vga_controller/VGAVerticalCounter/n411                    NET DELAY        3.934        21.441  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i5/CK   vga_controller/VGAHorizontalCounter/hcount_69__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+                                          SLICE_R16C22D   CLK_TO_Q0_DELAY  1.391         7.561  10      
+vga_controller/xpix[5]                                    NET DELAY        3.271        10.832  1       
+vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C->vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z
+                                          SLICE_R17C24D   B1_TO_F1_DELAY   0.450        11.282  2       
+vga_controller/VGAHorizontalCounter/n1788
+                                                          NET DELAY        2.556        13.838  1       
+vga_controller/VGAHorizontalCounter/i4_4_lut/C->vga_controller/VGAHorizontalCounter/i4_4_lut/Z
+                                          SLICE_R17C25A   A1_TO_F1_DELAY   0.450        14.288  7       
+vga_controller/n554                                       NET DELAY        2.490        16.778  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A->vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z
+                                          SLICE_R17C25B   B1_TO_F1_DELAY   0.450        17.228  6       
+vga_controller/n1375                                      NET DELAY        3.258        20.486  1       
 
 
 Destination Clock Path
@@ -1407,7 +1421,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i3/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i3/CK",
         "phy_name":"SLICE_3/CLK"
     },
     "path_sections":[
@@ -1508,15 +1522,15 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : {vga_controller/VGAVerticalCounter/vcount_34__i5/SR   vga_controller/VGAVerticalCounter/vcount_34__i6/SR}
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+Path End         : {vga_controller/VGAVerticalCounter/vcount_71__i5/SR   vga_controller/VGAVerticalCounter/vcount_71__i6/SR}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 4
-Delay Ratio      : 82.1% (route), 17.9% (logic)
+Delay Ratio      : 80.9% (route), 19.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 23.999 ns  (Passed)
+Path Slack       : 24.954 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
@@ -1529,9 +1543,9 @@ End-of-path required time( ns )                   45.440
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           15.271
++ Data Path Delay                           14.316
 -----------------------------------------   ------
-End-of-path arrival time( ns )              21.441
+End-of-path arrival time( ns )              20.486
 
  
 Source Clock Path
@@ -1547,7 +1561,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
         "phy_name":"SLICE_9/CLK"
     },
     "path_sections":[
@@ -1651,13 +1665,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
         "phy_name":"SLICE_9/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"{vga_controller/VGAVerticalCounter/vcount_34__i5/SR   vga_controller/VGAVerticalCounter/vcount_34__i6/SR}",
+        "log_name":"{vga_controller/VGAVerticalCounter/vcount_71__i5/SR   vga_controller/VGAVerticalCounter/vcount_71__i6/SR}",
         "phy_name":"SLICE_2/LSR"
     },
     "path_sections":[
@@ -1665,12 +1679,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
             "phy_name":"SLICE_9/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
             "phy_name":"SLICE_9/Q0"
         },
         "arrive":7.561,
@@ -1680,86 +1694,86 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[5]",
+            "phy_name":"vga_controller/xpix[5]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":10.832,
+        "delay":3.271
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C",
+            "phy_name":"SLICE_51/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z",
+            "phy_name":"SLICE_51/F1"
         },
-        "arrive":11.349,
+        "arrive":11.282,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
+            "log_name":"vga_controller/VGAHorizontalCounter/n1788",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n1788"
         },
-        "arrive":14.117,
-        "delay":2.768
+        "arrive":13.838,
+        "delay":2.556
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/C",
+            "phy_name":"SLICE_42/A1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/Z",
+            "phy_name":"SLICE_42/F1"
         },
-        "arrive":14.567,
+        "arrive":14.288,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/n554",
+            "phy_name":"vga_controller/n554"
         },
-        "arrive":17.057,
+        "arrive":16.778,
         "delay":2.490
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B",
-            "phy_name":"SLICE_57/B1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A",
+            "phy_name":"SLICE_32/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z",
-            "phy_name":"SLICE_57/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z",
+            "phy_name":"SLICE_32/F1"
         },
-        "arrive":17.507,
+        "arrive":17.228,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/n411",
-            "phy_name":"vga_controller/VGAVerticalCounter/n411"
+            "log_name":"vga_controller/n1375",
+            "phy_name":"vga_controller/n1375"
         },
-        "arrive":21.441,
-        "delay":3.934
+        "arrive":20.486,
+        "delay":3.258
     }
     ]
 }
@@ -1767,18 +1781,19 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        2.490        17.057  1       
-vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B->vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z
-                                          SLICE_R17C15B   B1_TO_F1_DELAY   0.450        17.507  6       
-vga_controller/VGAVerticalCounter/n411                    NET DELAY        3.934        21.441  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i5/CK   vga_controller/VGAHorizontalCounter/hcount_69__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+                                          SLICE_R16C22D   CLK_TO_Q0_DELAY  1.391         7.561  10      
+vga_controller/xpix[5]                                    NET DELAY        3.271        10.832  1       
+vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C->vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z
+                                          SLICE_R17C24D   B1_TO_F1_DELAY   0.450        11.282  2       
+vga_controller/VGAHorizontalCounter/n1788
+                                                          NET DELAY        2.556        13.838  1       
+vga_controller/VGAHorizontalCounter/i4_4_lut/C->vga_controller/VGAHorizontalCounter/i4_4_lut/Z
+                                          SLICE_R17C25A   A1_TO_F1_DELAY   0.450        14.288  7       
+vga_controller/n554                                       NET DELAY        2.490        16.778  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A->vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z
+                                          SLICE_R17C25B   B1_TO_F1_DELAY   0.450        17.228  6       
+vga_controller/n1375                                      NET DELAY        3.258        20.486  1       
 
 
 Destination Clock Path
@@ -1794,7 +1809,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i5/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i5/CK",
         "phy_name":"SLICE_2/CLK"
     },
     "path_sections":[
@@ -1895,15 +1910,15 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : {vga_controller/VGAVerticalCounter/vcount_34__i7/SR   vga_controller/VGAVerticalCounter/vcount_34__i8/SR}
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+Path End         : {vga_controller/VGAVerticalCounter/vcount_71__i7/SR   vga_controller/VGAVerticalCounter/vcount_71__i8/SR}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 4
-Delay Ratio      : 81.3% (route), 18.7% (logic)
+Delay Ratio      : 80.9% (route), 19.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 24.595 ns  (Passed)
+Path Slack       : 24.954 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
@@ -1916,9 +1931,9 @@ End-of-path required time( ns )                   45.440
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           14.675
++ Data Path Delay                           14.316
 -----------------------------------------   ------
-End-of-path arrival time( ns )              20.845
+End-of-path arrival time( ns )              20.486
 
  
 Source Clock Path
@@ -1934,7 +1949,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
         "phy_name":"SLICE_9/CLK"
     },
     "path_sections":[
@@ -2038,13 +2053,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
         "phy_name":"SLICE_9/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"{vga_controller/VGAVerticalCounter/vcount_34__i7/SR   vga_controller/VGAVerticalCounter/vcount_34__i8/SR}",
+        "log_name":"{vga_controller/VGAVerticalCounter/vcount_71__i7/SR   vga_controller/VGAVerticalCounter/vcount_71__i8/SR}",
         "phy_name":"SLICE_1/LSR"
     },
     "path_sections":[
@@ -2052,12 +2067,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
             "phy_name":"SLICE_9/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
             "phy_name":"SLICE_9/Q0"
         },
         "arrive":7.561,
@@ -2067,86 +2082,86 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[5]",
+            "phy_name":"vga_controller/xpix[5]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":10.832,
+        "delay":3.271
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C",
+            "phy_name":"SLICE_51/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z",
+            "phy_name":"SLICE_51/F1"
         },
-        "arrive":11.349,
+        "arrive":11.282,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
+            "log_name":"vga_controller/VGAHorizontalCounter/n1788",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n1788"
         },
-        "arrive":14.117,
-        "delay":2.768
+        "arrive":13.838,
+        "delay":2.556
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/C",
+            "phy_name":"SLICE_42/A1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/Z",
+            "phy_name":"SLICE_42/F1"
         },
-        "arrive":14.567,
+        "arrive":14.288,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/n554",
+            "phy_name":"vga_controller/n554"
         },
-        "arrive":17.057,
+        "arrive":16.778,
         "delay":2.490
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B",
-            "phy_name":"SLICE_57/B1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A",
+            "phy_name":"SLICE_32/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z",
-            "phy_name":"SLICE_57/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z",
+            "phy_name":"SLICE_32/F1"
         },
-        "arrive":17.507,
+        "arrive":17.228,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/n411",
-            "phy_name":"vga_controller/VGAVerticalCounter/n411"
+            "log_name":"vga_controller/n1375",
+            "phy_name":"vga_controller/n1375"
         },
-        "arrive":20.845,
-        "delay":3.338
+        "arrive":20.486,
+        "delay":3.258
     }
     ]
 }
@@ -2154,18 +2169,19 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        2.490        17.057  1       
-vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B->vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z
-                                          SLICE_R17C15B   B1_TO_F1_DELAY   0.450        17.507  6       
-vga_controller/VGAVerticalCounter/n411                    NET DELAY        3.338        20.845  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i5/CK   vga_controller/VGAHorizontalCounter/hcount_69__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+                                          SLICE_R16C22D   CLK_TO_Q0_DELAY  1.391         7.561  10      
+vga_controller/xpix[5]                                    NET DELAY        3.271        10.832  1       
+vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C->vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z
+                                          SLICE_R17C24D   B1_TO_F1_DELAY   0.450        11.282  2       
+vga_controller/VGAHorizontalCounter/n1788
+                                                          NET DELAY        2.556        13.838  1       
+vga_controller/VGAHorizontalCounter/i4_4_lut/C->vga_controller/VGAHorizontalCounter/i4_4_lut/Z
+                                          SLICE_R17C25A   A1_TO_F1_DELAY   0.450        14.288  7       
+vga_controller/n554                                       NET DELAY        2.490        16.778  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A->vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z
+                                          SLICE_R17C25B   B1_TO_F1_DELAY   0.450        17.228  6       
+vga_controller/n1375                                      NET DELAY        3.258        20.486  1       
 
 
 Destination Clock Path
@@ -2181,7 +2197,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i7/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i7/CK",
         "phy_name":"SLICE_1/CLK"
     },
     "path_sections":[
@@ -2282,15 +2298,15 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_34__i9/SR
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_71__i9/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 4
-Delay Ratio      : 81.3% (route), 18.7% (logic)
+Delay Ratio      : 80.9% (route), 19.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 24.595 ns  (Passed)
+Path Slack       : 24.954 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
@@ -2303,9 +2319,9 @@ End-of-path required time( ns )                   45.440
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           14.675
++ Data Path Delay                           14.316
 -----------------------------------------   ------
-End-of-path arrival time( ns )              20.845
+End-of-path arrival time( ns )              20.486
 
  
 Source Clock Path
@@ -2321,7 +2337,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
         "phy_name":"SLICE_9/CLK"
     },
     "path_sections":[
@@ -2425,13 +2441,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
         "phy_name":"SLICE_9/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i9/SR",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i9/SR",
         "phy_name":"SLICE_0/LSR"
     },
     "path_sections":[
@@ -2439,12 +2455,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
             "phy_name":"SLICE_9/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/Q",
             "phy_name":"SLICE_9/Q0"
         },
         "arrive":7.561,
@@ -2454,86 +2470,86 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[5]",
+            "phy_name":"vga_controller/xpix[5]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":10.832,
+        "delay":3.271
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C",
+            "phy_name":"SLICE_51/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z",
+            "phy_name":"SLICE_51/F1"
         },
-        "arrive":11.349,
+        "arrive":11.282,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
+            "log_name":"vga_controller/VGAHorizontalCounter/n1788",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n1788"
         },
-        "arrive":14.117,
-        "delay":2.768
+        "arrive":13.838,
+        "delay":2.556
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/C",
+            "phy_name":"SLICE_42/A1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i4_4_lut/Z",
+            "phy_name":"SLICE_42/F1"
         },
-        "arrive":14.567,
+        "arrive":14.288,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/n554",
+            "phy_name":"vga_controller/n554"
         },
-        "arrive":17.057,
+        "arrive":16.778,
         "delay":2.490
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B",
-            "phy_name":"SLICE_57/B1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A",
+            "phy_name":"SLICE_32/B1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z",
-            "phy_name":"SLICE_57/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z",
+            "phy_name":"SLICE_32/F1"
         },
-        "arrive":17.507,
+        "arrive":17.228,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/n411",
-            "phy_name":"vga_controller/VGAVerticalCounter/n411"
+            "log_name":"vga_controller/n1375",
+            "phy_name":"vga_controller/n1375"
         },
-        "arrive":20.845,
-        "delay":3.338
+        "arrive":20.486,
+        "delay":3.258
     }
     ]
 }
@@ -2541,18 +2557,19 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        2.490        17.057  1       
-vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/B->vga_controller/VGAVerticalCounter/i2_4_lut_adj_36/Z
-                                          SLICE_R17C15B   B1_TO_F1_DELAY   0.450        17.507  6       
-vga_controller/VGAVerticalCounter/n411                    NET DELAY        3.338        20.845  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i5/CK   vga_controller/VGAHorizontalCounter/hcount_69__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i5/Q
+                                          SLICE_R16C22D   CLK_TO_Q0_DELAY  1.391         7.561  10      
+vga_controller/xpix[5]                                    NET DELAY        3.271        10.832  1       
+vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/C->vga_controller/VGAHorizontalCounter/i2_3_lut_adj_62/Z
+                                          SLICE_R17C24D   B1_TO_F1_DELAY   0.450        11.282  2       
+vga_controller/VGAHorizontalCounter/n1788
+                                                          NET DELAY        2.556        13.838  1       
+vga_controller/VGAHorizontalCounter/i4_4_lut/C->vga_controller/VGAHorizontalCounter/i4_4_lut/Z
+                                          SLICE_R17C25A   A1_TO_F1_DELAY   0.450        14.288  7       
+vga_controller/n554                                       NET DELAY        2.490        16.778  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/A->vga_controller/VGAHorizontalCounter/i2_4_lut_adj_59/Z
+                                          SLICE_R17C25B   B1_TO_F1_DELAY   0.450        17.228  6       
+vga_controller/n1375                                      NET DELAY        3.258        20.486  1       
 
 
 Destination Clock Path
@@ -2568,7 +2585,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i9/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i9/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -2669,30 +2686,30 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : {vga_controller/VGAVerticalCounter/vcount_34__i7/SP   vga_controller/VGAVerticalCounter/vcount_34__i8/SP}
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+Path End         : {vga_controller/VGAHorizontalCounter/hcount_69__i1/SR   vga_controller/VGAHorizontalCounter/hcount_69__i2/SR}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 3
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 81.8% (route), 18.2% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 27.800 ns  (Passed)
+Path Slack       : 26.648 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
 - Destination Clock Uncertainty                    0.000
 + Destination Clock Path Delay                     6.170
-- Setup Time                                       0.199
+- Setup Time                                       0.530
 ----------------------------------------------   -------
-End-of-path required time( ns )                   45.771
+End-of-path required time( ns )                   45.440
 
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           11.801
++ Data Path Delay                           12.622
 -----------------------------------------   ------
-End-of-path arrival time( ns )              17.971
+End-of-path arrival time( ns )              18.792
 
  
 Source Clock Path
@@ -2708,8 +2725,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
-        "phy_name":"SLICE_9/CLK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
+        "phy_name":"SLICE_10/CLK"
     },
     "path_sections":[
     {
@@ -2812,27 +2829,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
-        "phy_name":"SLICE_9/Q0"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
+        "phy_name":"SLICE_10/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"{vga_controller/VGAVerticalCounter/vcount_34__i7/SP   vga_controller/VGAVerticalCounter/vcount_34__i8/SP}",
-        "phy_name":"SLICE_1/CE"
+        "log_name":"{vga_controller/VGAHorizontalCounter/hcount_69__i1/SR   vga_controller/VGAHorizontalCounter/hcount_69__i2/SR}",
+        "phy_name":"SLICE_11/LSR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
-            "phy_name":"SLICE_9/CLK"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/CK",
+            "phy_name":"SLICE_10/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
-            "phy_name":"SLICE_9/Q0"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
+            "phy_name":"SLICE_10/Q1"
         },
         "arrive":7.561,
         "delay":1.391
@@ -2841,61 +2858,61 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[4]",
+            "phy_name":"vga_controller/xpix[4]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":11.627,
+        "delay":4.066
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/B",
+            "phy_name":"SLICE_44/D1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/Z",
+            "phy_name":"SLICE_44/F1"
         },
-        "arrive":11.349,
+        "arrive":12.077,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
-        },
-        "arrive":14.117,
-        "delay":2.768
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
-        },
-        "pin1":
-        {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/n198",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n198"
         },
         "arrive":14.567,
+        "delay":2.490
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut/B",
+            "phy_name":"SLICE_40/B1"
+        },
+        "pin1":
+        {
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut/Z",
+            "phy_name":"SLICE_40/F1"
+        },
+        "arrive":15.017,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/VGAHorizontalCounter/n582",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n582"
         },
-        "arrive":17.971,
-        "delay":3.404
+        "arrive":18.792,
+        "delay":3.775
     }
     ]
 }
@@ -2903,15 +2920,15 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        3.404        17.971  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i3/CK   vga_controller/VGAHorizontalCounter/hcount_69__i4/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+                                          SLICE_R16C22C   CLK_TO_Q1_DELAY  1.391         7.561  9       
+vga_controller/xpix[4]                                    NET DELAY        4.066        11.627  1       
+vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/B->vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/Z
+                                          SLICE_R17C23A   D1_TO_F1_DELAY   0.450        12.077  1       
+vga_controller/VGAHorizontalCounter/n198                  NET DELAY        2.490        14.567  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut/B->vga_controller/VGAHorizontalCounter/i2_4_lut/Z
+                                          SLICE_R17C23B   B1_TO_F1_DELAY   0.450        15.017  6       
+vga_controller/VGAHorizontalCounter/n582                  NET DELAY        3.775        18.792  1       
 
 
 Destination Clock Path
@@ -2927,8 +2944,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i7/CK",
-        "phy_name":"SLICE_1/CLK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i1/CK",
+        "phy_name":"SLICE_11/CLK"
     },
     "path_sections":[
     {
@@ -3028,30 +3045,30 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_34__i9/SP
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+Path End         : {vga_controller/VGAHorizontalCounter/hcount_69__i3/SR   vga_controller/VGAHorizontalCounter/hcount_69__i4/SR}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 3
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 81.8% (route), 18.2% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 27.800 ns  (Passed)
+Path Slack       : 26.648 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
 - Destination Clock Uncertainty                    0.000
 + Destination Clock Path Delay                     6.170
-- Setup Time                                       0.199
+- Setup Time                                       0.530
 ----------------------------------------------   -------
-End-of-path required time( ns )                   45.771
+End-of-path required time( ns )                   45.440
 
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           11.801
++ Data Path Delay                           12.622
 -----------------------------------------   ------
-End-of-path arrival time( ns )              17.971
+End-of-path arrival time( ns )              18.792
 
  
 Source Clock Path
@@ -3067,8 +3084,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
-        "phy_name":"SLICE_9/CLK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
+        "phy_name":"SLICE_10/CLK"
     },
     "path_sections":[
     {
@@ -3171,27 +3188,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
-        "phy_name":"SLICE_9/Q0"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
+        "phy_name":"SLICE_10/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i9/SP",
-        "phy_name":"SLICE_0/CE"
+        "log_name":"{vga_controller/VGAHorizontalCounter/hcount_69__i3/SR   vga_controller/VGAHorizontalCounter/hcount_69__i4/SR}",
+        "phy_name":"SLICE_10/LSR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
-            "phy_name":"SLICE_9/CLK"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/CK",
+            "phy_name":"SLICE_10/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
-            "phy_name":"SLICE_9/Q0"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
+            "phy_name":"SLICE_10/Q1"
         },
         "arrive":7.561,
         "delay":1.391
@@ -3200,61 +3217,61 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[4]",
+            "phy_name":"vga_controller/xpix[4]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":11.627,
+        "delay":4.066
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/B",
+            "phy_name":"SLICE_44/D1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/Z",
+            "phy_name":"SLICE_44/F1"
         },
-        "arrive":11.349,
+        "arrive":12.077,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
-        },
-        "arrive":14.117,
-        "delay":2.768
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
-        },
-        "pin1":
-        {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/n198",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n198"
         },
         "arrive":14.567,
+        "delay":2.490
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut/B",
+            "phy_name":"SLICE_40/B1"
+        },
+        "pin1":
+        {
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut/Z",
+            "phy_name":"SLICE_40/F1"
+        },
+        "arrive":15.017,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/VGAHorizontalCounter/n582",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n582"
         },
-        "arrive":17.971,
-        "delay":3.404
+        "arrive":18.792,
+        "delay":3.775
     }
     ]
 }
@@ -3262,15 +3279,15 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        3.404        17.971  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i3/CK   vga_controller/VGAHorizontalCounter/hcount_69__i4/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+                                          SLICE_R16C22C   CLK_TO_Q1_DELAY  1.391         7.561  9       
+vga_controller/xpix[4]                                    NET DELAY        4.066        11.627  1       
+vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/B->vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/Z
+                                          SLICE_R17C23A   D1_TO_F1_DELAY   0.450        12.077  1       
+vga_controller/VGAHorizontalCounter/n198                  NET DELAY        2.490        14.567  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut/B->vga_controller/VGAHorizontalCounter/i2_4_lut/Z
+                                          SLICE_R17C23B   B1_TO_F1_DELAY   0.450        15.017  6       
+vga_controller/VGAHorizontalCounter/n582                  NET DELAY        3.775        18.792  1       
 
 
 Destination Clock Path
@@ -3286,8 +3303,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i9/CK",
-        "phy_name":"SLICE_0/CLK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
+        "phy_name":"SLICE_10/CLK"
     },
     "path_sections":[
     {
@@ -3387,30 +3404,30 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_34__i0/SP
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+Path End         : {vga_controller/VGAHorizontalCounter/hcount_69__i5/SR   vga_controller/VGAHorizontalCounter/hcount_69__i6/SR}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 3
-Delay Ratio      : 79.6% (route), 20.4% (logic)
+Delay Ratio      : 81.8% (route), 18.2% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 28.396 ns  (Passed)
+Path Slack       : 26.648 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
 - Destination Clock Uncertainty                    0.000
 + Destination Clock Path Delay                     6.170
-- Setup Time                                       0.199
+- Setup Time                                       0.530
 ----------------------------------------------   -------
-End-of-path required time( ns )                   45.771
+End-of-path required time( ns )                   45.440
 
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           11.205
++ Data Path Delay                           12.622
 -----------------------------------------   ------
-End-of-path arrival time( ns )              17.375
+End-of-path arrival time( ns )              18.792
 
  
 Source Clock Path
@@ -3426,8 +3443,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
-        "phy_name":"SLICE_9/CLK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
+        "phy_name":"SLICE_10/CLK"
     },
     "path_sections":[
     {
@@ -3530,27 +3547,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
-        "phy_name":"SLICE_9/Q0"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
+        "phy_name":"SLICE_10/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/SP",
-        "phy_name":"SLICE_5/CE"
+        "log_name":"{vga_controller/VGAHorizontalCounter/hcount_69__i5/SR   vga_controller/VGAHorizontalCounter/hcount_69__i6/SR}",
+        "phy_name":"SLICE_9/LSR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
-            "phy_name":"SLICE_9/CLK"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/CK",
+            "phy_name":"SLICE_10/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
-            "phy_name":"SLICE_9/Q0"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
+            "phy_name":"SLICE_10/Q1"
         },
         "arrive":7.561,
         "delay":1.391
@@ -3559,61 +3576,61 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[4]",
+            "phy_name":"vga_controller/xpix[4]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":11.627,
+        "delay":4.066
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/B",
+            "phy_name":"SLICE_44/D1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/Z",
+            "phy_name":"SLICE_44/F1"
         },
-        "arrive":11.349,
+        "arrive":12.077,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
-        },
-        "arrive":14.117,
-        "delay":2.768
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
-        },
-        "pin1":
-        {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/n198",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n198"
         },
         "arrive":14.567,
+        "delay":2.490
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut/B",
+            "phy_name":"SLICE_40/B1"
+        },
+        "pin1":
+        {
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut/Z",
+            "phy_name":"SLICE_40/F1"
+        },
+        "arrive":15.017,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/VGAHorizontalCounter/n582",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n582"
         },
-        "arrive":17.375,
-        "delay":2.808
+        "arrive":18.792,
+        "delay":3.775
     }
     ]
 }
@@ -3621,15 +3638,15 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        2.808        17.375  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i3/CK   vga_controller/VGAHorizontalCounter/hcount_69__i4/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+                                          SLICE_R16C22C   CLK_TO_Q1_DELAY  1.391         7.561  9       
+vga_controller/xpix[4]                                    NET DELAY        4.066        11.627  1       
+vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/B->vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/Z
+                                          SLICE_R17C23A   D1_TO_F1_DELAY   0.450        12.077  1       
+vga_controller/VGAHorizontalCounter/n198                  NET DELAY        2.490        14.567  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut/B->vga_controller/VGAHorizontalCounter/i2_4_lut/Z
+                                          SLICE_R17C23B   B1_TO_F1_DELAY   0.450        15.017  6       
+vga_controller/VGAHorizontalCounter/n582                  NET DELAY        3.775        18.792  1       
 
 
 Destination Clock Path
@@ -3645,8 +3662,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/CK",
-        "phy_name":"SLICE_5/CLK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i5/CK",
+        "phy_name":"SLICE_9/CLK"
     },
     "path_sections":[
     {
@@ -3746,30 +3763,30 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-Path End         : {vga_controller/VGAVerticalCounter/vcount_34__i1/SP   vga_controller/VGAVerticalCounter/vcount_34__i2/SP}
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_69__i0/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 3
-Delay Ratio      : 79.6% (route), 20.4% (logic)
+Delay Ratio      : 81.8% (route), 18.2% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 28.396 ns  (Passed)
+Path Slack       : 26.648 ns  (Passed)
 
   Destination Clock Arrival Time (vga_clk:R#2)    39.800
 + Master Clock Source Latency                      0.000
 - Destination Clock Uncertainty                    0.000
 + Destination Clock Path Delay                     6.170
-- Setup Time                                       0.199
+- Setup Time                                       0.530
 ----------------------------------------------   -------
-End-of-path required time( ns )                   45.771
+End-of-path required time( ns )                   45.440
 
   Source Clock Arrival Time (vga_clk:R#1)    0.000
 + Master Clock Source Latency                0.000
 + Source Clock Path Delay                    6.170
-+ Data Path Delay                           11.205
++ Data Path Delay                           12.622
 -----------------------------------------   ------
-End-of-path arrival time( ns )              17.375
+End-of-path arrival time( ns )              18.792
 
  
 Source Clock Path
@@ -3785,8 +3802,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
-        "phy_name":"SLICE_9/CLK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
+        "phy_name":"SLICE_10/CLK"
     },
     "path_sections":[
     {
@@ -3889,27 +3906,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
-        "phy_name":"SLICE_9/Q0"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
+        "phy_name":"SLICE_10/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"{vga_controller/VGAVerticalCounter/vcount_34__i1/SP   vga_controller/VGAVerticalCounter/vcount_34__i2/SP}",
-        "phy_name":"SLICE_4/CE"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i0/SR",
+        "phy_name":"SLICE_6/LSR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/CK",
-            "phy_name":"SLICE_9/CLK"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/CK",
+            "phy_name":"SLICE_10/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i5/Q",
-            "phy_name":"SLICE_9/Q0"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
+            "phy_name":"SLICE_10/Q1"
         },
         "arrive":7.561,
         "delay":1.391
@@ -3918,61 +3935,61 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[5]",
-            "phy_name":"xpix[5]"
+            "log_name":"vga_controller/xpix[4]",
+            "phy_name":"vga_controller/xpix[4]"
         },
-        "arrive":10.899,
-        "delay":3.338
+        "arrive":11.627,
+        "delay":4.066
     },
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/i1_3_lut/A",
-            "phy_name":"SLICE_38/A0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/B",
+            "phy_name":"SLICE_44/D1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/i1_3_lut/Z",
-            "phy_name":"SLICE_38/F0"
+            "log_name":"vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/Z",
+            "phy_name":"SLICE_44/F1"
         },
-        "arrive":11.349,
+        "arrive":12.077,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n321",
-            "phy_name":"vga_controller/n321"
-        },
-        "arrive":14.117,
-        "delay":2.768
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/B",
-            "phy_name":"SLICE_34/D1"
-        },
-        "pin1":
-        {
-            "log_name":"vga_controller/VGAHorizontalCounter/i1382_4_lut/Z",
-            "phy_name":"SLICE_34/F1"
+            "log_name":"vga_controller/VGAHorizontalCounter/n198",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n198"
         },
         "arrive":14.567,
+        "delay":2.490
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut/B",
+            "phy_name":"SLICE_40/B1"
+        },
+        "pin1":
+        {
+            "log_name":"vga_controller/VGAHorizontalCounter/i2_4_lut/Z",
+            "phy_name":"SLICE_40/F1"
+        },
+        "arrive":15.017,
         "delay":0.450
     },
     {
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/n386",
-            "phy_name":"vga_controller/n386"
+            "log_name":"vga_controller/VGAHorizontalCounter/n582",
+            "phy_name":"vga_controller/VGAHorizontalCounter/n582"
         },
-        "arrive":17.375,
-        "delay":2.808
+        "arrive":18.792,
+        "delay":3.775
     }
     ]
 }
@@ -3980,15 +3997,15 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i5/CK   vga_controller/VGAHorizontalCounter/hcount_32__i6/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i5/Q
-                                          SLICE_R16C14D   CLK_TO_Q0_DELAY  1.391         7.561  10      
-xpix[5]                                                   NET DELAY        3.338        10.899  1       
-vga_controller/i1_3_lut/A->vga_controller/i1_3_lut/Z
-                                          SLICE_R17C12C   A0_TO_F0_DELAY   0.450        11.349  4       
-vga_controller/n321                                       NET DELAY        2.768        14.117  1       
-vga_controller/VGAHorizontalCounter/i1382_4_lut/B->vga_controller/VGAHorizontalCounter/i1382_4_lut/Z
-                                          SLICE_R17C15A   D1_TO_F1_DELAY   0.450        14.567  7       
-vga_controller/n386                                       NET DELAY        2.808        17.375  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i3/CK   vga_controller/VGAHorizontalCounter/hcount_69__i4/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+                                          SLICE_R16C22C   CLK_TO_Q1_DELAY  1.391         7.561  9       
+vga_controller/xpix[4]                                    NET DELAY        4.066        11.627  1       
+vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/B->vga_controller/VGAHorizontalCounter/i1_2_lut_3_lut/Z
+                                          SLICE_R17C23A   D1_TO_F1_DELAY   0.450        12.077  1       
+vga_controller/VGAHorizontalCounter/n198                  NET DELAY        2.490        14.567  1       
+vga_controller/VGAHorizontalCounter/i2_4_lut/B->vga_controller/VGAHorizontalCounter/i2_4_lut/Z
+                                          SLICE_R17C23B   B1_TO_F1_DELAY   0.450        15.017  6       
+vga_controller/VGAHorizontalCounter/n582                  NET DELAY        3.775        18.792  1       
 
 
 Destination Clock Path
@@ -4004,8 +4021,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/CK",
-        "phy_name":"SLICE_4/CLK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i0/CK",
+        "phy_name":"SLICE_6/CLK"
     },
     "path_sections":[
     {
@@ -4106,7 +4123,8 @@ vga_clk                                                   NET DELAY             
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-<A name="Timing_rpt_SetupDetailedConstraint_2"></A><A href=#Timing_rpt_SetupSummaryConstraint_2>4.1.2  Setup path details for constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]</A>
+<A name="Timing_rpt_HoldDetailedReport"></A><B><U><big>4.2  Hold Detailed Report</big></U></B>
+<A name="Timing_rpt_HoldDetailedConstraint_1"></A><A href=#Timing_rpt_HoldSummaryConstraint_1>4.2.1  Hold path details for constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]</A>
 ----------------------------------------------------------------------
 0 endpoints scored, 0 timing errors detected.
 
@@ -4117,8 +4135,7 @@ vga_clk                                                   NET DELAY             
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-<A name="Timing_rpt_HoldDetailedReport"></A><B><U><big>4.2  Hold Detailed Report</big></U></B>
-<A name="Timing_rpt_HoldDetailedConstraint_1"></A><A href=#Timing_rpt_HoldSummaryConstraint_1>4.2.1  Hold path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A>
+<A name="Timing_rpt_HoldDetailedConstraint_2"></A><A href=#Timing_rpt_HoldSummaryConstraint_2>4.2.2  Hold path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </A>
 ----------------------------------------------------------------------
 38 endpoints scored, 0 timing errors detected.
 
@@ -4128,8 +4145,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i0/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_32__i0/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i0/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_69__i0/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -4167,7 +4184,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i0/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i0/CK",
         "phy_name":"SLICE_6/CLK"
     },
     "path_sections":[
@@ -4271,13 +4288,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i0/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i0/Q",
         "phy_name":"SLICE_6/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i0/D",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i0/D",
         "phy_name":"SLICE_6/DI1"
     },
     "path_sections":[
@@ -4285,12 +4302,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i0/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i0/CK",
             "phy_name":"SLICE_6/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i0/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i0/Q",
             "phy_name":"SLICE_6/Q1"
         },
         "arrive":7.561,
@@ -4300,8 +4317,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[0]",
-            "phy_name":"xpix[0]"
+            "log_name":"vga_controller/VGAHorizontalCounter/xpix[0]",
+            "phy_name":"vga_controller/VGAHorizontalCounter/xpix[0]"
         },
         "arrive":9.137,
         "delay":1.576
@@ -4310,12 +4327,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_1/C1",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_1/C1",
             "phy_name":"SLICE_6/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_1/S1",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_1/S1",
             "phy_name":"SLICE_6/F1"
         },
         "arrive":9.587,
@@ -4337,11 +4354,12 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_32__i0/CK->vga_controller/VGAHorizontalCounter/hcount_32__i0/Q
-                                          SLICE_R16C14A   CLK_TO_Q1_DELAY  1.391         7.561  4       
-xpix[0]                                                   NET DELAY        1.576         9.137  1       
-vga_controller/VGAHorizontalCounter/hcount_32_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_32_add_4_1/S1
-                                          SLICE_R16C14A   C1_TO_F1_DELAY   0.450         9.587  1       
+vga_controller/VGAHorizontalCounter/hcount_69__i0/CK->vga_controller/VGAHorizontalCounter/hcount_69__i0/Q
+                                          SLICE_R16C22A   CLK_TO_Q1_DELAY  1.391         7.561  2       
+vga_controller/VGAHorizontalCounter/xpix[0]
+                                                          NET DELAY        1.576         9.137  1       
+vga_controller/VGAHorizontalCounter/hcount_69_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_69_add_4_1/S1
+                                          SLICE_R16C22A   C1_TO_F1_DELAY   0.450         9.587  1       
 vga_controller/VGAHorizontalCounter/n45[0]
                                                           NET DELAY        0.000         9.587  1       
 
@@ -4359,7 +4377,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i0/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i0/CK",
         "phy_name":"SLICE_6/CLK"
     },
     "path_sections":[
@@ -4460,8 +4478,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_34__i0/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_34__i0/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_71__i0/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_71__i0/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -4499,7 +4517,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i0/CK",
         "phy_name":"SLICE_5/CLK"
     },
     "path_sections":[
@@ -4603,13 +4621,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/Q",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i0/Q",
         "phy_name":"SLICE_5/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/D",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i0/D",
         "phy_name":"SLICE_5/DI1"
     },
     "path_sections":[
@@ -4617,12 +4635,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/CK",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i0/CK",
             "phy_name":"SLICE_5/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/Q",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i0/Q",
             "phy_name":"SLICE_5/Q1"
         },
         "arrive":7.561,
@@ -4642,12 +4660,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_1/C1",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_1/C1",
             "phy_name":"SLICE_5/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_1/S1",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_1/S1",
             "phy_name":"SLICE_5/F1"
         },
         "arrive":9.587,
@@ -4669,12 +4687,12 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-vga_controller/VGAVerticalCounter/vcount_34__i0/CK->vga_controller/VGAVerticalCounter/vcount_34__i0/Q
-                                          SLICE_R18C15A   CLK_TO_Q1_DELAY  1.391         7.561  2       
+vga_controller/VGAVerticalCounter/vcount_71__i0/CK->vga_controller/VGAVerticalCounter/vcount_71__i0/Q
+                                          SLICE_R15C25A   CLK_TO_Q1_DELAY  1.391         7.561  2       
 vga_controller/VGAVerticalCounter/ypix[0]
                                                           NET DELAY        1.576         9.137  1       
-vga_controller/VGAVerticalCounter/vcount_34_add_4_1/C1->vga_controller/VGAVerticalCounter/vcount_34_add_4_1/S1
-                                          SLICE_R18C15A   C1_TO_F1_DELAY   0.450         9.587  1       
+vga_controller/VGAVerticalCounter/vcount_71_add_4_1/C1->vga_controller/VGAVerticalCounter/vcount_71_add_4_1/S1
+                                          SLICE_R15C25A   C1_TO_F1_DELAY   0.450         9.587  1       
 vga_controller/VGAVerticalCounter/n45[0]                  NET DELAY        0.000         9.587  1       
 
 
@@ -4691,7 +4709,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i0/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i0/CK",
         "phy_name":"SLICE_5/CLK"
     },
     "path_sections":[
@@ -4792,8 +4810,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i2/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_32__i2/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i2/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_69__i2/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -4831,7 +4849,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i1/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i1/CK",
         "phy_name":"SLICE_11/CLK"
     },
     "path_sections":[
@@ -4935,13 +4953,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i2/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i2/Q",
         "phy_name":"SLICE_11/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i2/D",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i2/D",
         "phy_name":"SLICE_11/DI1"
     },
     "path_sections":[
@@ -4949,12 +4967,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i2/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i2/CK",
             "phy_name":"SLICE_11/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i2/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i2/Q",
             "phy_name":"SLICE_11/Q1"
         },
         "arrive":7.561,
@@ -4964,8 +4982,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[2]",
-            "phy_name":"xpix[2]"
+            "log_name":"vga_controller/VGAHorizontalCounter/xpix[2]",
+            "phy_name":"vga_controller/VGAHorizontalCounter/xpix[2]"
         },
         "arrive":9.137,
         "delay":1.576
@@ -4974,12 +4992,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_3/C1",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_3/C1",
             "phy_name":"SLICE_11/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_3/S1",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_3/S1",
             "phy_name":"SLICE_11/F1"
         },
         "arrive":9.587,
@@ -5001,11 +5019,12 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i1/CK   vga_controller/VGAHorizontalCounter/hcount_32__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i2/Q
-                                          SLICE_R16C14B   CLK_TO_Q1_DELAY  1.391         7.561  7       
-xpix[2]                                                   NET DELAY        1.576         9.137  1       
-vga_controller/VGAHorizontalCounter/hcount_32_add_4_3/C1->vga_controller/VGAHorizontalCounter/hcount_32_add_4_3/S1
-                                          SLICE_R16C14B   C1_TO_F1_DELAY   0.450         9.587  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i1/CK   vga_controller/VGAHorizontalCounter/hcount_69__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i2/Q
+                                          SLICE_R16C22B   CLK_TO_Q1_DELAY  1.391         7.561  5       
+vga_controller/VGAHorizontalCounter/xpix[2]
+                                                          NET DELAY        1.576         9.137  1       
+vga_controller/VGAHorizontalCounter/hcount_69_add_4_3/C1->vga_controller/VGAHorizontalCounter/hcount_69_add_4_3/S1
+                                          SLICE_R16C22B   C1_TO_F1_DELAY   0.450         9.587  1       
 vga_controller/VGAHorizontalCounter/n45[2]
                                                           NET DELAY        0.000         9.587  1       
 
@@ -5023,7 +5042,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i1/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i1/CK",
         "phy_name":"SLICE_11/CLK"
     },
     "path_sections":[
@@ -5124,8 +5143,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_34__i2/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_34__i2/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_71__i2/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_71__i2/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -5163,7 +5182,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i1/CK",
         "phy_name":"SLICE_4/CLK"
     },
     "path_sections":[
@@ -5267,13 +5286,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i2/Q",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i2/Q",
         "phy_name":"SLICE_4/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i2/D",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i2/D",
         "phy_name":"SLICE_4/DI1"
     },
     "path_sections":[
@@ -5281,12 +5300,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i2/CK",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i2/CK",
             "phy_name":"SLICE_4/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i2/Q",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i2/Q",
             "phy_name":"SLICE_4/Q1"
         },
         "arrive":7.561,
@@ -5296,8 +5315,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/ypix[2]",
-            "phy_name":"vga_controller/ypix[2]"
+            "log_name":"vga_controller/VGAVerticalCounter/ypix[2]",
+            "phy_name":"vga_controller/VGAVerticalCounter/ypix[2]"
         },
         "arrive":9.137,
         "delay":1.576
@@ -5306,12 +5325,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_3/C1",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_3/C1",
             "phy_name":"SLICE_4/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_3/S1",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_3/S1",
             "phy_name":"SLICE_4/F1"
         },
         "arrive":9.587,
@@ -5333,11 +5352,12 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAVerticalCounter/vcount_34__i1/CK   vga_controller/VGAVerticalCounter/vcount_34__i2/CK}->vga_controller/VGAVerticalCounter/vcount_34__i2/Q
-                                          SLICE_R18C15B   CLK_TO_Q1_DELAY  1.391         7.561  6       
-vga_controller/ypix[2]                                    NET DELAY        1.576         9.137  1       
-vga_controller/VGAVerticalCounter/vcount_34_add_4_3/C1->vga_controller/VGAVerticalCounter/vcount_34_add_4_3/S1
-                                          SLICE_R18C15B   C1_TO_F1_DELAY   0.450         9.587  1       
+{vga_controller/VGAVerticalCounter/vcount_71__i1/CK   vga_controller/VGAVerticalCounter/vcount_71__i2/CK}->vga_controller/VGAVerticalCounter/vcount_71__i2/Q
+                                          SLICE_R15C25B   CLK_TO_Q1_DELAY  1.391         7.561  4       
+vga_controller/VGAVerticalCounter/ypix[2]
+                                                          NET DELAY        1.576         9.137  1       
+vga_controller/VGAVerticalCounter/vcount_71_add_4_3/C1->vga_controller/VGAVerticalCounter/vcount_71_add_4_3/S1
+                                          SLICE_R15C25B   C1_TO_F1_DELAY   0.450         9.587  1       
 vga_controller/VGAVerticalCounter/n45[2]                  NET DELAY        0.000         9.587  1       
 
 
@@ -5354,7 +5374,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i1/CK",
         "phy_name":"SLICE_4/CLK"
     },
     "path_sections":[
@@ -5455,8 +5475,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i1/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_32__i1/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i1/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_69__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -5494,7 +5514,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i1/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i1/CK",
         "phy_name":"SLICE_11/CLK"
     },
     "path_sections":[
@@ -5598,13 +5618,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i1/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i1/Q",
         "phy_name":"SLICE_11/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i1/D",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i1/D",
         "phy_name":"SLICE_11/DI0"
     },
     "path_sections":[
@@ -5612,12 +5632,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i1/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i1/CK",
             "phy_name":"SLICE_11/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i1/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i1/Q",
             "phy_name":"SLICE_11/Q0"
         },
         "arrive":7.561,
@@ -5627,8 +5647,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[1]",
-            "phy_name":"xpix[1]"
+            "log_name":"vga_controller/VGAHorizontalCounter/xpix[1]",
+            "phy_name":"vga_controller/VGAHorizontalCounter/xpix[1]"
         },
         "arrive":9.137,
         "delay":1.576
@@ -5637,12 +5657,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_3/C0",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_3/C0",
             "phy_name":"SLICE_11/C0"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_3/S0",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_3/S0",
             "phy_name":"SLICE_11/F0"
         },
         "arrive":9.587,
@@ -5664,11 +5684,12 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i1/CK   vga_controller/VGAHorizontalCounter/hcount_32__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i1/Q
-                                          SLICE_R16C14B   CLK_TO_Q0_DELAY  1.391         7.561  5       
-xpix[1]                                                   NET DELAY        1.576         9.137  1       
-vga_controller/VGAHorizontalCounter/hcount_32_add_4_3/C0->vga_controller/VGAHorizontalCounter/hcount_32_add_4_3/S0
-                                          SLICE_R16C14B   C0_TO_F0_DELAY   0.450         9.587  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i1/CK   vga_controller/VGAHorizontalCounter/hcount_69__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i1/Q
+                                          SLICE_R16C22B   CLK_TO_Q0_DELAY  1.391         7.561  3       
+vga_controller/VGAHorizontalCounter/xpix[1]
+                                                          NET DELAY        1.576         9.137  1       
+vga_controller/VGAHorizontalCounter/hcount_69_add_4_3/C0->vga_controller/VGAHorizontalCounter/hcount_69_add_4_3/S0
+                                          SLICE_R16C22B   C0_TO_F0_DELAY   0.450         9.587  1       
 vga_controller/VGAHorizontalCounter/n45[1]
                                                           NET DELAY        0.000         9.587  1       
 
@@ -5686,7 +5707,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i1/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i1/CK",
         "phy_name":"SLICE_11/CLK"
     },
     "path_sections":[
@@ -5787,8 +5808,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_34__i1/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_34__i1/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_71__i1/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_71__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -5826,7 +5847,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i1/CK",
         "phy_name":"SLICE_4/CLK"
     },
     "path_sections":[
@@ -5930,13 +5951,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/Q",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i1/Q",
         "phy_name":"SLICE_4/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/D",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i1/D",
         "phy_name":"SLICE_4/DI0"
     },
     "path_sections":[
@@ -5944,12 +5965,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/CK",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i1/CK",
             "phy_name":"SLICE_4/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/Q",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i1/Q",
             "phy_name":"SLICE_4/Q0"
         },
         "arrive":7.561,
@@ -5969,12 +5990,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_3/C0",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_3/C0",
             "phy_name":"SLICE_4/C0"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_3/S0",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_3/S0",
             "phy_name":"SLICE_4/F0"
         },
         "arrive":9.587,
@@ -5996,12 +6017,12 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAVerticalCounter/vcount_34__i1/CK   vga_controller/VGAVerticalCounter/vcount_34__i2/CK}->vga_controller/VGAVerticalCounter/vcount_34__i1/Q
-                                          SLICE_R18C15B   CLK_TO_Q0_DELAY  1.391         7.561  4       
+{vga_controller/VGAVerticalCounter/vcount_71__i1/CK   vga_controller/VGAVerticalCounter/vcount_71__i2/CK}->vga_controller/VGAVerticalCounter/vcount_71__i1/Q
+                                          SLICE_R15C25B   CLK_TO_Q0_DELAY  1.391         7.561  4       
 vga_controller/VGAVerticalCounter/ypix[1]
                                                           NET DELAY        1.576         9.137  1       
-vga_controller/VGAVerticalCounter/vcount_34_add_4_3/C0->vga_controller/VGAVerticalCounter/vcount_34_add_4_3/S0
-                                          SLICE_R18C15B   C0_TO_F0_DELAY   0.450         9.587  1       
+vga_controller/VGAVerticalCounter/vcount_71_add_4_3/C0->vga_controller/VGAVerticalCounter/vcount_71_add_4_3/S0
+                                          SLICE_R15C25B   C0_TO_F0_DELAY   0.450         9.587  1       
 vga_controller/VGAVerticalCounter/n45[1]                  NET DELAY        0.000         9.587  1       
 
 
@@ -6018,7 +6039,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i1/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i1/CK",
         "phy_name":"SLICE_4/CLK"
     },
     "path_sections":[
@@ -6119,8 +6140,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i4/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_32__i4/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_69__i4/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -6158,7 +6179,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i3/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
         "phy_name":"SLICE_10/CLK"
     },
     "path_sections":[
@@ -6262,13 +6283,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i4/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
         "phy_name":"SLICE_10/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i4/D",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/D",
         "phy_name":"SLICE_10/DI1"
     },
     "path_sections":[
@@ -6276,12 +6297,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i4/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/CK",
             "phy_name":"SLICE_10/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i4/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i4/Q",
             "phy_name":"SLICE_10/Q1"
         },
         "arrive":7.561,
@@ -6291,8 +6312,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[4]",
-            "phy_name":"xpix[4]"
+            "log_name":"vga_controller/xpix[4]",
+            "phy_name":"vga_controller/xpix[4]"
         },
         "arrive":9.137,
         "delay":1.576
@@ -6301,12 +6322,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_5/C1",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_5/C1",
             "phy_name":"SLICE_10/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_5/S1",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_5/S1",
             "phy_name":"SLICE_10/F1"
         },
         "arrive":9.587,
@@ -6328,11 +6349,11 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i3/CK   vga_controller/VGAHorizontalCounter/hcount_32__i4/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i4/Q
-                                          SLICE_R16C14C   CLK_TO_Q1_DELAY  1.391         7.561  10      
-xpix[4]                                                   NET DELAY        1.576         9.137  1       
-vga_controller/VGAHorizontalCounter/hcount_32_add_4_5/C1->vga_controller/VGAHorizontalCounter/hcount_32_add_4_5/S1
-                                          SLICE_R16C14C   C1_TO_F1_DELAY   0.450         9.587  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i3/CK   vga_controller/VGAHorizontalCounter/hcount_69__i4/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i4/Q
+                                          SLICE_R16C22C   CLK_TO_Q1_DELAY  1.391         7.561  9       
+vga_controller/xpix[4]                                    NET DELAY        1.576         9.137  1       
+vga_controller/VGAHorizontalCounter/hcount_69_add_4_5/C1->vga_controller/VGAHorizontalCounter/hcount_69_add_4_5/S1
+                                          SLICE_R16C22C   C1_TO_F1_DELAY   0.450         9.587  1       
 vga_controller/VGAHorizontalCounter/n45[4]
                                                           NET DELAY        0.000         9.587  1       
 
@@ -6350,7 +6371,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i3/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
         "phy_name":"SLICE_10/CLK"
     },
     "path_sections":[
@@ -6451,8 +6472,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_34__i4/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_34__i4/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_71__i4/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_71__i4/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -6490,7 +6511,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i3/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i3/CK",
         "phy_name":"SLICE_3/CLK"
     },
     "path_sections":[
@@ -6594,13 +6615,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i4/Q",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i4/Q",
         "phy_name":"SLICE_3/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i4/D",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i4/D",
         "phy_name":"SLICE_3/DI1"
     },
     "path_sections":[
@@ -6608,12 +6629,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i4/CK",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i4/CK",
             "phy_name":"SLICE_3/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i4/Q",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i4/Q",
             "phy_name":"SLICE_3/Q1"
         },
         "arrive":7.561,
@@ -6633,12 +6654,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_5/C1",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_5/C1",
             "phy_name":"SLICE_3/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_5/S1",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_5/S1",
             "phy_name":"SLICE_3/F1"
         },
         "arrive":9.587,
@@ -6660,11 +6681,11 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAVerticalCounter/vcount_34__i3/CK   vga_controller/VGAVerticalCounter/vcount_34__i4/CK}->vga_controller/VGAVerticalCounter/vcount_34__i4/Q
-                                          SLICE_R18C15C   CLK_TO_Q1_DELAY  1.391         7.561  9       
+{vga_controller/VGAVerticalCounter/vcount_71__i3/CK   vga_controller/VGAVerticalCounter/vcount_71__i4/CK}->vga_controller/VGAVerticalCounter/vcount_71__i4/Q
+                                          SLICE_R15C25C   CLK_TO_Q1_DELAY  1.391         7.561  6       
 vga_controller/ypix[4]                                    NET DELAY        1.576         9.137  1       
-vga_controller/VGAVerticalCounter/vcount_34_add_4_5/C1->vga_controller/VGAVerticalCounter/vcount_34_add_4_5/S1
-                                          SLICE_R18C15C   C1_TO_F1_DELAY   0.450         9.587  1       
+vga_controller/VGAVerticalCounter/vcount_71_add_4_5/C1->vga_controller/VGAVerticalCounter/vcount_71_add_4_5/S1
+                                          SLICE_R15C25C   C1_TO_F1_DELAY   0.450         9.587  1       
 vga_controller/VGAVerticalCounter/n45[4]                  NET DELAY        0.000         9.587  1       
 
 
@@ -6681,7 +6702,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i3/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i3/CK",
         "phy_name":"SLICE_3/CLK"
     },
     "path_sections":[
@@ -6782,8 +6803,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_32__i3/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_32__i3/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_69__i3/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_69__i3/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -6821,7 +6842,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i3/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
         "phy_name":"SLICE_10/CLK"
     },
     "path_sections":[
@@ -6925,13 +6946,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i3/Q",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/Q",
         "phy_name":"SLICE_10/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i3/D",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/D",
         "phy_name":"SLICE_10/DI0"
     },
     "path_sections":[
@@ -6939,12 +6960,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i3/CK",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
             "phy_name":"SLICE_10/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i3/Q",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/Q",
             "phy_name":"SLICE_10/Q0"
         },
         "arrive":7.561,
@@ -6954,8 +6975,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"xpix[3]",
-            "phy_name":"xpix[3]"
+            "log_name":"vga_controller/VGAHorizontalCounter/xpix[3]",
+            "phy_name":"vga_controller/VGAHorizontalCounter/xpix[3]"
         },
         "arrive":9.137,
         "delay":1.576
@@ -6964,12 +6985,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_5/C0",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_5/C0",
             "phy_name":"SLICE_10/C0"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_32_add_4_5/S0",
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_69_add_4_5/S0",
             "phy_name":"SLICE_10/F0"
         },
         "arrive":9.587,
@@ -6991,11 +7012,12 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_32__i3/CK   vga_controller/VGAHorizontalCounter/hcount_32__i4/CK}->vga_controller/VGAHorizontalCounter/hcount_32__i3/Q
-                                          SLICE_R16C14C   CLK_TO_Q0_DELAY  1.391         7.561  7       
-xpix[3]                                                   NET DELAY        1.576         9.137  1       
-vga_controller/VGAHorizontalCounter/hcount_32_add_4_5/C0->vga_controller/VGAHorizontalCounter/hcount_32_add_4_5/S0
-                                          SLICE_R16C14C   C0_TO_F0_DELAY   0.450         9.587  1       
+{vga_controller/VGAHorizontalCounter/hcount_69__i3/CK   vga_controller/VGAHorizontalCounter/hcount_69__i4/CK}->vga_controller/VGAHorizontalCounter/hcount_69__i3/Q
+                                          SLICE_R16C22C   CLK_TO_Q0_DELAY  1.391         7.561  7       
+vga_controller/VGAHorizontalCounter/xpix[3]
+                                                          NET DELAY        1.576         9.137  1       
+vga_controller/VGAHorizontalCounter/hcount_69_add_4_5/C0->vga_controller/VGAHorizontalCounter/hcount_69_add_4_5/S0
+                                          SLICE_R16C22C   C0_TO_F0_DELAY   0.450         9.587  1       
 vga_controller/VGAHorizontalCounter/n45[3]
                                                           NET DELAY        0.000         9.587  1       
 
@@ -7013,7 +7035,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_32__i3/CK",
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_69__i3/CK",
         "phy_name":"SLICE_10/CLK"
     },
     "path_sections":[
@@ -7114,8 +7136,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_34__i3/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_34__i3/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_71__i3/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_71__i3/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -7153,7 +7175,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i3/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i3/CK",
         "phy_name":"SLICE_3/CLK"
     },
     "path_sections":[
@@ -7257,13 +7279,13 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i3/Q",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i3/Q",
         "phy_name":"SLICE_3/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i3/D",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i3/D",
         "phy_name":"SLICE_3/DI0"
     },
     "path_sections":[
@@ -7271,12 +7293,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i3/CK",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i3/CK",
             "phy_name":"SLICE_3/CLK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i3/Q",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i3/Q",
             "phy_name":"SLICE_3/Q0"
         },
         "arrive":7.561,
@@ -7286,8 +7308,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"vga_controller/ypix[3]",
-            "phy_name":"vga_controller/ypix[3]"
+            "log_name":"vga_controller/VGAVerticalCounter/ypix[3]",
+            "phy_name":"vga_controller/VGAVerticalCounter/ypix[3]"
         },
         "arrive":9.137,
         "delay":1.576
@@ -7296,12 +7318,12 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_5/C0",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_5/C0",
             "phy_name":"SLICE_3/C0"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_34_add_4_5/S0",
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_71_add_4_5/S0",
             "phy_name":"SLICE_3/F0"
         },
         "arrive":9.587,
@@ -7323,11 +7345,12 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAVerticalCounter/vcount_34__i3/CK   vga_controller/VGAVerticalCounter/vcount_34__i4/CK}->vga_controller/VGAVerticalCounter/vcount_34__i3/Q
-                                          SLICE_R18C15C   CLK_TO_Q0_DELAY  1.391         7.561  7       
-vga_controller/ypix[3]                                    NET DELAY        1.576         9.137  1       
-vga_controller/VGAVerticalCounter/vcount_34_add_4_5/C0->vga_controller/VGAVerticalCounter/vcount_34_add_4_5/S0
-                                          SLICE_R18C15C   C0_TO_F0_DELAY   0.450         9.587  1       
+{vga_controller/VGAVerticalCounter/vcount_71__i3/CK   vga_controller/VGAVerticalCounter/vcount_71__i4/CK}->vga_controller/VGAVerticalCounter/vcount_71__i3/Q
+                                          SLICE_R15C25C   CLK_TO_Q0_DELAY  1.391         7.561  5       
+vga_controller/VGAVerticalCounter/ypix[3]
+                                                          NET DELAY        1.576         9.137  1       
+vga_controller/VGAVerticalCounter/vcount_71_add_4_5/C0->vga_controller/VGAVerticalCounter/vcount_71_add_4_5/S0
+                                          SLICE_R15C25C   C0_TO_F0_DELAY   0.450         9.587  1       
 vga_controller/VGAVerticalCounter/n45[3]                  NET DELAY        0.000         9.587  1       
 
 
@@ -7344,7 +7367,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_34__i3/CK",
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_71__i3/CK",
         "phy_name":"SLICE_3/CLK"
     },
     "path_sections":[
@@ -7442,17 +7465,6 @@ vga_clk                                                   NET DELAY             
 
 
 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    End of Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-<A name="Timing_rpt_HoldDetailedConstraint_2"></A><A href=#Timing_rpt_HoldSummaryConstraint_2>4.2.2  Hold path details for constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]</A>
-----------------------------------------------------------------------
-0 endpoints scored, 0 timing errors detected.
-
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

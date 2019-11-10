@@ -13,6 +13,7 @@ output pixval
 
 );
 
+//Si el pixel a pintar se encuentra dentro de la zona que esta la paleta se prende
 assign pixval = (xpix >= x_paddle) && (xpix < x_paddle+width_paddle) && (ypix >= y_paddle) && (ypix < y_paddle+height_paddle);
 
 endmodule

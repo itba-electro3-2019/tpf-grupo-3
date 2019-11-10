@@ -1,0 +1,8 @@
+module PaddleCollisionController(
+
+);
+
+
+
+
+endmodule

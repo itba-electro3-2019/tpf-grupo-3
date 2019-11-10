@@ -1,0 +1,14 @@
+[Version]
+Version=10.5
+[Designs]
+asf=asf.adf
+[Settings]
+Active=asf
+[Expand]
+asf=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

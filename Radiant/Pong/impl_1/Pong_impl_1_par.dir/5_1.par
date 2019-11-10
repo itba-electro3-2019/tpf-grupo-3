@@ -1,6 +1,6 @@
 
 Lattice Place and Route Report for Design "Pong_impl_1_map.udb"
-Sat Nov 09 13:02:55 2019
+Sat Nov 09 21:28:14 2019
 
 PAR: Place And Route Radiant Software (64-bit) 1.1.0.165.1.
 Command Line: par -w -t 1 -cores 1 -exp parPathBased=ON Pong_impl_1_map.udb \
@@ -18,12 +18,12 @@ WARNING - par: The preferred point for defining clocks is top level ports and dr
 WARNING: udb::Constraint "create_clock -name {pll_module/lscc_pll_inst/ref_clk_c} -period 83.3333333333333 [get_nets ref_clk_c]" does not have corresponding tmConstraint. Please check if the resource objects of the constraint are valid carefully!
 WARNING - par: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 WARNING: not support VREF in IC1PW_VREFOBJ::collect_vref_driver_comps()
-Number of Signals: 129
-Number of Connections: 340
+Number of Signals: 114
+Number of Connections: 295
 Device utilization summary:
 
-   SLICE (est.)      47/2640          1% used
-     LUT             88/5280          1% used
+   SLICE (est.)      38/2640          1% used
+     LUT             73/5280          1% used
      REG             20/5280         <1% used
    PIO                6/56           10% used
                       6/36           16% bonded
@@ -46,29 +46,29 @@ Device utilization summary:
 
 Pin Constraint Summary:
    5 out of 6 pins locked (83% locked).
-...........Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
+...........Finished Placer Phase 0 (HIER).  CPU time: 1 secs , REAL time: 0 secs 
 
 
-........................
+....................
 Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 0 secs 
 
 Starting Placer Phase 1. REAL time: 0 secs 
 ..  ..
 ....................
 
-Placer score = 13500.
+Placer score = 11468.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             47/2640          1% used
+   SLICE             38/2640          1% used
 
 WARNING - par: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
-Finished Placer Phase 1.  CPU time: 8 secs , REAL time: 9 secs 
+Finished Placer Phase 1.  CPU time: 10 secs , REAL time: 10 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  18631
-Finished Placer Phase 2.  CPU time: 8 secs , REAL time: 9 secs 
+Placer score =  17713
+Finished Placer Phase 2.  CPU time: 10 secs , REAL time: 10 secs 
 
 
 ------------------ Clock Report ------------------
@@ -96,13 +96,13 @@ I/O Bank Usage Summary:
 | 2        | 0 / 8 (  0%)  | OFF        |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 8 secs , REAL time: 9 secs 
+Total Placer CPU time: 10 secs , REAL time: 10 secs 
 
 Writing design to file Pong_impl_1_par.dir/5_1.udb ...
 
 WARNING - par: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
-Start NBR router at 13:03:04 11/09/19
+Start NBR router at 21:28:24 11/09/19
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -123,7 +123,7 @@ Preassignment Summary:
 --------------------------------------------------------------------------------
 42 connections routed with dedicated routing resources
 1 global clock signals routed
-54 connections routed (of 340 total) (15.88%)
+54 connections routed (of 295 total) (18.31%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
@@ -138,26 +138,26 @@ Other clocks:
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 13:03:04 11/09/19
+Start NBR section for initial routing at 21:28:25 11/09/19
 Level 4, iteration 1
-17(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 23.999ns/0.000ns; real time: 0 secs 
+12(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 24.954ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 13:03:05 11/09/19
+Start NBR section for normal routing at 21:28:25 11/09/19
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 23.999ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 24.954ns/0.000ns; real time: 0 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 13:03:05 11/09/19
+Start NBR section for setup/hold timing optimization with effort level 3 at 21:28:25 11/09/19
 
-Start NBR section for re-routing at 13:03:05 11/09/19
+Start NBR section for re-routing at 21:28:25 11/09/19
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 13:03:05 11/09/19
+Start NBR section for post-routing at 21:28:25 11/09/19
 WARNING - par: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
 End NBR router with 0 unrouted connection
@@ -166,7 +166,7 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 23.999ns
+  Estimated worst slack<setup> : 24.954ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only.
@@ -175,7 +175,7 @@ Notes: The timing info is calculated for SETUP only.
 Total CPU time 1 secs 
 Total REAL time: 2 secs 
 Completely routed.
-End of route.  340 routed (100.00%); 0 unrouted.
+End of route.  295 routed (100.00%); 0 unrouted.
 
 Writing design to file Pong_impl_1_par.dir/5_1.udb ...
 
@@ -185,15 +185,15 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Success
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 23.999
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 24.954
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
 PAR_SUMMARY::Worst  slack<hold /<ns>> = 3.417
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 10 secs 
-Total REAL Time: 11 secs 
-Peak Memory Usage: 117 MB
+Total CPU  Time: 12 secs 
+Total REAL Time: 12 secs 
+Peak Memory Usage: 116 MB
 
 
 par done!

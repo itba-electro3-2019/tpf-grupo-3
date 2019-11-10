@@ -2,8 +2,8 @@
 
 <clocks>
     <clockitem name = "outglobal_o"  type = "net" />
-    <clockitem name = "outcore_o"  type = "net" />
     <clockitem name = "ref_clk_i"  type = "port" />
+    <clockitem name = "outcore_o"  type = "net" />
     <clockitem name = "lscc_pll_inst/outcoreb_o"  type = "net" />
     <clockitem name = "lscc_pll_inst/outglobalb_o"  type = "net" />
 </clocks>
@@ -35,12 +35,13 @@
 <unit name = "pll">
 
     <!--
-        Top Level Pins: 4
+        Top Level Pins: 5
     -->
 
     <pins>
         <pitem  name = "ref_clk_i"  direction = "in"  />
         <pitem  name = "rst_n_i"  direction = "in"  />
+        <pitem  name = "lock_o"  direction = "out"  />
         <pitem  name = "outcore_o"  direction = "out"  />
         <pitem  name = "outglobal_o"  direction = "out"  />
     </pins>
@@ -80,7 +81,7 @@
         <nitem  name = "ref_clk_i"  />
         <nitem  name = "rst_n_i"  />
         <nitem  name = "gnd"  />
-        <nitem  name = "lscc_pll_inst/lock_o"  />
+        <nitem  name = "lock_o"  />
         <nitem  name = "outcore_o"  />
         <nitem  name = "outglobal_o"  />
         <nitem  name = "lscc_pll_inst/outcoreb_o"  />

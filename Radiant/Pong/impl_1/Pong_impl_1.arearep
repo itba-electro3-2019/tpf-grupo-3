@@ -7,21 +7,18 @@ I/O cells:      6
                                CCU2        12          100.0
                             FD1P3XZ        20          100.0
                                  IB         1          100.0
-                               LUT4        63          100.0
+                               LUT4        48          100.0
                                  OB         5          100.0
                               PLL_B         1          100.0
 SUB MODULES
                   DisplayController         1
-                Display_Ball_Module         1
               Display_Paddle_Module         1
-           Display_Paddle_Module_U0         1
-               Display_Table_Module         1
                       HSync_Counter         1
                       VGAController         1
                       VSync_Counter         1
                                 pll         1
 pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
-                              TOTAL       112
+                              TOTAL        94
 ----------------------------------------------------------------------
 Report for cell VGAController.v1
 Instance Path : vga_controller
@@ -29,7 +26,7 @@ Instance Path : vga_controller
                                cell     count   Res Usage(%)
                                 FA2        12          100.0
                             FD1P3XZ        20          100.0
-                               LUT4        46           73.0
+                               LUT4        46           95.8
 SUB MODULES
                       HSync_Counter         1
                       VSync_Counter         1
@@ -41,8 +38,8 @@ Instance Path : vga_controller.VGAVerticalCounter
                                cell     count   Res Usage(%)
                                 FA2         6           50.0
                             FD1P3XZ        10           50.0
-                               LUT4        23           36.5
-                              TOTAL        39
+                               LUT4        11           22.9
+                              TOTAL        27
 ----------------------------------------------------------------------
 Report for cell HSync_Counter.v1
 Instance Path : vga_controller.VGAHorizontalCounter
@@ -50,48 +47,24 @@ Instance Path : vga_controller.VGAHorizontalCounter
                                cell     count   Res Usage(%)
                                 FA2         6           50.0
                             FD1P3XZ        10           50.0
-                               LUT4         2            3.2
-                              TOTAL        18
+                               LUT4        19           39.6
+                              TOTAL        35
 ----------------------------------------------------------------------
 Report for cell DisplayController.v1
 Instance Path : display_controller
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4        17           27.0
+                               LUT4         2            4.2
 SUB MODULES
-                Display_Ball_Module         1
               Display_Paddle_Module         1
-           Display_Paddle_Module_U0         1
-               Display_Table_Module         1
-                              TOTAL        21
-----------------------------------------------------------------------
-Report for cell Display_Table_Module.v1
-Instance Path : display_controller.disp_table
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         2            3.2
-                              TOTAL         2
+                              TOTAL         3
 ----------------------------------------------------------------------
 Report for cell Display_Paddle_Module.v1
 Instance Path : display_controller.disp_paddleB
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         2            3.2
+                               LUT4         2            4.2
                               TOTAL         2
-----------------------------------------------------------------------
-Report for cell Display_Paddle_Module_U0.v1
-Instance Path : display_controller.disp_paddleA
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         2            3.2
-                              TOTAL         2
-----------------------------------------------------------------------
-Report for cell Display_Ball_Module.v1
-Instance Path : display_controller.disp_ball
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         5            7.9
-                              TOTAL         5
 ----------------------------------------------------------------------
 Report for cell pll.v1
 Instance Path : pll_module

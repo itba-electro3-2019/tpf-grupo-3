@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 1.1.0.165.1
-// Netlist written on Fri Nov 08 17:10:43 2019
+// Netlist written on Sat Nov 09 18:51:38 2019
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v"
@@ -27,26 +27,28 @@
 // Verilog Description of module pll
 //
 
-module pll (ref_clk_i, rst_n_i, outcore_o, outglobal_o);   /* synthesis lineinfo="@0(10[8],10[11])"*/
+module pll (ref_clk_i, rst_n_i, lock_o, outcore_o, outglobal_o);   /* synthesis lineinfo="@0(10[8],10[11])"*/
     input ref_clk_i;   /* synthesis lineinfo="@0(11[11],11[20])"*/
     input rst_n_i;   /* synthesis lineinfo="@0(12[11],12[18])"*/
-    output outcore_o;   /* synthesis lineinfo="@0(13[12],13[21])"*/
-    output outglobal_o;   /* synthesis lineinfo="@0(14[12],14[23])"*/
+    output lock_o;   /* synthesis lineinfo="@0(13[12],13[18])"*/
+    output outcore_o;   /* synthesis lineinfo="@0(14[12],14[21])"*/
+    output outglobal_o;   /* synthesis lineinfo="@0(15[12],15[23])"*/
     
     wire ref_clk_i_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(11[11],11[20])"*/
-    wire outcore_o_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(13[12],13[21])"*/
-    wire outglobal_o_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(14[12],14[23])"*/
+    wire outcore_o_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(14[12],14[21])"*/
+    wire outglobal_o_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(15[12],15[23])"*/
     
-    wire GND_net, rst_n_i_c, VCC_net;
+    wire GND_net, rst_n_i_c, lock_o_c, VCC_net;
     
-    IB rst_n_i_pad (.I(rst_n_i), .O(rst_n_i_c));   /* synthesis lineinfo="@0(12[11],12[18])"*/
     IB ref_clk_i_pad (.I(ref_clk_i), .O(ref_clk_i_c));   /* synthesis lineinfo="@0(11[11],11[20])"*/
     VLO i1 (.Z(GND_net));
-    OB outglobal_o_pad (.I(outglobal_o_c), .O(outglobal_o));   /* synthesis lineinfo="@0(14[12],14[23])"*/
+    OB outglobal_o_pad (.I(outglobal_o_c), .O(outglobal_o));   /* synthesis lineinfo="@0(15[12],15[23])"*/
     \pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")  lscc_pll_inst (.GND_net(GND_net), 
-            .ref_clk_i_c(ref_clk_i_c), .rst_n_i_c(rst_n_i_c), .outcore_o_c(outcore_o_c), 
-            .outglobal_o_c(outglobal_o_c));   /* synthesis lineinfo="@0(16[41],16[310])"*/
-    OB outcore_o_pad (.I(outcore_o_c), .O(outcore_o));   /* synthesis lineinfo="@0(13[12],13[21])"*/
+            .ref_clk_i_c(ref_clk_i_c), .rst_n_i_c(rst_n_i_c), .lock_o_c(lock_o_c), 
+            .outcore_o_c(outcore_o_c), .outglobal_o_c(outglobal_o_c));   /* synthesis lineinfo="@0(17[41],17[316])"*/
+    OB outcore_o_pad (.I(outcore_o_c), .O(outcore_o));   /* synthesis lineinfo="@0(14[12],14[21])"*/
+    IB rst_n_i_pad (.I(rst_n_i), .O(rst_n_i_c));   /* synthesis lineinfo="@0(12[11],12[18])"*/
+    OB lock_o_pad (.I(lock_o_c), .O(lock_o));   /* synthesis lineinfo="@0(13[12],13[18])"*/
     VHI i75 (.Z(VCC_net));
     
 endmodule
@@ -56,16 +58,17 @@ endmodule
 //
 
 module \pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")  (GND_net, 
-            ref_clk_i_c, rst_n_i_c, outcore_o_c, outglobal_o_c);
+            ref_clk_i_c, rst_n_i_c, lock_o_c, outcore_o_c, outglobal_o_c);
     input GND_net;
     input ref_clk_i_c;
     input rst_n_i_c;
+    output lock_o_c;
     output outcore_o_c;
     output outglobal_o_c;
     
     wire ref_clk_i_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(11[11],11[20])"*/
-    wire outcore_o_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(13[12],13[21])"*/
-    wire outglobal_o_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(14[12],14[23])"*/
+    wire outcore_o_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(14[12],14[21])"*/
+    wire outglobal_o_c /* synthesis is_clock=1 */ ;   /* synthesis lineinfo="@0(15[12],15[23])"*/
     
     wire feedback_w;
     
@@ -74,7 +77,7 @@ module \pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_S
           .DYNAMICDELAY3(GND_net), .DYNAMICDELAY2(GND_net), .DYNAMICDELAY1(GND_net), 
           .DYNAMICDELAY0(GND_net), .BYPASS(GND_net), .RESET_N(rst_n_i_c), 
           .SCLK(GND_net), .SDI(GND_net), .LATCH(GND_net), .INTFBOUT(feedback_w), 
-          .OUTCORE(outcore_o_c), .OUTGLOBAL(outglobal_o_c)) /* synthesis syn_instantiated=1, LSE_LINE_FILE_ID=23, LSE_LCOL=41, LSE_RCOL=310, LSE_LLINE=16, LSE_RLINE=16 */ ;   /* synthesis lineinfo="@0(16[41],16[310])"*/
+          .OUTCORE(outcore_o_c), .OUTGLOBAL(outglobal_o_c), .LOCK(lock_o_c)) /* synthesis syn_instantiated=1, LSE_LINE_FILE_ID=23, LSE_LCOL=41, LSE_RCOL=316, LSE_LLINE=17, LSE_RLINE=17 */ ;   /* synthesis lineinfo="@0(17[41],17[316])"*/
     defparam u_PLL_B.FEEDBACK_PATH = "SIMPLE";
     defparam u_PLL_B.DELAY_ADJUSTMENT_MODE_FEEDBACK = "FIXED";
     defparam u_PLL_B.FDA_FEEDBACK = "0";

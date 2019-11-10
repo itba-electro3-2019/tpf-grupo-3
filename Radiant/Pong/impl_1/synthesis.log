@@ -1,3 +1,15 @@
+synthesis:  version Radiant Software (64-bit) 1.1.0.165.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Sat Nov 09 21:28:08 2019
+
+
+Command Line:  C:\lscc\radiant\1.1\ispfpga\bin\nt64\synthesis.exe -f Pong_impl_1_lattice.synproj -gui -msgset C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/promote.xml 
+
 Synthesis options:
 The -a option is iCE40UP.
 The -t option is SG48.
@@ -53,8 +65,9 @@ Remove Duplicate Registers = TRUE
 Output HDL file name = Pong_impl_1.vm.
 ROM style = auto
 RAM style = auto
-The -comp option is TRUE.
+The -comp option is FALSE.
 The -syn option is FALSE.
+-sdc option: SDC file input is C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/source/impl_1.ldc.
 -path C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong (searchpath added)
 -path C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1 (searchpath added)
 -path C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/pll (searchpath added)
@@ -71,6 +84,9 @@ Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radian
 Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/BallModule.v
 Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController/PaddleModule.v
 Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/GameTickGenerator/GameTickGenerator.v
+Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Collisions/CollisionController.v
+Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Collisions/BallCollisionController.v
+Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Collisions/PaddleCollisionController.v
 VHDL library = pmi
 VHDL design file = C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
@@ -120,33 +136,34 @@ Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radia
 Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/ballmodule.v. VERI-1482
 Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/paddlemodule.v. VERI-1482
 Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v. VERI-1482
+Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/collisions/collisioncontroller.v. VERI-1482
+Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/collisions/ballcollisioncontroller.v. VERI-1482
+Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/collisions/paddlecollisioncontroller.v. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 INFO - synthesis: c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
 unit pong is not yet analyzed. VHDL-1485
 INFO - synthesis: The default VHDL library search path is now "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): pong
-INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(1): compiling module pong. VERI-1018
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(30): using initial value of y_floor since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(31): using initial value of y_ceil since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(32): using initial value of x_lwall since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(33): using initial value of x_rwall since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(34): using initial value of x_ball since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(35): using initial value of y_ball since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(36): using initial value of height_ball since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(37): using initial value of width_ball since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(38): using initial value of x_paddleA since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(39): using initial value of y_paddleA since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(40): using initial value of x_paddleB since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(41): using initial value of y_paddleB since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(42): using initial value of height_paddle since it is never assigned. VERI-1220
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(43): using initial value of width_paddle since it is never assigned. VERI-1220
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(2): compiling module pong. VERI-1018
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(23): using initial value of y_floor since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(24): using initial value of y_ceil since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(25): using initial value of x_lwall since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(26): using initial value of x_rwall since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(27): using initial value of height_ball since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(28): using initial value of width_ball since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(30): using initial value of x_paddleA since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(31): using initial value of y_paddleA since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(32): using initial value of x_paddleB since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(33): using initial value of y_paddleB since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(34): using initial value of height_paddle since it is never assigned. VERI-1220
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(35): using initial value of width_paddle since it is never assigned. VERI-1220
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(10): compiling module pll. VERI-1018
-INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(73): compiling module pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000"). VERI-1018
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(74): compiling module pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000"). VERI-1018
 INFO - synthesis: C:/lscc/radiant/1.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(428): compiling module PLL_B(PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",DIVF="66",DIVQ="5",FILTER_RANGE="1",FREQUENCY_PIN_REFERENCECLK="12.000000"). VERI-1018
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(16): input port sclk_i is not connected on this instance. VDB-1013
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(16): input port sdi_i is not connected on this instance. VDB-1013
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(45): actual bit length 32 differs from formal bit length 1 for port rst_n_i. VERI-1330
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sclk_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sdi_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(37): actual bit length 32 differs from formal bit length 1 for port rst_n_i. VERI-1330
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(2): compiling module VGAController. VERI-1018
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/hsync_counter.v(3): compiling module HSync_Counter. VERI-1018
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/hsync_counter.v(15): expression size 32 truncated to fit in target size 10. VERI-1209
@@ -157,12 +174,128 @@ WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(59): pixval should be on the sensitivity list. VERI-1221
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(60): pixval should be on the sensitivity list. VERI-1221
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(61): pixval should be on the sensitivity list. VERI-1221
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(71): system task write ignored for synthesis. VERI-1142
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/vgacontroller/controller.v(74): system task display ignored for synthesis. VERI-1142
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/displaycontroller.v(1): compiling module DisplayController. VERI-1018
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/tablemodule.v(1): compiling module Display_Table_Module. VERI-1018
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/ballmodule.v(1): compiling module Display_Ball_Module. VERI-1018
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller/paddlemodule.v(1): compiling module Display_Paddle_Module. VERI-1018
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v(1): compiling module GameTickGen. VERI-1018
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v(12): expression size 32 truncated to fit in target size 13. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v(7): net slow_clk does not have a driver. VDB-1002
-LSE: Compile Design done
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/gametickgenerator/gametickgenerator.v(12): expression size 32 truncated to fit in target size 26. VERI-1209
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/collisions/collisioncontroller.v(1): compiling module CollisionController. VERI-1018
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/collisions/ballcollisioncontroller.v(1): compiling module BallCollisionController. VERI-1018
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/collisions/ballcollisioncontroller.v(27): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/collisions/ballcollisioncontroller.v(28): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(18): net x_ball_vel[3] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pong.v(20): net y_ball_vel[3] does not have a driver. VDB-1002
+Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.1/ispfpga.
+                                                         
 
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 56
+
+
+##########################################################
+
+
+                                                         
+
+
+WARNING - synthesis: Initial value found on net gnd_2 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pwr_2 will be ignored due to unrecognized driver type
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sclk_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sdi_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(93): net \pll_module/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(94): net \pll_module/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
+######## Missing driver on net x_ball_vel[3]. Patching with GND.
+######## Missing driver on net x_ball_vel[2]. Patching with GND.
+######## Missing driver on net x_ball_vel[1]. Patching with GND.
+######## Missing driver on net x_ball_vel[0]. Patching with GND.
+######## Missing driver on net y_ball_vel[3]. Patching with GND.
+######## Missing driver on net y_ball_vel[2]. Patching with GND.
+######## Missing driver on net y_ball_vel[1]. Patching with GND.
+######## Missing driver on net y_ball_vel[0]. Patching with GND.
+######## Missing driver on net \pll_module/lscc_pll_inst/sclk_i. Patching with GND.
+######## Missing driver on net \pll_module/lscc_pll_inst/sdi_i. Patching with GND.
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/collisions/ballcollisioncontroller.v(66): Register \collision_controller/ball_collision_controller/init is stuck at Zero. VDB-5013
+
+
+
+WARNING - synthesis: Mapping latch \vga_controller/hrange_1__I_0_30_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \vga_controller/vrange_1__I_0_29_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \vga_controller/hsync_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \vga_controller/vsync_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \vga_controller/hrange_1__I_0_30_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \vga_controller/vrange_1__I_0_29_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+Starting design annotation....
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+Starting full timing analysis...
+Starting design annotation....
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+Starting full timing analysis...
+Starting design annotation....
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+Starting full timing analysis...
+Starting design annotation....
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+Starting full timing analysis...
+
+################### Begin Area Report (pong)######################
+Number of register bits => 20 of 5280 (0 % )
+CCU2 => 12
+FD1P3XZ => 20
+IB => 1
+LUT4 => 48
+OB => 5
+PLL_B => 1
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 2
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : ref_clk_c, loads : 1
+  Net : pll_module/lscc_pll_inst/vga_clk, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : vga_controller/VGAHorizontalCounter/xpix[8], loads : 10
+  Net : vga_controller/VGAHorizontalCounter/n554, loads : 10
+  Net : vga_controller/VGAHorizontalCounter/n582, loads : 10
+  Net : vga_controller/VGAHorizontalCounter/n1375, loads : 9
+  Net : vga_controller/VGAHorizontalCounter/xpix[9], loads : 8
+  Net : vga_controller/VGAHorizontalCounter/xpix[4], loads : 8
+  Net : vga_controller/VGAHorizontalCounter/xpix[7], loads : 7
+  Net : vga_controller/VGAHorizontalCounter/xpix[5], loads : 7
+  Net : vga_controller/VGAHorizontalCounter/xpix[6], loads : 7
+  Net : vga_controller/VGAHorizontalCounter/xpix[3], loads : 7
+################### End Clock Report ##################
+
+Peak Memory Usage: 80.184  MB
+
+--------------------------------------------------------------
+Total CPU time for LSE flow : 2.141  secs
+Total REAL time for LSE flow : 2.000  secs
+--------------------------------------------------------------
