@@ -45,7 +45,7 @@
         <Source name="ResetGenerator.v" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options/>
         </Source>
-        <Source name="BuzzerModule.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+        <Source name="BuzzerModule.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="DisplayController/CounterModule.v" type="Verilog" type_short="Verilog">
