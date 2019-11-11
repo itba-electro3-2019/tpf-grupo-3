@@ -36,21 +36,28 @@ parameter DEFAULT_BALL_Y = 235;
 
 reg collision_paddle;
 reg collision_wall;
+reg [3:0] counter; 
 
 assign lossA = (scoreA == 7?  1 : 0);assign lossB = (scoreB == 7?  1 : 0);
 
+assign wall_col = collision_wall;
+assign paddle_col = collision_paddle;
+
 always@(posedge game_clk) begin	
 	
-	if(reset) begin
+	if(~reset) begin
 		y_ball <= DEFAULT_BALL_Y;
 		x_ball <= DEFAULT_BALL_X;
 	end
 	
-	if(collision_paddle)
+	if(collision_paddle && counter <= 4'b1000)
 		collision_paddle <= 1'b0;
 		
-	if(collision_wall)
+	if(collision_wall && counter == 4'b1110)
 		collision_wall <= 1'b0;
+		
+	if(counter < 4'b1111)
+		counter <= counter + 4'b0001;
 	
 	//Logica que mueve la pelota por cada game tick constantemente
 	if(x_ball_dir == 0)
@@ -72,10 +79,12 @@ always@(posedge game_clk) begin
 	if((x_ball < 30) && (x_ball_dir == 0) && ((y_ball>y_paddleA ) && ((y_ball + height_ball) < (y_paddleA + height_paddle) ))) begin //left wall collision DEBUG
 		x_ball_dir <= ~x_ball_dir;
 		collision_paddle <= 1'b1;
+		counter <= 4'b0000;
 	end	
 	if((x_ball > 600) && (x_ball_dir == 1) && ((y_ball>y_paddleB ) && ((y_ball + height_ball) < (y_paddleB + height_paddle) ))) begin //left wall collision DEBUG
 		x_ball_dir <= ~x_ball_dir;
 		collision_paddle <= 1'b1;
+		counter <= 4'b0000;
 	end	
 
 	
@@ -84,13 +93,15 @@ always@(posedge game_clk) begin
 		x_ball <= DEFAULT_BALL_X;
 		y_ball <= DEFAULT_BALL_Y;
 		collision_wall <= 1'b1;
-		scoreA <= scoreA + 3'b001;
+		counter <= 4'b0000;
+		scoreA <= scoreA + 4'b0001;
 	end		
 	if(((x_ball + width_ball) > x_rwall) && (x_ball_dir == 1)) begin
 		x_ball <= DEFAULT_BALL_X;
 		y_ball <= DEFAULT_BALL_Y;
 		collision_wall <= 1'b1;
-		scoreB <= scoreB + 3'b001;
+		counter <= 4'b0000;
+		scoreB <= scoreB + 4'b0001;
 	end
 end
 

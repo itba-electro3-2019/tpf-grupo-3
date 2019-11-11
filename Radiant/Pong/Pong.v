@@ -5,7 +5,8 @@ output hsync,	//VGA
 output vsync,	//VGA
 output red,		//VGA
 output green,	//VGA
-output blue		//VGA
+output blue,	//VGA
+output buzzer   //BUZZER
 );
 
 //input pause,
@@ -13,14 +14,12 @@ output blue		//VGA
 //input inputA_down,
 //input inputB_up,
 //input inputB_down,
-//output buzzer, //BUZZER
 
 //Cables varios
 wire [2:0] scoreA;
 wire [2:0] scoreB;
 wire lossA;
 wire lossB;
-wire buzzer;
 wire buzzer_col;
 reg pause=0;
 wire reset;
@@ -70,7 +69,7 @@ DisplayController display_controller(y_floor,y_ceil,x_lwall,x_rwall,x_ball,y_bal
 											width_paddle, scoreA, scoreB, lossA, lossB, xpix, ypix, pixval, altcolor);
 
 //Modulo generador de game ticks. Toma de referencia el clock de VGA y lo divide para obtener un clock de un par de Hz.
-GameTickGen game_tick_gen(vga_clk, pause, game_clk);
+GameTickGen game_tick_gen(vga_clk, pause, game_clk, paddle_frequency, wall_frequency);
 
 //Genera una señal de reset que dura 7 game clocks cuando pulse se activa.
 //ResetGenerator reset_generator(game_clk, lossA, lossB, reset);
@@ -81,7 +80,7 @@ CollisionController collision_controller(lossA, lossB, scoreA, scoreB, wall_col,
 											x_lwall, x_rwall, height_ball, width_ball, height_paddle, width_paddle, x_ball_vel, y_ball_vel,
 											y_paddle_vel, y_paddleA, x_paddleA, y_paddleB, x_paddleB, x_ball, y_ball, x_ball_dir, y_ball_dir);
 
-//BuzzerModule buzzer_module(game_clock, wall_col, paddle_col, buzzer);
+BuzzerModule buzzer_module(game_clock, wall_col, paddle_col, paddle_frequency, wall_frequency, buzzer);
 
 //GameTickGen game_tick_gen(sim_clk,game_clk);
 //reg sim_clk=0;

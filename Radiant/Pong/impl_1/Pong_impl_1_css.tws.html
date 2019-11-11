@@ -46,7 +46,7 @@ if (a)
 <A name="timing_rpt_top">Timing Report</A><B><U><big></big></U></B>
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 1.1.0.165.1
 
-Mon Nov 11 02:09:51 2019
+Mon Nov 11 15:57:37 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -114,22 +114,22 @@ create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_in
 Combinational Loops
 -------------------
 ++++ Loop1
-vga_controller/VGAVerticalCounter/i2218_4_lut/D	->	vga_controller/VGAVerticalCounter/i2218_4_lut/Z
+vga_controller/VGAVerticalCounter/i1_4_lut_adj_114/C	->	vga_controller/VGAVerticalCounter/i1_4_lut_adj_114/Z
 
 ++++ Loop2
-vga_controller/VGAVerticalCounter/i20028_2_lut/A	->	vga_controller/VGAVerticalCounter/i20028_2_lut/Z
+vga_controller/VGAVerticalCounter/i1_4_lut_adj_116/C	->	vga_controller/VGAVerticalCounter/i1_4_lut_adj_116/Z
 
 ++++ Loop3
-vga_controller/VGAVerticalCounter/i2211_4_lut/D	->	vga_controller/VGAVerticalCounter/i2211_4_lut/Z
+vga_controller/VGAVerticalCounter/i1_4_lut_adj_117/C	->	vga_controller/VGAVerticalCounter/i1_4_lut_adj_117/Z
 
 ++++ Loop4
-vga_controller/VGAVerticalCounter/i2241_4_lut/A	->	vga_controller/VGAVerticalCounter/i2241_4_lut/Z
+vga_controller/VGAHorizontalCounter/i13_4_lut/A	->	vga_controller/VGAHorizontalCounter/i13_4_lut/Z
 
 ++++ Loop5
-vga_controller/VGAVerticalCounter/i6693_4_lut/A	->	vga_controller/VGAVerticalCounter/i6693_4_lut/Z
+vga_controller/VGAHorizontalCounter/i11_4_lut/A	->	vga_controller/VGAHorizontalCounter/i11_4_lut/Z
 
 ++++ Loop6
-vga_controller/i1_4_lut_adj_116/D	->	vga_controller/i1_4_lut_adj_116/Z
+vga_controller/VGAVerticalCounter/i1_4_lut_adj_109/C	->	vga_controller/VGAVerticalCounter/i1_4_lut_adj_109/Z
 
 
 <A name="Timing_rpt_ClockSummary"></A><B><U><big>2  CLOCK SUMMARY</big></U></B>
@@ -178,7 +178,7 @@ Clock Domain Crossing
 
 <A name="Timing_rpt_ConstraintCoverage"></A><B><U><big>3.1.1  Constraint Coverage</big></U></B>
 
-Constraint Coverage: 11.9686%
+Constraint Coverage: 11.4718%
 
 <A name="Timing_rpt_Errors"></A><B><U><big>3.1.2  Timing Errors</big></U></B>
 
@@ -213,15 +213,15 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
 game_tick_gen/game_clk_c/D               |   22.619 ns 
-game_tick_gen/counter_364__i18/SR        |   24.867 ns 
-game_tick_gen/counter_364__i17/SR        |   24.867 ns 
-game_tick_gen/counter_364__i16/SR        |   24.867 ns 
-game_tick_gen/counter_364__i15/SR        |   24.867 ns 
-game_tick_gen/counter_364__i14/SR        |   24.867 ns 
-game_tick_gen/counter_364__i13/SR        |   24.867 ns 
-game_tick_gen/counter_364__i12/SR        |   24.867 ns 
-game_tick_gen/counter_364__i11/SR        |   24.867 ns 
-game_tick_gen/counter_364__i10/SR        |   24.867 ns 
+game_tick_gen/counter_387__i18/SR        |   24.867 ns 
+game_tick_gen/counter_387__i17/SR        |   24.867 ns 
+game_tick_gen/counter_387__i16/SR        |   24.867 ns 
+game_tick_gen/counter_387__i15/SR        |   24.867 ns 
+game_tick_gen/counter_387__i14/SR        |   24.867 ns 
+game_tick_gen/counter_387__i13/SR        |   24.867 ns 
+game_tick_gen/counter_387__i12/SR        |   24.867 ns 
+game_tick_gen/counter_387__i11/SR        |   24.867 ns 
+game_tick_gen/counter_387__i10/SR        |   24.867 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -253,25 +253,25 @@ Setup # of endpoints with negative slack:|           0
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-vga_controller/VGAHorizontalCounter/hcount_366__i9/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i9/D              
                                          |    4.196 ns 
-vga_controller/VGAHorizontalCounter/hcount_366__i8/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i8/D              
                                          |    4.196 ns 
-vga_controller/VGAHorizontalCounter/hcount_366__i7/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i7/D              
                                          |    4.196 ns 
-vga_controller/VGAHorizontalCounter/hcount_366__i6/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i6/D              
                                          |    4.196 ns 
-vga_controller/VGAHorizontalCounter/hcount_366__i5/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i5/D              
                                          |    4.196 ns 
-vga_controller/VGAHorizontalCounter/hcount_366__i4/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i4/D              
                                          |    4.196 ns 
-vga_controller/VGAHorizontalCounter/hcount_366__i3/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i3/D              
                                          |    4.196 ns 
-vga_controller/VGAHorizontalCounter/hcount_366__i2/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i2/D              
                                          |    4.196 ns 
-vga_controller/VGAHorizontalCounter/hcount_366__i1/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i1/D              
                                          |    4.196 ns 
-vga_controller/VGAHorizontalCounter/hcount_366__i0/D              
+vga_controller/VGAHorizontalCounter/hcount_389__i0/D              
                                          |    4.196 ns 
 -------------------------------------------------------
                                          |             
@@ -287,6 +287,14 @@ Clocked but unconstrained timing start points
 -------------------------------------------------------------------
         Listing 10 Start Points         |           Type           
 -------------------------------------------------------------------
+collision_controller/ball_collision_controller/counter__i3/Q                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/counter__i2/Q                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/counter__i1/Q                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/counter__i0/Q                           
+                                        |    No arrival or required
 collision_controller/ball_collision_controller/scoreA_i0_i2/Q                           
                                         |    No arrival or required
 collision_controller/ball_collision_controller/scoreA_i0_i1/Q                           
@@ -299,18 +307,10 @@ collision_controller/ball_collision_controller/scoreB_i0_i1/Q
                                         |    No arrival or required
 collision_controller/ball_collision_controller/scoreB_i0_i0/Q                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_i9/Q                           
-                                        |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_i8/Q                           
-                                        |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_i7/Q                           
-                                        |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_i6/Q                           
-                                        |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing start po |                          
-ints                                    |                        46
+ints                                    |                        52
                                         |                          
 -------------------------------------------------------------------
 
@@ -318,16 +318,6 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
          Listing 10 End Points          |           Type           
 -------------------------------------------------------------------
-collision_controller/ball_collision_controller/scoreA_i0_i0/D                           
-                                        |    No arrival or required
-collision_controller/ball_collision_controller/scoreB_i0_i2/D                           
-                                        |    No arrival or required
-collision_controller/ball_collision_controller/scoreB_i0_i1/D                           
-                                        |    No arrival or required
-collision_controller/ball_collision_controller/scoreB_i0_i2/SP                           
-                                        |    No arrival or required
-collision_controller/ball_collision_controller/scoreB_i0_i1/SP                           
-                                        |    No arrival or required
 collision_controller/ball_collision_controller/y_ball_i9/D                           
                                         |    No arrival or required
 collision_controller/ball_collision_controller/y_ball_i8/D                           
@@ -338,10 +328,20 @@ collision_controller/ball_collision_controller/y_ball_i6/D
                                         |    No arrival or required
 collision_controller/ball_collision_controller/y_ball_i5/D                           
                                         |    No arrival or required
+collision_controller/ball_collision_controller/y_ball_i4/D                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/y_ball_i3/D                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/y_ball_i2/D                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/y_ball_i1/D                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/scoreB_i0_i0/D                           
+                                        |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
-ts                                      |                        88
+ts                                      |                       103
                                         |                          
 -------------------------------------------------------------------
 
@@ -358,16 +358,17 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 5 Start or End Points      |           Type           
+     Listing 6 Start or End Points      |           Type           
 -------------------------------------------------------------------
 hsync                                   |                    output
 vsync                                   |                    output
 red                                     |                    output
 green                                   |                    output
 blue                                    |                    output
+buzzer                                  |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                         5
+Number of I/O ports without constraint  |                         6
                                         |                          
 -------------------------------------------------------------------
 
@@ -389,7 +390,7 @@ There is no instance satisfying reporting criteria
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
+Path Begin       : game_tick_gen/counter_387__i6/Q
 Path End         : game_tick_gen/game_clk_c/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
@@ -428,8 +429,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -459,8 +460,8 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
@@ -473,13 +474,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -488,8 +489,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -538,8 +539,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -573,13 +574,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -588,8 +589,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -613,8 +614,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.241,
         "delay":2.075
@@ -650,24 +651,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.477        17.166  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.241  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.241  1       
 game_tick_gen/i1_2_lut/B->game_tick_gen/i1_2_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477        19.718  1       
 game_tick_gen/game_clk_N_527                              NET DELAY      2.075        21.793  1       
@@ -714,8 +715,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
-Path End         : game_tick_gen/counter_364__i0/SR
+Path Begin       : game_tick_gen/counter_387__i6/Q
+Path End         : game_tick_gen/counter_387__i19/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -753,8 +754,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -784,27 +785,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i0/SR",
-        "phy_name":"counter_364__i0/SR"
+        "log_name":"game_tick_gen/counter_387__i19/SR",
+        "phy_name":"counter_387__i19/SR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -813,8 +814,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -863,8 +864,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -898,13 +899,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -913,8 +914,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -938,8 +939,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.214,
         "delay":2.075
@@ -950,24 +951,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.450        17.139  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
@@ -983,8 +984,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i0/CK",
-        "phy_name":"counter_364__i0/CK"
+        "log_name":"game_tick_gen/counter_387__i19/CK",
+        "phy_name":"counter_387__i19/CK"
     },
     "path_sections":[
     {
@@ -1011,8 +1012,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
-Path End         : game_tick_gen/counter_364__i1/SR
+Path Begin       : game_tick_gen/counter_387__i6/Q
+Path End         : game_tick_gen/counter_387__i1/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -1050,8 +1051,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -1081,27 +1082,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i1/SR",
-        "phy_name":"counter_364__i1/SR"
+        "log_name":"game_tick_gen/counter_387__i1/SR",
+        "phy_name":"counter_387__i1/SR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -1110,8 +1111,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -1160,8 +1161,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -1195,13 +1196,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -1210,8 +1211,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -1235,8 +1236,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.214,
         "delay":2.075
@@ -1247,24 +1248,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.450        17.139  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
@@ -1280,8 +1281,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i1/CK",
-        "phy_name":"counter_364__i1/CK"
+        "log_name":"game_tick_gen/counter_387__i1/CK",
+        "phy_name":"counter_387__i1/CK"
     },
     "path_sections":[
     {
@@ -1308,8 +1309,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
-Path End         : game_tick_gen/counter_364__i2/SR
+Path Begin       : game_tick_gen/counter_387__i6/Q
+Path End         : game_tick_gen/counter_387__i2/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -1347,8 +1348,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -1378,27 +1379,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i2/SR",
-        "phy_name":"counter_364__i2/SR"
+        "log_name":"game_tick_gen/counter_387__i2/SR",
+        "phy_name":"counter_387__i2/SR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -1407,8 +1408,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -1457,8 +1458,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -1492,13 +1493,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -1507,8 +1508,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -1532,8 +1533,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.214,
         "delay":2.075
@@ -1544,24 +1545,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.450        17.139  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
@@ -1577,8 +1578,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i2/CK",
-        "phy_name":"counter_364__i2/CK"
+        "log_name":"game_tick_gen/counter_387__i2/CK",
+        "phy_name":"counter_387__i2/CK"
     },
     "path_sections":[
     {
@@ -1605,8 +1606,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
-Path End         : game_tick_gen/counter_364__i3/SR
+Path Begin       : game_tick_gen/counter_387__i6/Q
+Path End         : game_tick_gen/counter_387__i3/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -1644,8 +1645,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -1675,27 +1676,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i3/SR",
-        "phy_name":"counter_364__i3/SR"
+        "log_name":"game_tick_gen/counter_387__i3/SR",
+        "phy_name":"counter_387__i3/SR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -1704,8 +1705,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -1754,8 +1755,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -1789,13 +1790,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -1804,8 +1805,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -1829,8 +1830,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.214,
         "delay":2.075
@@ -1841,24 +1842,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.450        17.139  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
@@ -1874,8 +1875,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i3/CK",
-        "phy_name":"counter_364__i3/CK"
+        "log_name":"game_tick_gen/counter_387__i3/CK",
+        "phy_name":"counter_387__i3/CK"
     },
     "path_sections":[
     {
@@ -1902,8 +1903,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
-Path End         : game_tick_gen/counter_364__i4/SR
+Path Begin       : game_tick_gen/counter_387__i6/Q
+Path End         : game_tick_gen/counter_387__i4/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -1941,8 +1942,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -1972,27 +1973,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i4/SR",
-        "phy_name":"counter_364__i4/SR"
+        "log_name":"game_tick_gen/counter_387__i4/SR",
+        "phy_name":"counter_387__i4/SR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -2001,8 +2002,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -2051,8 +2052,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -2086,13 +2087,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -2101,8 +2102,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -2126,8 +2127,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.214,
         "delay":2.075
@@ -2138,24 +2139,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.450        17.139  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
@@ -2171,8 +2172,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i4/CK",
-        "phy_name":"counter_364__i4/CK"
+        "log_name":"game_tick_gen/counter_387__i4/CK",
+        "phy_name":"counter_387__i4/CK"
     },
     "path_sections":[
     {
@@ -2199,8 +2200,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
-Path End         : game_tick_gen/counter_364__i5/SR
+Path Begin       : game_tick_gen/counter_387__i6/Q
+Path End         : game_tick_gen/counter_387__i5/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -2238,8 +2239,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -2269,27 +2270,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i5/SR",
-        "phy_name":"counter_364__i5/SR"
+        "log_name":"game_tick_gen/counter_387__i5/SR",
+        "phy_name":"counter_387__i5/SR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -2298,8 +2299,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -2348,8 +2349,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -2383,13 +2384,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -2398,8 +2399,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -2423,8 +2424,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.214,
         "delay":2.075
@@ -2435,24 +2436,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.450        17.139  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
@@ -2468,8 +2469,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i5/CK",
-        "phy_name":"counter_364__i5/CK"
+        "log_name":"game_tick_gen/counter_387__i5/CK",
+        "phy_name":"counter_387__i5/CK"
     },
     "path_sections":[
     {
@@ -2496,8 +2497,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
-Path End         : game_tick_gen/counter_364__i6/SR
+Path Begin       : game_tick_gen/counter_387__i6/Q
+Path End         : game_tick_gen/counter_387__i6/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -2535,8 +2536,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -2566,27 +2567,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/SR",
-        "phy_name":"counter_364__i6/SR"
+        "log_name":"game_tick_gen/counter_387__i6/SR",
+        "phy_name":"counter_387__i6/SR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -2595,8 +2596,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -2645,8 +2646,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -2680,13 +2681,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -2695,8 +2696,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -2720,8 +2721,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.214,
         "delay":2.075
@@ -2732,24 +2733,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.450        17.139  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
@@ -2765,8 +2766,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -2793,8 +2794,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
-Path End         : game_tick_gen/counter_364__i7/SR
+Path Begin       : game_tick_gen/counter_387__i6/Q
+Path End         : game_tick_gen/counter_387__i7/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -2832,8 +2833,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -2863,27 +2864,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i7/SR",
-        "phy_name":"counter_364__i7/SR"
+        "log_name":"game_tick_gen/counter_387__i7/SR",
+        "phy_name":"counter_387__i7/SR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -2892,8 +2893,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -2942,8 +2943,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -2977,13 +2978,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -2992,8 +2993,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -3017,8 +3018,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.214,
         "delay":2.075
@@ -3029,24 +3030,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.450        17.139  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
@@ -3062,8 +3063,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i7/CK",
-        "phy_name":"counter_364__i7/CK"
+        "log_name":"game_tick_gen/counter_387__i7/CK",
+        "phy_name":"counter_387__i7/CK"
     },
     "path_sections":[
     {
@@ -3090,8 +3091,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i6/Q
-Path End         : game_tick_gen/counter_364__i8/SR
+Path Begin       : game_tick_gen/counter_387__i6/Q
+Path End         : game_tick_gen/counter_387__i8/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -3129,8 +3130,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/CK",
-        "phy_name":"counter_364__i6/CK"
+        "log_name":"game_tick_gen/counter_387__i6/CK",
+        "phy_name":"counter_387__i6/CK"
     },
     "path_sections":[
     {
@@ -3160,27 +3161,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i6/Q",
-        "phy_name":"counter_364__i6/Q"
+        "log_name":"game_tick_gen/counter_387__i6/Q",
+        "phy_name":"counter_387__i6/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i8/SR",
-        "phy_name":"counter_364__i8/SR"
+        "log_name":"game_tick_gen/counter_387__i8/SR",
+        "phy_name":"counter_387__i8/SR"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i6/CK",
-            "phy_name":"counter_364__i6/CK"
+            "log_name":"game_tick_gen/counter_387__i6/CK",
+            "phy_name":"counter_387__i6/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i6/Q",
-            "phy_name":"counter_364__i6/Q"
+            "log_name":"game_tick_gen/counter_387__i6/Q",
+            "phy_name":"counter_387__i6/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -3189,8 +3190,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/counter[6]",
-            "phy_name":"game_tick_gen/counter[6]"
+            "log_name":"game_tick_gen/counter[5]",
+            "phy_name":"game_tick_gen/counter[5]"
         },
         "arrive":6.481,
         "delay":0.280
@@ -3239,8 +3240,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19755",
-            "phy_name":"game_tick_gen/n19755"
+            "log_name":"game_tick_gen/n17629",
+            "phy_name":"game_tick_gen/n17629"
         },
         "arrive":11.585,
         "delay":2.075
@@ -3274,13 +3275,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/C",
-            "phy_name":"i2_4_lut_adj_141/C"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/C",
+            "phy_name":"i2_4_lut_adj_118/C"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/i2_4_lut_adj_141/Z",
-            "phy_name":"i2_4_lut_adj_141/Z"
+            "log_name":"game_tick_gen/i2_4_lut_adj_118/Z",
+            "phy_name":"i2_4_lut_adj_118/Z"
         },
         "arrive":14.614,
         "delay":0.477
@@ -3289,8 +3290,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n19713",
-            "phy_name":"game_tick_gen/n19713"
+            "log_name":"game_tick_gen/n17598",
+            "phy_name":"game_tick_gen/n17598"
         },
         "arrive":16.689,
         "delay":2.075
@@ -3314,8 +3315,8 @@ Data path
         "type":"net_delay",
         "net":
         {
-            "log_name":"game_tick_gen/n1998",
-            "phy_name":"game_tick_gen/n1998"
+            "log_name":"game_tick_gen/n2092",
+            "phy_name":"game_tick_gen/n2092"
         },
         "arrive":19.214,
         "delay":2.075
@@ -3326,24 +3327,24 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
+game_tick_gen/counter_387__i6/CK->game_tick_gen/counter_387__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/counter[5]                                  NET DELAY      0.280         6.481  1       
 game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
 game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
 game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/n17629                                      NET DELAY      2.075        11.585  1       
 game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+game_tick_gen/i2_4_lut_adj_118/C->game_tick_gen/i2_4_lut_adj_118/Z
                                           LUT4            C_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/n17598                                      NET DELAY      2.075        16.689  1       
 game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
                                           LUT4            C_TO_Z_DELAY   0.450        17.139  20      
-game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/n2092                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
@@ -3359,8 +3360,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i8/CK",
-        "phy_name":"counter_364__i8/CK"
+        "log_name":"game_tick_gen/counter_387__i8/CK",
+        "phy_name":"counter_387__i8/CK"
     },
     "path_sections":[
     {
@@ -3410,8 +3411,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i0/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i0/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_389__i0/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_389__i0/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -3449,8 +3450,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i0/CK",
-        "phy_name":"hcount_366__i0/CK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i0/CK",
+        "phy_name":"hcount_389__i0/CK"
     },
     "path_sections":[
     {
@@ -3480,27 +3481,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i0/Q",
-        "phy_name":"hcount_366__i0/Q"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i0/Q",
+        "phy_name":"hcount_389__i0/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i0/D",
-        "phy_name":"hcount_366__i0/D"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i0/D",
+        "phy_name":"hcount_389__i0/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i0/CK",
-            "phy_name":"hcount_366__i0/CK"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i0/CK",
+            "phy_name":"hcount_389__i0/CK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i0/Q",
-            "phy_name":"hcount_366__i0/Q"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i0/Q",
+            "phy_name":"hcount_389__i0/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -3519,13 +3520,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/C1",
-            "phy_name":"hcount_366_add_4_1/C1"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389_add_4_1/C1",
+            "phy_name":"hcount_389_add_4_1/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/S1",
-            "phy_name":"hcount_366_add_4_1/S1"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389_add_4_1/S1",
+            "phy_name":"hcount_389_add_4_1/S1"
         },
         "arrive":6.931,
         "delay":0.450
@@ -3546,10 +3547,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_366__i0/CK->vga_controller/VGAHorizontalCounter/hcount_366__i0/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  13      
+vga_controller/VGAHorizontalCounter/hcount_389__i0/CK->vga_controller/VGAHorizontalCounter/hcount_389__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  15      
 xpix[0]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/S1
+vga_controller/VGAHorizontalCounter/hcount_389_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_389_add_4_1/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 vga_controller/VGAHorizontalCounter/n45[0]
                                                           NET DELAY       2.075         9.006  1       
@@ -3568,8 +3569,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i0/CK",
-        "phy_name":"hcount_366__i0/CK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i0/CK",
+        "phy_name":"hcount_389__i0/CK"
     },
     "path_sections":[
     {
@@ -3596,8 +3597,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_368__i0/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_368__i0/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_391__i0/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_391__i0/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -3635,8 +3636,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i0/CK",
-        "phy_name":"vcount_368__i0/CK"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i0/CK",
+        "phy_name":"vcount_391__i0/CK"
     },
     "path_sections":[
     {
@@ -3666,27 +3667,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i0/Q",
-        "phy_name":"vcount_368__i0/Q"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i0/Q",
+        "phy_name":"vcount_391__i0/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i0/D",
-        "phy_name":"vcount_368__i0/D"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i0/D",
+        "phy_name":"vcount_391__i0/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i0/CK",
-            "phy_name":"vcount_368__i0/CK"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i0/CK",
+            "phy_name":"vcount_391__i0/CK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i0/Q",
-            "phy_name":"vcount_368__i0/Q"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i0/Q",
+            "phy_name":"vcount_391__i0/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -3705,13 +3706,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368_add_4_1/C1",
-            "phy_name":"vcount_368_add_4_1/C1"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391_add_4_1/C1",
+            "phy_name":"vcount_391_add_4_1/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368_add_4_1/S1",
-            "phy_name":"vcount_368_add_4_1/S1"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391_add_4_1/S1",
+            "phy_name":"vcount_391_add_4_1/S1"
         },
         "arrive":6.931,
         "delay":0.450
@@ -3732,10 +3733,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAVerticalCounter/vcount_368__i0/CK->vga_controller/VGAVerticalCounter/vcount_368__i0/Q
+vga_controller/VGAVerticalCounter/vcount_391__i0/CK->vga_controller/VGAVerticalCounter/vcount_391__i0/Q
                                           FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  13      
 ypix[0]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAVerticalCounter/vcount_368_add_4_1/C1->vga_controller/VGAVerticalCounter/vcount_368_add_4_1/S1
+vga_controller/VGAVerticalCounter/vcount_391_add_4_1/C1->vga_controller/VGAVerticalCounter/vcount_391_add_4_1/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 vga_controller/VGAVerticalCounter/n45[0]                  NET DELAY       2.075         9.006  1       
 
@@ -3753,8 +3754,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i0/CK",
-        "phy_name":"vcount_368__i0/CK"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i0/CK",
+        "phy_name":"vcount_391__i0/CK"
     },
     "path_sections":[
     {
@@ -3781,8 +3782,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i0/Q
-Path End         : game_tick_gen/counter_364__i0/D
+Path Begin       : game_tick_gen/counter_387__i1/Q
+Path End         : game_tick_gen/counter_387__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -3820,8 +3821,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i0/CK",
-        "phy_name":"counter_364__i0/CK"
+        "log_name":"game_tick_gen/counter_387__i1/CK",
+        "phy_name":"counter_387__i1/CK"
     },
     "path_sections":[
     {
@@ -3851,27 +3852,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i0/Q",
-        "phy_name":"counter_364__i0/Q"
+        "log_name":"game_tick_gen/counter_387__i1/Q",
+        "phy_name":"counter_387__i1/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i0/D",
-        "phy_name":"counter_364__i0/D"
+        "log_name":"game_tick_gen/counter_387__i1/D",
+        "phy_name":"counter_387__i1/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i0/CK",
-            "phy_name":"counter_364__i0/CK"
+            "log_name":"game_tick_gen/counter_387__i1/CK",
+            "phy_name":"counter_387__i1/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i0/Q",
-            "phy_name":"counter_364__i0/Q"
+            "log_name":"game_tick_gen/counter_387__i1/Q",
+            "phy_name":"counter_387__i1/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -3890,13 +3891,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364_add_4_1/C1",
-            "phy_name":"counter_364_add_4_1/C1"
+            "log_name":"game_tick_gen/counter_387_add_4_1/C1",
+            "phy_name":"counter_387_add_4_1/C1"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364_add_4_1/S1",
-            "phy_name":"counter_364_add_4_1/S1"
+            "log_name":"game_tick_gen/counter_387_add_4_1/S1",
+            "phy_name":"counter_387_add_4_1/S1"
         },
         "arrive":6.931,
         "delay":0.450
@@ -3917,10 +3918,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
+game_tick_gen/counter_387__i1/CK->game_tick_gen/counter_387__i1/Q
                                           FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  2       
 game_tick_gen/counter[0]                                  NET DELAY       0.280         6.481  1       
-game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/S1
+game_tick_gen/counter_387_add_4_1/C1->game_tick_gen/counter_387_add_4_1/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 game_tick_gen/n81[0]                                      NET DELAY       2.075         9.006  1       
 
@@ -3938,8 +3939,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i0/CK",
-        "phy_name":"counter_364__i0/CK"
+        "log_name":"game_tick_gen/counter_387__i1/CK",
+        "phy_name":"counter_387__i1/CK"
     },
     "path_sections":[
     {
@@ -3966,8 +3967,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i1/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i1/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_389__i1/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_389__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -4005,8 +4006,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i1/CK",
-        "phy_name":"hcount_366__i1/CK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i1/CK",
+        "phy_name":"hcount_389__i1/CK"
     },
     "path_sections":[
     {
@@ -4036,27 +4037,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i1/Q",
-        "phy_name":"hcount_366__i1/Q"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i1/Q",
+        "phy_name":"hcount_389__i1/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i1/D",
-        "phy_name":"hcount_366__i1/D"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i1/D",
+        "phy_name":"hcount_389__i1/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i1/CK",
-            "phy_name":"hcount_366__i1/CK"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i1/CK",
+            "phy_name":"hcount_389__i1/CK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i1/Q",
-            "phy_name":"hcount_366__i1/Q"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i1/Q",
+            "phy_name":"hcount_389__i1/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -4075,13 +4076,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/C0",
-            "phy_name":"hcount_366_add_4_3/C0"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389_add_4_3/C0",
+            "phy_name":"hcount_389_add_4_3/C0"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/S0",
-            "phy_name":"hcount_366_add_4_3/S0"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389_add_4_3/S0",
+            "phy_name":"hcount_389_add_4_3/S0"
         },
         "arrive":6.931,
         "delay":0.450
@@ -4102,10 +4103,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_366__i1/CK->vga_controller/VGAHorizontalCounter/hcount_366__i1/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  19      
+vga_controller/VGAHorizontalCounter/hcount_389__i1/CK->vga_controller/VGAHorizontalCounter/hcount_389__i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  20      
 xpix[1]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/C0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/S0
+vga_controller/VGAHorizontalCounter/hcount_389_add_4_3/C0->vga_controller/VGAHorizontalCounter/hcount_389_add_4_3/S0
                                           FA2             C0_TO_S0_DELAY  0.450         6.931  1       
 vga_controller/VGAHorizontalCounter/n45[1]
                                                           NET DELAY       2.075         9.006  1       
@@ -4124,8 +4125,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i1/CK",
-        "phy_name":"hcount_366__i1/CK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i1/CK",
+        "phy_name":"hcount_389__i1/CK"
     },
     "path_sections":[
     {
@@ -4152,8 +4153,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_368__i1/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_368__i1/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_391__i1/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_391__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -4191,8 +4192,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i1/CK",
-        "phy_name":"vcount_368__i1/CK"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i1/CK",
+        "phy_name":"vcount_391__i1/CK"
     },
     "path_sections":[
     {
@@ -4222,27 +4223,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i1/Q",
-        "phy_name":"vcount_368__i1/Q"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i1/Q",
+        "phy_name":"vcount_391__i1/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i1/D",
-        "phy_name":"vcount_368__i1/D"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i1/D",
+        "phy_name":"vcount_391__i1/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i1/CK",
-            "phy_name":"vcount_368__i1/CK"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i1/CK",
+            "phy_name":"vcount_391__i1/CK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i1/Q",
-            "phy_name":"vcount_368__i1/Q"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i1/Q",
+            "phy_name":"vcount_391__i1/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -4261,13 +4262,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368_add_4_3/C0",
-            "phy_name":"vcount_368_add_4_3/C0"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391_add_4_3/C0",
+            "phy_name":"vcount_391_add_4_3/C0"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368_add_4_3/S0",
-            "phy_name":"vcount_368_add_4_3/S0"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391_add_4_3/S0",
+            "phy_name":"vcount_391_add_4_3/S0"
         },
         "arrive":6.931,
         "delay":0.450
@@ -4288,10 +4289,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAVerticalCounter/vcount_368__i1/CK->vga_controller/VGAVerticalCounter/vcount_368__i1/Q
+vga_controller/VGAVerticalCounter/vcount_391__i1/CK->vga_controller/VGAVerticalCounter/vcount_391__i1/Q
                                           FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  14      
 ypix[1]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAVerticalCounter/vcount_368_add_4_3/C0->vga_controller/VGAVerticalCounter/vcount_368_add_4_3/S0
+vga_controller/VGAVerticalCounter/vcount_391_add_4_3/C0->vga_controller/VGAVerticalCounter/vcount_391_add_4_3/S0
                                           FA2             C0_TO_S0_DELAY  0.450         6.931  1       
 vga_controller/VGAVerticalCounter/n45[1]                  NET DELAY       2.075         9.006  1       
 
@@ -4309,8 +4310,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i1/CK",
-        "phy_name":"vcount_368__i1/CK"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i1/CK",
+        "phy_name":"vcount_391__i1/CK"
     },
     "path_sections":[
     {
@@ -4337,8 +4338,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i1/Q
-Path End         : game_tick_gen/counter_364__i1/D
+Path Begin       : game_tick_gen/counter_387__i2/Q
+Path End         : game_tick_gen/counter_387__i2/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -4376,8 +4377,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i1/CK",
-        "phy_name":"counter_364__i1/CK"
+        "log_name":"game_tick_gen/counter_387__i2/CK",
+        "phy_name":"counter_387__i2/CK"
     },
     "path_sections":[
     {
@@ -4407,27 +4408,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i1/Q",
-        "phy_name":"counter_364__i1/Q"
+        "log_name":"game_tick_gen/counter_387__i2/Q",
+        "phy_name":"counter_387__i2/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i1/D",
-        "phy_name":"counter_364__i1/D"
+        "log_name":"game_tick_gen/counter_387__i2/D",
+        "phy_name":"counter_387__i2/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i1/CK",
-            "phy_name":"counter_364__i1/CK"
+            "log_name":"game_tick_gen/counter_387__i2/CK",
+            "phy_name":"counter_387__i2/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i1/Q",
-            "phy_name":"counter_364__i1/Q"
+            "log_name":"game_tick_gen/counter_387__i2/Q",
+            "phy_name":"counter_387__i2/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -4446,13 +4447,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364_add_4_3/C0",
-            "phy_name":"counter_364_add_4_3/C0"
+            "log_name":"game_tick_gen/counter_387_add_4_3/C0",
+            "phy_name":"counter_387_add_4_3/C0"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364_add_4_3/S0",
-            "phy_name":"counter_364_add_4_3/S0"
+            "log_name":"game_tick_gen/counter_387_add_4_3/S0",
+            "phy_name":"counter_387_add_4_3/S0"
         },
         "arrive":6.931,
         "delay":0.450
@@ -4473,10 +4474,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-game_tick_gen/counter_364__i1/CK->game_tick_gen/counter_364__i1/Q
+game_tick_gen/counter_387__i2/CK->game_tick_gen/counter_387__i2/Q
                                           FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  2       
 game_tick_gen/counter[1]                                  NET DELAY       0.280         6.481  1       
-game_tick_gen/counter_364_add_4_3/C0->game_tick_gen/counter_364_add_4_3/S0
+game_tick_gen/counter_387_add_4_3/C0->game_tick_gen/counter_387_add_4_3/S0
                                           FA2             C0_TO_S0_DELAY  0.450         6.931  1       
 game_tick_gen/n81[1]                                      NET DELAY       2.075         9.006  1       
 
@@ -4494,8 +4495,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i1/CK",
-        "phy_name":"counter_364__i1/CK"
+        "log_name":"game_tick_gen/counter_387__i2/CK",
+        "phy_name":"counter_387__i2/CK"
     },
     "path_sections":[
     {
@@ -4522,8 +4523,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i2/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_389__i2/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_389__i2/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -4561,8 +4562,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i2/CK",
-        "phy_name":"hcount_366__i2/CK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i2/CK",
+        "phy_name":"hcount_389__i2/CK"
     },
     "path_sections":[
     {
@@ -4592,27 +4593,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i2/Q",
-        "phy_name":"hcount_366__i2/Q"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i2/Q",
+        "phy_name":"hcount_389__i2/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i2/D",
-        "phy_name":"hcount_366__i2/D"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i2/D",
+        "phy_name":"hcount_389__i2/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i2/CK",
-            "phy_name":"hcount_366__i2/CK"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i2/CK",
+            "phy_name":"hcount_389__i2/CK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i2/Q",
-            "phy_name":"hcount_366__i2/Q"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i2/Q",
+            "phy_name":"hcount_389__i2/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -4631,13 +4632,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/C1",
-            "phy_name":"hcount_366_add_4_3/C1"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389_add_4_3/C1",
+            "phy_name":"hcount_389_add_4_3/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/S1",
-            "phy_name":"hcount_366_add_4_3/S1"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389_add_4_3/S1",
+            "phy_name":"hcount_389_add_4_3/S1"
         },
         "arrive":6.931,
         "delay":0.450
@@ -4658,10 +4659,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_366__i2/CK->vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  26      
+vga_controller/VGAHorizontalCounter/hcount_389__i2/CK->vga_controller/VGAHorizontalCounter/hcount_389__i2/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  27      
 xpix[2]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/C1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/S1
+vga_controller/VGAHorizontalCounter/hcount_389_add_4_3/C1->vga_controller/VGAHorizontalCounter/hcount_389_add_4_3/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 vga_controller/VGAHorizontalCounter/n45[2]
                                                           NET DELAY       2.075         9.006  1       
@@ -4680,8 +4681,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i2/CK",
-        "phy_name":"hcount_366__i2/CK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i2/CK",
+        "phy_name":"hcount_389__i2/CK"
     },
     "path_sections":[
     {
@@ -4708,8 +4709,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_368__i2/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_368__i2/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_391__i2/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_391__i2/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -4747,8 +4748,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i2/CK",
-        "phy_name":"vcount_368__i2/CK"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i2/CK",
+        "phy_name":"vcount_391__i2/CK"
     },
     "path_sections":[
     {
@@ -4778,27 +4779,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i2/Q",
-        "phy_name":"vcount_368__i2/Q"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i2/Q",
+        "phy_name":"vcount_391__i2/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i2/D",
-        "phy_name":"vcount_368__i2/D"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i2/D",
+        "phy_name":"vcount_391__i2/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i2/CK",
-            "phy_name":"vcount_368__i2/CK"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i2/CK",
+            "phy_name":"vcount_391__i2/CK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i2/Q",
-            "phy_name":"vcount_368__i2/Q"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i2/Q",
+            "phy_name":"vcount_391__i2/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -4817,13 +4818,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368_add_4_3/C1",
-            "phy_name":"vcount_368_add_4_3/C1"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391_add_4_3/C1",
+            "phy_name":"vcount_391_add_4_3/C1"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAVerticalCounter/vcount_368_add_4_3/S1",
-            "phy_name":"vcount_368_add_4_3/S1"
+            "log_name":"vga_controller/VGAVerticalCounter/vcount_391_add_4_3/S1",
+            "phy_name":"vcount_391_add_4_3/S1"
         },
         "arrive":6.931,
         "delay":0.450
@@ -4844,10 +4845,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAVerticalCounter/vcount_368__i2/CK->vga_controller/VGAVerticalCounter/vcount_368__i2/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  20      
+vga_controller/VGAVerticalCounter/vcount_391__i2/CK->vga_controller/VGAVerticalCounter/vcount_391__i2/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  21      
 ypix[2]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAVerticalCounter/vcount_368_add_4_3/C1->vga_controller/VGAVerticalCounter/vcount_368_add_4_3/S1
+vga_controller/VGAVerticalCounter/vcount_391_add_4_3/C1->vga_controller/VGAVerticalCounter/vcount_391_add_4_3/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 vga_controller/VGAVerticalCounter/n45[2]                  NET DELAY       2.075         9.006  1       
 
@@ -4865,8 +4866,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAVerticalCounter/vcount_368__i2/CK",
-        "phy_name":"vcount_368__i2/CK"
+        "log_name":"vga_controller/VGAVerticalCounter/vcount_391__i2/CK",
+        "phy_name":"vcount_391__i2/CK"
     },
     "path_sections":[
     {
@@ -4893,8 +4894,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_364__i2/Q
-Path End         : game_tick_gen/counter_364__i2/D
+Path Begin       : game_tick_gen/counter_387__i3/Q
+Path End         : game_tick_gen/counter_387__i3/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -4932,8 +4933,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i2/CK",
-        "phy_name":"counter_364__i2/CK"
+        "log_name":"game_tick_gen/counter_387__i3/CK",
+        "phy_name":"counter_387__i3/CK"
     },
     "path_sections":[
     {
@@ -4963,27 +4964,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i2/Q",
-        "phy_name":"counter_364__i2/Q"
+        "log_name":"game_tick_gen/counter_387__i3/Q",
+        "phy_name":"counter_387__i3/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i2/D",
-        "phy_name":"counter_364__i2/D"
+        "log_name":"game_tick_gen/counter_387__i3/D",
+        "phy_name":"counter_387__i3/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364__i2/CK",
-            "phy_name":"counter_364__i2/CK"
+            "log_name":"game_tick_gen/counter_387__i3/CK",
+            "phy_name":"counter_387__i3/CK"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364__i2/Q",
-            "phy_name":"counter_364__i2/Q"
+            "log_name":"game_tick_gen/counter_387__i3/Q",
+            "phy_name":"counter_387__i3/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -5002,13 +5003,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"game_tick_gen/counter_364_add_4_3/C1",
-            "phy_name":"counter_364_add_4_3/C1"
+            "log_name":"game_tick_gen/counter_387_add_4_3/C1",
+            "phy_name":"counter_387_add_4_3/C1"
         },
         "pin1":
         {
-            "log_name":"game_tick_gen/counter_364_add_4_3/S1",
-            "phy_name":"counter_364_add_4_3/S1"
+            "log_name":"game_tick_gen/counter_387_add_4_3/S1",
+            "phy_name":"counter_387_add_4_3/S1"
         },
         "arrive":6.931,
         "delay":0.450
@@ -5029,10 +5030,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-game_tick_gen/counter_364__i2/CK->game_tick_gen/counter_364__i2/Q
+game_tick_gen/counter_387__i3/CK->game_tick_gen/counter_387__i3/Q
                                           FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  2       
 game_tick_gen/counter[2]                                  NET DELAY       0.280         6.481  1       
-game_tick_gen/counter_364_add_4_3/C1->game_tick_gen/counter_364_add_4_3/S1
+game_tick_gen/counter_387_add_4_3/C1->game_tick_gen/counter_387_add_4_3/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 game_tick_gen/n81[2]                                      NET DELAY       2.075         9.006  1       
 
@@ -5050,8 +5051,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"game_tick_gen/counter_364__i2/CK",
-        "phy_name":"counter_364__i2/CK"
+        "log_name":"game_tick_gen/counter_387__i3/CK",
+        "phy_name":"counter_387__i3/CK"
     },
     "path_sections":[
     {
@@ -5078,8 +5079,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i3/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i3/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_389__i3/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_389__i3/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -5117,8 +5118,8 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i3/CK",
-        "phy_name":"hcount_366__i3/CK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i3/CK",
+        "phy_name":"hcount_389__i3/CK"
     },
     "path_sections":[
     {
@@ -5148,27 +5149,27 @@ Data path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i3/Q",
-        "phy_name":"hcount_366__i3/Q"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i3/Q",
+        "phy_name":"hcount_389__i3/Q"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i3/D",
-        "phy_name":"hcount_366__i3/D"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i3/D",
+        "phy_name":"hcount_389__i3/D"
     },
     "path_sections":[
     {
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i3/CK",
-            "phy_name":"hcount_366__i3/CK"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i3/CK",
+            "phy_name":"hcount_389__i3/CK"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i3/Q",
-            "phy_name":"hcount_366__i3/Q"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i3/Q",
+            "phy_name":"hcount_389__i3/Q"
         },
         "arrive":6.201,
         "delay":1.391
@@ -5187,13 +5188,13 @@ Data path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/C0",
-            "phy_name":"hcount_366_add_4_5/C0"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389_add_4_5/C0",
+            "phy_name":"hcount_389_add_4_5/C0"
         },
         "pin1":
         {
-            "log_name":"vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/S0",
-            "phy_name":"hcount_366_add_4_5/S0"
+            "log_name":"vga_controller/VGAHorizontalCounter/hcount_389_add_4_5/S0",
+            "phy_name":"hcount_389_add_4_5/S0"
         },
         "arrive":6.931,
         "delay":0.450
@@ -5214,10 +5215,10 @@ Data path
 </tapath>
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_366__i3/CK->vga_controller/VGAHorizontalCounter/hcount_366__i3/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  29      
+vga_controller/VGAHorizontalCounter/hcount_389__i3/CK->vga_controller/VGAHorizontalCounter/hcount_389__i3/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  27      
 xpix[3]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/C0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/S0
+vga_controller/VGAHorizontalCounter/hcount_389_add_4_5/C0->vga_controller/VGAHorizontalCounter/hcount_389_add_4_5/S0
                                           FA2             C0_TO_S0_DELAY  0.450         6.931  1       
 vga_controller/VGAHorizontalCounter/n45[3]
                                                           NET DELAY       2.075         9.006  1       
@@ -5236,8 +5237,8 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"vga_controller/VGAHorizontalCounter/hcount_366__i3/CK",
-        "phy_name":"hcount_366__i3/CK"
+        "log_name":"vga_controller/VGAHorizontalCounter/hcount_389__i3/CK",
+        "phy_name":"hcount_389__i3/CK"
     },
     "path_sections":[
     {

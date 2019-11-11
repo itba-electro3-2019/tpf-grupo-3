@@ -26,7 +26,7 @@ parameter OFFSET_PADDLE = 100;			//Offset que se le agrega a la altura de la pal
 
 always@(posedge game_clk) begin
 	
-	if(reset) begin
+	if(~reset) begin
 		paddle_y <= 10'd200;
 		paddle_x <= player? 10'd20 : 10'd610;
 	end
