@@ -13,6 +13,14 @@ output pixvalball
 );
 
 //Si el pixel a pintar se encuentra dentro de la zona que ocupa la pelota se prende
-assign pixvalball = (xpix >= x_ball) && (xpix < x_ball+width_ball) && (ypix >= y_ball) && (ypix < y_ball+height_ball);
+assign pixvalball = (xpix >= x_ball) && (xpix < x_ball+width_ball) && (ypix >= y_ball) && (ypix < y_ball+height_ball);		
 
+														//		******
+														//   ************
+														//******************
+														//******************
+														//******************
+														//******************
+														//   ************
+														//      ******      
 endmodule

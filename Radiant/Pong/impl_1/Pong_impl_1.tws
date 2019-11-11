@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 1.1.0.165.1
 
-Sun Nov 10 17:24:22 2019
+Mon Nov 11 02:09:51 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -44,11 +44,11 @@ Performance:     High-Performance_1.2V
             3.4.2  Start/End Points Without Timing Constraints
     4  DETAILED REPORT
         4.1  Setup Detailed Report
-            4.1.1  Setup Path Details For Constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]
-            4.1.2  Setup Path Details For Constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+            4.1.1  Setup Path Details For Constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+            4.1.2  Setup Path Details For Constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]
         4.2  Hold Detailed Report
-            4.2.1  Hold Path Details For Constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]
-            4.2.2  Hold Path Details For Constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+            4.2.1  Hold Path Details For Constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+            4.2.2  Hold Path Details For Constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]
 
 =====================================================================
                     End of Table of Contents
@@ -69,22 +69,22 @@ create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_in
 Combinational Loops
 -------------------
 ++++ Loop1
-vga_controller/i22_4_lut/B	->	vga_controller/i22_4_lut/Z
+vga_controller/VGAVerticalCounter/i2218_4_lut/D	->	vga_controller/VGAVerticalCounter/i2218_4_lut/Z
 
 ++++ Loop2
-vga_controller/i3509_2_lut/A	->	vga_controller/i3509_2_lut/Z
+vga_controller/VGAVerticalCounter/i20028_2_lut/A	->	vga_controller/VGAVerticalCounter/i20028_2_lut/Z
 
 ++++ Loop3
-vga_controller/i3460_2_lut/B	->	vga_controller/i3460_2_lut/Z
+vga_controller/VGAVerticalCounter/i2211_4_lut/D	->	vga_controller/VGAVerticalCounter/i2211_4_lut/Z
 
 ++++ Loop4
-vga_controller/VGAHorizontalCounter/i907_4_lut/D	->	vga_controller/VGAHorizontalCounter/i907_4_lut/Z
+vga_controller/VGAVerticalCounter/i2241_4_lut/A	->	vga_controller/VGAVerticalCounter/i2241_4_lut/Z
 
 ++++ Loop5
-vga_controller/VGAHorizontalCounter/i3770_3_lut/A	->	vga_controller/VGAHorizontalCounter/i3770_3_lut/Z
+vga_controller/VGAVerticalCounter/i6693_4_lut/A	->	vga_controller/VGAVerticalCounter/i6693_4_lut/Z
 
 ++++ Loop6
-vga_controller/i1_4_lut_adj_51/C	->	vga_controller/i1_4_lut_adj_51/Z
+vga_controller/i1_4_lut_adj_116/D	->	vga_controller/i1_4_lut_adj_116/Z
 
 ==============================================
 2  CLOCK SUMMARY
@@ -137,7 +137,7 @@ Clock Domain Crossing
 
 3.1.1  Constraint Coverage
 ---------------------------
-Constraint Coverage: 22.0628%
+Constraint Coverage: 11.9686%
 
 3.1.2  Timing Errors
 ---------------------
@@ -157,15 +157,15 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
              SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
 -------------------------------------------------------------------------------------------------------------------------------------------
                                         |             |             |        |             |             |                |                
-create_clock -name {ref_clk} -period 83                                                                                                    
-.3333333333333 -waveform {0.000 41.666}                                                                                                    
- [get_ports ref_clk]                    |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
-                                        |             |             |        |             |             |                |                
 create_generated_clock -name {vga_clk}                                                                                                     
 -source [get_pins {pll_module/lscc_pll_                                                                                                    
 inst/u_PLL_B/REFERENCECLK}] -multiply_b                                                                                                    
 y 67 -divide_by 32 [get_pins {pll_modul                                                                                                    
-e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |   39.800 ns |   22.618 ns |    7   |   17.182 ns |  58.200 MHz |       87       |        0       
+e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |   39.800 ns |   22.618 ns |    7   |   17.182 ns |  58.200 MHz |       89       |        0       
+                                        |             |             |        |             |             |                |                
+create_clock -name {ref_clk} -period 83                                                                                                    
+.3333333333333 -waveform {0.000 41.666}                                                                                                    
+ [get_ports ref_clk]                    |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 3.2.2  Setup Critical Endpoint Summary 
@@ -174,15 +174,15 @@ e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |   39.800 ns |   22.618 ns |    7   |  
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
 game_tick_gen/game_clk_c/D               |   22.619 ns 
-game_tick_gen/counter_124__i16/SR        |   24.867 ns 
-game_tick_gen/counter_124__i15/SR        |   24.867 ns 
-game_tick_gen/counter_124__i14/SR        |   24.867 ns 
-game_tick_gen/counter_124__i13/SR        |   24.867 ns 
-game_tick_gen/counter_124__i12/SR        |   24.867 ns 
-game_tick_gen/counter_124__i11/SR        |   24.867 ns 
-game_tick_gen/counter_124__i10/SR        |   24.867 ns 
-game_tick_gen/counter_124__i9/SR         |   24.867 ns 
-game_tick_gen/counter_124__i8/SR         |   24.867 ns 
+game_tick_gen/counter_364__i18/SR        |   24.867 ns 
+game_tick_gen/counter_364__i17/SR        |   24.867 ns 
+game_tick_gen/counter_364__i16/SR        |   24.867 ns 
+game_tick_gen/counter_364__i15/SR        |   24.867 ns 
+game_tick_gen/counter_364__i14/SR        |   24.867 ns 
+game_tick_gen/counter_364__i13/SR        |   24.867 ns 
+game_tick_gen/counter_364__i12/SR        |   24.867 ns 
+game_tick_gen/counter_364__i11/SR        |   24.867 ns 
+game_tick_gen/counter_364__i10/SR        |   24.867 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -199,15 +199,15 @@ Setup # of endpoints with negative slack:|           0
              SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
 -------------------------------------------------------------------------------------------------------------------------------------------
                                         |             |             |        |             |             |                |                
-create_clock -name {ref_clk} -period 83                                                                                                    
-.3333333333333 -waveform {0.000 41.666}                                                                                                    
- [get_ports ref_clk]                    |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
-                                        |             |             |        |             |             |                |                
 create_generated_clock -name {vga_clk}                                                                                                     
 -source [get_pins {pll_module/lscc_pll_                                                                                                    
 inst/u_PLL_B/REFERENCECLK}] -multiply_b                                                                                                    
 y 67 -divide_by 32 [get_pins {pll_modul                                                                                                    
-e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |    0.000 ns |    4.196 ns |    2   |        ---- |        ---- |       87       |        0       
+e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |    0.000 ns |    4.196 ns |    2   |        ---- |        ---- |       89       |        0       
+                                        |             |             |        |             |             |                |                
+create_clock -name {ref_clk} -period 83                                                                                                    
+.3333333333333 -waveform {0.000 41.666}                                                                                                    
+ [get_ports ref_clk]                    |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 3.3.2  Hold Critical Endpoint Summary 
@@ -216,16 +216,26 @@ e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |    0.000 ns |    4.196 ns |    2   |  
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-game_tick_gen/counter_124__i17/D         |    4.196 ns 
-game_tick_gen/counter_124__i16/D         |    4.196 ns 
-game_tick_gen/counter_124__i15/D         |    4.196 ns 
-game_tick_gen/counter_124__i14/D         |    4.196 ns 
-game_tick_gen/counter_124__i13/D         |    4.196 ns 
-game_tick_gen/counter_124__i12/D         |    4.196 ns 
-game_tick_gen/counter_124__i11/D         |    4.196 ns 
-game_tick_gen/counter_124__i10/D         |    4.196 ns 
-game_tick_gen/counter_124__i9/D          |    4.196 ns 
-game_tick_gen/counter_124__i8/D          |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i9/D              
+                                         |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i8/D              
+                                         |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i7/D              
+                                         |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i6/D              
+                                         |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i5/D              
+                                         |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i4/D              
+                                         |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i3/D              
+                                         |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i2/D              
+                                         |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i1/D              
+                                         |    4.196 ns 
+vga_controller/VGAHorizontalCounter/hcount_366__i0/D              
+                                         |    4.196 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -242,25 +252,30 @@ Clocked but unconstrained timing start points
 -------------------------------------------------------------------
         Listing 10 Start Points         |           Type           
 -------------------------------------------------------------------
-reset_generator/rst_counter_126__i3/Q   |    No arrival or required
-reset_generator/rst_counter_126__i2/Q   |    No arrival or required
-reset_generator/rst_counter_126__i1/Q   |    No arrival or required
-reset_generator/rst_counter_126__i0/Q   |    No arrival or required
-reset_generator/rst/Q                   |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i9/Q                           
+collision_controller/ball_collision_controller/scoreA_i0_i2/Q                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i8/Q                           
+collision_controller/ball_collision_controller/scoreA_i0_i1/Q                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i7/Q                           
+collision_controller/ball_collision_controller/scoreA_i0_i0/Q                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i6/Q                           
+collision_controller/ball_collision_controller/scoreB_i0_i2/Q                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i5/Q                           
+collision_controller/ball_collision_controller/scoreB_i0_i1/Q                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/scoreB_i0_i0/Q                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/x_ball_i9/Q                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/x_ball_i8/Q                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/x_ball_i7/Q                           
+                                        |    No arrival or required
+collision_controller/ball_collision_controller/x_ball_i6/Q                           
                                         |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing start po |                          
-ints                                    |                        33
+ints                                    |                        46
                                         |                          
 -------------------------------------------------------------------
 
@@ -268,30 +283,30 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
          Listing 10 End Points          |           Type           
 -------------------------------------------------------------------
-collision_controller/ball_collision_controller/x_ball_res2_i9/D                           
+collision_controller/ball_collision_controller/scoreA_i0_i0/D                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i8/D                           
+collision_controller/ball_collision_controller/scoreB_i0_i2/D                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i7/D                           
+collision_controller/ball_collision_controller/scoreB_i0_i1/D                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i6/D                           
+collision_controller/ball_collision_controller/scoreB_i0_i2/SP                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i5/D                           
+collision_controller/ball_collision_controller/scoreB_i0_i1/SP                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i4/D                           
+collision_controller/ball_collision_controller/y_ball_i9/D                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i3/D                           
+collision_controller/ball_collision_controller/y_ball_i8/D                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i2/D                           
+collision_controller/ball_collision_controller/y_ball_i7/D                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i1/D                           
+collision_controller/ball_collision_controller/y_ball_i6/D                           
                                         |    No arrival or required
-collision_controller/ball_collision_controller/x_ball_res2_i0/D                           
+collision_controller/ball_collision_controller/y_ball_i5/D                           
                                         |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
-ts                                      |                        42
+ts                                      |                        88
                                         |                          
 -------------------------------------------------------------------
 
@@ -334,20 +349,9 @@ There is no instance satisfying reporting criteria
 
 4.1  Setup Detailed Report
 ===========================
-4.1.1  Setup path details for constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]
+4.1.1  Setup path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 ----------------------------------------------------------------------
-0 endpoints scored, 0 timing errors detected.
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-                    Detailed Report for timing paths 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-                    End of Detailed Report for timing paths 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-
-4.1.2  Setup path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
-----------------------------------------------------------------------
-87 endpoints scored, 0 timing errors detected.
+89 endpoints scored, 0 timing errors detected.
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     Detailed Report for timing paths 
@@ -355,7 +359,7 @@ There is no instance satisfying reporting criteria
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
+Path Begin       : game_tick_gen/counter_364__i6/Q
 Path End         : game_tick_gen/game_clk_c/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
@@ -384,40 +388,40 @@ End-of-path arrival time( ns )              21.793
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.477        17.166  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.241  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        17.166  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.241  1       
 game_tick_gen/i1_2_lut/B->game_tick_gen/i1_2_lut/Z
                                           LUT4            B_TO_Z_DELAY   0.477        19.718  1       
-game_tick_gen/game_clk_N_199                              NET DELAY      2.075        21.793  1       
+game_tick_gen/game_clk_N_527                              NET DELAY      2.075        21.793  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -425,8 +429,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
-Path End         : game_tick_gen/counter_124__i17/SR
+Path Begin       : game_tick_gen/counter_364__i6/Q
+Path End         : game_tick_gen/counter_364__i0/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -454,37 +458,37 @@ End-of-path arrival time( ns )              19.214
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.450        17.139  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.450        17.139  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -492,8 +496,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
-Path End         : game_tick_gen/counter_124__i1/SR
+Path Begin       : game_tick_gen/counter_364__i6/Q
+Path End         : game_tick_gen/counter_364__i1/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -521,37 +525,37 @@ End-of-path arrival time( ns )              19.214
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.450        17.139  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.450        17.139  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -559,8 +563,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
-Path End         : game_tick_gen/counter_124__i2/SR
+Path Begin       : game_tick_gen/counter_364__i6/Q
+Path End         : game_tick_gen/counter_364__i2/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -588,37 +592,37 @@ End-of-path arrival time( ns )              19.214
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.450        17.139  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.450        17.139  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -626,8 +630,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
-Path End         : game_tick_gen/counter_124__i0/SR
+Path Begin       : game_tick_gen/counter_364__i6/Q
+Path End         : game_tick_gen/counter_364__i3/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -655,37 +659,37 @@ End-of-path arrival time( ns )              19.214
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.450        17.139  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.450        17.139  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -693,8 +697,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
-Path End         : game_tick_gen/counter_124__i3/SR
+Path Begin       : game_tick_gen/counter_364__i6/Q
+Path End         : game_tick_gen/counter_364__i4/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -722,37 +726,37 @@ End-of-path arrival time( ns )              19.214
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.450        17.139  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.450        17.139  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -760,8 +764,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
-Path End         : game_tick_gen/counter_124__i4/SR
+Path Begin       : game_tick_gen/counter_364__i6/Q
+Path End         : game_tick_gen/counter_364__i5/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -789,37 +793,37 @@ End-of-path arrival time( ns )              19.214
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.450        17.139  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.450        17.139  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -827,8 +831,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
-Path End         : game_tick_gen/counter_124__i5/SR
+Path Begin       : game_tick_gen/counter_364__i6/Q
+Path End         : game_tick_gen/counter_364__i6/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -856,37 +860,37 @@ End-of-path arrival time( ns )              19.214
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.450        17.139  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.450        17.139  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -894,8 +898,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
-Path End         : game_tick_gen/counter_124__i6/SR
+Path Begin       : game_tick_gen/counter_364__i6/Q
+Path End         : game_tick_gen/counter_364__i7/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -923,37 +927,37 @@ End-of-path arrival time( ns )              19.214
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.450        17.139  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.450        17.139  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -961,8 +965,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i4/Q
-Path End         : game_tick_gen/counter_124__i7/SR
+Path Begin       : game_tick_gen/counter_364__i6/Q
+Path End         : game_tick_gen/counter_364__i8/SR
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 6
@@ -990,37 +994,37 @@ End-of-path arrival time( ns )              19.214
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-game_tick_gen/counter_124__i4/CK->game_tick_gen/counter_124__i4/Q
+game_tick_gen/counter_364__i6/CK->game_tick_gen/counter_364__i6/Q
                                           FD1P3XZ         CK_TO_Q_DELAY  1.391         6.201  2       
-game_tick_gen/counter[4]                                  NET DELAY      0.280         6.481  1       
-game_tick_gen/i3_4_lut/D->game_tick_gen/i3_4_lut/Z
+game_tick_gen/counter[6]                                  NET DELAY      0.280         6.481  1       
+game_tick_gen/i5_4_lut/D->game_tick_gen/i5_4_lut/Z
                                           LUT4            D_TO_Z_DELAY   0.477         6.958  1       
-game_tick_gen/n3570                                       NET DELAY      2.075         9.033  1       
-game_tick_gen/i3_4_lut_adj_42/C->game_tick_gen/i3_4_lut_adj_42/Z
-                                          LUT4            C_TO_Z_DELAY   0.477         9.510  1       
-game_tick_gen/n3565                                       NET DELAY      2.075        11.585  1       
-game_tick_gen/i1_4_lut_adj_41/A->game_tick_gen/i1_4_lut_adj_41/Z
+game_tick_gen/n12                                         NET DELAY      2.075         9.033  1       
+game_tick_gen/i6_4_lut/B->game_tick_gen/i6_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         9.510  1       
+game_tick_gen/n19755                                      NET DELAY      2.075        11.585  1       
+game_tick_gen/i1_4_lut/A->game_tick_gen/i1_4_lut/Z
                                           LUT4            A_TO_Z_DELAY   0.477        12.062  1       
 game_tick_gen/n5                                          NET DELAY      2.075        14.137  1       
-game_tick_gen/i1_4_lut/B->game_tick_gen/i1_4_lut/Z
-                                          LUT4            B_TO_Z_DELAY   0.477        14.614  1       
-game_tick_gen/n4                                          NET DELAY      2.075        16.689  1       
-game_tick_gen/i1555_4_lut/D->game_tick_gen/i1555_4_lut/Z
-                                          LUT4            D_TO_Z_DELAY   0.450        17.139  19      
-game_tick_gen/n1072                                       NET DELAY      2.075        19.214  1       
+game_tick_gen/i2_4_lut_adj_141/C->game_tick_gen/i2_4_lut_adj_141/Z
+                                          LUT4            C_TO_Z_DELAY   0.477        14.614  1       
+game_tick_gen/n19713                                      NET DELAY      2.075        16.689  1       
+game_tick_gen/i2_4_lut/C->game_tick_gen/i2_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.450        17.139  20      
+game_tick_gen/n1998                                       NET DELAY      2.075        19.214  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -1029,9 +1033,7 @@ vga_clk                                                   NET DELAY      2.075  
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-4.2  Hold Detailed Report
-==========================
-4.2.1  Hold path details for constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]
+4.1.2  Setup path details for constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]
 ----------------------------------------------------------------------
 0 endpoints scored, 0 timing errors detected.
 
@@ -1042,9 +1044,11 @@ vga_clk                                                   NET DELAY      2.075  
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-4.2.2  Hold path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+4.2  Hold Detailed Report
+==========================
+4.2.1  Hold path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 ----------------------------------------------------------------------
-87 endpoints scored, 0 timing errors detected.
+89 endpoints scored, 0 timing errors detected.
 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     Detailed Report for timing paths 
@@ -1052,8 +1056,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i0/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i0/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i0/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1081,72 +1085,17 @@ End-of-path arrival time( ns )              9.006
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  2       
-game_tick_gen/counter[0]                                  NET DELAY       0.280         6.481  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/S1
-                                          FA2             C1_TO_S1_DELAY  0.450         6.931  1       
-game_tick_gen/n77[0]                                      NET DELAY       2.075         9.006  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
-vga_clk                                                   NET DELAY      2.075         4.810  1       
-
-
-
-
- ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_128__i0/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_128__i0/D
-Source Clock     : vga_clk
-Destination Clock: vga_clk
-Logic Level      : 2
-Delay Ratio      : 56.1% (route), 43.9% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 4.196 ns  (Passed)
-
-  Destination Clock Arrival Time (vga_clk:R#1)     0.000
-+ Generated Clock Source Latency                   2.735
-+ Destination Clock Uncertainty                    0.000
-+ Destination Clock Path Delay                     2.075
-+ Hold Time                                       -0.000
-----------------------------------------------   -------
-End-of-path required time( ns )                    4.810
-
-  Source Clock Arrival Time (vga_clk:R#1)   0.000
-+ Generated Clock Source Latency            2.735
-+ Source Clock Path Delay                   2.075
-+ Data Path Delay                           4.196
------------------------------------------   -----
-End-of-path arrival time( ns )              9.006
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
-vga_clk                                                   NET DELAY      2.075         4.810  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_128__i0/CK->vga_controller/VGAHorizontalCounter/hcount_128__i0/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  4       
+vga_controller/VGAHorizontalCounter/hcount_366__i0/CK->vga_controller/VGAHorizontalCounter/hcount_366__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  13      
 xpix[0]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_128_add_4_1/S1
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 vga_controller/VGAHorizontalCounter/n45[0]
                                                           NET DELAY       2.075         9.006  1       
@@ -1155,16 +1104,16 @@ vga_controller/VGAHorizontalCounter/n45[0]
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 
 
- ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_130__i0/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_130__i0/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_368__i0/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_368__i0/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1192,17 +1141,17 @@ End-of-path arrival time( ns )              9.006
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAVerticalCounter/vcount_130__i0/CK->vga_controller/VGAVerticalCounter/vcount_130__i0/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  4       
+vga_controller/VGAVerticalCounter/vcount_368__i0/CK->vga_controller/VGAVerticalCounter/vcount_368__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  13      
 ypix[0]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAVerticalCounter/vcount_130_add_4_1/C1->vga_controller/VGAVerticalCounter/vcount_130_add_4_1/S1
+vga_controller/VGAVerticalCounter/vcount_368_add_4_1/C1->vga_controller/VGAVerticalCounter/vcount_368_add_4_1/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 vga_controller/VGAVerticalCounter/n45[0]                  NET DELAY       2.075         9.006  1       
 
@@ -1210,7 +1159,62 @@ vga_controller/VGAVerticalCounter/n45[0]                  NET DELAY       2.075 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
+vga_clk                                                   NET DELAY      2.075         4.810  1       
+
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i0/D
+Source Clock     : vga_clk
+Destination Clock: vga_clk
+Logic Level      : 2
+Delay Ratio      : 56.1% (route), 43.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 4.196 ns  (Passed)
+
+  Destination Clock Arrival Time (vga_clk:R#1)     0.000
++ Generated Clock Source Latency                   2.735
++ Destination Clock Uncertainty                    0.000
++ Destination Clock Path Delay                     2.075
++ Hold Time                                       -0.000
+----------------------------------------------   -------
+End-of-path required time( ns )                    4.810
+
+  Source Clock Arrival Time (vga_clk:R#1)   0.000
++ Generated Clock Source Latency            2.735
++ Source Clock Path Delay                   2.075
++ Data Path Delay                           4.196
+-----------------------------------------   -----
+End-of-path arrival time( ns )              9.006
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
+vga_clk                                                   NET DELAY      2.075         4.810  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------  -----  ------------  ------  
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  2       
+game_tick_gen/counter[0]                                  NET DELAY       0.280         6.481  1       
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/S1
+                                          FA2             C1_TO_S1_DELAY  0.450         6.931  1       
+game_tick_gen/n81[0]                                      NET DELAY       2.075         9.006  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -1218,8 +1222,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i1/Q
-Path End         : game_tick_gen/counter_124__i1/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i1/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1247,72 +1251,17 @@ End-of-path arrival time( ns )              9.006
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-game_tick_gen/counter_124__i1/CK->game_tick_gen/counter_124__i1/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  2       
-game_tick_gen/counter[1]                                  NET DELAY       0.280         6.481  1       
-game_tick_gen/counter_124_add_4_3/C0->game_tick_gen/counter_124_add_4_3/S0
-                                          FA2             C0_TO_S0_DELAY  0.450         6.931  1       
-game_tick_gen/n77[1]                                      NET DELAY       2.075         9.006  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
-vga_clk                                                   NET DELAY      2.075         4.810  1       
-
-
-
-
- ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_128__i1/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_128__i1/D
-Source Clock     : vga_clk
-Destination Clock: vga_clk
-Logic Level      : 2
-Delay Ratio      : 56.1% (route), 43.9% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 4.196 ns  (Passed)
-
-  Destination Clock Arrival Time (vga_clk:R#1)     0.000
-+ Generated Clock Source Latency                   2.735
-+ Destination Clock Uncertainty                    0.000
-+ Destination Clock Path Delay                     2.075
-+ Hold Time                                       -0.000
-----------------------------------------------   -------
-End-of-path required time( ns )                    4.810
-
-  Source Clock Arrival Time (vga_clk:R#1)   0.000
-+ Generated Clock Source Latency            2.735
-+ Source Clock Path Delay                   2.075
-+ Data Path Delay                           4.196
------------------------------------------   -----
-End-of-path arrival time( ns )              9.006
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
-vga_clk                                                   NET DELAY      2.075         4.810  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_128__i1/CK->vga_controller/VGAHorizontalCounter/hcount_128__i1/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  4       
+vga_controller/VGAHorizontalCounter/hcount_366__i1/CK->vga_controller/VGAHorizontalCounter/hcount_366__i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  19      
 xpix[1]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/C0->vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/S0
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/C0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/S0
                                           FA2             C0_TO_S0_DELAY  0.450         6.931  1       
 vga_controller/VGAHorizontalCounter/n45[1]
                                                           NET DELAY       2.075         9.006  1       
@@ -1321,16 +1270,16 @@ vga_controller/VGAHorizontalCounter/n45[1]
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 
 
- ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_130__i1/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_130__i1/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_368__i1/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_368__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1358,17 +1307,17 @@ End-of-path arrival time( ns )              9.006
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAVerticalCounter/vcount_130__i1/CK->vga_controller/VGAVerticalCounter/vcount_130__i1/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  5       
+vga_controller/VGAVerticalCounter/vcount_368__i1/CK->vga_controller/VGAVerticalCounter/vcount_368__i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  14      
 ypix[1]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAVerticalCounter/vcount_130_add_4_3/C0->vga_controller/VGAVerticalCounter/vcount_130_add_4_3/S0
+vga_controller/VGAVerticalCounter/vcount_368_add_4_3/C0->vga_controller/VGAVerticalCounter/vcount_368_add_4_3/S0
                                           FA2             C0_TO_S0_DELAY  0.450         6.931  1       
 vga_controller/VGAVerticalCounter/n45[1]                  NET DELAY       2.075         9.006  1       
 
@@ -1376,7 +1325,62 @@ vga_controller/VGAVerticalCounter/n45[1]                  NET DELAY       2.075 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
+vga_clk                                                   NET DELAY      2.075         4.810  1       
+
+
+
+
+ ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : game_tick_gen/counter_364__i1/Q
+Path End         : game_tick_gen/counter_364__i1/D
+Source Clock     : vga_clk
+Destination Clock: vga_clk
+Logic Level      : 2
+Delay Ratio      : 56.1% (route), 43.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 4.196 ns  (Passed)
+
+  Destination Clock Arrival Time (vga_clk:R#1)     0.000
++ Generated Clock Source Latency                   2.735
++ Destination Clock Uncertainty                    0.000
++ Destination Clock Path Delay                     2.075
++ Hold Time                                       -0.000
+----------------------------------------------   -------
+End-of-path required time( ns )                    4.810
+
+  Source Clock Arrival Time (vga_clk:R#1)   0.000
++ Generated Clock Source Latency            2.735
++ Source Clock Path Delay                   2.075
++ Data Path Delay                           4.196
+-----------------------------------------   -----
+End-of-path arrival time( ns )              9.006
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
+vga_clk                                                   NET DELAY      2.075         4.810  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------  -----  ------------  ------  
+game_tick_gen/counter_364__i1/CK->game_tick_gen/counter_364__i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  2       
+game_tick_gen/counter[1]                                  NET DELAY       0.280         6.481  1       
+game_tick_gen/counter_364_add_4_3/C0->game_tick_gen/counter_364_add_4_3/S0
+                                          FA2             C0_TO_S0_DELAY  0.450         6.931  1       
+game_tick_gen/n81[1]                                      NET DELAY       2.075         9.006  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
@@ -1384,8 +1388,8 @@ vga_clk                                                   NET DELAY      2.075  
 
  ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i2/Q
-Path End         : game_tick_gen/counter_124__i2/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i2/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1413,72 +1417,17 @@ End-of-path arrival time( ns )              9.006
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-game_tick_gen/counter_124__i2/CK->game_tick_gen/counter_124__i2/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  2       
-game_tick_gen/counter[2]                                  NET DELAY       0.280         6.481  1       
-game_tick_gen/counter_124_add_4_3/C1->game_tick_gen/counter_124_add_4_3/S1
-                                          FA2             C1_TO_S1_DELAY  0.450         6.931  1       
-game_tick_gen/n77[2]                                      NET DELAY       2.075         9.006  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
-vga_clk                                                   NET DELAY      2.075         4.810  1       
-
-
-
-
- ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_128__i2/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_128__i2/D
-Source Clock     : vga_clk
-Destination Clock: vga_clk
-Logic Level      : 2
-Delay Ratio      : 56.1% (route), 43.9% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 4.196 ns  (Passed)
-
-  Destination Clock Arrival Time (vga_clk:R#1)     0.000
-+ Generated Clock Source Latency                   2.735
-+ Destination Clock Uncertainty                    0.000
-+ Destination Clock Path Delay                     2.075
-+ Hold Time                                       -0.000
-----------------------------------------------   -------
-End-of-path required time( ns )                    4.810
-
-  Source Clock Arrival Time (vga_clk:R#1)   0.000
-+ Generated Clock Source Latency            2.735
-+ Source Clock Path Delay                   2.075
-+ Data Path Delay                           4.196
------------------------------------------   -----
-End-of-path arrival time( ns )              9.006
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
-vga_clk                                                   NET DELAY      2.075         4.810  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_128__i2/CK->vga_controller/VGAHorizontalCounter/hcount_128__i2/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  7       
+vga_controller/VGAHorizontalCounter/hcount_366__i2/CK->vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  26      
 xpix[2]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/C1->vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/S1
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/C1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 vga_controller/VGAHorizontalCounter/n45[2]
                                                           NET DELAY       2.075         9.006  1       
@@ -1487,16 +1436,16 @@ vga_controller/VGAHorizontalCounter/n45[2]
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 
 
- ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_130__i2/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_130__i2/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_368__i2/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_368__i2/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1524,17 +1473,17 @@ End-of-path arrival time( ns )              9.006
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-vga_controller/VGAVerticalCounter/vcount_130__i2/CK->vga_controller/VGAVerticalCounter/vcount_130__i2/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  11      
+vga_controller/VGAVerticalCounter/vcount_368__i2/CK->vga_controller/VGAVerticalCounter/vcount_368__i2/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  20      
 ypix[2]                                                   NET DELAY       0.280         6.481  1       
-vga_controller/VGAVerticalCounter/vcount_130_add_4_3/C1->vga_controller/VGAVerticalCounter/vcount_130_add_4_3/S1
+vga_controller/VGAVerticalCounter/vcount_368_add_4_3/C1->vga_controller/VGAVerticalCounter/vcount_368_add_4_3/S1
                                           FA2             C1_TO_S1_DELAY  0.450         6.931  1       
 vga_controller/VGAVerticalCounter/n45[2]                  NET DELAY       2.075         9.006  1       
 
@@ -1542,16 +1491,16 @@ vga_controller/VGAVerticalCounter/n45[2]                  NET DELAY       2.075 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 
 
- ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i3/Q
-Path End         : game_tick_gen/counter_124__i3/D
+Path Begin       : game_tick_gen/counter_364__i2/Q
+Path End         : game_tick_gen/counter_364__i2/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1579,29 +1528,96 @@ End-of-path arrival time( ns )              9.006
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-game_tick_gen/counter_124__i3/CK->game_tick_gen/counter_124__i3/Q
+game_tick_gen/counter_364__i2/CK->game_tick_gen/counter_364__i2/Q
                                           FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  2       
-game_tick_gen/counter[3]                                  NET DELAY       0.280         6.481  1       
-game_tick_gen/counter_124_add_4_5/C0->game_tick_gen/counter_124_add_4_5/S0
-                                          FA2             C0_TO_S0_DELAY  0.450         6.931  1       
-game_tick_gen/n77[3]                                      NET DELAY       2.075         9.006  1       
+game_tick_gen/counter[2]                                  NET DELAY       0.280         6.481  1       
+game_tick_gen/counter_364_add_4_3/C1->game_tick_gen/counter_364_add_4_3/S1
+                                          FA2             C1_TO_S1_DELAY  0.450         6.931  1       
+game_tick_gen/n81[2]                                      NET DELAY       2.075         9.006  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  39      
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
 vga_clk                                                   NET DELAY      2.075         4.810  1       
 
 
 
+
+ ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i3/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i3/D
+Source Clock     : vga_clk
+Destination Clock: vga_clk
+Logic Level      : 2
+Delay Ratio      : 56.1% (route), 43.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 4.196 ns  (Passed)
+
+  Destination Clock Arrival Time (vga_clk:R#1)     0.000
++ Generated Clock Source Latency                   2.735
++ Destination Clock Uncertainty                    0.000
++ Destination Clock Path Delay                     2.075
++ Hold Time                                       -0.000
+----------------------------------------------   -------
+End-of-path required time( ns )                    4.810
+
+  Source Clock Arrival Time (vga_clk:R#1)   0.000
++ Generated Clock Source Latency            2.735
++ Source Clock Path Delay                   2.075
++ Data Path Delay                           4.196
+-----------------------------------------   -----
+End-of-path arrival time( ns )              9.006
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
+vga_clk                                                   NET DELAY      2.075         4.810  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------  -----  ------------  ------  
+vga_controller/VGAHorizontalCounter/hcount_366__i3/CK->vga_controller/VGAHorizontalCounter/hcount_366__i3/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         6.201  29      
+xpix[3]                                                   NET DELAY       0.280         6.481  1       
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/C0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/S0
+                                          FA2             C0_TO_S0_DELAY  0.450         6.931  1       
+vga_controller/VGAHorizontalCounter/n45[3]
+                                                          NET DELAY       2.075         9.006  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  40      
+vga_clk                                                   NET DELAY      2.075         4.810  1       
+
+
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.2.2  Hold path details for constraint: create_clock -name {ref_clk} -period 83.3333333333333 -waveform {0.000 41.666} [get_ports ref_clk]
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

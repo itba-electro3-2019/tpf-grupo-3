@@ -14,6 +14,8 @@ output pixval
 );
 
 //Si el pixel a pintar se encuentra dentro de la zona que esta la paleta se prende
-assign pixval = (xpix >= x_paddle) && (xpix < x_paddle+width_paddle) && (ypix >= y_paddle) && (ypix < y_paddle+height_paddle);
+assign pixval = ((xpix > x_paddle) && (xpix < x_paddle+width_paddle) && (ypix > y_paddle + 3) && (ypix < y_paddle+height_paddle - 3)) ||
+((xpix> x_paddle + 2) && (xpix < x_paddle + width_paddle - 2) && (ypix>y_paddle) && (ypix <= y_paddle + 3)) ||
+((xpix> x_paddle + 2) && (xpix < x_paddle + width_paddle - 2) && (ypix>=y_paddle+height_paddle - 3) && (ypix < y_paddle + height_paddle));
 
 endmodule

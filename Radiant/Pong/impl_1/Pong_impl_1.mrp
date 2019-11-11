@@ -5,7 +5,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 1.1.0.165.1
-Mapped on: Sun Nov 10 17:24:23 2019
+Mapped on: Mon Nov 11 02:09:53 2019
 
 Design Information
 ------------------
@@ -16,12 +16,11 @@ Command line:   map Pong_impl_1_syn.udb C:/Users/Acer/Desktop/GitHub/ElectroIII/
 Design Summary
 --------------
 
-   Number of slice registers:  72 out of  5280 (1%)
+   Number of slice registers:  86 out of  5280 (2%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           317 out of  5280 (6%)
-      Number of logic LUT4s:             167
-      Number of replicated LUT4s:          2
-      Number of ripple logic:             74 (148 LUT4s)
+   Number of LUT4s:           633 out of  5280 (12%)
+      Number of logic LUT4s:             423
+      Number of ripple logic:            105 (210 LUT4s)
    Number of IO sites used:   6 out of 39 (15%)
       Number of IO sites used for general PIOs: 6
       Number of IO sites used for I3Cs: 0 out of 2 (0%)
@@ -41,25 +40,26 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             1 out of 1 (100%)
    Number of Clocks:  3
-      Net game_clk: 25 loads, 25 rising, 0 falling (Driver: Pin
-     game_tick_gen.game_clk_c/Q)
       Net vga_clk: 23 loads, 23 rising, 0 falling (Driver: Pin
      pll_module.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net game_clk: 30 loads, 30 rising, 0 falling (Driver: Pin
+     game_tick_gen.game_clk_c/Q)
       Net ref_clk_c: 1 loads, 1 rising, 0 falling (Driver: Port ref_clk)
-   Number of Clock Enables:  2
-      Net reset_generator/n1040: 4 loads, 4 SLICEs
-      Net vga_controller/n1038: 6 loads, 6 SLICEs
-   Number of LSRs:  5
-      Net reset_generator/n1071: 4 loads, 4 SLICEs
-      Net reset_generator/n21[0]: 1 loads, 1 SLICEs
-      Net vga_controller/VGAVerticalCounter/n1077: 6 loads, 6 SLICEs
-      Net vga_controller/VGAHorizontalCounter/n1067: 6 loads, 6 SLICEs
-      Net game_tick_gen/n1072: 10 loads, 10 SLICEs
-   Top 10 highest fanout non-clock nets:
-      Net VCC_net: 30 loads
-      Net xpix[5]: 16 loads
-      Net xpix[6]: 16 loads
-      Net xpix[7]: 15 loads
+   Number of Clock Enables:  3
+      Net vga_controller/n1963: 6 loads, 6 SLICEs
+      Net collision_controller/ball_collision_controller/x_ball_9__N_571: 2
+     loads, 2 SLICEs
+      Net collision_controller/ball_collision_controller/scoreA_2__N_558: 2
+     loads, 2 SLICEs
+   Number of LSRs:  6
+      Net game_tick_gen/n1998: 10 loads, 10 SLICEs
+      Net vga_controller/n1995: 6 loads, 6 SLICEs
+      Net vga_controller/VGAVerticalCounter/n2000: 6 loads, 6 SLICEs
+      Net collision_controller/paddleB_collision_controler/paddle_y_9__N_734: 6
+     loads, 6 SLICEs
+      Net collision_controller/paddleA_collision_controler/paddle_y_9__N_734: 6
+     loads, 6 SLICEs
+      Net collision_controller/ball_collision_controller/n347: 10 loads, 10
 
                                     Page 1
 
@@ -69,12 +69,18 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net ypix[3]: 15 loads
-      Net xpix[8]: 14 loads
-      Net xpix[4]: 13 loads
-      Net xpix[9]: 13 loads
-      Net ypix[4]: 12 loads
-      Net ypix[2]: 11 loads
+     SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net VCC_net: 57 loads
+      Net xpix[4]: 31 loads
+      Net xpix[3]: 29 loads
+      Net xpix[5]: 29 loads
+      Net xpix[9]: 27 loads
+      Net xpix[2]: 26 loads
+      Net xpix[6]: 26 loads
+      Net ypix[3]: 25 loads
+      Net ypix[4]: 25 loads
+      Net ypix[5]: 25 loads
 
 
 
@@ -100,11 +106,11 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | red                 | OUTPUT    | LVCMOS33  |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| ref_clk             | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | green               | OUTPUT    | LVCMOS33  |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | blue                | OUTPUT    | LVCMOS33  |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| ref_clk             | INPUT     | LVCMOS33  |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 Removed logic
@@ -120,12 +126,6 @@ PLL 1:                                 Pin/Node Value
   PLL Instance Name:                            pll_module.lscc_pll_inst.u_PLL_B
   PLL Type:                                     PLL_B
   Input Reference Clock:               PIN      ref_clk_c
-  Output Clock(CoreA):                          NONE
-  Output Clock(GlobalA):               NODE     vga_clk
-  Output Clock(CoreB):                          NONE
-  Output Clock(GlobalB):                        NONE
-  Feedback input:                      NODE
-       pll_module/lscc_pll_inst/feedback_w
 
                                     Page 2
 
@@ -135,11 +135,17 @@ PLL 1:                                 Pin/Node Value
 
 PLL/DLL Summary (cont)
 ----------------------
+  Output Clock(CoreA):                          NONE
+  Output Clock(GlobalA):               NODE     vga_clk
+  Output Clock(CoreB):                          NONE
+  Output Clock(GlobalB):                        NONE
+  Feedback input:                      NODE
+       pll_module/lscc_pll_inst/feedback_w
   Internal Feedback output:            NODE
        pll_module/lscc_pll_inst/feedback_w
   BYPASS signal:                                GND
   LATCH signal:                                 GND
-  Lock Signal:                         NODE     NULL/sig_000/FeedThruLUT
+  Lock Signal:                                  NONE
   Input Clock Frequency (MHz):                  12.0000
   Reference Divider:                            0
   Feedback Divider:                             66
@@ -169,13 +175,7 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 68 MB
-
-
-
-
-
-
+   Peak Memory Usage: 77 MB
 
 
 

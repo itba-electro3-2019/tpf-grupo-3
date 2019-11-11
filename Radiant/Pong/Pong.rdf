@@ -45,6 +45,15 @@
         <Source name="ResetGenerator.v" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options/>
         </Source>
+        <Source name="BuzzerModule.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="DisplayController/CounterModule.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="DisplayController/GameoverController.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="asf/asf.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>

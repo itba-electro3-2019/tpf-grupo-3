@@ -1,19 +1,25 @@
 module ResetGenerator(
 	input clk,
-	input pulse,
-	output reg rst = 1
+	input lossA,
+	input lossB,
+	output reg rst
 	);
 	
-reg [3:0] rst_counter;
+reg [5:0] rst_counter;
+wire pulse;
+
+assign pulse = (lossA||lossB);
 
 always@(posedge clk) begin
 	
-	rst<=(rst_counter != 15);
-	
-	if(~pulse)
+	if(rst_counter < 63 && rst_counter >39) begin
+		rst <= 1;
+	end
+	else
+		rst <= 0;
+	if(pulse)
 		rst_counter <= 0;
-	
-	if(rst_counter < 15) begin
+	if(rst_counter < 63) begin
 		rst_counter <= rst_counter + 1;
 	end
 end

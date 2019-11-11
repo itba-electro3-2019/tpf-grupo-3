@@ -2,6 +2,7 @@
 module VGAController(
 
 input clk,
+input altcolor,
 input pixval,
 output reg hsync=1,
 output reg vsync=1,
@@ -62,7 +63,7 @@ always @(xpix,ypix) begin
 	end
 	
 	if(vrange == VISIBLE_RANGE && hrange == VISIBLE_RANGE) begin
-		red <= pixval;					//Prendido es rojo
+		red <= altcolor?  0 : pixval;					//Prendido es rojo
 		green <= pixval? 0 : 1;			//Apagado es cyan
 		blue <= pixval? 0 : 1;			// 		"
 	end

@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 1.1.0.165.1
 
-Sun Nov 10 17:24:25 2019
+Mon Nov 11 02:09:55 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -69,22 +69,22 @@ create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_in
 Combinational Loops
 -------------------
 ++++ Loop1
-vga_controller/i22_4_lut/B	->	vga_controller/i22_4_lut/Z
+vga_controller/VGAVerticalCounter/i14_4_lut/B	->	vga_controller/VGAVerticalCounter/i14_4_lut/Z
 
 ++++ Loop2
-vga_controller/i3509_2_lut/A	->	vga_controller/i3509_2_lut/Z
+vga_controller/VGAVerticalCounter/i2218_4_lut/D	->	vga_controller/VGAVerticalCounter/i2218_4_lut/Z
 
 ++++ Loop3
-vga_controller/i3460_2_lut/B	->	vga_controller/i3460_2_lut/Z
+vga_controller/VGAVerticalCounter/i2211_4_lut/D	->	vga_controller/VGAVerticalCounter/i2211_4_lut/Z
 
 ++++ Loop4
-vga_controller/i3505_2_lut_3_lut_4_lut/A	->	vga_controller/i3505_2_lut_3_lut_4_lut/Z
+vga_controller/i1_4_lut_adj_116/D	->	vga_controller/i1_4_lut_adj_116/Z
 
 ++++ Loop5
-SLICE_105/D0	->	SLICE_105/F0
+vga_controller/VGAVerticalCounter/i6693_4_lut/A	->	vga_controller/VGAVerticalCounter/i6693_4_lut/Z
 
 ++++ Loop6
-vga_controller/VGAHorizontalCounter/i3770_3_lut/A	->	vga_controller/VGAHorizontalCounter/i3770_3_lut/Z
+vga_controller/VGAVerticalCounter/i2241_4_lut/A	->	vga_controller/VGAVerticalCounter/i2241_4_lut/Z
 
 ==============================================
 2  CLOCK SUMMARY
@@ -118,7 +118,7 @@ Single Clock Domain
              Clock vga_clk              |                    |       Period       |     Frequency      
 -------------------------------------------------------------------------------------------------------
  From vga_clk                           |             Target |          39.800 ns |         25.126 MHz 
-                                        | Actual (all paths) |          29.684 ns |         33.688 MHz 
+                                        | Actual (all paths) |          29.962 ns |         33.376 MHz 
 -------------------------------------------------------------------------------------------------------
 
 Clock Domain Crossing
@@ -137,7 +137,7 @@ Clock Domain Crossing
 
 3.1.1  Constraint Coverage
 ---------------------------
-Constraint Coverage: 20.5074%
+Constraint Coverage: 10.7612%
 
 3.1.2  Timing Errors
 ---------------------
@@ -165,7 +165,7 @@ create_generated_clock -name {vga_clk}
 -source [get_pins {pll_module/lscc_pll_                                                                                                    
 inst/u_PLL_B/REFERENCECLK}] -multiply_b                                                                                                    
 y 67 -divide_by 32 [get_pins {pll_modul                                                                                                    
-e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |   39.800 ns |   10.116 ns |   19   |   29.684 ns |  33.688 MHz |       67       |        0       
+e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |   39.800 ns |    9.838 ns |   20   |   29.962 ns |  33.376 MHz |       68       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 3.2.2  Setup Critical Endpoint Summary 
@@ -173,18 +173,16 @@ e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |   39.800 ns |   10.116 ns |   19   |  
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-game_tick_gen/counter_124__i17/D         |   10.117 ns 
-game_tick_gen/counter_124__i16/D         |   12.470 ns 
-game_tick_gen/counter_124__i15/D         |   12.748 ns 
-game_tick_gen/counter_124__i14/D         |   15.101 ns 
-game_tick_gen/counter_124__i13/D         |   15.379 ns 
-game_tick_gen/counter_124__i12/D         |   17.732 ns 
-game_tick_gen/counter_124__i11/D         |   18.010 ns 
-game_tick_gen/counter_124__i10/D         |   20.363 ns 
-vga_controller/VGAVerticalCounter/vcount_130__i9/D              
-                                         |   20.641 ns 
-vga_controller/VGAHorizontalCounter/hcount_128__i9/D              
-                                         |   20.641 ns 
+game_tick_gen/counter_364__i18/D         |    9.839 ns 
+game_tick_gen/counter_364__i17/D         |   10.117 ns 
+game_tick_gen/counter_364__i16/D         |   12.470 ns 
+game_tick_gen/counter_364__i15/D         |   12.748 ns 
+game_tick_gen/counter_364__i14/D         |   15.101 ns 
+game_tick_gen/counter_364__i13/D         |   15.379 ns 
+game_tick_gen/counter_364__i12/D         |   17.732 ns 
+game_tick_gen/counter_364__i11/D         |   18.010 ns 
+game_tick_gen/counter_364__i10/D         |   20.363 ns 
+game_tick_gen/counter_364__i9/D          |   20.641 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -209,7 +207,7 @@ create_generated_clock -name {vga_clk}
 -source [get_pins {pll_module/lscc_pll_                                                                                                    
 inst/u_PLL_B/REFERENCECLK}] -multiply_b                                                                                                    
 y 67 -divide_by 32 [get_pins {pll_modul                                                                                                    
-e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |    0.000 ns |    5.991 ns |    2   |        ---- |        ---- |       67       |        0       
+e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |    0.000 ns |    5.991 ns |    2   |        ---- |        ---- |       68       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 3.3.2  Hold Critical Endpoint Summary 
@@ -218,26 +216,16 @@ e/lscc_pll_inst/u_PLL_B/OUTGLOBAL }]    |    0.000 ns |    5.991 ns |    2   |  
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-vga_controller/VGAVerticalCounter/vcount_130__i3/D              
-                                         |    5.991 ns 
-vga_controller/VGAVerticalCounter/vcount_130__i0/SP              
-                                         |    5.991 ns 
-vga_controller/VGAVerticalCounter/vcount_130__i9/SP              
-                                         |    5.991 ns 
-{vga_controller/VGAVerticalCounter/vcount_130__i7/SP   vga_controller/VGAVerticalCounter/vcount_130__i8/SP}              
-                                         |    5.991 ns 
-{vga_controller/VGAVerticalCounter/vcount_130__i5/SP   vga_controller/VGAVerticalCounter/vcount_130__i6/SP}              
-                                         |    5.991 ns 
-{vga_controller/VGAVerticalCounter/vcount_130__i3/SP   vga_controller/VGAVerticalCounter/vcount_130__i4/SP}              
-                                         |    5.991 ns 
-{vga_controller/VGAVerticalCounter/vcount_130__i1/SP   vga_controller/VGAVerticalCounter/vcount_130__i2/SP}              
-                                         |    5.991 ns 
-vga_controller/VGAVerticalCounter/vcount_130__i1/D              
-                                         |    5.991 ns 
-vga_controller/VGAVerticalCounter/vcount_130__i0/D              
-                                         |    5.991 ns 
-vga_controller/VGAVerticalCounter/vcount_130__i2/D              
-                                         |    5.991 ns 
+game_tick_gen/counter_364__i13/D         |    5.991 ns 
+game_tick_gen/counter_364__i14/D         |    5.991 ns 
+game_tick_gen/counter_364__i18/D         |    5.991 ns 
+game_tick_gen/counter_364__i17/D         |    5.991 ns 
+game_tick_gen/counter_364__i16/D         |    5.991 ns 
+game_tick_gen/counter_364__i15/D         |    5.991 ns 
+game_tick_gen/counter_364__i12/D         |    5.991 ns 
+game_tick_gen/counter_364__i11/D         |    5.991 ns 
+game_tick_gen/counter_364__i10/D         |    5.991 ns 
+game_tick_gen/counter_364__i9/D          |    5.991 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -292,20 +280,20 @@ Define the clock for these registers.
 -------------------------------------------------------------------
          Listing 10 Instance(s)         |           Type           
 -------------------------------------------------------------------
-y_ball_res1_i5                          |                  No Clock
-y_ball_res1_i6                          |                  No Clock
-x_ball_res2_i0                          |                  No Clock
-x_ball_res2_i3                          |                  No Clock
-x_ball_res2_i4                          |                  No Clock
-x_ball_res2_i5                          |                  No Clock
-x_ball_res2_i6                          |                  No Clock
-x_ball_res2_i1                          |                  No Clock
-x_ball_res2_i2                          |                  No Clock
-y_ball_res1_i9                          |                  No Clock
+paddle_y_370__i7                        |                  No Clock
+paddle_y_370__i8                        |                  No Clock
+paddle_y_370__i9                        |                  No Clock
+paddle_y_370__i5                        |                  No Clock
+paddle_y_370__i6                        |                  No Clock
+paddle_y_370__i3                        |                  No Clock
+paddle_y_370__i4                        |                  No Clock
+paddle_y_370__i0                        |                  No Clock
+paddle_y_369__i1                        |                  No Clock
+paddle_y_369__i2                        |                  No Clock
 -------------------------------------------------------------------
                                         |                          
 Number of registers without clock defin |                          
-ition                                   |                       116
+ition                                   |                       249
                                         |                          
 -------------------------------------------------------------------
 
@@ -328,7 +316,7 @@ ition                                   |                       116
 
 4.1.2  Setup path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 ----------------------------------------------------------------------
-67 endpoints scored, 0 timing errors detected.
+68 endpoints scored, 0 timing errors detected.
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     Detailed Report for timing paths 
@@ -336,8 +324,133 @@ ition                                   |                       116
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i17/D
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i18/D
+Source Clock     : vga_clk
+Destination Clock: vga_clk
+Logic Level      : 20
+Delay Ratio      : 76.7% (route), 23.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 9.838 ns  (Passed)
+
+  Destination Clock Arrival Time (vga_clk:R#2)    39.800
++ Master Clock Source Latency                      0.000
+- Destination Clock Uncertainty                    0.000
++ Destination Clock Path Delay                     4.810
+- Setup Time                                       0.199
+----------------------------------------------   -------
+End-of-path required time( ns )                   44.411
+
+  Source Clock Arrival Time (vga_clk:R#1)    0.000
++ Master Clock Source Latency                0.000
++ Source Clock Path Delay                    4.810
++ Data Path Delay                           29.763
+-----------------------------------------   ------
+End-of-path arrival time( ns )              34.573
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name            Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------------  -----  ------------  ------  
+ref_clk                                   pong            CLOCK LATENCY         0.000         0.000  1       
+ref_clk                                                   NET DELAY             0.000         0.000  1       
+ref_clk_pad.bb_inst/B->ref_clk_pad.bb_inst/O
+                                          PIO             IOPAD_TO_PADDI_DELAY  0.510         0.510  1       
+ref_clk_c                                                 NET DELAY             2.075         2.585  1       
+pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL                                   0.000         2.585  23      
+pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL                                   0.150         2.735  23      
+vga_clk                                                   NET DELAY             2.075         4.810  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------------  -----  ------------  ------  
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
+                                          SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
+game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/CO1
+                                          SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
+game_tick_gen/n17381                                      NET DELAY            2.075        10.695  1       
+game_tick_gen/counter_364_add_4_3/CI0->game_tick_gen/counter_364_add_4_3/CO0
+                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
+game_tick_gen/n23114                                      NET DELAY            0.000        10.973  1       
+game_tick_gen/counter_364_add_4_3/CI1->game_tick_gen/counter_364_add_4_3/CO1
+                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
+game_tick_gen/n17383                                      NET DELAY            2.075        13.326  1       
+game_tick_gen/counter_364_add_4_5/CI0->game_tick_gen/counter_364_add_4_5/CO0
+                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
+game_tick_gen/n23117                                      NET DELAY            0.000        13.604  1       
+game_tick_gen/counter_364_add_4_5/CI1->game_tick_gen/counter_364_add_4_5/CO1
+                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
+game_tick_gen/n17385                                      NET DELAY            2.075        15.957  1       
+game_tick_gen/counter_364_add_4_7/CI0->game_tick_gen/counter_364_add_4_7/CO0
+                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
+game_tick_gen/n23120                                      NET DELAY            0.000        16.235  1       
+game_tick_gen/counter_364_add_4_7/CI1->game_tick_gen/counter_364_add_4_7/CO1
+                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
+game_tick_gen/n17387                                      NET DELAY            2.075        18.588  1       
+game_tick_gen/counter_364_add_4_9/CI0->game_tick_gen/counter_364_add_4_9/CO0
+                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
+game_tick_gen/n23123                                      NET DELAY            0.000        18.866  1       
+game_tick_gen/counter_364_add_4_9/CI1->game_tick_gen/counter_364_add_4_9/CO1
+                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
+game_tick_gen/n17389                                      NET DELAY            2.075        21.219  1       
+game_tick_gen/counter_364_add_4_11/CI0->game_tick_gen/counter_364_add_4_11/CO0
+                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        21.497  2       
+game_tick_gen/n23126                                      NET DELAY            0.000        21.497  1       
+game_tick_gen/counter_364_add_4_11/CI1->game_tick_gen/counter_364_add_4_11/CO1
+                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        21.775  2       
+game_tick_gen/n17391                                      NET DELAY            2.075        23.850  1       
+game_tick_gen/counter_364_add_4_13/CI0->game_tick_gen/counter_364_add_4_13/CO0
+                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        24.128  2       
+game_tick_gen/n23129                                      NET DELAY            0.000        24.128  1       
+game_tick_gen/counter_364_add_4_13/CI1->game_tick_gen/counter_364_add_4_13/CO1
+                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        24.406  2       
+game_tick_gen/n17393                                      NET DELAY            2.075        26.481  1       
+game_tick_gen/counter_364_add_4_15/CI0->game_tick_gen/counter_364_add_4_15/CO0
+                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        26.759  2       
+game_tick_gen/n23132                                      NET DELAY            0.000        26.759  1       
+game_tick_gen/counter_364_add_4_15/CI1->game_tick_gen/counter_364_add_4_15/CO1
+                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        27.037  2       
+game_tick_gen/n17395                                      NET DELAY            2.075        29.112  1       
+game_tick_gen/counter_364_add_4_17/CI0->game_tick_gen/counter_364_add_4_17/CO0
+                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        29.390  2       
+game_tick_gen/n23135                                      NET DELAY            0.000        29.390  1       
+game_tick_gen/counter_364_add_4_17/CI1->game_tick_gen/counter_364_add_4_17/CO1
+                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        29.668  2       
+game_tick_gen/n17397                                      NET DELAY            2.075        31.743  1       
+game_tick_gen/counter_364_add_4_19/CI0->game_tick_gen/counter_364_add_4_19/CO0
+                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        32.021  2       
+game_tick_gen/n23138                                      NET DELAY            0.000        32.021  1       
+game_tick_gen/counter_364_add_4_19/D1->game_tick_gen/counter_364_add_4_19/S1
+                                          SLICE           D1_TO_F1_DELAY       0.477        32.498  1       
+game_tick_gen/n81[18]                                     NET DELAY            2.075        34.573  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name            Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------------  -----  ------------  ------  
+ref_clk                                   pong            CLOCK LATENCY         0.000         0.000  1       
+ref_clk                                                   NET DELAY             0.000         0.000  1       
+ref_clk_pad.bb_inst/B->ref_clk_pad.bb_inst/O
+                                          PIO             IOPAD_TO_PADDI_DELAY  0.510         0.510  1       
+ref_clk_c                                                 NET DELAY             2.075         2.585  1       
+pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL                                   0.000         2.585  23      
+pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL                                   0.150         2.735  23      
+vga_clk                                                   NET DELAY             2.075         4.810  1       
+
+
+
+
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i17/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 19
@@ -380,63 +493,63 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
                                           SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
 game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/CO1
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/CO1
                                           SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-game_tick_gen/n2212                                       NET DELAY            2.075        10.695  1       
-game_tick_gen/counter_124_add_4_3/CI0->game_tick_gen/counter_124_add_4_3/CO0
+game_tick_gen/n17381                                      NET DELAY            2.075        10.695  1       
+game_tick_gen/counter_364_add_4_3/CI0->game_tick_gen/counter_364_add_4_3/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-game_tick_gen/n5451                                       NET DELAY            0.000        10.973  1       
-game_tick_gen/counter_124_add_4_3/CI1->game_tick_gen/counter_124_add_4_3/CO1
+game_tick_gen/n23114                                      NET DELAY            0.000        10.973  1       
+game_tick_gen/counter_364_add_4_3/CI1->game_tick_gen/counter_364_add_4_3/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-game_tick_gen/n2214                                       NET DELAY            2.075        13.326  1       
-game_tick_gen/counter_124_add_4_5/CI0->game_tick_gen/counter_124_add_4_5/CO0
+game_tick_gen/n17383                                      NET DELAY            2.075        13.326  1       
+game_tick_gen/counter_364_add_4_5/CI0->game_tick_gen/counter_364_add_4_5/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-game_tick_gen/n5454                                       NET DELAY            0.000        13.604  1       
-game_tick_gen/counter_124_add_4_5/CI1->game_tick_gen/counter_124_add_4_5/CO1
+game_tick_gen/n23117                                      NET DELAY            0.000        13.604  1       
+game_tick_gen/counter_364_add_4_5/CI1->game_tick_gen/counter_364_add_4_5/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-game_tick_gen/n2216                                       NET DELAY            2.075        15.957  1       
-game_tick_gen/counter_124_add_4_7/CI0->game_tick_gen/counter_124_add_4_7/CO0
+game_tick_gen/n17385                                      NET DELAY            2.075        15.957  1       
+game_tick_gen/counter_364_add_4_7/CI0->game_tick_gen/counter_364_add_4_7/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-game_tick_gen/n5457                                       NET DELAY            0.000        16.235  1       
-game_tick_gen/counter_124_add_4_7/CI1->game_tick_gen/counter_124_add_4_7/CO1
+game_tick_gen/n23120                                      NET DELAY            0.000        16.235  1       
+game_tick_gen/counter_364_add_4_7/CI1->game_tick_gen/counter_364_add_4_7/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-game_tick_gen/n2218                                       NET DELAY            2.075        18.588  1       
-game_tick_gen/counter_124_add_4_9/CI0->game_tick_gen/counter_124_add_4_9/CO0
+game_tick_gen/n17387                                      NET DELAY            2.075        18.588  1       
+game_tick_gen/counter_364_add_4_9/CI0->game_tick_gen/counter_364_add_4_9/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-game_tick_gen/n5460                                       NET DELAY            0.000        18.866  1       
-game_tick_gen/counter_124_add_4_9/CI1->game_tick_gen/counter_124_add_4_9/CO1
+game_tick_gen/n23123                                      NET DELAY            0.000        18.866  1       
+game_tick_gen/counter_364_add_4_9/CI1->game_tick_gen/counter_364_add_4_9/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-game_tick_gen/n2220                                       NET DELAY            2.075        21.219  1       
-game_tick_gen/counter_124_add_4_11/CI0->game_tick_gen/counter_124_add_4_11/CO0
+game_tick_gen/n17389                                      NET DELAY            2.075        21.219  1       
+game_tick_gen/counter_364_add_4_11/CI0->game_tick_gen/counter_364_add_4_11/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        21.497  2       
-game_tick_gen/n5463                                       NET DELAY            0.000        21.497  1       
-game_tick_gen/counter_124_add_4_11/CI1->game_tick_gen/counter_124_add_4_11/CO1
+game_tick_gen/n23126                                      NET DELAY            0.000        21.497  1       
+game_tick_gen/counter_364_add_4_11/CI1->game_tick_gen/counter_364_add_4_11/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        21.775  2       
-game_tick_gen/n2222                                       NET DELAY            2.075        23.850  1       
-game_tick_gen/counter_124_add_4_13/CI0->game_tick_gen/counter_124_add_4_13/CO0
+game_tick_gen/n17391                                      NET DELAY            2.075        23.850  1       
+game_tick_gen/counter_364_add_4_13/CI0->game_tick_gen/counter_364_add_4_13/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        24.128  2       
-game_tick_gen/n5466                                       NET DELAY            0.000        24.128  1       
-game_tick_gen/counter_124_add_4_13/CI1->game_tick_gen/counter_124_add_4_13/CO1
+game_tick_gen/n23129                                      NET DELAY            0.000        24.128  1       
+game_tick_gen/counter_364_add_4_13/CI1->game_tick_gen/counter_364_add_4_13/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        24.406  2       
-game_tick_gen/n2224                                       NET DELAY            2.075        26.481  1       
-game_tick_gen/counter_124_add_4_15/CI0->game_tick_gen/counter_124_add_4_15/CO0
+game_tick_gen/n17393                                      NET DELAY            2.075        26.481  1       
+game_tick_gen/counter_364_add_4_15/CI0->game_tick_gen/counter_364_add_4_15/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        26.759  2       
-game_tick_gen/n5469                                       NET DELAY            0.000        26.759  1       
-game_tick_gen/counter_124_add_4_15/CI1->game_tick_gen/counter_124_add_4_15/CO1
+game_tick_gen/n23132                                      NET DELAY            0.000        26.759  1       
+game_tick_gen/counter_364_add_4_15/CI1->game_tick_gen/counter_364_add_4_15/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        27.037  2       
-game_tick_gen/n2226                                       NET DELAY            2.075        29.112  1       
-game_tick_gen/counter_124_add_4_17/CI0->game_tick_gen/counter_124_add_4_17/CO0
+game_tick_gen/n17395                                      NET DELAY            2.075        29.112  1       
+game_tick_gen/counter_364_add_4_17/CI0->game_tick_gen/counter_364_add_4_17/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        29.390  2       
-game_tick_gen/n5472                                       NET DELAY            0.000        29.390  1       
-game_tick_gen/counter_124_add_4_17/CI1->game_tick_gen/counter_124_add_4_17/CO1
+game_tick_gen/n23135                                      NET DELAY            0.000        29.390  1       
+game_tick_gen/counter_364_add_4_17/CI1->game_tick_gen/counter_364_add_4_17/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        29.668  2       
-game_tick_gen/n2228                                       NET DELAY            2.075        31.743  1       
-game_tick_gen/counter_124_add_4_19/D0->game_tick_gen/counter_124_add_4_19/S0
+game_tick_gen/n17397                                      NET DELAY            2.075        31.743  1       
+game_tick_gen/counter_364_add_4_19/D0->game_tick_gen/counter_364_add_4_19/S0
                                           SLICE           D0_TO_F0_DELAY       0.477        32.220  1       
-game_tick_gen/n77[17]                                     NET DELAY            2.075        34.295  1       
+game_tick_gen/n81[17]                                     NET DELAY            2.075        34.295  1       
 
 
 Destination Clock Path
@@ -456,10 +569,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i16/D
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i16/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 18
@@ -502,60 +615,60 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
                                           SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
 game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/CO1
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/CO1
                                           SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-game_tick_gen/n2212                                       NET DELAY            2.075        10.695  1       
-game_tick_gen/counter_124_add_4_3/CI0->game_tick_gen/counter_124_add_4_3/CO0
+game_tick_gen/n17381                                      NET DELAY            2.075        10.695  1       
+game_tick_gen/counter_364_add_4_3/CI0->game_tick_gen/counter_364_add_4_3/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-game_tick_gen/n5451                                       NET DELAY            0.000        10.973  1       
-game_tick_gen/counter_124_add_4_3/CI1->game_tick_gen/counter_124_add_4_3/CO1
+game_tick_gen/n23114                                      NET DELAY            0.000        10.973  1       
+game_tick_gen/counter_364_add_4_3/CI1->game_tick_gen/counter_364_add_4_3/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-game_tick_gen/n2214                                       NET DELAY            2.075        13.326  1       
-game_tick_gen/counter_124_add_4_5/CI0->game_tick_gen/counter_124_add_4_5/CO0
+game_tick_gen/n17383                                      NET DELAY            2.075        13.326  1       
+game_tick_gen/counter_364_add_4_5/CI0->game_tick_gen/counter_364_add_4_5/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-game_tick_gen/n5454                                       NET DELAY            0.000        13.604  1       
-game_tick_gen/counter_124_add_4_5/CI1->game_tick_gen/counter_124_add_4_5/CO1
+game_tick_gen/n23117                                      NET DELAY            0.000        13.604  1       
+game_tick_gen/counter_364_add_4_5/CI1->game_tick_gen/counter_364_add_4_5/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-game_tick_gen/n2216                                       NET DELAY            2.075        15.957  1       
-game_tick_gen/counter_124_add_4_7/CI0->game_tick_gen/counter_124_add_4_7/CO0
+game_tick_gen/n17385                                      NET DELAY            2.075        15.957  1       
+game_tick_gen/counter_364_add_4_7/CI0->game_tick_gen/counter_364_add_4_7/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-game_tick_gen/n5457                                       NET DELAY            0.000        16.235  1       
-game_tick_gen/counter_124_add_4_7/CI1->game_tick_gen/counter_124_add_4_7/CO1
+game_tick_gen/n23120                                      NET DELAY            0.000        16.235  1       
+game_tick_gen/counter_364_add_4_7/CI1->game_tick_gen/counter_364_add_4_7/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-game_tick_gen/n2218                                       NET DELAY            2.075        18.588  1       
-game_tick_gen/counter_124_add_4_9/CI0->game_tick_gen/counter_124_add_4_9/CO0
+game_tick_gen/n17387                                      NET DELAY            2.075        18.588  1       
+game_tick_gen/counter_364_add_4_9/CI0->game_tick_gen/counter_364_add_4_9/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-game_tick_gen/n5460                                       NET DELAY            0.000        18.866  1       
-game_tick_gen/counter_124_add_4_9/CI1->game_tick_gen/counter_124_add_4_9/CO1
+game_tick_gen/n23123                                      NET DELAY            0.000        18.866  1       
+game_tick_gen/counter_364_add_4_9/CI1->game_tick_gen/counter_364_add_4_9/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-game_tick_gen/n2220                                       NET DELAY            2.075        21.219  1       
-game_tick_gen/counter_124_add_4_11/CI0->game_tick_gen/counter_124_add_4_11/CO0
+game_tick_gen/n17389                                      NET DELAY            2.075        21.219  1       
+game_tick_gen/counter_364_add_4_11/CI0->game_tick_gen/counter_364_add_4_11/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        21.497  2       
-game_tick_gen/n5463                                       NET DELAY            0.000        21.497  1       
-game_tick_gen/counter_124_add_4_11/CI1->game_tick_gen/counter_124_add_4_11/CO1
+game_tick_gen/n23126                                      NET DELAY            0.000        21.497  1       
+game_tick_gen/counter_364_add_4_11/CI1->game_tick_gen/counter_364_add_4_11/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        21.775  2       
-game_tick_gen/n2222                                       NET DELAY            2.075        23.850  1       
-game_tick_gen/counter_124_add_4_13/CI0->game_tick_gen/counter_124_add_4_13/CO0
+game_tick_gen/n17391                                      NET DELAY            2.075        23.850  1       
+game_tick_gen/counter_364_add_4_13/CI0->game_tick_gen/counter_364_add_4_13/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        24.128  2       
-game_tick_gen/n5466                                       NET DELAY            0.000        24.128  1       
-game_tick_gen/counter_124_add_4_13/CI1->game_tick_gen/counter_124_add_4_13/CO1
+game_tick_gen/n23129                                      NET DELAY            0.000        24.128  1       
+game_tick_gen/counter_364_add_4_13/CI1->game_tick_gen/counter_364_add_4_13/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        24.406  2       
-game_tick_gen/n2224                                       NET DELAY            2.075        26.481  1       
-game_tick_gen/counter_124_add_4_15/CI0->game_tick_gen/counter_124_add_4_15/CO0
+game_tick_gen/n17393                                      NET DELAY            2.075        26.481  1       
+game_tick_gen/counter_364_add_4_15/CI0->game_tick_gen/counter_364_add_4_15/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        26.759  2       
-game_tick_gen/n5469                                       NET DELAY            0.000        26.759  1       
-game_tick_gen/counter_124_add_4_15/CI1->game_tick_gen/counter_124_add_4_15/CO1
+game_tick_gen/n23132                                      NET DELAY            0.000        26.759  1       
+game_tick_gen/counter_364_add_4_15/CI1->game_tick_gen/counter_364_add_4_15/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        27.037  2       
-game_tick_gen/n2226                                       NET DELAY            2.075        29.112  1       
-game_tick_gen/counter_124_add_4_17/CI0->game_tick_gen/counter_124_add_4_17/CO0
+game_tick_gen/n17395                                      NET DELAY            2.075        29.112  1       
+game_tick_gen/counter_364_add_4_17/CI0->game_tick_gen/counter_364_add_4_17/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        29.390  2       
-game_tick_gen/n5472                                       NET DELAY            0.000        29.390  1       
-game_tick_gen/counter_124_add_4_17/D1->game_tick_gen/counter_124_add_4_17/S1
+game_tick_gen/n23135                                      NET DELAY            0.000        29.390  1       
+game_tick_gen/counter_364_add_4_17/D1->game_tick_gen/counter_364_add_4_17/S1
                                           SLICE           D1_TO_F1_DELAY       0.477        29.867  1       
-game_tick_gen/n77[16]                                     NET DELAY            2.075        31.942  1       
+game_tick_gen/n81[16]                                     NET DELAY            2.075        31.942  1       
 
 
 Destination Clock Path
@@ -575,10 +688,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i15/D
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i15/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 17
@@ -621,57 +734,57 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
                                           SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
 game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/CO1
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/CO1
                                           SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-game_tick_gen/n2212                                       NET DELAY            2.075        10.695  1       
-game_tick_gen/counter_124_add_4_3/CI0->game_tick_gen/counter_124_add_4_3/CO0
+game_tick_gen/n17381                                      NET DELAY            2.075        10.695  1       
+game_tick_gen/counter_364_add_4_3/CI0->game_tick_gen/counter_364_add_4_3/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-game_tick_gen/n5451                                       NET DELAY            0.000        10.973  1       
-game_tick_gen/counter_124_add_4_3/CI1->game_tick_gen/counter_124_add_4_3/CO1
+game_tick_gen/n23114                                      NET DELAY            0.000        10.973  1       
+game_tick_gen/counter_364_add_4_3/CI1->game_tick_gen/counter_364_add_4_3/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-game_tick_gen/n2214                                       NET DELAY            2.075        13.326  1       
-game_tick_gen/counter_124_add_4_5/CI0->game_tick_gen/counter_124_add_4_5/CO0
+game_tick_gen/n17383                                      NET DELAY            2.075        13.326  1       
+game_tick_gen/counter_364_add_4_5/CI0->game_tick_gen/counter_364_add_4_5/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-game_tick_gen/n5454                                       NET DELAY            0.000        13.604  1       
-game_tick_gen/counter_124_add_4_5/CI1->game_tick_gen/counter_124_add_4_5/CO1
+game_tick_gen/n23117                                      NET DELAY            0.000        13.604  1       
+game_tick_gen/counter_364_add_4_5/CI1->game_tick_gen/counter_364_add_4_5/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-game_tick_gen/n2216                                       NET DELAY            2.075        15.957  1       
-game_tick_gen/counter_124_add_4_7/CI0->game_tick_gen/counter_124_add_4_7/CO0
+game_tick_gen/n17385                                      NET DELAY            2.075        15.957  1       
+game_tick_gen/counter_364_add_4_7/CI0->game_tick_gen/counter_364_add_4_7/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-game_tick_gen/n5457                                       NET DELAY            0.000        16.235  1       
-game_tick_gen/counter_124_add_4_7/CI1->game_tick_gen/counter_124_add_4_7/CO1
+game_tick_gen/n23120                                      NET DELAY            0.000        16.235  1       
+game_tick_gen/counter_364_add_4_7/CI1->game_tick_gen/counter_364_add_4_7/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-game_tick_gen/n2218                                       NET DELAY            2.075        18.588  1       
-game_tick_gen/counter_124_add_4_9/CI0->game_tick_gen/counter_124_add_4_9/CO0
+game_tick_gen/n17387                                      NET DELAY            2.075        18.588  1       
+game_tick_gen/counter_364_add_4_9/CI0->game_tick_gen/counter_364_add_4_9/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-game_tick_gen/n5460                                       NET DELAY            0.000        18.866  1       
-game_tick_gen/counter_124_add_4_9/CI1->game_tick_gen/counter_124_add_4_9/CO1
+game_tick_gen/n23123                                      NET DELAY            0.000        18.866  1       
+game_tick_gen/counter_364_add_4_9/CI1->game_tick_gen/counter_364_add_4_9/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-game_tick_gen/n2220                                       NET DELAY            2.075        21.219  1       
-game_tick_gen/counter_124_add_4_11/CI0->game_tick_gen/counter_124_add_4_11/CO0
+game_tick_gen/n17389                                      NET DELAY            2.075        21.219  1       
+game_tick_gen/counter_364_add_4_11/CI0->game_tick_gen/counter_364_add_4_11/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        21.497  2       
-game_tick_gen/n5463                                       NET DELAY            0.000        21.497  1       
-game_tick_gen/counter_124_add_4_11/CI1->game_tick_gen/counter_124_add_4_11/CO1
+game_tick_gen/n23126                                      NET DELAY            0.000        21.497  1       
+game_tick_gen/counter_364_add_4_11/CI1->game_tick_gen/counter_364_add_4_11/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        21.775  2       
-game_tick_gen/n2222                                       NET DELAY            2.075        23.850  1       
-game_tick_gen/counter_124_add_4_13/CI0->game_tick_gen/counter_124_add_4_13/CO0
+game_tick_gen/n17391                                      NET DELAY            2.075        23.850  1       
+game_tick_gen/counter_364_add_4_13/CI0->game_tick_gen/counter_364_add_4_13/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        24.128  2       
-game_tick_gen/n5466                                       NET DELAY            0.000        24.128  1       
-game_tick_gen/counter_124_add_4_13/CI1->game_tick_gen/counter_124_add_4_13/CO1
+game_tick_gen/n23129                                      NET DELAY            0.000        24.128  1       
+game_tick_gen/counter_364_add_4_13/CI1->game_tick_gen/counter_364_add_4_13/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        24.406  2       
-game_tick_gen/n2224                                       NET DELAY            2.075        26.481  1       
-game_tick_gen/counter_124_add_4_15/CI0->game_tick_gen/counter_124_add_4_15/CO0
+game_tick_gen/n17393                                      NET DELAY            2.075        26.481  1       
+game_tick_gen/counter_364_add_4_15/CI0->game_tick_gen/counter_364_add_4_15/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        26.759  2       
-game_tick_gen/n5469                                       NET DELAY            0.000        26.759  1       
-game_tick_gen/counter_124_add_4_15/CI1->game_tick_gen/counter_124_add_4_15/CO1
+game_tick_gen/n23132                                      NET DELAY            0.000        26.759  1       
+game_tick_gen/counter_364_add_4_15/CI1->game_tick_gen/counter_364_add_4_15/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        27.037  2       
-game_tick_gen/n2226                                       NET DELAY            2.075        29.112  1       
-game_tick_gen/counter_124_add_4_17/D0->game_tick_gen/counter_124_add_4_17/S0
+game_tick_gen/n17395                                      NET DELAY            2.075        29.112  1       
+game_tick_gen/counter_364_add_4_17/D0->game_tick_gen/counter_364_add_4_17/S0
                                           SLICE           D0_TO_F0_DELAY       0.477        29.589  1       
-game_tick_gen/n77[15]                                     NET DELAY            2.075        31.664  1       
+game_tick_gen/n81[15]                                     NET DELAY            2.075        31.664  1       
 
 
 Destination Clock Path
@@ -691,10 +804,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i14/D
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i14/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 16
@@ -737,54 +850,54 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
                                           SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
 game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/CO1
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/CO1
                                           SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-game_tick_gen/n2212                                       NET DELAY            2.075        10.695  1       
-game_tick_gen/counter_124_add_4_3/CI0->game_tick_gen/counter_124_add_4_3/CO0
+game_tick_gen/n17381                                      NET DELAY            2.075        10.695  1       
+game_tick_gen/counter_364_add_4_3/CI0->game_tick_gen/counter_364_add_4_3/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-game_tick_gen/n5451                                       NET DELAY            0.000        10.973  1       
-game_tick_gen/counter_124_add_4_3/CI1->game_tick_gen/counter_124_add_4_3/CO1
+game_tick_gen/n23114                                      NET DELAY            0.000        10.973  1       
+game_tick_gen/counter_364_add_4_3/CI1->game_tick_gen/counter_364_add_4_3/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-game_tick_gen/n2214                                       NET DELAY            2.075        13.326  1       
-game_tick_gen/counter_124_add_4_5/CI0->game_tick_gen/counter_124_add_4_5/CO0
+game_tick_gen/n17383                                      NET DELAY            2.075        13.326  1       
+game_tick_gen/counter_364_add_4_5/CI0->game_tick_gen/counter_364_add_4_5/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-game_tick_gen/n5454                                       NET DELAY            0.000        13.604  1       
-game_tick_gen/counter_124_add_4_5/CI1->game_tick_gen/counter_124_add_4_5/CO1
+game_tick_gen/n23117                                      NET DELAY            0.000        13.604  1       
+game_tick_gen/counter_364_add_4_5/CI1->game_tick_gen/counter_364_add_4_5/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-game_tick_gen/n2216                                       NET DELAY            2.075        15.957  1       
-game_tick_gen/counter_124_add_4_7/CI0->game_tick_gen/counter_124_add_4_7/CO0
+game_tick_gen/n17385                                      NET DELAY            2.075        15.957  1       
+game_tick_gen/counter_364_add_4_7/CI0->game_tick_gen/counter_364_add_4_7/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-game_tick_gen/n5457                                       NET DELAY            0.000        16.235  1       
-game_tick_gen/counter_124_add_4_7/CI1->game_tick_gen/counter_124_add_4_7/CO1
+game_tick_gen/n23120                                      NET DELAY            0.000        16.235  1       
+game_tick_gen/counter_364_add_4_7/CI1->game_tick_gen/counter_364_add_4_7/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-game_tick_gen/n2218                                       NET DELAY            2.075        18.588  1       
-game_tick_gen/counter_124_add_4_9/CI0->game_tick_gen/counter_124_add_4_9/CO0
+game_tick_gen/n17387                                      NET DELAY            2.075        18.588  1       
+game_tick_gen/counter_364_add_4_9/CI0->game_tick_gen/counter_364_add_4_9/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-game_tick_gen/n5460                                       NET DELAY            0.000        18.866  1       
-game_tick_gen/counter_124_add_4_9/CI1->game_tick_gen/counter_124_add_4_9/CO1
+game_tick_gen/n23123                                      NET DELAY            0.000        18.866  1       
+game_tick_gen/counter_364_add_4_9/CI1->game_tick_gen/counter_364_add_4_9/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-game_tick_gen/n2220                                       NET DELAY            2.075        21.219  1       
-game_tick_gen/counter_124_add_4_11/CI0->game_tick_gen/counter_124_add_4_11/CO0
+game_tick_gen/n17389                                      NET DELAY            2.075        21.219  1       
+game_tick_gen/counter_364_add_4_11/CI0->game_tick_gen/counter_364_add_4_11/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        21.497  2       
-game_tick_gen/n5463                                       NET DELAY            0.000        21.497  1       
-game_tick_gen/counter_124_add_4_11/CI1->game_tick_gen/counter_124_add_4_11/CO1
+game_tick_gen/n23126                                      NET DELAY            0.000        21.497  1       
+game_tick_gen/counter_364_add_4_11/CI1->game_tick_gen/counter_364_add_4_11/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        21.775  2       
-game_tick_gen/n2222                                       NET DELAY            2.075        23.850  1       
-game_tick_gen/counter_124_add_4_13/CI0->game_tick_gen/counter_124_add_4_13/CO0
+game_tick_gen/n17391                                      NET DELAY            2.075        23.850  1       
+game_tick_gen/counter_364_add_4_13/CI0->game_tick_gen/counter_364_add_4_13/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        24.128  2       
-game_tick_gen/n5466                                       NET DELAY            0.000        24.128  1       
-game_tick_gen/counter_124_add_4_13/CI1->game_tick_gen/counter_124_add_4_13/CO1
+game_tick_gen/n23129                                      NET DELAY            0.000        24.128  1       
+game_tick_gen/counter_364_add_4_13/CI1->game_tick_gen/counter_364_add_4_13/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        24.406  2       
-game_tick_gen/n2224                                       NET DELAY            2.075        26.481  1       
-game_tick_gen/counter_124_add_4_15/CI0->game_tick_gen/counter_124_add_4_15/CO0
+game_tick_gen/n17393                                      NET DELAY            2.075        26.481  1       
+game_tick_gen/counter_364_add_4_15/CI0->game_tick_gen/counter_364_add_4_15/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        26.759  2       
-game_tick_gen/n5469                                       NET DELAY            0.000        26.759  1       
-game_tick_gen/counter_124_add_4_15/D1->game_tick_gen/counter_124_add_4_15/S1
+game_tick_gen/n23132                                      NET DELAY            0.000        26.759  1       
+game_tick_gen/counter_364_add_4_15/D1->game_tick_gen/counter_364_add_4_15/S1
                                           SLICE           D1_TO_F1_DELAY       0.477        27.236  1       
-game_tick_gen/n77[14]                                     NET DELAY            2.075        29.311  1       
+game_tick_gen/n81[14]                                     NET DELAY            2.075        29.311  1       
 
 
 Destination Clock Path
@@ -804,10 +917,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i13/D
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i13/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 15
@@ -850,51 +963,51 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
                                           SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
 game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/CO1
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/CO1
                                           SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-game_tick_gen/n2212                                       NET DELAY            2.075        10.695  1       
-game_tick_gen/counter_124_add_4_3/CI0->game_tick_gen/counter_124_add_4_3/CO0
+game_tick_gen/n17381                                      NET DELAY            2.075        10.695  1       
+game_tick_gen/counter_364_add_4_3/CI0->game_tick_gen/counter_364_add_4_3/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-game_tick_gen/n5451                                       NET DELAY            0.000        10.973  1       
-game_tick_gen/counter_124_add_4_3/CI1->game_tick_gen/counter_124_add_4_3/CO1
+game_tick_gen/n23114                                      NET DELAY            0.000        10.973  1       
+game_tick_gen/counter_364_add_4_3/CI1->game_tick_gen/counter_364_add_4_3/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-game_tick_gen/n2214                                       NET DELAY            2.075        13.326  1       
-game_tick_gen/counter_124_add_4_5/CI0->game_tick_gen/counter_124_add_4_5/CO0
+game_tick_gen/n17383                                      NET DELAY            2.075        13.326  1       
+game_tick_gen/counter_364_add_4_5/CI0->game_tick_gen/counter_364_add_4_5/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-game_tick_gen/n5454                                       NET DELAY            0.000        13.604  1       
-game_tick_gen/counter_124_add_4_5/CI1->game_tick_gen/counter_124_add_4_5/CO1
+game_tick_gen/n23117                                      NET DELAY            0.000        13.604  1       
+game_tick_gen/counter_364_add_4_5/CI1->game_tick_gen/counter_364_add_4_5/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-game_tick_gen/n2216                                       NET DELAY            2.075        15.957  1       
-game_tick_gen/counter_124_add_4_7/CI0->game_tick_gen/counter_124_add_4_7/CO0
+game_tick_gen/n17385                                      NET DELAY            2.075        15.957  1       
+game_tick_gen/counter_364_add_4_7/CI0->game_tick_gen/counter_364_add_4_7/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-game_tick_gen/n5457                                       NET DELAY            0.000        16.235  1       
-game_tick_gen/counter_124_add_4_7/CI1->game_tick_gen/counter_124_add_4_7/CO1
+game_tick_gen/n23120                                      NET DELAY            0.000        16.235  1       
+game_tick_gen/counter_364_add_4_7/CI1->game_tick_gen/counter_364_add_4_7/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-game_tick_gen/n2218                                       NET DELAY            2.075        18.588  1       
-game_tick_gen/counter_124_add_4_9/CI0->game_tick_gen/counter_124_add_4_9/CO0
+game_tick_gen/n17387                                      NET DELAY            2.075        18.588  1       
+game_tick_gen/counter_364_add_4_9/CI0->game_tick_gen/counter_364_add_4_9/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-game_tick_gen/n5460                                       NET DELAY            0.000        18.866  1       
-game_tick_gen/counter_124_add_4_9/CI1->game_tick_gen/counter_124_add_4_9/CO1
+game_tick_gen/n23123                                      NET DELAY            0.000        18.866  1       
+game_tick_gen/counter_364_add_4_9/CI1->game_tick_gen/counter_364_add_4_9/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-game_tick_gen/n2220                                       NET DELAY            2.075        21.219  1       
-game_tick_gen/counter_124_add_4_11/CI0->game_tick_gen/counter_124_add_4_11/CO0
+game_tick_gen/n17389                                      NET DELAY            2.075        21.219  1       
+game_tick_gen/counter_364_add_4_11/CI0->game_tick_gen/counter_364_add_4_11/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        21.497  2       
-game_tick_gen/n5463                                       NET DELAY            0.000        21.497  1       
-game_tick_gen/counter_124_add_4_11/CI1->game_tick_gen/counter_124_add_4_11/CO1
+game_tick_gen/n23126                                      NET DELAY            0.000        21.497  1       
+game_tick_gen/counter_364_add_4_11/CI1->game_tick_gen/counter_364_add_4_11/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        21.775  2       
-game_tick_gen/n2222                                       NET DELAY            2.075        23.850  1       
-game_tick_gen/counter_124_add_4_13/CI0->game_tick_gen/counter_124_add_4_13/CO0
+game_tick_gen/n17391                                      NET DELAY            2.075        23.850  1       
+game_tick_gen/counter_364_add_4_13/CI0->game_tick_gen/counter_364_add_4_13/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        24.128  2       
-game_tick_gen/n5466                                       NET DELAY            0.000        24.128  1       
-game_tick_gen/counter_124_add_4_13/CI1->game_tick_gen/counter_124_add_4_13/CO1
+game_tick_gen/n23129                                      NET DELAY            0.000        24.128  1       
+game_tick_gen/counter_364_add_4_13/CI1->game_tick_gen/counter_364_add_4_13/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        24.406  2       
-game_tick_gen/n2224                                       NET DELAY            2.075        26.481  1       
-game_tick_gen/counter_124_add_4_15/D0->game_tick_gen/counter_124_add_4_15/S0
+game_tick_gen/n17393                                      NET DELAY            2.075        26.481  1       
+game_tick_gen/counter_364_add_4_15/D0->game_tick_gen/counter_364_add_4_15/S0
                                           SLICE           D0_TO_F0_DELAY       0.477        26.958  1       
-game_tick_gen/n77[13]                                     NET DELAY            2.075        29.033  1       
+game_tick_gen/n81[13]                                     NET DELAY            2.075        29.033  1       
 
 
 Destination Clock Path
@@ -914,10 +1027,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i12/D
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i12/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 14
@@ -960,48 +1073,48 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
                                           SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
 game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/CO1
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/CO1
                                           SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-game_tick_gen/n2212                                       NET DELAY            2.075        10.695  1       
-game_tick_gen/counter_124_add_4_3/CI0->game_tick_gen/counter_124_add_4_3/CO0
+game_tick_gen/n17381                                      NET DELAY            2.075        10.695  1       
+game_tick_gen/counter_364_add_4_3/CI0->game_tick_gen/counter_364_add_4_3/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-game_tick_gen/n5451                                       NET DELAY            0.000        10.973  1       
-game_tick_gen/counter_124_add_4_3/CI1->game_tick_gen/counter_124_add_4_3/CO1
+game_tick_gen/n23114                                      NET DELAY            0.000        10.973  1       
+game_tick_gen/counter_364_add_4_3/CI1->game_tick_gen/counter_364_add_4_3/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-game_tick_gen/n2214                                       NET DELAY            2.075        13.326  1       
-game_tick_gen/counter_124_add_4_5/CI0->game_tick_gen/counter_124_add_4_5/CO0
+game_tick_gen/n17383                                      NET DELAY            2.075        13.326  1       
+game_tick_gen/counter_364_add_4_5/CI0->game_tick_gen/counter_364_add_4_5/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-game_tick_gen/n5454                                       NET DELAY            0.000        13.604  1       
-game_tick_gen/counter_124_add_4_5/CI1->game_tick_gen/counter_124_add_4_5/CO1
+game_tick_gen/n23117                                      NET DELAY            0.000        13.604  1       
+game_tick_gen/counter_364_add_4_5/CI1->game_tick_gen/counter_364_add_4_5/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-game_tick_gen/n2216                                       NET DELAY            2.075        15.957  1       
-game_tick_gen/counter_124_add_4_7/CI0->game_tick_gen/counter_124_add_4_7/CO0
+game_tick_gen/n17385                                      NET DELAY            2.075        15.957  1       
+game_tick_gen/counter_364_add_4_7/CI0->game_tick_gen/counter_364_add_4_7/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-game_tick_gen/n5457                                       NET DELAY            0.000        16.235  1       
-game_tick_gen/counter_124_add_4_7/CI1->game_tick_gen/counter_124_add_4_7/CO1
+game_tick_gen/n23120                                      NET DELAY            0.000        16.235  1       
+game_tick_gen/counter_364_add_4_7/CI1->game_tick_gen/counter_364_add_4_7/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-game_tick_gen/n2218                                       NET DELAY            2.075        18.588  1       
-game_tick_gen/counter_124_add_4_9/CI0->game_tick_gen/counter_124_add_4_9/CO0
+game_tick_gen/n17387                                      NET DELAY            2.075        18.588  1       
+game_tick_gen/counter_364_add_4_9/CI0->game_tick_gen/counter_364_add_4_9/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-game_tick_gen/n5460                                       NET DELAY            0.000        18.866  1       
-game_tick_gen/counter_124_add_4_9/CI1->game_tick_gen/counter_124_add_4_9/CO1
+game_tick_gen/n23123                                      NET DELAY            0.000        18.866  1       
+game_tick_gen/counter_364_add_4_9/CI1->game_tick_gen/counter_364_add_4_9/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-game_tick_gen/n2220                                       NET DELAY            2.075        21.219  1       
-game_tick_gen/counter_124_add_4_11/CI0->game_tick_gen/counter_124_add_4_11/CO0
+game_tick_gen/n17389                                      NET DELAY            2.075        21.219  1       
+game_tick_gen/counter_364_add_4_11/CI0->game_tick_gen/counter_364_add_4_11/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        21.497  2       
-game_tick_gen/n5463                                       NET DELAY            0.000        21.497  1       
-game_tick_gen/counter_124_add_4_11/CI1->game_tick_gen/counter_124_add_4_11/CO1
+game_tick_gen/n23126                                      NET DELAY            0.000        21.497  1       
+game_tick_gen/counter_364_add_4_11/CI1->game_tick_gen/counter_364_add_4_11/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        21.775  2       
-game_tick_gen/n2222                                       NET DELAY            2.075        23.850  1       
-game_tick_gen/counter_124_add_4_13/CI0->game_tick_gen/counter_124_add_4_13/CO0
+game_tick_gen/n17391                                      NET DELAY            2.075        23.850  1       
+game_tick_gen/counter_364_add_4_13/CI0->game_tick_gen/counter_364_add_4_13/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        24.128  2       
-game_tick_gen/n5466                                       NET DELAY            0.000        24.128  1       
-game_tick_gen/counter_124_add_4_13/D1->game_tick_gen/counter_124_add_4_13/S1
+game_tick_gen/n23129                                      NET DELAY            0.000        24.128  1       
+game_tick_gen/counter_364_add_4_13/D1->game_tick_gen/counter_364_add_4_13/S1
                                           SLICE           D1_TO_F1_DELAY       0.477        24.605  1       
-game_tick_gen/n77[12]                                     NET DELAY            2.075        26.680  1       
+game_tick_gen/n81[12]                                     NET DELAY            2.075        26.680  1       
 
 
 Destination Clock Path
@@ -1021,10 +1134,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i11/D
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i11/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 13
@@ -1067,45 +1180,45 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
                                           SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
 game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/CO1
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/CO1
                                           SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-game_tick_gen/n2212                                       NET DELAY            2.075        10.695  1       
-game_tick_gen/counter_124_add_4_3/CI0->game_tick_gen/counter_124_add_4_3/CO0
+game_tick_gen/n17381                                      NET DELAY            2.075        10.695  1       
+game_tick_gen/counter_364_add_4_3/CI0->game_tick_gen/counter_364_add_4_3/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-game_tick_gen/n5451                                       NET DELAY            0.000        10.973  1       
-game_tick_gen/counter_124_add_4_3/CI1->game_tick_gen/counter_124_add_4_3/CO1
+game_tick_gen/n23114                                      NET DELAY            0.000        10.973  1       
+game_tick_gen/counter_364_add_4_3/CI1->game_tick_gen/counter_364_add_4_3/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-game_tick_gen/n2214                                       NET DELAY            2.075        13.326  1       
-game_tick_gen/counter_124_add_4_5/CI0->game_tick_gen/counter_124_add_4_5/CO0
+game_tick_gen/n17383                                      NET DELAY            2.075        13.326  1       
+game_tick_gen/counter_364_add_4_5/CI0->game_tick_gen/counter_364_add_4_5/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-game_tick_gen/n5454                                       NET DELAY            0.000        13.604  1       
-game_tick_gen/counter_124_add_4_5/CI1->game_tick_gen/counter_124_add_4_5/CO1
+game_tick_gen/n23117                                      NET DELAY            0.000        13.604  1       
+game_tick_gen/counter_364_add_4_5/CI1->game_tick_gen/counter_364_add_4_5/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-game_tick_gen/n2216                                       NET DELAY            2.075        15.957  1       
-game_tick_gen/counter_124_add_4_7/CI0->game_tick_gen/counter_124_add_4_7/CO0
+game_tick_gen/n17385                                      NET DELAY            2.075        15.957  1       
+game_tick_gen/counter_364_add_4_7/CI0->game_tick_gen/counter_364_add_4_7/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-game_tick_gen/n5457                                       NET DELAY            0.000        16.235  1       
-game_tick_gen/counter_124_add_4_7/CI1->game_tick_gen/counter_124_add_4_7/CO1
+game_tick_gen/n23120                                      NET DELAY            0.000        16.235  1       
+game_tick_gen/counter_364_add_4_7/CI1->game_tick_gen/counter_364_add_4_7/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-game_tick_gen/n2218                                       NET DELAY            2.075        18.588  1       
-game_tick_gen/counter_124_add_4_9/CI0->game_tick_gen/counter_124_add_4_9/CO0
+game_tick_gen/n17387                                      NET DELAY            2.075        18.588  1       
+game_tick_gen/counter_364_add_4_9/CI0->game_tick_gen/counter_364_add_4_9/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-game_tick_gen/n5460                                       NET DELAY            0.000        18.866  1       
-game_tick_gen/counter_124_add_4_9/CI1->game_tick_gen/counter_124_add_4_9/CO1
+game_tick_gen/n23123                                      NET DELAY            0.000        18.866  1       
+game_tick_gen/counter_364_add_4_9/CI1->game_tick_gen/counter_364_add_4_9/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-game_tick_gen/n2220                                       NET DELAY            2.075        21.219  1       
-game_tick_gen/counter_124_add_4_11/CI0->game_tick_gen/counter_124_add_4_11/CO0
+game_tick_gen/n17389                                      NET DELAY            2.075        21.219  1       
+game_tick_gen/counter_364_add_4_11/CI0->game_tick_gen/counter_364_add_4_11/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        21.497  2       
-game_tick_gen/n5463                                       NET DELAY            0.000        21.497  1       
-game_tick_gen/counter_124_add_4_11/CI1->game_tick_gen/counter_124_add_4_11/CO1
+game_tick_gen/n23126                                      NET DELAY            0.000        21.497  1       
+game_tick_gen/counter_364_add_4_11/CI1->game_tick_gen/counter_364_add_4_11/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        21.775  2       
-game_tick_gen/n2222                                       NET DELAY            2.075        23.850  1       
-game_tick_gen/counter_124_add_4_13/D0->game_tick_gen/counter_124_add_4_13/S0
+game_tick_gen/n17391                                      NET DELAY            2.075        23.850  1       
+game_tick_gen/counter_364_add_4_13/D0->game_tick_gen/counter_364_add_4_13/S0
                                           SLICE           D0_TO_F0_DELAY       0.477        24.327  1       
-game_tick_gen/n77[11]                                     NET DELAY            2.075        26.402  1       
+game_tick_gen/n81[11]                                     NET DELAY            2.075        26.402  1       
 
 
 Destination Clock Path
@@ -1125,10 +1238,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i10/D
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i10/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 12
@@ -1171,140 +1284,42 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
                                           SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
 game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/CO1
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/CO1
                                           SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-game_tick_gen/n2212                                       NET DELAY            2.075        10.695  1       
-game_tick_gen/counter_124_add_4_3/CI0->game_tick_gen/counter_124_add_4_3/CO0
+game_tick_gen/n17381                                      NET DELAY            2.075        10.695  1       
+game_tick_gen/counter_364_add_4_3/CI0->game_tick_gen/counter_364_add_4_3/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-game_tick_gen/n5451                                       NET DELAY            0.000        10.973  1       
-game_tick_gen/counter_124_add_4_3/CI1->game_tick_gen/counter_124_add_4_3/CO1
+game_tick_gen/n23114                                      NET DELAY            0.000        10.973  1       
+game_tick_gen/counter_364_add_4_3/CI1->game_tick_gen/counter_364_add_4_3/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-game_tick_gen/n2214                                       NET DELAY            2.075        13.326  1       
-game_tick_gen/counter_124_add_4_5/CI0->game_tick_gen/counter_124_add_4_5/CO0
+game_tick_gen/n17383                                      NET DELAY            2.075        13.326  1       
+game_tick_gen/counter_364_add_4_5/CI0->game_tick_gen/counter_364_add_4_5/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-game_tick_gen/n5454                                       NET DELAY            0.000        13.604  1       
-game_tick_gen/counter_124_add_4_5/CI1->game_tick_gen/counter_124_add_4_5/CO1
+game_tick_gen/n23117                                      NET DELAY            0.000        13.604  1       
+game_tick_gen/counter_364_add_4_5/CI1->game_tick_gen/counter_364_add_4_5/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-game_tick_gen/n2216                                       NET DELAY            2.075        15.957  1       
-game_tick_gen/counter_124_add_4_7/CI0->game_tick_gen/counter_124_add_4_7/CO0
+game_tick_gen/n17385                                      NET DELAY            2.075        15.957  1       
+game_tick_gen/counter_364_add_4_7/CI0->game_tick_gen/counter_364_add_4_7/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-game_tick_gen/n5457                                       NET DELAY            0.000        16.235  1       
-game_tick_gen/counter_124_add_4_7/CI1->game_tick_gen/counter_124_add_4_7/CO1
+game_tick_gen/n23120                                      NET DELAY            0.000        16.235  1       
+game_tick_gen/counter_364_add_4_7/CI1->game_tick_gen/counter_364_add_4_7/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-game_tick_gen/n2218                                       NET DELAY            2.075        18.588  1       
-game_tick_gen/counter_124_add_4_9/CI0->game_tick_gen/counter_124_add_4_9/CO0
+game_tick_gen/n17387                                      NET DELAY            2.075        18.588  1       
+game_tick_gen/counter_364_add_4_9/CI0->game_tick_gen/counter_364_add_4_9/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-game_tick_gen/n5460                                       NET DELAY            0.000        18.866  1       
-game_tick_gen/counter_124_add_4_9/CI1->game_tick_gen/counter_124_add_4_9/CO1
+game_tick_gen/n23123                                      NET DELAY            0.000        18.866  1       
+game_tick_gen/counter_364_add_4_9/CI1->game_tick_gen/counter_364_add_4_9/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-game_tick_gen/n2220                                       NET DELAY            2.075        21.219  1       
-game_tick_gen/counter_124_add_4_11/CI0->game_tick_gen/counter_124_add_4_11/CO0
+game_tick_gen/n17389                                      NET DELAY            2.075        21.219  1       
+game_tick_gen/counter_364_add_4_11/CI0->game_tick_gen/counter_364_add_4_11/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        21.497  2       
-game_tick_gen/n5463                                       NET DELAY            0.000        21.497  1       
-game_tick_gen/counter_124_add_4_11/D1->game_tick_gen/counter_124_add_4_11/S1
+game_tick_gen/n23126                                      NET DELAY            0.000        21.497  1       
+game_tick_gen/counter_364_add_4_11/D1->game_tick_gen/counter_364_add_4_11/S1
                                           SLICE           D1_TO_F1_DELAY       0.477        21.974  1       
-game_tick_gen/n77[10]                                     NET DELAY            2.075        24.049  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name            Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------------  -----  ------------  ------  
-ref_clk                                   pong            CLOCK LATENCY         0.000         0.000  1       
-ref_clk                                                   NET DELAY             0.000         0.000  1       
-ref_clk_pad.bb_inst/B->ref_clk_pad.bb_inst/O
-                                          PIO             IOPAD_TO_PADDI_DELAY  0.510         0.510  1       
-ref_clk_c                                                 NET DELAY             2.075         2.585  1       
-pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL                                   0.000         2.585  23      
-pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL                                   0.150         2.735  23      
-vga_clk                                                   NET DELAY             2.075         4.810  1       
-
-
-
-
- ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i9/D
-Source Clock     : vga_clk
-Destination Clock: vga_clk
-Logic Level      : 11
-Delay Ratio      : 76.6% (route), 23.4% (logic)
-Clock Skew       : 0.000 ns
-Setup Constraint : 39.800 ns 
-Path Slack       : 20.640 ns  (Passed)
-
-  Destination Clock Arrival Time (vga_clk:R#2)    39.800
-+ Master Clock Source Latency                      0.000
-- Destination Clock Uncertainty                    0.000
-+ Destination Clock Path Delay                     4.810
-- Setup Time                                       0.199
-----------------------------------------------   -------
-End-of-path required time( ns )                   44.411
-
-  Source Clock Arrival Time (vga_clk:R#1)    0.000
-+ Master Clock Source Latency                0.000
-+ Source Clock Path Delay                    4.810
-+ Data Path Delay                           18.961
------------------------------------------   ------
-End-of-path arrival time( ns )              23.771
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name            Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------------  -----  ------------  ------  
-ref_clk                                   pong            CLOCK LATENCY         0.000         0.000  1       
-ref_clk                                                   NET DELAY             0.000         0.000  1       
-ref_clk_pad.bb_inst/B->ref_clk_pad.bb_inst/O
-                                          PIO             IOPAD_TO_PADDI_DELAY  0.510         0.510  1       
-ref_clk_c                                                 NET DELAY             2.075         2.585  1       
-pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL                                   0.000         2.585  23      
-pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL                                   0.150         2.735  23      
-vga_clk                                                   NET DELAY             2.075         4.810  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
-                                          SLICE           CLK_TO_Q1_DELAY      1.391         6.201  2       
-game_tick_gen/counter[0]                                  NET DELAY            2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/CO1
-                                          SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-game_tick_gen/n2212                                       NET DELAY            2.075        10.695  1       
-game_tick_gen/counter_124_add_4_3/CI0->game_tick_gen/counter_124_add_4_3/CO0
-                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-game_tick_gen/n5451                                       NET DELAY            0.000        10.973  1       
-game_tick_gen/counter_124_add_4_3/CI1->game_tick_gen/counter_124_add_4_3/CO1
-                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-game_tick_gen/n2214                                       NET DELAY            2.075        13.326  1       
-game_tick_gen/counter_124_add_4_5/CI0->game_tick_gen/counter_124_add_4_5/CO0
-                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-game_tick_gen/n5454                                       NET DELAY            0.000        13.604  1       
-game_tick_gen/counter_124_add_4_5/CI1->game_tick_gen/counter_124_add_4_5/CO1
-                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-game_tick_gen/n2216                                       NET DELAY            2.075        15.957  1       
-game_tick_gen/counter_124_add_4_7/CI0->game_tick_gen/counter_124_add_4_7/CO0
-                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-game_tick_gen/n5457                                       NET DELAY            0.000        16.235  1       
-game_tick_gen/counter_124_add_4_7/CI1->game_tick_gen/counter_124_add_4_7/CO1
-                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-game_tick_gen/n2218                                       NET DELAY            2.075        18.588  1       
-game_tick_gen/counter_124_add_4_9/CI0->game_tick_gen/counter_124_add_4_9/CO0
-                                          SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-game_tick_gen/n5460                                       NET DELAY            0.000        18.866  1       
-game_tick_gen/counter_124_add_4_9/CI1->game_tick_gen/counter_124_add_4_9/CO1
-                                          SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-game_tick_gen/n2220                                       NET DELAY            2.075        21.219  1       
-game_tick_gen/counter_124_add_4_11/D0->game_tick_gen/counter_124_add_4_11/S0
-                                          SLICE           D0_TO_F0_DELAY       0.477        21.696  1       
-game_tick_gen/n77[9]                                      NET DELAY            2.075        23.771  1       
+game_tick_gen/n81[10]                                     NET DELAY            2.075        24.049  1       
 
 
 Destination Clock Path
@@ -1326,8 +1341,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_128__i0/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_128__i9/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i0/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i9/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 11
@@ -1370,46 +1385,46 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name           Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_128__i0/CK->vga_controller/VGAHorizontalCounter/hcount_128__i0/Q
-                                          SLICE           CLK_TO_Q1_DELAY      1.391         6.201  4       
+vga_controller/VGAHorizontalCounter/hcount_366__i0/CK->vga_controller/VGAHorizontalCounter/hcount_366__i0/Q
+                                          SLICE           CLK_TO_Q1_DELAY      1.391         6.201  13      
 xpix[0]                                                   NET DELAY            2.075         8.276  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_128_add_4_1/CO1
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/CO1
                                           SLICE           C1_TO_COUT1_DELAY    0.344         8.620  2       
-vga_controller/VGAHorizontalCounter/n2181
+vga_controller/VGAHorizontalCounter/n17242
                                                           NET DELAY            2.075        10.695  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/CI0->vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/CO0
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/CI0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        10.973  2       
-vga_controller/VGAHorizontalCounter/n5634
+vga_controller/VGAHorizontalCounter/n23144
                                                           NET DELAY            0.000        10.973  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/CI1->vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/CO1
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/CI1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        11.251  2       
-vga_controller/VGAHorizontalCounter/n2183
+vga_controller/VGAHorizontalCounter/n17244
                                                           NET DELAY            2.075        13.326  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_5/CI0->vga_controller/VGAHorizontalCounter/hcount_128_add_4_5/CO0
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/CI0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        13.604  2       
-vga_controller/VGAHorizontalCounter/n5637
+vga_controller/VGAHorizontalCounter/n23147
                                                           NET DELAY            0.000        13.604  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_5/CI1->vga_controller/VGAHorizontalCounter/hcount_128_add_4_5/CO1
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/CI1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_5/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        13.882  2       
-vga_controller/VGAHorizontalCounter/n2185
+vga_controller/VGAHorizontalCounter/n17246
                                                           NET DELAY            2.075        15.957  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_7/CI0->vga_controller/VGAHorizontalCounter/hcount_128_add_4_7/CO0
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_7/CI0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_7/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        16.235  2       
-vga_controller/VGAHorizontalCounter/n5640
+vga_controller/VGAHorizontalCounter/n23150
                                                           NET DELAY            0.000        16.235  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_7/CI1->vga_controller/VGAHorizontalCounter/hcount_128_add_4_7/CO1
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_7/CI1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_7/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        16.513  2       
-vga_controller/VGAHorizontalCounter/n2187
+vga_controller/VGAHorizontalCounter/n17248
                                                           NET DELAY            2.075        18.588  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_9/CI0->vga_controller/VGAHorizontalCounter/hcount_128_add_4_9/CO0
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_9/CI0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_9/CO0
                                           SLICE           CIN0_TO_COUT0_DELAY  0.278        18.866  2       
-vga_controller/VGAHorizontalCounter/n5643
+vga_controller/VGAHorizontalCounter/n23153
                                                           NET DELAY            0.000        18.866  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_9/CI1->vga_controller/VGAHorizontalCounter/hcount_128_add_4_9/CO1
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_9/CI1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_9/CO1
                                           SLICE           CIN1_TO_COUT1_DELAY  0.278        19.144  2       
-vga_controller/VGAHorizontalCounter/n2189
+vga_controller/VGAHorizontalCounter/n17250
                                                           NET DELAY            2.075        21.219  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_11/D0->vga_controller/VGAHorizontalCounter/hcount_128_add_4_11/S0
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_11/D0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_11/S0
                                           SLICE           D0_TO_F0_DELAY       0.477        21.696  1       
 vga_controller/VGAHorizontalCounter/n45[9]
                                                           NET DELAY            2.075        23.771  1       
@@ -1450,7 +1465,7 @@ vga_clk                                                   NET DELAY             
 
 4.2.2  Hold path details for constraint: create_generated_clock -name {vga_clk} -source [get_pins {pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 ----------------------------------------------------------------------
-67 endpoints scored, 0 timing errors detected.
+68 endpoints scored, 0 timing errors detected.
 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     Detailed Report for timing paths 
@@ -1458,8 +1473,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i0/Q
-Path End         : game_tick_gen/counter_124__i0/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i0/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i0/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1502,81 +1517,10 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-game_tick_gen/counter_124__i0/CK->game_tick_gen/counter_124__i0/Q
-                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  2       
-game_tick_gen/counter[0]                                  NET DELAY        2.075         8.276  1       
-game_tick_gen/counter_124_add_4_1/C1->game_tick_gen/counter_124_add_4_1/S1
-                                          SLICE           C1_TO_F1_DELAY   0.450         8.726  1       
-game_tick_gen/n77[0]                                      NET DELAY        2.075        10.801  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name            Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------------  -----  ------------  ------  
-ref_clk                                   pong            CLOCK LATENCY         0.000         0.000  1       
-ref_clk                                                   NET DELAY             0.000         0.000  1       
-ref_clk_pad.bb_inst/B->ref_clk_pad.bb_inst/O
-                                          PIO             IOPAD_TO_PADDI_DELAY  0.510         0.510  1       
-ref_clk_c                                                 NET DELAY             2.075         2.585  1       
-pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL                                   0.000         2.585  23      
-pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL                                   0.150         2.735  23      
-vga_clk                                                   NET DELAY             2.075         4.810  1       
-
-
-
-
- ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_128__i0/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_128__i0/D
-Source Clock     : vga_clk
-Destination Clock: vga_clk
-Logic Level      : 2
-Delay Ratio      : 69.3% (route), 30.7% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 5.991 ns  (Passed)
-
-  Destination Clock Arrival Time (vga_clk:R#1)     0.000
-+ Master Clock Source Latency                      0.000
-+ Destination Clock Uncertainty                    0.000
-+ Destination Clock Path Delay                     4.810
-+ Hold Time                                       -0.000
-----------------------------------------------   -------
-End-of-path required time( ns )                    4.810
-
-  Source Clock Arrival Time (vga_clk:R#1)    0.000
-+ Master Clock Source Latency                0.000
-+ Source Clock Path Delay                    4.810
-+ Data Path Delay                            5.991
------------------------------------------   ------
-End-of-path arrival time( ns )              10.801
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name            Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------------  -----  ------------  ------  
-ref_clk                                   pong            CLOCK LATENCY         0.000         0.000  1       
-ref_clk                                                   NET DELAY             0.000         0.000  1       
-ref_clk_pad.bb_inst/B->ref_clk_pad.bb_inst/O
-                                          PIO             IOPAD_TO_PADDI_DELAY  0.510         0.510  1       
-ref_clk_c                                                 NET DELAY             2.075         2.585  1       
-pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL                                   0.000         2.585  23      
-pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL                                   0.150         2.735  23      
-vga_clk                                                   NET DELAY             2.075         4.810  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ---------------  -----  ------------  ------  
-vga_controller/VGAHorizontalCounter/hcount_128__i0/CK->vga_controller/VGAHorizontalCounter/hcount_128__i0/Q
-                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  4       
+vga_controller/VGAHorizontalCounter/hcount_366__i0/CK->vga_controller/VGAHorizontalCounter/hcount_366__i0/Q
+                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  13      
 xpix[0]                                                   NET DELAY        2.075         8.276  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_128_add_4_1/S1
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/C1->vga_controller/VGAHorizontalCounter/hcount_366_add_4_1/S1
                                           SLICE           C1_TO_F1_DELAY   0.450         8.726  1       
 vga_controller/VGAHorizontalCounter/n45[0]
                                                           NET DELAY        2.075        10.801  1       
@@ -1599,10 +1543,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_130__i0/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_130__i0/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_368__i0/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_368__i0/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1645,10 +1589,10 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-vga_controller/VGAVerticalCounter/vcount_130__i0/CK->vga_controller/VGAVerticalCounter/vcount_130__i0/Q
-                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  4       
+vga_controller/VGAVerticalCounter/vcount_368__i0/CK->vga_controller/VGAVerticalCounter/vcount_368__i0/Q
+                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  13      
 ypix[0]                                                   NET DELAY        2.075         8.276  1       
-vga_controller/VGAVerticalCounter/vcount_130_add_4_1/C1->vga_controller/VGAVerticalCounter/vcount_130_add_4_1/S1
+vga_controller/VGAVerticalCounter/vcount_368_add_4_1/C1->vga_controller/VGAVerticalCounter/vcount_368_add_4_1/S1
                                           SLICE           C1_TO_F1_DELAY   0.450         8.726  1       
 vga_controller/VGAVerticalCounter/n45[0]                  NET DELAY        2.075        10.801  1       
 
@@ -1670,10 +1614,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i1/Q
-Path End         : game_tick_gen/counter_124__i1/D
+Path Begin       : game_tick_gen/counter_364__i0/Q
+Path End         : game_tick_gen/counter_364__i0/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1716,12 +1660,12 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{game_tick_gen/counter_124__i1/CK   game_tick_gen/counter_124__i2/CK}->game_tick_gen/counter_124__i1/Q
-                                          SLICE           CLK_TO_Q0_DELAY  1.391         6.201  2       
-game_tick_gen/counter[1]                                  NET DELAY        2.075         8.276  1       
-game_tick_gen/counter_124_add_4_3/C0->game_tick_gen/counter_124_add_4_3/S0
-                                          SLICE           C0_TO_F0_DELAY   0.450         8.726  1       
-game_tick_gen/n77[1]                                      NET DELAY        2.075        10.801  1       
+game_tick_gen/counter_364__i0/CK->game_tick_gen/counter_364__i0/Q
+                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  2       
+game_tick_gen/counter[0]                                  NET DELAY        2.075         8.276  1       
+game_tick_gen/counter_364_add_4_1/C1->game_tick_gen/counter_364_add_4_1/S1
+                                          SLICE           C1_TO_F1_DELAY   0.450         8.726  1       
+game_tick_gen/n81[0]                                      NET DELAY        2.075        10.801  1       
 
 
 Destination Clock Path
@@ -1741,10 +1685,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_128__i1/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_128__i1/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i1/Q
+Path End         : vga_controller/VGAHorizontalCounter/hcount_366__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1787,10 +1731,10 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_128__i1/CK   vga_controller/VGAHorizontalCounter/hcount_128__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_128__i1/Q
-                                          SLICE           CLK_TO_Q0_DELAY  1.391         6.201  4       
+{vga_controller/VGAHorizontalCounter/hcount_366__i1/CK   vga_controller/VGAHorizontalCounter/hcount_366__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_366__i1/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         6.201  19      
 xpix[1]                                                   NET DELAY        2.075         8.276  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/C0->vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/S0
+vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/C0->vga_controller/VGAHorizontalCounter/hcount_366_add_4_3/S0
                                           SLICE           C0_TO_F0_DELAY   0.450         8.726  1       
 vga_controller/VGAHorizontalCounter/n45[1]
                                                           NET DELAY        2.075        10.801  1       
@@ -1813,10 +1757,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_130__i1/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_130__i1/D
+Path Begin       : vga_controller/VGAVerticalCounter/vcount_368__i1/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_368__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1859,10 +1803,10 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAVerticalCounter/vcount_130__i1/CK   vga_controller/VGAVerticalCounter/vcount_130__i2/CK}->vga_controller/VGAVerticalCounter/vcount_130__i1/Q
-                                          SLICE           CLK_TO_Q0_DELAY  1.391         6.201  5       
+{vga_controller/VGAVerticalCounter/vcount_368__i1/CK   vga_controller/VGAVerticalCounter/vcount_368__i2/CK}->vga_controller/VGAVerticalCounter/vcount_368__i1/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         6.201  14      
 ypix[1]                                                   NET DELAY        2.075         8.276  1       
-vga_controller/VGAVerticalCounter/vcount_130_add_4_3/C0->vga_controller/VGAVerticalCounter/vcount_130_add_4_3/S0
+vga_controller/VGAVerticalCounter/vcount_368_add_4_3/C0->vga_controller/VGAVerticalCounter/vcount_368_add_4_3/S0
                                           SLICE           C0_TO_F0_DELAY   0.450         8.726  1       
 vga_controller/VGAVerticalCounter/n45[1]                  NET DELAY        2.075        10.801  1       
 
@@ -1884,10 +1828,10 @@ vga_clk                                                   NET DELAY             
 
 
 
- ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i2/Q
-Path End         : game_tick_gen/counter_124__i2/D
+Path Begin       : game_tick_gen/counter_364__i1/Q
+Path End         : game_tick_gen/counter_364__i1/D
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -1930,12 +1874,83 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{game_tick_gen/counter_124__i1/CK   game_tick_gen/counter_124__i2/CK}->game_tick_gen/counter_124__i2/Q
-                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  2       
-game_tick_gen/counter[2]                                  NET DELAY        2.075         8.276  1       
-game_tick_gen/counter_124_add_4_3/C1->game_tick_gen/counter_124_add_4_3/S1
-                                          SLICE           C1_TO_F1_DELAY   0.450         8.726  1       
-game_tick_gen/n77[2]                                      NET DELAY        2.075        10.801  1       
+{game_tick_gen/counter_364__i1/CK   game_tick_gen/counter_364__i2/CK}->game_tick_gen/counter_364__i1/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         6.201  2       
+game_tick_gen/counter[1]                                  NET DELAY        2.075         8.276  1       
+game_tick_gen/counter_364_add_4_3/C0->game_tick_gen/counter_364_add_4_3/S0
+                                          SLICE           C0_TO_F0_DELAY   0.450         8.726  1       
+game_tick_gen/n81[1]                                      NET DELAY        2.075        10.801  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name            Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------------  -----  ------------  ------  
+ref_clk                                   pong            CLOCK LATENCY         0.000         0.000  1       
+ref_clk                                                   NET DELAY             0.000         0.000  1       
+ref_clk_pad.bb_inst/B->ref_clk_pad.bb_inst/O
+                                          PIO             IOPAD_TO_PADDI_DELAY  0.510         0.510  1       
+ref_clk_c                                                 NET DELAY             2.075         2.585  1       
+pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL                                   0.000         2.585  23      
+pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL                                   0.150         2.735  23      
+vga_clk                                                   NET DELAY             2.075         4.810  1       
+
+
+
+
+ ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+Path End         : vga_controller/VGAVerticalCounter/vcount_368__i0/SP
+Source Clock     : vga_clk
+Destination Clock: vga_clk
+Logic Level      : 2
+Delay Ratio      : 69.3% (route), 30.7% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 5.991 ns  (Passed)
+
+  Destination Clock Arrival Time (vga_clk:R#1)     0.000
++ Master Clock Source Latency                      0.000
++ Destination Clock Uncertainty                    0.000
++ Destination Clock Path Delay                     4.810
++ Hold Time                                       -0.000
+----------------------------------------------   -------
+End-of-path required time( ns )                    4.810
+
+  Source Clock Arrival Time (vga_clk:R#1)    0.000
++ Master Clock Source Latency                0.000
++ Source Clock Path Delay                    4.810
++ Data Path Delay                            5.991
+-----------------------------------------   ------
+End-of-path arrival time( ns )              10.801
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name            Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------------  -----  ------------  ------  
+ref_clk                                   pong            CLOCK LATENCY         0.000         0.000  1       
+ref_clk                                                   NET DELAY             0.000         0.000  1       
+ref_clk_pad.bb_inst/B->ref_clk_pad.bb_inst/O
+                                          PIO             IOPAD_TO_PADDI_DELAY  0.510         0.510  1       
+ref_clk_c                                                 NET DELAY             2.075         2.585  1       
+pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL                                   0.000         2.585  23      
+pll_module/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_module/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL                                   0.150         2.735  23      
+vga_clk                                                   NET DELAY             2.075         4.810  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_controller/VGAHorizontalCounter/hcount_366__i1/CK   vga_controller/VGAHorizontalCounter/hcount_366__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  26      
+xpix[2]                                                   NET DELAY        2.075         8.276  1       
+vga_controller/VGAHorizontalCounter/i20634_4_lut/D->vga_controller/VGAHorizontalCounter/i20634_4_lut/Z
+                                          SLICE           D0_TO_F0_DELAY   0.450         8.726  7       
+vga_controller/n1963                                      NET DELAY        2.075        10.801  1       
 
 
 Destination Clock Path
@@ -1957,8 +1972,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAHorizontalCounter/hcount_128__i2/Q
-Path End         : vga_controller/VGAHorizontalCounter/hcount_128__i2/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+Path End         : {vga_controller/VGAVerticalCounter/vcount_368__i1/SP   vga_controller/VGAVerticalCounter/vcount_368__i2/SP}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -2001,13 +2016,12 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAHorizontalCounter/hcount_128__i1/CK   vga_controller/VGAHorizontalCounter/hcount_128__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_128__i2/Q
-                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  7       
+{vga_controller/VGAHorizontalCounter/hcount_366__i1/CK   vga_controller/VGAHorizontalCounter/hcount_366__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  26      
 xpix[2]                                                   NET DELAY        2.075         8.276  1       
-vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/C1->vga_controller/VGAHorizontalCounter/hcount_128_add_4_3/S1
-                                          SLICE           C1_TO_F1_DELAY   0.450         8.726  1       
-vga_controller/VGAHorizontalCounter/n45[2]
-                                                          NET DELAY        2.075        10.801  1       
+vga_controller/VGAHorizontalCounter/i20634_4_lut/D->vga_controller/VGAHorizontalCounter/i20634_4_lut/Z
+                                          SLICE           D0_TO_F0_DELAY   0.450         8.726  7       
+vga_controller/n1963                                      NET DELAY        2.075        10.801  1       
 
 
 Destination Clock Path
@@ -2029,8 +2043,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_controller/VGAVerticalCounter/vcount_130__i2/Q
-Path End         : vga_controller/VGAVerticalCounter/vcount_130__i2/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+Path End         : {vga_controller/VGAVerticalCounter/vcount_368__i3/SP   vga_controller/VGAVerticalCounter/vcount_368__i4/SP}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -2073,12 +2087,12 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_controller/VGAVerticalCounter/vcount_130__i1/CK   vga_controller/VGAVerticalCounter/vcount_130__i2/CK}->vga_controller/VGAVerticalCounter/vcount_130__i2/Q
-                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  11      
-ypix[2]                                                   NET DELAY        2.075         8.276  1       
-vga_controller/VGAVerticalCounter/vcount_130_add_4_3/C1->vga_controller/VGAVerticalCounter/vcount_130_add_4_3/S1
-                                          SLICE           C1_TO_F1_DELAY   0.450         8.726  1       
-vga_controller/VGAVerticalCounter/n45[2]                  NET DELAY        2.075        10.801  1       
+{vga_controller/VGAHorizontalCounter/hcount_366__i1/CK   vga_controller/VGAHorizontalCounter/hcount_366__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  26      
+xpix[2]                                                   NET DELAY        2.075         8.276  1       
+vga_controller/VGAHorizontalCounter/i20634_4_lut/D->vga_controller/VGAHorizontalCounter/i20634_4_lut/Z
+                                          SLICE           D0_TO_F0_DELAY   0.450         8.726  7       
+vga_controller/n1963                                      NET DELAY        2.075        10.801  1       
 
 
 Destination Clock Path
@@ -2100,8 +2114,8 @@ vga_clk                                                   NET DELAY             
 
  ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : game_tick_gen/counter_124__i3/Q
-Path End         : game_tick_gen/counter_124__i3/D
+Path Begin       : vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+Path End         : {vga_controller/VGAVerticalCounter/vcount_368__i5/SP   vga_controller/VGAVerticalCounter/vcount_368__i6/SP}
 Source Clock     : vga_clk
 Destination Clock: vga_clk
 Logic Level      : 2
@@ -2144,12 +2158,12 @@ vga_clk                                                   NET DELAY             
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{game_tick_gen/counter_124__i3/CK   game_tick_gen/counter_124__i4/CK}->game_tick_gen/counter_124__i3/Q
-                                          SLICE           CLK_TO_Q0_DELAY  1.391         6.201  2       
-game_tick_gen/counter[3]                                  NET DELAY        2.075         8.276  1       
-game_tick_gen/counter_124_add_4_5/C0->game_tick_gen/counter_124_add_4_5/S0
-                                          SLICE           C0_TO_F0_DELAY   0.450         8.726  1       
-game_tick_gen/n77[3]                                      NET DELAY        2.075        10.801  1       
+{vga_controller/VGAHorizontalCounter/hcount_366__i1/CK   vga_controller/VGAHorizontalCounter/hcount_366__i2/CK}->vga_controller/VGAHorizontalCounter/hcount_366__i2/Q
+                                          SLICE           CLK_TO_Q1_DELAY  1.391         6.201  26      
+xpix[2]                                                   NET DELAY        2.075         8.276  1       
+vga_controller/VGAHorizontalCounter/i20634_4_lut/D->vga_controller/VGAHorizontalCounter/i20634_4_lut/Z
+                                          SLICE           D0_TO_F0_DELAY   0.450         8.726  7       
+vga_controller/n1963                                      NET DELAY        2.075        10.801  1       
 
 
 Destination Clock Path
