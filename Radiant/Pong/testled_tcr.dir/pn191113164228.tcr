@@ -1,0 +1,230 @@
+#Start recording tcl command: 11/13/2019 09:57:38
+#Project Location: C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled; Project name: testled
+prj_open "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/testled.rdf"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/Controller.v"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/sim/sim.spf"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/sim/sim.spf"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/sim/sim.spf"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/game_config.vh"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/disp_scr_config.vh"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/CounterModule.v" "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/Controller.v"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/DisplayController.v"
+prj_disable_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/disp_scr_config.vh"
+prj_disable_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/game_config.vh"
+prj_run Synthesis -impl impl_1
+prj_remove_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/game_config.vh"
+prj_remove_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/disp_scr_config.vh"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/disp_scr_config.vh"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/game_config.vh"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/disp_scr_config.vh"
+prj_disable_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/game_config.vh"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/col_ctrl.v"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/GameEnableGen.v"
+prj_remove_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/GameEnableGen.v"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/enablegen.v"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/BuzzerModule.v"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 11/13/2019 16:42:28

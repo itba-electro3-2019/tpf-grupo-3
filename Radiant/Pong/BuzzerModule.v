@@ -1,5 +1,5 @@
 module BuzzerModule(
-input game_clk,
+input clk,
 input buzzer_wall_col,
 input buzzer_paddle_col,
 input paddle_frequency,

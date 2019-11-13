@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RadiantModule date="2019 11 12 20:59:30" generator="ipgen" library="module" module="pll" name="spll" source_format="Verilog" vendor="latticesemi.com" version="1.0.1">
+ <Package>
+  <File modified="2019 11 12 20:59:28" name="rtl/spll.v" type="top_level_verilog"/>
+  <File modified="2019 11 12 20:59:28" name="rtl/spll_bb.v" type="black_box_verilog"/>
+  <File modified="2019 11 12 20:59:28" name="misc/spll_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2019 11 12 20:59:30" name="component.xml" type="IP-XACT_output_file"/>
+  <File modified="2019 11 12 20:59:28" name="spll.cfg" type="cfg"/>
+  <File modified="2019 11 12 20:59:28" name="misc/spll_tmpl.v" type="template_verilog"/>
+ </Package>
+</RadiantModule>

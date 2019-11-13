@@ -1,0 +1,1862 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 1.1.0.165.1
+
+Wed Nov 13 16:53:46 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt testled_impl_1.tws testled_impl_1_syn.udb -gui
+
+-----------------------------------------
+Design:          Pong
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  DESIGN CHECKING
+        1.1  SDC Constraints
+        1.2  Combinational Loop
+    2  CLOCK SUMMARY
+        2.1  Clock clk_in
+        2.2  Clock clk
+    3  TIMING ANALYSIS SUMMARY
+        3.1  Overall (Setup and Hold)
+            3.1.1  Constraint Coverage
+            3.1.2  Timing Errors
+            3.1.3  Total Timing Score
+        3.2  Setup Summary Report
+            3.2.1  Setup Constraint Slack Summary
+            3.2.2  Setup Critical Endpoint Summary 
+        3.3  Hold Summary Report
+            3.3.1  Hold Constraint Slack Summary
+            3.3.2  Hold Critical Endpoint Summary 
+        3.4  Unconstrained Report
+            3.4.1  Unconstrained Start/End Points
+            3.4.2  Start/End Points Without Timing Constraints
+    4  DETAILED REPORT
+        4.1  Setup Detailed Report
+            4.1.1  Setup Path Details For Constraint: create_clock -name {clk_in} -period 83.3333333333333 [get_ports clk_in]
+            4.1.2  Setup Path Details For Constraint: create_generated_clock -name {clk} -source [get_pins {mypll/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {mypll/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+        4.2  Hold Detailed Report
+            4.2.1  Hold Path Details For Constraint: create_clock -name {clk_in} -period 83.3333333333333 [get_ports clk_in]
+            4.2.2  Hold Path Details For Constraint: create_generated_clock -name {clk} -source [get_pins {mypll/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {mypll/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  DESIGN CHECKING
+==============================================
+
+1.1  SDC Constraints
+=====================
+[IGNORED:]create_clock -name {mypll/lscc_pll_inst/clk_in_c} -period 83.3333333333333 [get_nets clk_in_c]
+create_clock -name {clk_in} -period 83.3333333333333 [get_ports clk_in]
+create_generated_clock -name {clk} -source [get_pins {mypll/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {mypll/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+
+1.2  Combinational Loop
+========================
+None
+
+==============================================
+2  CLOCK SUMMARY
+==============================================
+
+2.1 Clock "clk_in"
+=======================
+create_clock -name {clk_in} -period 83.3333333333333 [get_ports clk_in]
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+              Clock clk_in              |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From clk_in                            |             Target |          83.333 ns |         12.000 MHz 
+                                        | Actual (all paths) |               ---- |               ---- 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+              Clock clk_in              |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From clk                               |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------
+
+2.2 Clock "clk"
+=======================
+create_generated_clock -name {clk} -source [get_pins {mypll/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {mypll/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+               Clock clk                |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From clk                               |             Target |          39.800 ns |         25.126 MHz 
+                                        | Actual (all paths) |          39.295 ns |         25.449 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+               Clock clk                |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From clk_in                            |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------
+
+==============================================
+3  TIMING ANALYSIS SUMMARY
+==============================================
+
+3.1  Overall (Setup and Hold)
+==============================
+
+3.1.1  Constraint Coverage
+---------------------------
+Constraint Coverage: 95.5942%
+
+3.1.2  Timing Errors
+---------------------
+Timing Errors: 0 endpoints (setup), 0 endpoints (hold)
+
+3.1.3  Total Timing Score
+--------------------------
+Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
+
+3.2  Setup Summary Report
+==========================
+
+3.2.1  Setup Constraint Slack Summary
+--------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+                                        |             |             |        |   Actual (flop to flop)   |                |                
+             SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
+-------------------------------------------------------------------------------------------------------------------------------------------
+                                        |             |             |        |             |             |                |                
+create_clock -name {clk_in} -period 83.                                                                                                    
+3333333333333 [get_ports clk_in]        |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+                                        |             |             |        |             |             |                |                
+create_generated_clock -name {clk} -sou                                                                                                    
+rce [get_pins {mypll/lscc_pll_inst/u_PL                                                                                                    
+L_B/REFERENCECLK}] -multiply_by 67 -div                                                                                                    
+ide_by 32 [get_pins {mypll/lscc_pll_ins                                                                                                    
+t/u_PLL_B/OUTGLOBAL }]                  |   39.800 ns |    0.505 ns |   24   |   39.295 ns |  25.449 MHz |       357      |        0       
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+3.2.2  Setup Critical Endpoint Summary 
+----------------------------------------
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+vga_ctrl/rgb__i3/SR                      |    0.506 ns 
+vga_ctrl/rgb__i1/D                       |    0.810 ns 
+vga_ctrl/rgb__i3/D                       |    0.810 ns 
+col_ctrl/x_ball_dir_c/D                  |    6.232 ns 
+col_ctrl/pad_col_c/D                     |    8.784 ns 
+col_ctrl/y_ball_i0_i0/D                  |   16.440 ns 
+col_ctrl/y_ball_i0_i1/SR                 |   18.688 ns 
+col_ctrl/y_ball_i0_i3/SR                 |   18.688 ns 
+col_ctrl/y_ball_i0_i5/SR                 |   18.688 ns 
+col_ctrl/y_ball_i0_i6/SR                 |   18.688 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           0 
+                                         |             
+-------------------------------------------------------
+
+3.3  Hold Summary Report
+=========================
+
+3.3.1  Hold Constraint Slack Summary
+-------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+                                        |             |             |        |   Actual (flop to flop)   |                |                
+             SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
+-------------------------------------------------------------------------------------------------------------------------------------------
+                                        |             |             |        |             |             |                |                
+create_clock -name {clk_in} -period 83.                                                                                                    
+3333333333333 [get_ports clk_in]        |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+                                        |             |             |        |             |             |                |                
+create_generated_clock -name {clk} -sou                                                                                                    
+rce [get_pins {mypll/lscc_pll_inst/u_PL                                                                                                    
+L_B/REFERENCECLK}] -multiply_by 67 -div                                                                                                    
+ide_by 32 [get_pins {mypll/lscc_pll_ins                                                                                                    
+t/u_PLL_B/OUTGLOBAL }]                  |    0.000 ns |    1.671 ns |    1   |        ---- |        ---- |       357      |        0       
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+3.3.2  Hold Critical Endpoint Summary 
+---------------------------------------
+
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+col_ctrl/x_ball_i0_i4/SP                 |    1.671 ns 
+col_ctrl/x_ball_i0_i8/SP                 |    1.671 ns 
+col_ctrl/x_ball_i0_i9/SP                 |    1.671 ns 
+col_ctrl/x_ball_i0_i5/SP                 |    1.671 ns 
+col_ctrl/x_ball_i0_i6/SP                 |    1.671 ns 
+col_ctrl/x_ball_i0_i7/SP                 |    1.671 ns 
+col_ctrl/x_ball_i0_i2/SP                 |    1.671 ns 
+col_ctrl/x_ball_i0_i1/SP                 |    1.671 ns 
+col_ctrl/x_ball_i0_i3/SP                 |    1.671 ns 
+rst_gen_inst/rst_cnt__i25/D              |    4.196 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
+
+3.4  Unconstrained Report
+===========================
+
+3.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+-------------------------------------------------------------------
+         Listing 6 Start Points         |           Type           
+-------------------------------------------------------------------
+vga_ctrl/hsync/Q                        |          No required time
+vga_ctrl/rgb__i3/Q                      |          No required time
+vga_ctrl/rgb__i1/Q                      |          No required time
+vga_ctrl/vsync/Q                        |          No required time
+col_ctrl/wall_col_c/Q                   |          No required time
+col_ctrl/pad_col_c/Q                    |          No required time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing start po |                          
+ints                                    |                         6
+                                        |                          
+-------------------------------------------------------------------
+
+Clocked but unconstrained timing end points
+-------------------------------------------------------------------
+         Listing 10 End Points          |           Type           
+-------------------------------------------------------------------
+enable_gen/countergmv_518__i16/SP       |           No arrival time
+enable_gen/countergmv_518__i17/SP       |           No arrival time
+enable_gen/countergmv_518__i18/SP       |           No arrival time
+enable_gen/countergmv_518__i19/SP       |           No arrival time
+enable_gen/counter_516__i17/SP          |           No arrival time
+enable_gen/counter_516__i16/SP          |           No arrival time
+enable_gen/counter_516__i15/SP          |           No arrival time
+enable_gen/counter_516__i9/SP           |           No arrival time
+enable_gen/counter_516__i10/SP          |           No arrival time
+enable_gen/countergmv_518__i20/SP       |           No arrival time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                        43
+                                        |                          
+-------------------------------------------------------------------
+
+3.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 10 Start or End Points     |           Type           
+-------------------------------------------------------------------
+j13                                     |                     input
+j14                                     |                     input
+j15                                     |                     input
+j16                                     |                     input
+j17                                     |                     input
+j01                                     |                    output
+j02                                     |                    output
+j03                                     |                    output
+j04                                     |                    output
+j05                                     |                    output
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                        11
+                                        |                          
+-------------------------------------------------------------------
+
+Registers without clock definition
+Define the clock for these registers.
+--------------------------------------------------
+There is no instance satisfying reporting criteria
+
+
+==============================================
+4  DETAILED REPORT
+==============================================
+
+4.1  Setup Detailed Report
+===========================
+4.1.1  Setup path details for constraint: create_clock -name {clk_in} -period 83.3333333333333 [get_ports clk_in]
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+4.1.2  Setup path details for constraint: create_generated_clock -name {clk} -source [get_pins {mypll/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {mypll/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+----------------------------------------------------------------------
+357 endpoints scored, 0 timing errors detected.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : col_ctrl/y_padA_i0_i2/Q
+Path End         : vga_ctrl/rgb__i3/SR
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 24
+Delay Ratio      : 72.9% (route), 27.1% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 0.505 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.530
+------------------------------------------   -------
+End-of-path required time( ns )               48.230
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       38.765
+-------------------------------------   ------
+End-of-path arrival time( ns )          47.725
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/y_padA_i0_i2/CK->col_ctrl/y_padA_i0_i2/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  6       
+y_padA[2]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_221_add_5_1/B1->disp_ctrl/add_221_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13474                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_221_add_5_3/D0->disp_ctrl/add_221_add_5_3/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        11.746  9       
+p_padA_N_430[3]                                           NET DELAY         0.280        12.026  1       
+disp_ctrl/sub_20_add_2_add_5_3/B0->disp_ctrl/sub_20_add_2_add_5_3/CO0
+                                          FA2             B0_TO_CO0_DELAY   0.358        12.384  2       
+disp_ctrl/n21211                                          NET DELAY         0.280        12.664  1       
+disp_ctrl/sub_20_add_2_add_5_3/CI1->disp_ctrl/sub_20_add_2_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.942  2       
+disp_ctrl/n13533                                          NET DELAY         0.280        13.222  1       
+disp_ctrl/sub_20_add_2_add_5_5/CI0->disp_ctrl/sub_20_add_2_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        13.500  2       
+disp_ctrl/n21217                                          NET DELAY         0.280        13.780  1       
+disp_ctrl/sub_20_add_2_add_5_5/CI1->disp_ctrl/sub_20_add_2_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        14.058  2       
+disp_ctrl/n13535                                          NET DELAY         0.280        14.338  1       
+disp_ctrl/sub_20_add_2_add_5_7/CI0->disp_ctrl/sub_20_add_2_add_5_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        14.616  2       
+disp_ctrl/n21223                                          NET DELAY         0.280        14.896  1       
+disp_ctrl/sub_20_add_2_add_5_7/CI1->disp_ctrl/sub_20_add_2_add_5_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        15.174  2       
+disp_ctrl/n13537                                          NET DELAY         0.280        15.454  1       
+disp_ctrl/sub_20_add_2_add_5_9/CI0->disp_ctrl/sub_20_add_2_add_5_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        15.732  2       
+disp_ctrl/n21229                                          NET DELAY         0.280        16.012  1       
+disp_ctrl/sub_20_add_2_add_5_9/CI1->disp_ctrl/sub_20_add_2_add_5_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        16.290  2       
+disp_ctrl/n13539                                          NET DELAY         0.280        16.570  1       
+disp_ctrl/sub_20_add_2_add_5_11/CI0->disp_ctrl/sub_20_add_2_add_5_11/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        16.848  2       
+disp_ctrl/n21235                                          NET DELAY         0.280        17.128  1       
+disp_ctrl/sub_20_add_2_add_5_11/D1->disp_ctrl/sub_20_add_2_add_5_11/S1
+                                          FA2             D1_TO_S1_DELAY    0.477        17.605  1       
+p_padA_N_323[12]                                          NET DELAY         2.075        19.680  1       
+i2_3_lut_adj_274/C->i2_3_lut_adj_274/Z    LUT4            C_TO_Z_DELAY      0.477        20.157  2       
+n2858                                                     NET DELAY         2.075        22.232  1       
+disp_ctrl/i3_3_lut/A->disp_ctrl/i3_3_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        22.709  1       
+disp_ctrl/n8_adj_1673                                     NET DELAY         2.075        24.784  1       
+disp_ctrl/i2_4_lut_adj_163/C->disp_ctrl/i2_4_lut_adj_163/Z
+                                          LUT4            C_TO_Z_DELAY      0.477        25.261  1       
+disp_ctrl/n8_c                                            NET DELAY         2.075        27.336  1       
+disp_ctrl/i5_4_lut/D->disp_ctrl/i5_4_lut/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        27.813  1       
+disp_ctrl/n16933                                          NET DELAY         2.075        29.888  1       
+disp_ctrl/i1_4_lut_adj_160/B->disp_ctrl/i1_4_lut_adj_160/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        30.365  1       
+disp_ctrl/n15                                             NET DELAY         2.075        32.440  1       
+disp_ctrl/i1_4_lut/B->disp_ctrl/i1_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        32.917  1       
+disp_ctrl/n12_c                                           NET DELAY         2.075        34.992  1       
+disp_ctrl/i10_4_lut_adj_177/C->disp_ctrl/i10_4_lut_adj_177/Z
+                                          LUT4            C_TO_Z_DELAY      0.477        35.469  1       
+disp_ctrl/n16101                                          NET DELAY         2.075        37.544  1       
+disp_ctrl/i4_4_lut_adj_174/D->disp_ctrl/i4_4_lut_adj_174/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        38.021  1       
+disp_ctrl/n17048                                          NET DELAY         2.075        40.096  1       
+disp_ctrl/i3_4_lut_adj_169/B->disp_ctrl/i3_4_lut_adj_169/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        40.573  1       
+disp_ctrl/n12_adj_1677                                    NET DELAY         2.075        42.648  1       
+disp_ctrl/i8_4_lut_adj_164/C->disp_ctrl/i8_4_lut_adj_164/Z
+                                          LUT4            C_TO_Z_DELAY      0.477        43.125  3       
+altcol_N_134                                              NET DELAY         2.075        45.200  1       
+vga_ctrl/i1078_3_lut/A->vga_ctrl/i1078_3_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.450        45.650  1       
+vga_ctrl/n1975                                            NET DELAY         2.075        47.725  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : col_ctrl/y_padA_i0_i2/Q
+Path End         : vga_ctrl/rgb__i3/D
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 24
+Delay Ratio      : 72.9% (route), 27.1% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 0.809 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.199
+------------------------------------------   -------
+End-of-path required time( ns )               48.561
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       38.792
+-------------------------------------   ------
+End-of-path arrival time( ns )          47.752
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/y_padA_i0_i2/CK->col_ctrl/y_padA_i0_i2/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  6       
+y_padA[2]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_221_add_5_1/B1->disp_ctrl/add_221_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13474                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_221_add_5_3/D0->disp_ctrl/add_221_add_5_3/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        11.746  9       
+p_padA_N_430[3]                                           NET DELAY         0.280        12.026  1       
+disp_ctrl/sub_20_add_2_add_5_3/B0->disp_ctrl/sub_20_add_2_add_5_3/CO0
+                                          FA2             B0_TO_CO0_DELAY   0.358        12.384  2       
+disp_ctrl/n21211                                          NET DELAY         0.280        12.664  1       
+disp_ctrl/sub_20_add_2_add_5_3/CI1->disp_ctrl/sub_20_add_2_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.942  2       
+disp_ctrl/n13533                                          NET DELAY         0.280        13.222  1       
+disp_ctrl/sub_20_add_2_add_5_5/CI0->disp_ctrl/sub_20_add_2_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        13.500  2       
+disp_ctrl/n21217                                          NET DELAY         0.280        13.780  1       
+disp_ctrl/sub_20_add_2_add_5_5/CI1->disp_ctrl/sub_20_add_2_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        14.058  2       
+disp_ctrl/n13535                                          NET DELAY         0.280        14.338  1       
+disp_ctrl/sub_20_add_2_add_5_7/CI0->disp_ctrl/sub_20_add_2_add_5_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        14.616  2       
+disp_ctrl/n21223                                          NET DELAY         0.280        14.896  1       
+disp_ctrl/sub_20_add_2_add_5_7/CI1->disp_ctrl/sub_20_add_2_add_5_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        15.174  2       
+disp_ctrl/n13537                                          NET DELAY         0.280        15.454  1       
+disp_ctrl/sub_20_add_2_add_5_9/CI0->disp_ctrl/sub_20_add_2_add_5_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        15.732  2       
+disp_ctrl/n21229                                          NET DELAY         0.280        16.012  1       
+disp_ctrl/sub_20_add_2_add_5_9/CI1->disp_ctrl/sub_20_add_2_add_5_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        16.290  2       
+disp_ctrl/n13539                                          NET DELAY         0.280        16.570  1       
+disp_ctrl/sub_20_add_2_add_5_11/CI0->disp_ctrl/sub_20_add_2_add_5_11/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        16.848  2       
+disp_ctrl/n21235                                          NET DELAY         0.280        17.128  1       
+disp_ctrl/sub_20_add_2_add_5_11/D1->disp_ctrl/sub_20_add_2_add_5_11/S1
+                                          FA2             D1_TO_S1_DELAY    0.477        17.605  1       
+p_padA_N_323[12]                                          NET DELAY         2.075        19.680  1       
+i2_3_lut_adj_274/C->i2_3_lut_adj_274/Z    LUT4            C_TO_Z_DELAY      0.477        20.157  2       
+n2858                                                     NET DELAY         2.075        22.232  1       
+disp_ctrl/i3_3_lut/A->disp_ctrl/i3_3_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        22.709  1       
+disp_ctrl/n8_adj_1673                                     NET DELAY         2.075        24.784  1       
+disp_ctrl/i2_4_lut_adj_163/C->disp_ctrl/i2_4_lut_adj_163/Z
+                                          LUT4            C_TO_Z_DELAY      0.477        25.261  1       
+disp_ctrl/n8_c                                            NET DELAY         2.075        27.336  1       
+disp_ctrl/i5_4_lut/D->disp_ctrl/i5_4_lut/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        27.813  1       
+disp_ctrl/n16933                                          NET DELAY         2.075        29.888  1       
+disp_ctrl/i1_4_lut_adj_160/B->disp_ctrl/i1_4_lut_adj_160/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        30.365  1       
+disp_ctrl/n15                                             NET DELAY         2.075        32.440  1       
+disp_ctrl/i1_4_lut/B->disp_ctrl/i1_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        32.917  1       
+disp_ctrl/n12_c                                           NET DELAY         2.075        34.992  1       
+disp_ctrl/i10_4_lut_adj_177/C->disp_ctrl/i10_4_lut_adj_177/Z
+                                          LUT4            C_TO_Z_DELAY      0.477        35.469  1       
+disp_ctrl/n16101                                          NET DELAY         2.075        37.544  1       
+disp_ctrl/i4_4_lut_adj_174/D->disp_ctrl/i4_4_lut_adj_174/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        38.021  1       
+disp_ctrl/n17048                                          NET DELAY         2.075        40.096  1       
+disp_ctrl/i3_4_lut_adj_169/B->disp_ctrl/i3_4_lut_adj_169/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        40.573  1       
+disp_ctrl/n12_adj_1677                                    NET DELAY         2.075        42.648  1       
+disp_ctrl/i8_4_lut_adj_164/C->disp_ctrl/i8_4_lut_adj_164/Z
+                                          LUT4            C_TO_Z_DELAY      0.477        43.125  3       
+altcol_N_134                                              NET DELAY         2.075        45.200  1       
+disp_ctrl/i1_2_lut/B->disp_ctrl/i1_2_lut/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        45.677  1       
+pixval                                                    NET DELAY         2.075        47.752  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : col_ctrl/y_padA_i0_i2/Q
+Path End         : vga_ctrl/rgb__i1/D
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 24
+Delay Ratio      : 72.9% (route), 27.1% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 0.809 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.199
+------------------------------------------   -------
+End-of-path required time( ns )               48.561
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       38.792
+-------------------------------------   ------
+End-of-path arrival time( ns )          47.752
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/y_padA_i0_i2/CK->col_ctrl/y_padA_i0_i2/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  6       
+y_padA[2]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_221_add_5_1/B1->disp_ctrl/add_221_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13474                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_221_add_5_3/D0->disp_ctrl/add_221_add_5_3/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        11.746  9       
+p_padA_N_430[3]                                           NET DELAY         0.280        12.026  1       
+disp_ctrl/sub_20_add_2_add_5_3/B0->disp_ctrl/sub_20_add_2_add_5_3/CO0
+                                          FA2             B0_TO_CO0_DELAY   0.358        12.384  2       
+disp_ctrl/n21211                                          NET DELAY         0.280        12.664  1       
+disp_ctrl/sub_20_add_2_add_5_3/CI1->disp_ctrl/sub_20_add_2_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.942  2       
+disp_ctrl/n13533                                          NET DELAY         0.280        13.222  1       
+disp_ctrl/sub_20_add_2_add_5_5/CI0->disp_ctrl/sub_20_add_2_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        13.500  2       
+disp_ctrl/n21217                                          NET DELAY         0.280        13.780  1       
+disp_ctrl/sub_20_add_2_add_5_5/CI1->disp_ctrl/sub_20_add_2_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        14.058  2       
+disp_ctrl/n13535                                          NET DELAY         0.280        14.338  1       
+disp_ctrl/sub_20_add_2_add_5_7/CI0->disp_ctrl/sub_20_add_2_add_5_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        14.616  2       
+disp_ctrl/n21223                                          NET DELAY         0.280        14.896  1       
+disp_ctrl/sub_20_add_2_add_5_7/CI1->disp_ctrl/sub_20_add_2_add_5_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        15.174  2       
+disp_ctrl/n13537                                          NET DELAY         0.280        15.454  1       
+disp_ctrl/sub_20_add_2_add_5_9/CI0->disp_ctrl/sub_20_add_2_add_5_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        15.732  2       
+disp_ctrl/n21229                                          NET DELAY         0.280        16.012  1       
+disp_ctrl/sub_20_add_2_add_5_9/CI1->disp_ctrl/sub_20_add_2_add_5_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        16.290  2       
+disp_ctrl/n13539                                          NET DELAY         0.280        16.570  1       
+disp_ctrl/sub_20_add_2_add_5_11/CI0->disp_ctrl/sub_20_add_2_add_5_11/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        16.848  2       
+disp_ctrl/n21235                                          NET DELAY         0.280        17.128  1       
+disp_ctrl/sub_20_add_2_add_5_11/D1->disp_ctrl/sub_20_add_2_add_5_11/S1
+                                          FA2             D1_TO_S1_DELAY    0.477        17.605  1       
+p_padA_N_323[12]                                          NET DELAY         2.075        19.680  1       
+i2_3_lut_adj_274/C->i2_3_lut_adj_274/Z    LUT4            C_TO_Z_DELAY      0.477        20.157  2       
+n2858                                                     NET DELAY         2.075        22.232  1       
+disp_ctrl/i3_3_lut/A->disp_ctrl/i3_3_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        22.709  1       
+disp_ctrl/n8_adj_1673                                     NET DELAY         2.075        24.784  1       
+disp_ctrl/i2_4_lut_adj_163/C->disp_ctrl/i2_4_lut_adj_163/Z
+                                          LUT4            C_TO_Z_DELAY      0.477        25.261  1       
+disp_ctrl/n8_c                                            NET DELAY         2.075        27.336  1       
+disp_ctrl/i5_4_lut/D->disp_ctrl/i5_4_lut/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        27.813  1       
+disp_ctrl/n16933                                          NET DELAY         2.075        29.888  1       
+disp_ctrl/i1_4_lut_adj_160/B->disp_ctrl/i1_4_lut_adj_160/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        30.365  1       
+disp_ctrl/n15                                             NET DELAY         2.075        32.440  1       
+disp_ctrl/i1_4_lut/B->disp_ctrl/i1_4_lut/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        32.917  1       
+disp_ctrl/n12_c                                           NET DELAY         2.075        34.992  1       
+disp_ctrl/i10_4_lut_adj_177/C->disp_ctrl/i10_4_lut_adj_177/Z
+                                          LUT4            C_TO_Z_DELAY      0.477        35.469  1       
+disp_ctrl/n16101                                          NET DELAY         2.075        37.544  1       
+disp_ctrl/i4_4_lut_adj_174/D->disp_ctrl/i4_4_lut_adj_174/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        38.021  1       
+disp_ctrl/n17048                                          NET DELAY         2.075        40.096  1       
+disp_ctrl/i3_4_lut_adj_169/B->disp_ctrl/i3_4_lut_adj_169/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        40.573  1       
+disp_ctrl/n12_adj_1677                                    NET DELAY         2.075        42.648  1       
+disp_ctrl/i8_4_lut_adj_164/C->disp_ctrl/i8_4_lut_adj_164/Z
+                                          LUT4            C_TO_Z_DELAY      0.477        43.125  3       
+altcol_N_134                                              NET DELAY         2.075        45.200  1       
+vga_ctrl/i6_1_lut_2_lut/B->vga_ctrl/i6_1_lut_2_lut/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        45.677  1       
+vga_ctrl/rgb_2__N_100[0]                                  NET DELAY         2.075        47.752  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : col_ctrl/y_ball_i0_i1/Q
+Path End         : col_ctrl/x_ball_dir_c/D
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 18
+Delay Ratio      : 74.3% (route), 25.7% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 6.231 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.199
+------------------------------------------   -------
+End-of-path required time( ns )               48.561
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       33.370
+-------------------------------------   ------
+End-of-path arrival time( ns )          42.330
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/y_ball_i0_i1/CK->col_ctrl/y_ball_i0_i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  7       
+y_ball[1]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_506_add_5_1/B1->disp_ctrl/add_506_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13512                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_506_add_5_3/CI0->disp_ctrl/add_506_add_5_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.547  2       
+disp_ctrl/n21289                                          NET DELAY         0.280        11.827  1       
+disp_ctrl/add_506_add_5_3/CI1->disp_ctrl/add_506_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.105  2       
+disp_ctrl/n13514                                          NET DELAY         0.280        12.385  1       
+disp_ctrl/add_506_add_5_5/CI0->disp_ctrl/add_506_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.663  2       
+disp_ctrl/n21292                                          NET DELAY         0.280        12.943  1       
+disp_ctrl/add_506_add_5_5/CI1->disp_ctrl/add_506_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.221  2       
+disp_ctrl/n13516                                          NET DELAY         0.280        13.501  1       
+disp_ctrl/add_506_add_5_7/D0->disp_ctrl/add_506_add_5_7/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        13.978  7       
+p_ball_N_219[6]                                           NET DELAY         0.280        14.258  1       
+LessThan_357_i13_2_lut/A->LessThan_357_i13_2_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        14.735  2       
+n13_adj_1894                                              NET DELAY         2.075        16.810  1       
+i17464_3_lut/C->i17464_3_lut/Z            LUT4            C_TO_Z_DELAY      0.477        17.287  1       
+n19601                                                    NET DELAY         2.075        19.362  1       
+i17465_3_lut/A->i17465_3_lut/Z            LUT4            A_TO_Z_DELAY      0.477        19.839  1       
+n19602                                                    NET DELAY         2.075        21.914  1       
+i17339_3_lut/A->i17339_3_lut/Z            LUT4            A_TO_Z_DELAY      0.477        22.391  1       
+n16_adj_1892                                              NET DELAY         2.075        24.466  1       
+i17466_4_lut/A->i17466_4_lut/Z            LUT4            A_TO_Z_DELAY      0.477        24.943  1       
+n19603                                                    NET DELAY         2.075        27.018  1       
+i17467_3_lut/A->i17467_3_lut/Z            LUT4            A_TO_Z_DELAY      0.477        27.495  1       
+n19604                                                    NET DELAY         2.075        29.570  1       
+i17337_3_lut/A->i17337_3_lut/Z            LUT4            A_TO_Z_DELAY      0.477        30.047  1       
+x_ball_dir_N_1439                                         NET DELAY         2.075        32.122  1       
+col_ctrl/i2_4_lut_adj_260/B->col_ctrl/i2_4_lut_adj_260/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        32.599  1       
+col_ctrl/n7_adj_1853                                      NET DELAY         2.075        34.674  1       
+col_ctrl/i4_4_lut_adj_259/A->col_ctrl/i4_4_lut_adj_259/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        35.151  2       
+x_ball_dir_N_1401                                         NET DELAY         2.075        37.226  1       
+col_ctrl/i1_4_lut/C->col_ctrl/i1_4_lut/Z  LUT4            C_TO_Z_DELAY      0.477        37.703  1       
+n16111                                                    NET DELAY         2.075        39.778  1       
+i2281_4_lut/D->i2281_4_lut/Z              LUT4            D_TO_Z_DELAY      0.477        40.255  1       
+n3222                                                     NET DELAY         2.075        42.330  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : col_ctrl/y_ball_i0_i1/Q
+Path End         : col_ctrl/pad_col_c/D
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 17
+Delay Ratio      : 73.7% (route), 26.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 8.783 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.199
+------------------------------------------   -------
+End-of-path required time( ns )               48.561
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       30.818
+-------------------------------------   ------
+End-of-path arrival time( ns )          39.778
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/y_ball_i0_i1/CK->col_ctrl/y_ball_i0_i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  7       
+y_ball[1]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_506_add_5_1/B1->disp_ctrl/add_506_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13512                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_506_add_5_3/CI0->disp_ctrl/add_506_add_5_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.547  2       
+disp_ctrl/n21289                                          NET DELAY         0.280        11.827  1       
+disp_ctrl/add_506_add_5_3/CI1->disp_ctrl/add_506_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.105  2       
+disp_ctrl/n13514                                          NET DELAY         0.280        12.385  1       
+disp_ctrl/add_506_add_5_5/CI0->disp_ctrl/add_506_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.663  2       
+disp_ctrl/n21292                                          NET DELAY         0.280        12.943  1       
+disp_ctrl/add_506_add_5_5/CI1->disp_ctrl/add_506_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.221  2       
+disp_ctrl/n13516                                          NET DELAY         0.280        13.501  1       
+disp_ctrl/add_506_add_5_7/D0->disp_ctrl/add_506_add_5_7/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        13.978  7       
+p_ball_N_219[6]                                           NET DELAY         0.280        14.258  1       
+LessThan_357_i13_2_lut/A->LessThan_357_i13_2_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        14.735  2       
+n13_adj_1894                                              NET DELAY         2.075        16.810  1       
+i17464_3_lut/C->i17464_3_lut/Z            LUT4            C_TO_Z_DELAY      0.477        17.287  1       
+n19601                                                    NET DELAY         2.075        19.362  1       
+i17465_3_lut/A->i17465_3_lut/Z            LUT4            A_TO_Z_DELAY      0.477        19.839  1       
+n19602                                                    NET DELAY         2.075        21.914  1       
+i17339_3_lut/A->i17339_3_lut/Z            LUT4            A_TO_Z_DELAY      0.477        22.391  1       
+n16_adj_1892                                              NET DELAY         2.075        24.466  1       
+i17466_4_lut/A->i17466_4_lut/Z            LUT4            A_TO_Z_DELAY      0.477        24.943  1       
+n19603                                                    NET DELAY         2.075        27.018  1       
+i17467_3_lut/A->i17467_3_lut/Z            LUT4            A_TO_Z_DELAY      0.477        27.495  1       
+n19604                                                    NET DELAY         2.075        29.570  1       
+i17337_3_lut/A->i17337_3_lut/Z            LUT4            A_TO_Z_DELAY      0.477        30.047  1       
+x_ball_dir_N_1439                                         NET DELAY         2.075        32.122  1       
+col_ctrl/i2_4_lut_adj_260/B->col_ctrl/i2_4_lut_adj_260/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        32.599  1       
+col_ctrl/n7_adj_1853                                      NET DELAY         2.075        34.674  1       
+col_ctrl/i4_4_lut_adj_259/A->col_ctrl/i4_4_lut_adj_259/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        35.151  2       
+x_ball_dir_N_1401                                         NET DELAY         2.075        37.226  1       
+rst_gen_inst/i2904_3_lut/B->rst_gen_inst/i2904_3_lut/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        37.703  1       
+pad_col_N_1626                                            NET DELAY         2.075        39.778  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : col_ctrl/x_ball_i0_i1/Q
+Path End         : col_ctrl/y_ball_i0_i0/D
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 14
+Delay Ratio      : 71.2% (route), 28.8% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 16.439 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.199
+------------------------------------------   -------
+End-of-path required time( ns )               48.561
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       23.162
+-------------------------------------   ------
+End-of-path arrival time( ns )          32.122
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/x_ball_i0_i1/CK->col_ctrl/x_ball_i0_i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  7       
+x_ball[1]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_507_add_5_1/B1->disp_ctrl/add_507_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13503                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_507_add_5_3/CI0->disp_ctrl/add_507_add_5_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.547  2       
+disp_ctrl/n21304                                          NET DELAY         0.280        11.827  1       
+disp_ctrl/add_507_add_5_3/CI1->disp_ctrl/add_507_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.105  2       
+disp_ctrl/n13505                                          NET DELAY         0.280        12.385  1       
+disp_ctrl/add_507_add_5_5/CI0->disp_ctrl/add_507_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.663  2       
+disp_ctrl/n21307                                          NET DELAY         0.280        12.943  1       
+disp_ctrl/add_507_add_5_5/CI1->disp_ctrl/add_507_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.221  2       
+disp_ctrl/n13507                                          NET DELAY         0.280        13.501  1       
+disp_ctrl/add_507_add_5_7/D0->disp_ctrl/add_507_add_5_7/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        13.978  4       
+p_ball_N_185[6]                                           NET DELAY         0.280        14.258  1       
+col_ctrl/i1_2_lut_adj_264/B->col_ctrl/i1_2_lut_adj_264/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        14.735  1       
+col_ctrl/n6_adj_1857                                      NET DELAY         2.075        16.810  1       
+col_ctrl/i4_4_lut_adj_262/D->col_ctrl/i4_4_lut_adj_262/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        17.287  1       
+col_ctrl/n16952                                           NET DELAY         2.075        19.362  1       
+col_ctrl/i637_4_lut/A->col_ctrl/i637_4_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        19.839  4       
+col_ctrl/wall_col_N_1590                                  NET DELAY         2.075        21.914  1       
+col_ctrl/i2868_3_lut_4_lut/D->col_ctrl/i2868_3_lut_4_lut/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        22.391  9       
+wall_col_N_1589                                           NET DELAY         2.075        24.466  1       
+rst_gen_inst/i1_3_lut_4_lut_adj_217/A->rst_gen_inst/i1_3_lut_4_lut_adj_217/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        24.943  11      
+n3074                                                     NET DELAY         2.075        27.018  1       
+col_ctrl/i1_3_lut_adj_252/B->col_ctrl/i1_3_lut_adj_252/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        27.495  5       
+n3209                                                     NET DELAY         2.075        29.570  1       
+i15_4_lut/C->i15_4_lut/Z                  LUT4            C_TO_Z_DELAY      0.477        30.047  1       
+n7_adj_1911                                               NET DELAY         2.075        32.122  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : col_ctrl/x_ball_i0_i1/Q
+Path End         : col_ctrl/y_ball_i0_i4/SR
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 13
+Delay Ratio      : 70.0% (route), 30.0% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 18.687 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.530
+------------------------------------------   -------
+End-of-path required time( ns )               48.230
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       20.583
+-------------------------------------   ------
+End-of-path arrival time( ns )          29.543
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/x_ball_i0_i1/CK->col_ctrl/x_ball_i0_i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  7       
+x_ball[1]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_507_add_5_1/B1->disp_ctrl/add_507_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13503                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_507_add_5_3/CI0->disp_ctrl/add_507_add_5_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.547  2       
+disp_ctrl/n21304                                          NET DELAY         0.280        11.827  1       
+disp_ctrl/add_507_add_5_3/CI1->disp_ctrl/add_507_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.105  2       
+disp_ctrl/n13505                                          NET DELAY         0.280        12.385  1       
+disp_ctrl/add_507_add_5_5/CI0->disp_ctrl/add_507_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.663  2       
+disp_ctrl/n21307                                          NET DELAY         0.280        12.943  1       
+disp_ctrl/add_507_add_5_5/CI1->disp_ctrl/add_507_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.221  2       
+disp_ctrl/n13507                                          NET DELAY         0.280        13.501  1       
+disp_ctrl/add_507_add_5_7/D0->disp_ctrl/add_507_add_5_7/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        13.978  4       
+p_ball_N_185[6]                                           NET DELAY         0.280        14.258  1       
+col_ctrl/i1_2_lut_adj_264/B->col_ctrl/i1_2_lut_adj_264/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        14.735  1       
+col_ctrl/n6_adj_1857                                      NET DELAY         2.075        16.810  1       
+col_ctrl/i4_4_lut_adj_262/D->col_ctrl/i4_4_lut_adj_262/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        17.287  1       
+col_ctrl/n16952                                           NET DELAY         2.075        19.362  1       
+col_ctrl/i637_4_lut/A->col_ctrl/i637_4_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        19.839  4       
+col_ctrl/wall_col_N_1590                                  NET DELAY         2.075        21.914  1       
+col_ctrl/i2868_3_lut_4_lut/D->col_ctrl/i2868_3_lut_4_lut/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        22.391  9       
+wall_col_N_1589                                           NET DELAY         2.075        24.466  1       
+rst_gen_inst/i1_3_lut_4_lut_adj_217/A->rst_gen_inst/i1_3_lut_4_lut_adj_217/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        24.943  11      
+n3074                                                     NET DELAY         2.075        27.018  1       
+col_ctrl/i1_3_lut_adj_252/B->col_ctrl/i1_3_lut_adj_252/Z
+                                          LUT4            B_TO_Z_DELAY      0.450        27.468  5       
+n3209                                                     NET DELAY         2.075        29.543  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : col_ctrl/x_ball_i0_i1/Q
+Path End         : col_ctrl/y_ball_i0_i8/SR
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 13
+Delay Ratio      : 70.0% (route), 30.0% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 18.687 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.530
+------------------------------------------   -------
+End-of-path required time( ns )               48.230
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       20.583
+-------------------------------------   ------
+End-of-path arrival time( ns )          29.543
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/x_ball_i0_i1/CK->col_ctrl/x_ball_i0_i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  7       
+x_ball[1]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_507_add_5_1/B1->disp_ctrl/add_507_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13503                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_507_add_5_3/CI0->disp_ctrl/add_507_add_5_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.547  2       
+disp_ctrl/n21304                                          NET DELAY         0.280        11.827  1       
+disp_ctrl/add_507_add_5_3/CI1->disp_ctrl/add_507_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.105  2       
+disp_ctrl/n13505                                          NET DELAY         0.280        12.385  1       
+disp_ctrl/add_507_add_5_5/CI0->disp_ctrl/add_507_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.663  2       
+disp_ctrl/n21307                                          NET DELAY         0.280        12.943  1       
+disp_ctrl/add_507_add_5_5/CI1->disp_ctrl/add_507_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.221  2       
+disp_ctrl/n13507                                          NET DELAY         0.280        13.501  1       
+disp_ctrl/add_507_add_5_7/D0->disp_ctrl/add_507_add_5_7/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        13.978  4       
+p_ball_N_185[6]                                           NET DELAY         0.280        14.258  1       
+col_ctrl/i1_2_lut_adj_264/B->col_ctrl/i1_2_lut_adj_264/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        14.735  1       
+col_ctrl/n6_adj_1857                                      NET DELAY         2.075        16.810  1       
+col_ctrl/i4_4_lut_adj_262/D->col_ctrl/i4_4_lut_adj_262/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        17.287  1       
+col_ctrl/n16952                                           NET DELAY         2.075        19.362  1       
+col_ctrl/i637_4_lut/A->col_ctrl/i637_4_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        19.839  4       
+col_ctrl/wall_col_N_1590                                  NET DELAY         2.075        21.914  1       
+col_ctrl/i2868_3_lut_4_lut/D->col_ctrl/i2868_3_lut_4_lut/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        22.391  9       
+wall_col_N_1589                                           NET DELAY         2.075        24.466  1       
+rst_gen_inst/i1_3_lut_4_lut_adj_217/A->rst_gen_inst/i1_3_lut_4_lut_adj_217/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        24.943  11      
+n3074                                                     NET DELAY         2.075        27.018  1       
+col_ctrl/i1_3_lut_adj_252/B->col_ctrl/i1_3_lut_adj_252/Z
+                                          LUT4            B_TO_Z_DELAY      0.450        27.468  5       
+n3209                                                     NET DELAY         2.075        29.543  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : col_ctrl/x_ball_i0_i1/Q
+Path End         : col_ctrl/y_ball_i0_i7/SR
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 13
+Delay Ratio      : 70.0% (route), 30.0% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 18.687 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.530
+------------------------------------------   -------
+End-of-path required time( ns )               48.230
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       20.583
+-------------------------------------   ------
+End-of-path arrival time( ns )          29.543
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/x_ball_i0_i1/CK->col_ctrl/x_ball_i0_i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  7       
+x_ball[1]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_507_add_5_1/B1->disp_ctrl/add_507_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13503                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_507_add_5_3/CI0->disp_ctrl/add_507_add_5_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.547  2       
+disp_ctrl/n21304                                          NET DELAY         0.280        11.827  1       
+disp_ctrl/add_507_add_5_3/CI1->disp_ctrl/add_507_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.105  2       
+disp_ctrl/n13505                                          NET DELAY         0.280        12.385  1       
+disp_ctrl/add_507_add_5_5/CI0->disp_ctrl/add_507_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.663  2       
+disp_ctrl/n21307                                          NET DELAY         0.280        12.943  1       
+disp_ctrl/add_507_add_5_5/CI1->disp_ctrl/add_507_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.221  2       
+disp_ctrl/n13507                                          NET DELAY         0.280        13.501  1       
+disp_ctrl/add_507_add_5_7/D0->disp_ctrl/add_507_add_5_7/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        13.978  4       
+p_ball_N_185[6]                                           NET DELAY         0.280        14.258  1       
+col_ctrl/i1_2_lut_adj_264/B->col_ctrl/i1_2_lut_adj_264/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        14.735  1       
+col_ctrl/n6_adj_1857                                      NET DELAY         2.075        16.810  1       
+col_ctrl/i4_4_lut_adj_262/D->col_ctrl/i4_4_lut_adj_262/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        17.287  1       
+col_ctrl/n16952                                           NET DELAY         2.075        19.362  1       
+col_ctrl/i637_4_lut/A->col_ctrl/i637_4_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        19.839  4       
+col_ctrl/wall_col_N_1590                                  NET DELAY         2.075        21.914  1       
+col_ctrl/i2868_3_lut_4_lut/D->col_ctrl/i2868_3_lut_4_lut/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        22.391  9       
+wall_col_N_1589                                           NET DELAY         2.075        24.466  1       
+rst_gen_inst/i1_3_lut_4_lut_adj_217/A->rst_gen_inst/i1_3_lut_4_lut_adj_217/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        24.943  11      
+n3074                                                     NET DELAY         2.075        27.018  1       
+col_ctrl/i2271_2_lut/A->col_ctrl/i2271_2_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.450        27.468  5       
+col_ctrl/n3208                                            NET DELAY         2.075        29.543  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : col_ctrl/x_ball_i0_i1/Q
+Path End         : col_ctrl/y_ball_i0_i6/SR
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 13
+Delay Ratio      : 70.0% (route), 30.0% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 18.687 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#2)    39.800
++ Generated Clock Source Latency               2.735
+- Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
+- Setup Time                                   0.530
+------------------------------------------   -------
+End-of-path required time( ns )               48.230
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                       20.583
+-------------------------------------   ------
+End-of-path arrival time( ns )          29.543
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+col_ctrl/x_ball_i0_i1/CK->col_ctrl/x_ball_i0_i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391        10.351  7       
+x_ball[1]                                                 NET DELAY         0.280        10.631  1       
+disp_ctrl/add_507_add_5_1/B1->disp_ctrl/add_507_add_5_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358        10.989  2       
+disp_ctrl/n13503                                          NET DELAY         0.280        11.269  1       
+disp_ctrl/add_507_add_5_3/CI0->disp_ctrl/add_507_add_5_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.547  2       
+disp_ctrl/n21304                                          NET DELAY         0.280        11.827  1       
+disp_ctrl/add_507_add_5_3/CI1->disp_ctrl/add_507_add_5_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.105  2       
+disp_ctrl/n13505                                          NET DELAY         0.280        12.385  1       
+disp_ctrl/add_507_add_5_5/CI0->disp_ctrl/add_507_add_5_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.663  2       
+disp_ctrl/n21307                                          NET DELAY         0.280        12.943  1       
+disp_ctrl/add_507_add_5_5/CI1->disp_ctrl/add_507_add_5_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.221  2       
+disp_ctrl/n13507                                          NET DELAY         0.280        13.501  1       
+disp_ctrl/add_507_add_5_7/D0->disp_ctrl/add_507_add_5_7/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        13.978  4       
+p_ball_N_185[6]                                           NET DELAY         0.280        14.258  1       
+col_ctrl/i1_2_lut_adj_264/B->col_ctrl/i1_2_lut_adj_264/Z
+                                          LUT4            B_TO_Z_DELAY      0.477        14.735  1       
+col_ctrl/n6_adj_1857                                      NET DELAY         2.075        16.810  1       
+col_ctrl/i4_4_lut_adj_262/D->col_ctrl/i4_4_lut_adj_262/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        17.287  1       
+col_ctrl/n16952                                           NET DELAY         2.075        19.362  1       
+col_ctrl/i637_4_lut/A->col_ctrl/i637_4_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        19.839  4       
+col_ctrl/wall_col_N_1590                                  NET DELAY         2.075        21.914  1       
+col_ctrl/i2868_3_lut_4_lut/D->col_ctrl/i2868_3_lut_4_lut/Z
+                                          LUT4            D_TO_Z_DELAY      0.477        22.391  9       
+wall_col_N_1589                                           NET DELAY         2.075        24.466  1       
+rst_gen_inst/i1_3_lut_4_lut_adj_217/A->rst_gen_inst/i1_3_lut_4_lut_adj_217/Z
+                                          LUT4            A_TO_Z_DELAY      0.477        24.943  11      
+n3074                                                     NET DELAY         2.075        27.018  1       
+col_ctrl/i2271_2_lut/A->col_ctrl/i2271_2_lut/Z
+                                          LUT4            A_TO_Z_DELAY      0.450        27.468  5       
+col_ctrl/n3208                                            NET DELAY         2.075        29.543  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.2  Hold Detailed Report
+==========================
+4.2.1  Hold path details for constraint: create_clock -name {clk_in} -period 83.3333333333333 [get_ports clk_in]
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.2.2  Hold path details for constraint: create_generated_clock -name {clk} -source [get_pins {mypll/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {mypll/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+----------------------------------------------------------------------
+357 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : enable_gen/game_en_c/Q
+Path End         : col_ctrl/x_ball_i0_i3/SP
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 1
+Delay Ratio      : 16.8% (route), 83.2% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.671 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        1.671
+-------------------------------------   ------
+End-of-path arrival time( ns )          10.631
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+enable_gen/game_en_c/CK->enable_gen/game_en_c/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391        10.351  19      
+game_en                                                   NET DELAY      0.280        10.631  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : enable_gen/game_en_c/Q
+Path End         : col_ctrl/x_ball_i0_i1/SP
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 1
+Delay Ratio      : 16.8% (route), 83.2% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.671 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        1.671
+-------------------------------------   ------
+End-of-path arrival time( ns )          10.631
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+enable_gen/game_en_c/CK->enable_gen/game_en_c/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391        10.351  19      
+game_en                                                   NET DELAY      0.280        10.631  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : enable_gen/game_en_c/Q
+Path End         : col_ctrl/x_ball_i0_i2/SP
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 1
+Delay Ratio      : 16.8% (route), 83.2% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.671 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        1.671
+-------------------------------------   ------
+End-of-path arrival time( ns )          10.631
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+enable_gen/game_en_c/CK->enable_gen/game_en_c/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391        10.351  19      
+game_en                                                   NET DELAY      0.280        10.631  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : enable_gen/game_en_c/Q
+Path End         : col_ctrl/x_ball_i0_i7/SP
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 1
+Delay Ratio      : 16.8% (route), 83.2% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.671 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        1.671
+-------------------------------------   ------
+End-of-path arrival time( ns )          10.631
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+enable_gen/game_en_c/CK->enable_gen/game_en_c/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391        10.351  19      
+game_en                                                   NET DELAY      0.280        10.631  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : enable_gen/game_en_c/Q
+Path End         : col_ctrl/x_ball_i0_i6/SP
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 1
+Delay Ratio      : 16.8% (route), 83.2% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.671 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        1.671
+-------------------------------------   ------
+End-of-path arrival time( ns )          10.631
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+enable_gen/game_en_c/CK->enable_gen/game_en_c/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391        10.351  19      
+game_en                                                   NET DELAY      0.280        10.631  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : enable_gen/game_en_c/Q
+Path End         : col_ctrl/x_ball_i0_i5/SP
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 1
+Delay Ratio      : 16.8% (route), 83.2% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.671 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        1.671
+-------------------------------------   ------
+End-of-path arrival time( ns )          10.631
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+enable_gen/game_en_c/CK->enable_gen/game_en_c/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391        10.351  19      
+game_en                                                   NET DELAY      0.280        10.631  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : enable_gen/game_en_c/Q
+Path End         : col_ctrl/x_ball_i0_i9/SP
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 1
+Delay Ratio      : 16.8% (route), 83.2% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.671 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        1.671
+-------------------------------------   ------
+End-of-path arrival time( ns )          10.631
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+enable_gen/game_en_c/CK->enable_gen/game_en_c/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391        10.351  19      
+game_en                                                   NET DELAY      0.280        10.631  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : enable_gen/game_en_c/Q
+Path End         : col_ctrl/x_ball_i0_i8/SP
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 1
+Delay Ratio      : 16.8% (route), 83.2% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.671 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        1.671
+-------------------------------------   ------
+End-of-path arrival time( ns )          10.631
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+enable_gen/game_en_c/CK->enable_gen/game_en_c/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391        10.351  19      
+game_en                                                   NET DELAY      0.280        10.631  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : enable_gen/game_en_c/Q
+Path End         : col_ctrl/x_ball_i0_i4/SP
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 1
+Delay Ratio      : 16.8% (route), 83.2% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.671 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        1.671
+-------------------------------------   ------
+End-of-path arrival time( ns )          10.631
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+enable_gen/game_en_c/CK->enable_gen/game_en_c/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391        10.351  19      
+game_en                                                   NET DELAY      0.280        10.631  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+
+ ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : rst_gen_inst/rst_cnt__i0/Q
+Path End         : rst_gen_inst/rst_cnt__i0/D
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 2
+Delay Ratio      : 56.1% (route), 43.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 4.196 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Generated Clock Source Latency               2.735
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 6.225
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                8.960
+
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Generated Clock Source Latency         2.735
++ Source Clock Path Delay                6.225
++ Data Path Delay                        4.196
+-------------------------------------   ------
+End-of-path arrival time( ns )          13.156
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------  -----  ------------  ------  
+rst_gen_inst/rst_cnt__i0/CK->rst_gen_inst/rst_cnt__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391        10.351  2       
+rst_gen_inst/rst_cnt[0]                                   NET DELAY       0.280        10.631  1       
+rst_gen_inst/add_4_add_5_1/B1->rst_gen_inst/add_4_add_5_1/S1
+                                          FA2             B1_TO_S1_DELAY  0.450        11.081  1       
+rst_gen_inst/n137[0]                                      NET DELAY       2.075        13.156  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+u_PLL_B/OUTGLOBAL                         PLL_B           CLOCK LATENCY  2.735         2.735  141     
+clk                                                       NET DELAY      6.225         8.960  1       
+
+
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

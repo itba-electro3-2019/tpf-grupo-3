@@ -1,0 +1,86 @@
+---------------------------------------------------
+Report for cell Pong
+   Instance path: Pong
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        911        100.0
+                                 IOBUF	         12        100.0
+                                PFUREG	        141        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                          BuzzerModule	          1         0.1
+                   CollisionController	          1        14.1
+                     DisplayController	          1        45.2
+                       EnableGenerator	          1         6.3
+                         VGAController	          1         8.2
+                               rst_gen	          1         5.0
+                                  spll	          1         0.0
+---------------------------------------------------
+Report for cell EnableGenerator
+   Instance path: Pong/enable_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         57         6.3
+                                PFUREG	         44        31.2
+---------------------------------------------------
+Report for cell CollisionController
+   Instance path: Pong/col_ctrl
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        128        14.1
+                                PFUREG	         47        33.3
+---------------------------------------------------
+Report for cell VGAController
+   Instance path: Pong/vga_ctrl
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         75         8.2
+                                PFUREG	         24        17.0
+---------------------------------------------------
+Report for cell rst_gen
+   Instance path: Pong/rst_gen_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         46         5.0
+                                PFUREG	         26        18.4
+---------------------------------------------------
+Report for cell spll
+   Instance path: Pong/mypll
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+spll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")	          1         0.0
+---------------------------------------------------
+Report for cell spll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")
+   Instance path: Pong/mypll/lscc_pll_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell DisplayController
+   Instance path: Pong/disp_ctrl
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        412        45.2
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                         CounterModule	          1         3.2
+               CounterModule(PLAYER=1)	          1         1.6
+---------------------------------------------------
+Report for cell CounterModule(PLAYER=1)
+   Instance path: Pong/disp_ctrl/scrB_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         1.6
+---------------------------------------------------
+Report for cell CounterModule
+   Instance path: Pong/disp_ctrl/scrA_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         29         3.2
+---------------------------------------------------
+Report for cell BuzzerModule
+   Instance path: Pong/buzzer_crtl
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.1

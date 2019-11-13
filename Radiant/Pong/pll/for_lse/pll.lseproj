@@ -24,7 +24,7 @@
 -sethld
 -use_io_insertion 1
 -resolve_mixed_drivers 0
--ver "C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\pll\rtl\pll.v"
+-ver "C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\testled\pll\rtl\pll.v"
 -top pll
 -udb "pll.udb"
 -output_hdl "pll.vm"

@@ -17,12 +17,13 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>../../impl_1/Pong_impl_1.bin</File>
-			<FileTime>11/10/19 16:46:32</FileTime>
+			<File>../../impl_1/testled_impl_1.bin</File>
+			<FileTime>11/13/19 10:26:05</FileTime>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<SVFProcessor>SVF Processor</SVFProcessor>
 				<AccessMode>Direct Programming</AccessMode>
 			</Option>
 			<FPGALoader>
@@ -46,7 +47,7 @@
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
 						<IOState>HighZ</IOState>
-						<IOVectorData>@</IOVectorData>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 						<AccessMode>Direct Programming</AccessMode>
 					</Option>
 				</Device>
@@ -60,7 +61,7 @@
 					<IDCode>0x15</IDCode>
 					<Package>8-pin SOIC</Package>
 					<Operation>Erase,Program,Verify</Operation>
-					<File>../../impl_1/Pong_impl_1.bin</File>
+					<File>../../impl_1/testled_impl_1.bin</File>
 					<AddressBase>0x00000000</AddressBase>
 					<EndAddress>0x00010000</EndAddress>
 					<DeviceSize>32</DeviceSize>
@@ -73,14 +74,15 @@
 				<Device>
 					<Pos>1</Pos>
 					<Name></Name>
-					<File>C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1/Pong_impl_1.bin</File>
+					<File>C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/impl_1/testled_impl_1.bin</File>
 					<LocalChainList>
 						<LocalDevice index="-99"
 							name="Unknown"
-							file="C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1/Pong_impl_1.bin"/>
+							file="C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/testled/impl_1/testled_impl_1.bin"/>
 					</LocalChainList>
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 					</Option>
 				</Device>
 			</FPGADevice>

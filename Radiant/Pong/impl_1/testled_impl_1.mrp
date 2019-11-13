@@ -1,0 +1,273 @@
+        Lattice Mapping Report File for Design Module 'testled_impl_1'
+
+Target Vendor:        LATTICE
+Target Device:        iCE40UP5KSG48
+Target Performance:   High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 1.1.0.165.1
+Mapped on: Wed Nov 13 16:53:48 2019
+
+Design Information
+------------------
+
+Command line:   map testled_impl_1_syn.udb
+     C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/test.pdc
+     -o testled_impl_1.udb -gui
+
+Design Summary
+--------------
+
+   Number of slice registers: 141 out of  5280 (3%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:           911 out of  5280 (17%)
+      Number of logic LUT4s:             607
+      Number of inserted feedthru LUT4s:   2
+      Number of replicated LUT4s:          2
+      Number of ripple logic:            150 (300 LUT4s)
+   Number of IO sites used:   12 out of 39 (31%)
+      Number of IO sites used for general PIOs: 12
+      Number of IO sites used for I3Cs: 0 out of 2 (0%)
+      Number of IO sites used for PIOs+I3Cs: 12 out of 36 (33%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             1 out of 1 (100%)
+   Number of Clocks:  2
+      Net clk: 92 loads, 92 rising, 0 falling (Driver: Pin
+     mypll.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net clk_in_c: 1 loads, 1 rising, 0 falling (Driver: Port clk_in)
+   Number of Clock Enables:  12
+      Net game_en: 5 loads, 5 SLICEs
+      Net n3073: 23 loads, 23 SLICEs
+      Net n3077: 7 loads, 7 SLICEs
+      Net n3086: 7 loads, 7 SLICEs
+      Net n595: 3 loads, 3 SLICEs
+      Net n3815: 3 loads, 3 SLICEs
+      Net n3074: 8 loads, 8 SLICEs
+      Net n3079: 2 loads, 2 SLICEs
+      Net vga_ctrl/n3078: 6 loads, 6 SLICEs
+      Net vga_ctrl/n16297: 1 loads, 1 SLICEs
+      Net vga_ctrl/n16777: 1 loads, 1 SLICEs
+      Net rst_gen_inst/n1023: 14 loads, 14 SLICEs
+   Number of LSRs:  16
+
+                                    Page 1
+
+
+
+
+
+Design Summary (cont)
+---------------------
+      Net n3209: 3 loads, 3 SLICEs
+      Net enable_gen/n3134: 12 loads, 12 SLICEs
+      Net enable_gen/n3220: 10 loads, 10 SLICEs
+      Net n3818: 8 loads, 8 SLICEs
+      Net n3810: 5 loads, 5 SLICEs
+      Net n8898: 6 loads, 6 SLICEs
+      Net col_ctrl/n3124: 3 loads, 3 SLICEs
+      Net col_ctrl/n3208: 5 loads, 5 SLICEs
+      Net col_ctrl/n3201: 3 loads, 3 SLICEs
+      Net rst_cnt_25__N_53: 14 loads, 14 SLICEs
+      Net vga_ctrl/n3174: 6 loads, 6 SLICEs
+      Net vga_ctrl/n8254: 1 loads, 1 SLICEs
+      Net vga_ctrl/n3181: 6 loads, 6 SLICEs
+      Net vga_ctrl/n8138: 1 loads, 1 SLICEs
+      Net n17564: 1 loads, 1 SLICEs
+      Net vga_ctrl/n1975: 1 loads, 1 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net j06_pad.vcc: 93 loads
+      Net ypix[4]: 38 loads
+      Net ypix[3]: 37 loads
+      Net ypix[5]: 36 loads
+      Net xpix[4]: 35 loads
+      Net ypix[6]: 35 loads
+      Net ypix[7]: 35 loads
+      Net xpix[9]: 33 loads
+      Net xpix[3]: 31 loads
+      Net ypix[2]: 31 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j13                 | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j01                 | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j02                 | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j03                 | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j04                 | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j05                 | OUTPUT    | LVCMOS33  |       |       |           |
+
+                                    Page 2
+
+
+
+
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
+| j14                 | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j15                 | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j16                 | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j17                 | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| clk_in              | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| j06                 | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Signal GND_net undriven or does not drive anything - clipped.
+Block i1 was optimized away.
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                 Pin/Node Value
+  PLL Instance Name:                            mypll.lscc_pll_inst.u_PLL_B
+  PLL Type:                                     PLL_B
+  Input Reference Clock:               PIN      clk_in_c
+  Output Clock(CoreA):                          NONE
+  Output Clock(GlobalA):               NODE     clk
+  Output Clock(CoreB):                          NONE
+  Output Clock(GlobalB):                        NONE
+  Feedback input:                      NODE     mypll/lscc_pll_inst/feedback_w
+  Internal Feedback output:            NODE     mypll/lscc_pll_inst/feedback_w
+  BYPASS signal:                                GND
+  LATCH signal:                                 GND
+  Lock Signal:                         NODE     NULL/sig_000/FeedThruLUT
+  Input Clock Frequency (MHz):                  12.0000
+  Reference Divider:                            0
+  Feedback Divider:                             66
+  VCO Divider:                                  5
+  ENABLE_ICEGATE_PORTA:                         0
+  ENABLE_ICEGATE_PORTB:                         0
+  PLLOUT_SELECT_PORTA:                          GENCLK
+  PLLOUT_SELECT_PORTB:                          GENCLK
+  SHIFTREG_DIV_MODE:                            0
+  DELAY_ADJUSTMENT_MODE_RELATIVE:               FIXED
+  FDA_RELATIVE:                                 0
+  FEEDBACK_PATH:                                SIMPLE
+  DELAY_ADJUSTMENT_MODE_FEEDBACK:               FIXED
+  FDA_FEEDBACK:                                 0
+  FILTER_RANGE:                                 1
+  EXTERNAL_DIVIDE_FACTOR:                       NONE
+  TEST Mode:                                    0
+
+
+
+
+
+                                    Page 3
+
+
+
+
+
+ASIC Components
+---------------
+
+Instance Name: mypll.lscc_pll_inst.u_PLL_B
+         Type: PLL
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 80 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 4
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor
+     Corporation,  All rights reserved.

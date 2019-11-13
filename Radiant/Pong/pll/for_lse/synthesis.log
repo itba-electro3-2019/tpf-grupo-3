@@ -5,10 +5,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Nov 09 18:51:36 2019
+Tue Nov 12 20:54:45 2019
 
 
-Command Line:  synthesis -f C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\pll\for_lse\pll.lseproj 
+Command Line:  synthesis -f C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\testled\pll\for_lse\pll.lseproj 
 
 Synthesis options:
 The -a option is iCE40UP.
@@ -68,18 +68,18 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
-Verilog design file = C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\pll\rtl\pll.v
+Verilog design file = C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\testled\pll\rtl\pll.v
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 Compile design.
 Compile Design Begin
-Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v. VERI-1482
+Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v. VERI-1482
 Analyzing Verilog file C:/lscc/radiant/1.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v. VERI-1482
 Top module name (Verilog): pll
-INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(10): compiling module pll. VERI-1018
-INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(74): compiling module pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000"). VERI-1018
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(10): compiling module pll. VERI-1018
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(74): compiling module pll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000"). VERI-1018
 INFO - synthesis: C:/lscc/radiant/1.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(428): compiling module PLL_B(PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",DIVF="66",DIVQ="5",FILTER_RANGE="1",FREQUENCY_PIN_REFERENCECLK="12.000000"). VERI-1018
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sclk_i is not connected on this instance. VDB-1013
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sdi_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(17): input port sclk_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(17): input port sdi_i is not connected on this instance. VDB-1013
 Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.1/ispfpga.
                                                          
 
@@ -105,12 +105,12 @@ Loading device for application lse from file 'itpa08.nph' in environment: C:/lsc
                                                          
 
 
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sclk_i is not connected on this instance. VDB-1013
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sdi_i is not connected on this instance. VDB-1013
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sclk_i is not connected on this instance. VDB-1013
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(17): input port sdi_i is not connected on this instance. VDB-1013
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(93): net \lscc_pll_inst/sclk_i does not have a driver. VDB-1002
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/pll/rtl/pll.v(94): net \lscc_pll_inst/sdi_i does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(17): input port sclk_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(17): input port sdi_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(17): input port sclk_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(17): input port sdi_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(93): net \lscc_pll_inst/sclk_i does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/testled/pll/rtl/pll.v(94): net \lscc_pll_inst/sdi_i does not have a driver. VDB-1002
 ######## Missing driver on net \lscc_pll_inst/sclk_i. Patching with GND.
 ######## Missing driver on net \lscc_pll_inst/sdi_i. Patching with GND.
 
@@ -144,9 +144,9 @@ Top 10 highest fanout non-clock nets:
   Net : outcore_o, loads : 0
 ################### End Clock Report ##################
 
-Peak Memory Usage: 48.070  MB
+Peak Memory Usage: 47.938  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 1.438  secs
+Total CPU time for LSE flow : 1.359  secs
 Total REAL time for LSE flow : 2.000  secs
 --------------------------------------------------------------
