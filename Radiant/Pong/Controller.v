@@ -2,6 +2,7 @@
 module VGAController(
 	input clk,
 	input altcolor,
+	input altcolor2,
 	input pixval,
 	output reg hsync = 1'b1,
 	output reg vsync = 1'b1,
@@ -59,7 +60,7 @@ end
 always @(posedge clk) begin
 	if(xpix < 640  && ypix < 480) begin
 		rgb[2] <= altcolor?  0 : pixval;	//Prendido es rojo
-		rgb[1] <= pixval? 0 : 1;			//Apagado es cyan
+		rgb[1] <= pixval? ( altcolor2? 1 : 0 ) : 1;			//Apagado es cyan
 		rgb[0] <= pixval? 0 : 1;
 	end
 	else

@@ -1,0 +1,26 @@
+[Files List]
+C:\lscc\radiant\1.1\active-hdl\vlib\std/src/standard.vhd=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/CounterModule.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/disp_scr_config.vh=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/mux4to1.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/Delay4Buf.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/ABIWTCZ4.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/FineDlyAdj.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/ShiftReg427.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/tSPLL40.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/ShiftReg427_DS.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/pllcfg_dynamicsetting_shiftreg.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/t_DS_PLL40.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/PLL40_2F_CORE.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/PLL_B.v=S
+./../../../../../../../rtf/ispfpga/../cae_library/simulation/verilog/iCE40UP/convertDeviceString.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/spll/rtl/spll.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/RandomNumberGenerator.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/BuzzerModule.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/col_ctrl.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/game_config.vh=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/enablegen.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/DisplayController.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/Controller.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/rst_gen.v=S
+C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong/top.v=S

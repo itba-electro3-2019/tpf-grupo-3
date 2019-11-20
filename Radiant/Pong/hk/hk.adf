@@ -1,0 +1,68 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=work
+[Library]
+hk=.\hk\hk.lib
+work=.\work\work.lib
+pmi=.\..\pmi\pmi.lib
+[Settings]
+AccessRead=1
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+PriorityLibNames=
+LibNames=ovi_ice40up
+[LocalVhdlSets]
+CompileWithDebug=0
+[$LibMap$]
+hk=.
+work=.
+pmi=.
+[LocalVerilogDirs]
+Count=0
+[DefineMacro]
+Global=
+[Files]
+/..\..\..\..\..\..\..\..\..\..\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.v=-1
+/..\..\RandomNumberGenerator.v=-1
+/..\..\BuzzerModule.v=-1
+/..\..\col_ctrl.v=-1
+/..\..\enablegen.v=-1
+/..\..\CounterModule.v=-1
+/..\..\DisplayController.v=-1
+/..\..\Controller.v=-1
+/..\..\rst_gen.v=-1
+/..\..\spll\rtl\spll.v=-1
+/..\..\top.v=-1
+[Files.Data]
+.\..\..\..\..\..\..\..\..\..\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.v=Verilog Source Code
+.\..\RandomNumberGenerator.v=Verilog Source Code
+.\..\BuzzerModule.v=Verilog Source Code
+.\..\col_ctrl.v=Verilog Source Code
+.\..\enablegen.v=Verilog Source Code
+.\..\CounterModule.v=Verilog Source Code
+.\..\DisplayController.v=Verilog Source Code
+.\..\Controller.v=Verilog Source Code
+.\..\rst_gen.v=Verilog Source Code
+.\..\spll\rtl\spll.v=Verilog Source Code
+.\..\top.v=Verilog Source Code
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

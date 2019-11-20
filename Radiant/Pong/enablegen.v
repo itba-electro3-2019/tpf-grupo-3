@@ -14,8 +14,8 @@ localparam DIVGMV = 3400000;
 reg [18:0] counter;
 reg [22:0] countergmv;
 
-assign paddle_frequency = counter[15];
-assign wall_frequency = counter[12];
+assign pad_buzz_en = counter[15];
+assign wall_buzz_en = counter[12];
 
 always@(posedge clk) begin
 	game_en <= 1'b0;

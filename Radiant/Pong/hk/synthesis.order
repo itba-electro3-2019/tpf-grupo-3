@@ -1,0 +1,11 @@
+i<>.\..\..\..\..\..\..\..\..\..\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.v
+i<>.\..\RandomNumberGenerator.v
+i<>.\..\BuzzerModule.v
+i<>.\..\col_ctrl.v
+i<>.\..\enablegen.v
+i<>.\..\CounterModule.v
+i<>.\..\DisplayController.v
+i<>.\..\Controller.v
+i<>.\..\rst_gen.v
+i<>.\..\spll\rtl\spll.v
+i<>.\..\top.v

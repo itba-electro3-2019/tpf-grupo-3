@@ -30,6 +30,7 @@ Pinout:
 		Pin17 (PlayerB DOWN)
 		Pin35 (External 12MHz Oscillator)
 */
+`timescale 1ns / 100ps
 
 module Pong (
    output j01,
@@ -48,9 +49,13 @@ module Pong (
 
 //WIRE SIGNALS
 wire lock, clk, rst_n, hsync, vsync, pixval, altcol, lossA, lossB, game_en, pad_buzz_en, wall_buzz_en, wall_col, pad_col;
-wire A_up, A_down, B_up, B_down, gmv, gmv_flash;
+wire A_up, A_down, B_up, B_down, gmv, gmv_flash, power_en, powerA, powerB;
 wire [2:0] rgb, scrA, scrB;
-wire [9:0] xpix, ypix, x_padA, y_padA, x_padB, y_padB, x_ball, y_ball;
+wire [9:0] xpix, ypix, x_padA, y_padA, x_padB, y_padB, x_ball, y_ball, power_pos_x;
+wire [1:0] Astatus, Bstatus, rand_type;
+wire [7:0] padA_h, padB_h;
+wire [8:0] power_pos_y, rand_pos;
+wire [1:0] powerup_type;
 
 //OUTPUT ASSIGNMENT
 assign j01 = hsync;
@@ -61,11 +66,12 @@ assign j05 = vsync;
 assign j06 = buzz_out;
 
 //INPUT ASSIGMENT
-assign pause = j13;
-assign A_up = j14;
-assign A_down = j15;
-assign B_up = j16;
-assign B_down = j17;
+assign pause = ~j13;
+assign A_up = ~j14;
+assign A_down = ~j15;
+assign B_up = ~j16;
+assign B_down = ~j17;
+
 
 spll mypll (.ref_clk_i(clk_in) ,
 			.rst_n_i(1'b1),
@@ -84,6 +90,7 @@ rst_gen rst_gen_inst(.clk(clk),
 					
 VGAController vga_ctrl (.clk(clk),
 						.altcolor(altcol),
+						.altcolor2(altcol2),
 						.pixval(pixval),
 						.hsync(hsync),
 						.vsync(vsync),
@@ -91,7 +98,8 @@ VGAController vga_ctrl (.clk(clk),
 						.ypix(ypix),
 						.rgb(rgb)
 						);
-						
+				
+//TODO: display powerups				
 DisplayController  disp_ctrl(.gmv_flash(gmv_flash),
 							 .rst_n(rst_n),
 							 .x_ball(x_ball),
@@ -107,7 +115,15 @@ DisplayController  disp_ctrl(.gmv_flash(gmv_flash),
 							 .xpix(xpix),
 							 .ypix(ypix),
 							 .pixval(pixval),
-							 .altcol(altcol)
+							 .altcol(altcol),
+							 .altcol2(altcol2),
+							 .padA_h(padA_h),
+							 .padB_h(padB_h),
+							 .power_en(power_en),
+							 .power_pos_x(power_pos_x),
+							 .power_pos_y(power_pos_y),
+							 .powerA(powerA),
+							 .powerB(powerB)
 );
 
 EnableGenerator enable_gen(.clk(clk),
@@ -118,6 +134,7 @@ EnableGenerator enable_gen(.clk(clk),
 						   .wall_buzz_en(wall_buzz_en)
 						  );
 
+//TODO: generate powerups and catch them
 CollisionController col_ctrl(.clk(clk),
 							 .game_en(game_en),
 							 .rst_n(rst_n),
@@ -132,14 +149,23 @@ CollisionController col_ctrl(.clk(clk),
 							 .x_padB(x_padB),
 							 .x_ball(x_ball),
 							 .y_ball(y_ball),
-							 .x_ball_dir(x_ball_dir),
-							 .y_ball_dir(y_ball_dir),
 							 .scrA(scrA),
 							 .scrB(scrB),
 							 .wall_col(wall_col),
 							 .pad_col(pad_col),
 							 .lossA(lossA),
-							 .lossB(lossB)
+							 .lossB(lossB),
+							 .Astatus(Astatus),
+							 .Bstatus(Bstatus),
+							 .padA_h(padA_h),
+							 .padB_h(padB_h),
+							 .rand_pos(rand_pos),
+							 .rand_type(rand_type),
+							 .power_en(power_en),
+							 .power_pos_x(power_pos_x),
+							 .power_pos_y(power_pos_y),
+							 .powerA(powerA),
+							 .powerB(powerB)
 							);
 							
 BuzzerModule buzzer_crtl(.clk(clk),
@@ -149,5 +175,10 @@ BuzzerModule buzzer_crtl(.clk(clk),
 						 .wall_frequency(wall_buzz_en),
 						 .buzzer(buzz_out)
 						);
-
+						
+RandomNumGen ran_gen(.clk(clk),
+					 .rand_pos(rand_pos),
+					 .rand_power(rand_type)
+					 );
+					
 endmodule

@@ -7,48 +7,76 @@ Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V 
 Reading input file 'testled_impl_1.vm' ...
 Reading constraint file 'C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1/testled_impl_1.ldc' ...
 Removing unused logic...
-INFO - Signal disp_ctrl/p_padA_N_323[12]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_N_323[11]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_N_323[10]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_N_323[9]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_N_323[8]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_N_323[7]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_N_323[6]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_N_323[5]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_N_323[4]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_N_323[3]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[9]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[8]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[7]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[6]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[5]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[4]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[3]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[2]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[1]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_ball_s1_N_731[0]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padB_s_N_915[9]_2 undriven or does not drive anything - clipped
-INFO - Signal disp_ctrl/p_padA_s_N_804[9]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[25]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[24]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[21]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[20]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[13]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[12]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[5]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[4]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[1]_2 undriven or does not drive anything - clipped
+INFO - Signal rst_gen_inst/rst_cnt[0]_2 undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/x_r_ball_vel[2] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/poweroffcount[2] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/poweroffcount[1] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/poweroffcount[0] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/y_padA_vel[2] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/y_padB_vel[2] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/x_l_ball_vel[2] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/powercount[3] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/powercount[2] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/powercount[1] undriven or does not drive anything - clipped
+INFO - Signal col_ctrl/powercount[0] undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_padA_s_N_781[9]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_padA_s_N_781[8]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_padB_s_N_848[9]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_padA_s_N_770[9]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[9]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[8]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[7]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[6]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[5]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[4]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[3]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[2]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[1]_2 undriven or does not drive anything - clipped
+INFO - Signal disp_ctrl/p_ball_s1_N_697[0]_2 undriven or does not drive anything - clipped
 INFO - Signal enable_gen/countergmv[5] undriven or does not drive anything - clipped
 INFO - Signal enable_gen/countergmv[4] undriven or does not drive anything - clipped
 INFO - Signal enable_gen/countergmv[3] undriven or does not drive anything - clipped
 INFO - Signal enable_gen/countergmv[2] undriven or does not drive anything - clipped
 INFO - Signal enable_gen/countergmv[1] undriven or does not drive anything - clipped
 INFO - Signal enable_gen/countergmv[0] undriven or does not drive anything - clipped
-INFO - Signal enable_gen/counter[5] undriven or does not drive anything - clipped
-INFO - Signal enable_gen/counter[4] undriven or does not drive anything - clipped
-INFO - Signal enable_gen/counter[3] undriven or does not drive anything - clipped
-INFO - Signal enable_gen/counter[2] undriven or does not drive anything - clipped
-INFO - Signal enable_gen/counter[1] undriven or does not drive anything - clipped
-INFO - Signal enable_gen/counter[0] undriven or does not drive anything - clipped
-INFO - Instance i18748 is optimized away.
+INFO - Instance i23484 is optimized away.
 INFO - Signal y_padA[0] undriven or does not drive anything - clipped
 INFO - Signal y_padB[0] undriven or does not drive anything - clipped
-INFO - Signal x_ball[0] undriven or does not drive anything - clipped
+INFO - Signal padA_h[3] undriven or does not drive anything - clipped
+INFO - Signal padA_h[2] undriven or does not drive anything - clipped
+INFO - Signal padA_h[0] undriven or does not drive anything - clipped
+INFO - Signal padB_h[3] undriven or does not drive anything - clipped
+INFO - Signal padB_h[2] undriven or does not drive anything - clipped
+INFO - Signal padB_h[0] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[23] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[22] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[19] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[18] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[17] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[16] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[15] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[14] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[11] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[10] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[9] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[8] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[7] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[6] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[3] undriven or does not drive anything - clipped
+INFO - Signal rst_cnt[2] undriven or does not drive anything - clipped
 Starting design annotation....
 WARNING - The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 Writing output file 'testled_impl_1.udb'.
 POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 43 MB
+Peak Memory Usage: 50 MB

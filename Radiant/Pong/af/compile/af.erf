@@ -1,0 +1,39 @@
+MESSAGE "Pass 1. Scanning modules hierarchy."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+BEGINPROGRESS Compiling...
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol pause has not been declared in module Pong." "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/top.v" 65  15
+UPDATEPROGRESS 35
+MESSAGE_SP VCP2113 "Module spll found in current working library."
+MESSAGE_SP VCP2113 "Module rst_gen found in current working library."
+MESSAGE_SP VCP2113 "Module VGAController found in current working library."
+MESSAGE_SP VCP2113 "Module DisplayController found in current working library."
+MESSAGE_SP VCP2113 "Module EnableGenerator found in current working library."
+MESSAGE_SP VCP2113 "Module CollisionController found in current working library."
+MESSAGE_SP VCP2113 "Module BuzzerModule found in current working library."
+MESSAGE_SP VCP2113 "Module RandomNumGen found in current working library."
+MESSAGE "Pass 2. Processing instantiations."
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol x_ball_dir has not been declared in module Pong." "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/top.v" 141  52
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol y_ball_dir has not been declared in module Pong." "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/top.v" 142  52
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol buzz_out has not been declared in module Pong." "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/top.v" 156  42
+UPDATEPROGRESS 45
+MESSAGE "Pass 3. Processing behavioral statements."
+UPDATEPROGRESS 80
+MESSAGE "ELB/DAG code generating."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+UPDATEPROGRESS 81
+UPDATEPROGRESS 83
+UPDATEPROGRESS 85
+UPDATEPROGRESS 86
+UPDATEPROGRESS 88
+UPDATEPROGRESS 90
+UPDATEPROGRESS 91
+UPDATEPROGRESS 93
+UPDATEPROGRESS 95
+UPDATEPROGRESS 96
+UPDATEPROGRESS 98
+UPDATEPROGRESS 100
+MESSAGE "Unit top modules: Pong."
+MESSAGE "$root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp Pong."
+ENDPROGRESS Compiling...
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+MESSAGE "done"

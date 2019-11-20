@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1573674869">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1573674869"/>
-            <Task name="IBIS" build_result="2" update_result="0" update_time="1573674869"/>
-            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1573674873"/>
+        <Milestone name="Export" build_result="2" build_time="1574210515">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1574210515"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1574210516"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1574210521"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1573674830">
-            <Task name="Map" build_result="2" update_result="0" update_time="1573674830"/>
-            <Task name="MapTrace" build_result="2" update_result="0" update_time="1573674831"/>
+        <Milestone name="Map" build_result="2" build_time="1574210467">
+            <Task name="Map" build_result="2" update_result="0" update_time="1574210467"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1574210467"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1573674863">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1573674863"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1573674867"/>
+        <Milestone name="PAR" build_result="2" build_time="1574210508">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1574210508"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1574210513"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1573674825">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1573674825"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1573674827"/>
-            <Task name="SynTrace" build_result="2" update_result="0" update_time="1573674827"/>
-            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1573674811"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1574210462">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1574210462"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1574210464"/>
+            <Task name="SynTrace" build_result="2" update_result="0" update_time="1574210464"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1573952565"/>
         </Milestone>
-        <Report name="IBIS/testled_impl_1.ibs" last_build_time="1573674869" last_build_size="54417"/>
-        <Report name="testled_impl_1.bgn" last_build_time="1573674868" last_build_size="948"/>
-        <Report name="testled_impl_1.bin" last_build_time="1573674869" last_build_size="104156"/>
-        <Report name="testled_impl_1.lsedata" last_build_time="1573674820" last_build_size="1335491"/>
-        <Report name="testled_impl_1.tw1.html" last_build_time="1573674830" last_build_size="412884"/>
-        <Report name="testled_impl_1.twr.html" last_build_time="1573674867" last_build_size="335535"/>
-        <Report name="testled_impl_1.tws.html" last_build_time="1573674827" last_build_size="259274"/>
-        <Report name="testled_impl_1.udb::log" last_build_time="1573674825" last_build_size="1020585"/>
-        <Report name="testled_impl_1.udb::phy_par" last_build_time="1573674863" last_build_size="1571596"/>
-        <Report name="testled_impl_1.udb::rtl" last_build_time="1573674819" last_build_size="1020585"/>
-        <Report name="testled_impl_1_map.udb" last_build_time="1573674830" last_build_size="1470187"/>
-        <Report name="testled_impl_1_vo.sdf" last_build_time="1573674873" last_build_size="523340"/>
-        <Report name="testled_impl_1_vo.vo" last_build_time="1573674872" last_build_size="533553"/>
+        <Report name="IBIS/testled_impl_1.ibs" last_build_time="1574210516" last_build_size="54417"/>
+        <Report name="testled_impl_1.bgn" last_build_time="1574210515" last_build_size="948"/>
+        <Report name="testled_impl_1.bin" last_build_time="1574210515" last_build_size="104156"/>
+        <Report name="testled_impl_1.lsedata" last_build_time="1574210455" last_build_size="1772857"/>
+        <Report name="testled_impl_1.tw1.html" last_build_time="1574210467" last_build_size="379037"/>
+        <Report name="testled_impl_1.twr.html" last_build_time="1574210513" last_build_size="369332"/>
+        <Report name="testled_impl_1.tws.html" last_build_time="1574210463" last_build_size="268993"/>
+        <Report name="testled_impl_1.udb::log" last_build_time="1574210462" last_build_size="1431792"/>
+        <Report name="testled_impl_1.udb::phy_par" last_build_time="1574210508" last_build_size="2227526"/>
+        <Report name="testled_impl_1.udb::rtl" last_build_time="1574210455" last_build_size="1431792"/>
+        <Report name="testled_impl_1_map.udb" last_build_time="1574210467" last_build_size="2079786"/>
+        <Report name="testled_impl_1_vo.sdf" last_build_time="1574210521" last_build_size="763275"/>
+        <Report name="testled_impl_1_vo.vo" last_build_time="1574210520" last_build_size="766958"/>
     </Strategy>
 </BuildStatus>

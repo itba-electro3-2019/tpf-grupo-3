@@ -1,0 +1,10 @@
+#Start recording tcl command: 11/16/2019 21:57:49
+#Project Location: C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong; Project name: testled
+prj_open "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/PONG.rdf"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/RandomNumberGenerator.v"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Sim_rand/Sim_rand.spf"
+prj_remove_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/sim/sim.spf"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/sim_rand/sim_rand.spf"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/hk/hk.spf"
+prj_add_source "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/af/af.spf"
+#Stop recording: 11/16/2019 23:43:36

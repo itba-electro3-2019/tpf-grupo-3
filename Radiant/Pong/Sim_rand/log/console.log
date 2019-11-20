@@ -1,0 +1,247 @@
+# Waveform file 'C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Sim_rand/simrand.awc' connected to 'C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Sim_rand/simrand.asdb'.
+designverincludedir -clear
+designverlibrarysim -PL -clear
+designverlibrarysim -L -clear
+designverlibrarysim ovi_ice40up
+designverdefinemacro -clear
+addfile C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.v
+# Adding file C:\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/RandomNumberGenerator.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\RandomNumberGenerator.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/BuzzerModule.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\BuzzerModule.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/col_ctrl.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\col_ctrl.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/enablegen.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\enablegen.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/CounterModule.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\CounterModule.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\DisplayController.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Controller.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\Controller.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/rst_gen.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\rst_gen.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/spll/rtl/spll.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\spll\rtl\spll.v ... Done
+addfile C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/top.v
+# Adding file C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\top.v ... Done
+vlib C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/sim_rand/work
+# Warning: Library work already exists
+adel -all
+# Library contents cleared.
+vlib pmi
+# Warning: Library pmi already exists
+vcom -work pmi C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\lscc\radiant\1.1\ip\pmi\pmi_iCE40UP.vhd
+# Compile Package "components"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+vlog -dbg -work work C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.v
+# Pass 1. Scanning modules hierarchy.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Unit top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/RandomNumberGenerator.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: RandomNumGen.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp RandomNumGen.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/BuzzerModule.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: BuzzerModule.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp RandomNumGen BuzzerModule.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/col_ctrl.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: CollisionController.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp RandomNumGen BuzzerModule CollisionController.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/enablegen.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 enablegen.v : (17, 26): Implicit net declaration, symbol paddle_frequency has not been declared in module EnableGenerator.
+# Info: VCP2876 enablegen.v : (18, 24): Implicit net declaration, symbol wall_frequency has not been declared in module EnableGenerator.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: EnableGenerator.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp RandomNumGen BuzzerModule CollisionController EnableGenerator.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/CounterModule.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: CounterModule.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp RandomNumGen BuzzerModule CollisionController EnableGenerator CounterModule.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 DisplayController.v : (28, 16): Implicit net declaration, symbol p_ball has not been declared in module DisplayController.
+# Info: VCP2876 DisplayController.v : (31, 16): Implicit net declaration, symbol p_padA has not been declared in module DisplayController.
+# Info: VCP2876 DisplayController.v : (36, 16): Implicit net declaration, symbol p_padB has not been declared in module DisplayController.
+# Info: VCP2876 DisplayController.v : (46, 20): Implicit net declaration, symbol p_gameover has not been declared in module DisplayController.
+# Info: VCP2876 DisplayController.v : (49, 19): Implicit net declaration, symbol p_ball_s1 has not been declared in module DisplayController.
+# Info: VCP2876 DisplayController.v : (50, 19): Implicit net declaration, symbol p_ball_s2 has not been declared in module DisplayController.
+# Info: VCP2876 DisplayController.v : (52, 18): Implicit net declaration, symbol p_padA_s has not been declared in module DisplayController.
+# Info: VCP2876 DisplayController.v : (56, 18): Implicit net declaration, symbol p_padB_s has not been declared in module DisplayController.
+# Info: VCP2113 Module CounterModule found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 DisplayController.v : (64, 39): Implicit net declaration, symbol p_scrA has not been declared in module DisplayController.
+# Info: VCP2876 DisplayController.v : (72, 39): Implicit net declaration, symbol p_scrB has not been declared in module DisplayController.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: DisplayController.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp RandomNumGen BuzzerModule CollisionController EnableGenerator DisplayController.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Controller.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: VGAController.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp RandomNumGen BuzzerModule CollisionController EnableGenerator DisplayController VGAController.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/rst_gen.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: rst_gen.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp RandomNumGen BuzzerModule CollisionController EnableGenerator DisplayController VGAController rst_gen.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/spll/rtl/spll.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: spll.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp RandomNumGen BuzzerModule CollisionController EnableGenerator DisplayController VGAController rst_gen spll.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/top.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 top.v : (65, 15): Implicit net declaration, symbol pause has not been declared in module Pong.
+# Info: VCP2113 Module spll found in current working library.
+# Info: VCP2113 Module rst_gen found in current working library.
+# Info: VCP2113 Module VGAController found in current working library.
+# Info: VCP2113 Module DisplayController found in current working library.
+# Info: VCP2113 Module EnableGenerator found in current working library.
+# Info: VCP2113 Module CollisionController found in current working library.
+# Info: VCP2113 Module BuzzerModule found in current working library.
+# Info: VCP2113 Module RandomNumGen found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 top.v : (139, 52): Implicit net declaration, symbol x_ball_dir has not been declared in module Pong.
+# Info: VCP2876 top.v : (140, 52): Implicit net declaration, symbol y_ball_dir has not been declared in module Pong.
+# Info: VCP2876 top.v : (154, 42): Implicit net declaration, symbol buzz_out has not been declared in module Pong.
+# Info: VCP2876 top.v : (158, 43): Implicit net declaration, symbol powerup_pos has not been declared in module Pong.
+# Info: VCP2876 top.v : (159, 46): Implicit net declaration, symbol powerup_type has not been declared in module Pong.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Pong.
+# $root top modules: pmi_addsub pmi_add pmi_complex_mult pmi_counter pmi_fifo pmi_fifo_dc pmi_mac pmi_multaddsubsum pmi_multaddsub pmi_mult pmi_ram_dp pmi_ram_dq pmi_rom pmi_sub pmi_ram_dp_be pmi_ram_dq_be pmi_dsp Pong.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+module Pong
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'spll' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'rst_gen' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'DisplayController' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'EnableGenerator' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'CollisionController' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'BuzzerModule' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'RandomNumGen' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'spll_ipgen_lscc_pll' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'CounterModule' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+vsim +access +r Pong -L ovi_ice40up
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'spll' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'rst_gen' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'DisplayController' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'EnableGenerator' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'CollisionController' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'BuzzerModule' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'RandomNumGen' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'spll_ipgen_lscc_pll' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'CounterModule' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.8 [s]
+# SLP: Finished : 0.9 [s]
+# SLP: 65 (31.10%) primitives and 144 (68.90%) other processes in SLP
+# SLP: 601 (99.83%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5836 kB (elbread=1281 elab2=4421 kernel=133 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\Sim_rand\src\wave.asdb
+#  10:26 PM, Saturday, November 16, 2019
+#  Simulation has been initialized
+add wave *
+run 1000ns
+# KERNEL: ************************SBT : Info*****************************
+# KERNEL: Note that signal connection to the EXTFEEDBACK port of the PLL must come from INTFBOUT port of PLL.
+# KERNEL: ***************************************************************
+# KERNEL: ************************SBT : Attention***************************
+# KERNEL: Since FEEDBACK_PATH="SIMPLE", the FDA_FEEDBACK value will be ignored
+# KERNEL: ******************************************************************
+# KERNEL: stopped at time: 1 us
+# Warning: WAVEFORM: Object matching /Pong/ran_gen/clk not found in C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Sim_rand/simrand.asdb.
+# Warning: WAVEFORM: Object matching /Pong/ran_gen/clk not found in C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Sim_rand/simrand.asdb.

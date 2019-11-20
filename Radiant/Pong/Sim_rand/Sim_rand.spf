@@ -1,0 +1,16 @@
+<RadiantSimulationProject stage="0" language="1" name="sim_rand" path="." version="2.0" simType="Active-HDL">
+    <Source include="none" type="VERILOG" worklib="work" path="RandomNumberGenerator.v"/>
+    <Source include="none" type="VERILOG" worklib="work" path="BuzzerModule.v"/>
+    <Source include="none" type="VERILOG" worklib="work" path="col_ctrl.v"/>
+    <Source include="none" type="VERILOG" worklib="work" path="enablegen.v"/>
+    <Source include="none" type="VERILOG" worklib="work" path="CounterModule.v"/>
+    <Source include="none" type="VERILOG" worklib="work" path="DisplayController.v"/>
+    <Source include="none" type="VERILOG" worklib="work" path="Controller.v"/>
+    <Source include="none" type="VERILOG" worklib="work" path="rst_gen.v"/>
+    <Source include="none" type="VERILOG" worklib="work" path="spll/rtl/spll.v"/>
+    <Source include="none" type="VERILOG" worklib="work" path="top.v"/>
+    <SimLib value="ovi_ice40up"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <TopModule instance="" language="VERILOG" name="Pong"/>
+</RadiantSimulationProject>

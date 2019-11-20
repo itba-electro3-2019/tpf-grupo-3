@@ -36,7 +36,16 @@
         <Source name="top.v" type="Verilog" type_short="Verilog">
             <Options top_module="Pong"/>
         </Source>
-        <Source name="sim/sim.spf" type="Simulation Project File" type_short="SPF">
+        <Source name="RandomNumberGenerator.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="af/af.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="hk/hk.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="Sim_rand/Sim_rand.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>
         <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">

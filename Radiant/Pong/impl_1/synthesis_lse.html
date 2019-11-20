@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Nov 13 16:53:38 2019
+Tue Nov 19 21:40:53 2019
 
 
 Command Line:  C:\lscc\radiant\1.1\ispfpga\bin\nt64\synthesis.exe -f testled_impl_1_lattice.synproj -gui -msgset C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/promote.xml 
@@ -126,6 +126,7 @@ Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radian
 Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/enablegen.v
 Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/BuzzerModule.v
 Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/top.v
+Verilog design file = C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/RandomNumberGenerator.v
 VHDL library = pmi
 VHDL design file = C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
@@ -171,35 +172,36 @@ Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radia
 Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/countermodule.v. VERI-1482
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/countermodule.v(9): analyzing included file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/disp_scr_config.vh. VERI-1328
 Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v. VERI-1482
-INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(20): analyzing included file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/game_config.vh. VERI-1328
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(28): analyzing included file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/game_config.vh. VERI-1328
 Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v. VERI-1482
-INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(26): analyzing included file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/game_config.vh. VERI-1328
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(50): analyzing included file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/game_config.vh. VERI-1328
 Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/enablegen.v. VERI-1482
 Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/buzzermodule.v. VERI-1482
 Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/top.v. VERI-1482
+Analyzing Verilog file c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/randomnumbergenerator.v. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 INFO - synthesis: c:/lscc/radiant/1.1/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
 unit Pong is not yet analyzed. VHDL-1485
 INFO - synthesis: The default VHDL library search path is now "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): Pong
-INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/top.v(34): compiling module Pong. VERI-1018
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/top.v(35): compiling module Pong. VERI-1018
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/spll/rtl/spll.v(10): compiling module spll. VERI-1018
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/spll/rtl/spll.v(74): compiling module spll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000"). VERI-1018
 INFO - synthesis: C:/lscc/radiant/1.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(428): compiling module PLL_B(PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",DIVF="66",DIVQ="5",FILTER_RANGE="1",FREQUENCY_PIN_REFERENCECLK="12.000000"). VERI-1018
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/spll/rtl/spll.v(17): input port sclk_i is not connected on this instance. VDB-1013
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/spll/rtl/spll.v(17): input port sdi_i is not connected on this instance. VDB-1013
-INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/rst_gen.v(1): compiling module rst_gen. VERI-1018
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/rst_gen.v(3): compiling module rst_gen. VERI-1018
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/controller.v(2): compiling module VGAController. VERI-1018
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/controller.v(17): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/controller.v(25): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/controller.v(61): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/controller.v(18): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/controller.v(26): expression size 32 truncated to fit in target size 10. VERI-1209
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/controller.v(62): expression size 32 truncated to fit in target size 1. VERI-1209
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/controller.v(63): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/controller.v(64): expression size 32 truncated to fit in target size 1. VERI-1209
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(1): compiling module DisplayController. VERI-1018
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(44): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(45): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(46): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(52): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(53): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(54): expression size 32 truncated to fit in target size 1. VERI-1209
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/countermodule.v(1): compiling module CounterModule. VERI-1018
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/countermodule.v(16): expression size 32 truncated to fit in target size 1. VERI-1209
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/countermodule.v(17): expression size 32 truncated to fit in target size 1. VERI-1209
@@ -232,22 +234,21 @@ WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/countermodule.v(29): expression size 32 truncated to fit in target size 1. VERI-1209
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/countermodule.v(30): expression size 32 truncated to fit in target size 1. VERI-1209
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/countermodule.v(65): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/displaycontroller.v(86): expression size 32 truncated to fit in target size 1. VERI-1209
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/enablegen.v(1): compiling module EnableGenerator. VERI-1018
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(1): compiling module CollisionController. VERI-1018
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(28): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(29): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(82): expression size 4 truncated to fit in target size 3. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(86): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(93): expression size 4 truncated to fit in target size 3. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(97): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(106): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(113): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(120): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(124): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(129): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(133): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(52): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(53): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(137): expression size 4 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(149): expression size 4 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(162): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(169): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(286): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(288): expression size 32 truncated to fit in target size 10. VERI-1209
 INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/buzzermodule.v(1): compiling module BuzzerModule. VERI-1018
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/buzzermodule.v(10): expression size 32 truncated to fit in target size 1. VERI-1209
+INFO - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/randomnumbergenerator.v(1): compiling module RandomNumGen. VERI-1018
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/randomnumbergenerator.v(9): expression size 32 truncated to fit in target size 9. VERI-1209
 Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.1/ispfpga.
                                                          
 
@@ -275,12 +276,8 @@ Loading device for application lse from file 'itpa08.nph' in environment: C:/lsc
 
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/spll/rtl/spll.v(17): input port sclk_i is not connected on this instance. VDB-1013
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/spll/rtl/spll.v(17): input port sdi_i is not connected on this instance. VDB-1013
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/top.v(50): net pad_buzz_en does not have a driver. VDB-1002
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/top.v(50): net wall_buzz_en does not have a driver. VDB-1002
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/spll/rtl/spll.v(93): net \mypll/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
 WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/spll/rtl/spll.v(94): net \mypll/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
-######## Missing driver on net pad_buzz_en. Patching with GND.
-######## Missing driver on net wall_buzz_en. Patching with GND.
 ######## Missing driver on net \mypll/lscc_pll_inst/sclk_i. Patching with GND.
 ######## Missing driver on net \mypll/lscc_pll_inst/sdi_i. Patching with GND.
 
@@ -306,9 +303,17 @@ WARNING - synthesis: Bit 6 of Register \col_ctrl/x_padB is stuck at Zero
 WARNING - synthesis: Bit 7 of Register \col_ctrl/x_padB is stuck at Zero
 WARNING - synthesis: Bit 8 of Register \col_ctrl/x_padB is stuck at One
 WARNING - synthesis: Bit 9 of Register \col_ctrl/x_padB is stuck at Zero
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(137): Register \col_ctrl/y_padA_i0_i0 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(137): Register \col_ctrl/x_ball_i0_i0 is stuck at One. VDB-5014
-Duplicate register/latch removal. \vga_ctrl/rgb__i1 is a one-to-one match with \vga_ctrl/rgb__i2.
+WARNING - synthesis: Bit 0 of Register \col_ctrl/power_pos_y is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \col_ctrl/power_pos_y is stuck at One
+WARNING - synthesis: Bit 2 of Register \col_ctrl/power_pos_y is stuck at One
+WARNING - synthesis: Bit 3 of Register \col_ctrl/power_pos_y is stuck at One
+WARNING - synthesis: Bit 4 of Register \col_ctrl/power_pos_y is stuck at One
+WARNING - synthesis: Bit 5 of Register \col_ctrl/power_pos_y is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \col_ctrl/power_pos_y is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \col_ctrl/power_pos_y is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \col_ctrl/power_pos_y is stuck at Zero
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(293): Register \col_ctrl/x_l_ball_vel_i0_i2 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/acer/desktop/github/electroiii/tpf-grupo-3/radiant/pong/col_ctrl.v(293): Register \col_ctrl/padB_h_i0_i2 is stuck at One. VDB-5014
 Starting design annotation....
 WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
@@ -334,16 +339,16 @@ Starting full timing analysis...
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (Pong)######################
-Number of register bits => 141 of 5280 (2 % )
-CCU2 => 150
-FD1P3XZ => 141
+Number of register bits => 214 of 5280 (4 % )
+CCU2 => 213
+FD1P3XZ => 214
 IB => 6
-LUT4 => 605
+LUT4 => 874
 OB => 6
 PLL_B => 1
 ################### End Area Report ##################
-Number of odd-length carry chains : 13
-Number of even-length carry chains : 10
+Number of odd-length carry chains : 16
+Number of even-length carry chains : 17
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
@@ -357,23 +362,23 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n3073, loads : 43
-  Net : vga_ctrl/ypix[3], loads : 36
-  Net : vga_ctrl/ypix[4], loads : 35
-  Net : vga_ctrl/xpix[9], loads : 32
-  Net : vga_ctrl/ypix[7], loads : 32
-  Net : vga_ctrl/ypix[6], loads : 32
-  Net : vga_ctrl/ypix[5], loads : 32
-  Net : vga_ctrl/xpix[4], loads : 30
-  Net : vga_ctrl/ypix[2], loads : 30
-  Net : vga_ctrl/xpix[2], loads : 29
+  Net : enable_gen/game_en, loads : 66
+  Net : pause_N_1207_c, loads : 45
+  Net : vga_ctrl/ypix[4], loads : 43
+  Net : vga_ctrl/ypix[3], loads : 43
+  Net : vga_ctrl/xpix[4], loads : 42
+  Net : vga_ctrl/xpix[3], loads : 40
+  Net : vga_ctrl/ypix[6], loads : 38
+  Net : vga_ctrl/ypix[7], loads : 37
+  Net : rst_gen_inst/rst_cnt[25], loads : 37
+  Net : vga_ctrl/xpix[5], loads : 36
 ################### End Clock Report ##################
 
-Peak Memory Usage: 140.301  MB
+Peak Memory Usage: 169.918  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 6.281  secs
-Total REAL time for LSE flow : 7.000  secs
+Total CPU time for LSE flow : 7.656  secs
+Total REAL time for LSE flow : 8.000  secs
 --------------------------------------------------------------
 
 
