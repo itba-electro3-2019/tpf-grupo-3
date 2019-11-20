@@ -44,6 +44,7 @@ module Pong (
 	input j15,
 	input j16,
 	input j17,
+	input j18,
 	input clk_in
 );
 
@@ -66,12 +67,14 @@ assign j05 = vsync;
 assign j06 = buzz_out;
 
 //INPUT ASSIGMENT
-assign pause = ~j13;
+assign pause_pulse = ~j13;
 assign A_up = ~j14;
 assign A_down = ~j15;
 assign B_up = ~j16;
 assign B_down = ~j17;
+assign reset_n = j18;
 
+assign total_reset = reset_n && rst_n;
 
 spll mypll (.ref_clk_i(clk_in) ,
 			.rst_n_i(1'b1),
@@ -127,7 +130,7 @@ DisplayController  disp_ctrl(.gmv_flash(gmv_flash),
 );
 
 EnableGenerator enable_gen(.clk(clk),
-						   .pause(pause),
+						   .pause_pulse(pause_pulse),
 						   .game_en(game_en),
 						   .gmv_flash(gmv_flash),
 						   .pad_buzz_en(pad_buzz_en),
@@ -137,7 +140,7 @@ EnableGenerator enable_gen(.clk(clk),
 //TODO: generate powerups and catch them
 CollisionController col_ctrl(.clk(clk),
 							 .game_en(game_en),
-							 .rst_n(rst_n),
+							 .rst_n(total_reset),
 							 .gmv(gmv),
 							 .A_up(A_up),
 							 .A_down(A_down),

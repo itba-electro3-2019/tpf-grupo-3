@@ -48,7 +48,7 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Tue Nov 19 21:41:38 2019
+Wed Nov 20 16:27:22 2019
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+--------------------+
@@ -66,6 +66,7 @@ Pinout by Port Name:
 | j15       | 9/1      | LVCMOS33_IN  | PL16A | PULL:100K          |
 | j16       | 10/1     | LVCMOS33_IN  | PL17A | PULL:100K          |
 | j17       | 11/1     | LVCMOS33_IN  | PL18A | PULL:100K          |
+| j18       | 12/1     | LVCMOS33_IN  | PL19A | PULL:100K          |
 +-----------+----------+--------------+-------+--------------------+
 
 Vccio by Bank:
@@ -88,7 +89,7 @@ Vccio by Bank:
 | 9/1      | j15                 | LOCATED    | LVCMOS33_IN  | PL16A |                  |
 | 10/1     | j16                 | LOCATED    | LVCMOS33_IN  | PL17A |                  |
 | 11/1     | j17                 | LOCATED    | LVCMOS33_IN  | PL18A |                  |
-| 12/1     |     unused, PULL:UP |            |              | PL19A |                  |
+| 12/1     | j18                 | LOCATED    | LVCMOS33_IN  | PL19A |                  |
 | 13/1     |     unused, PULL:UP |            |              | PL20A |                  |
 | 14/1     |     unused, PULL:UP |            |              | PL24A | SPI_SO           |
 | 15/1     |     unused, PULL:UP |            |              | PL25A | SPISCK           |
@@ -154,13 +155,14 @@ ldc_set_location -site {6} [ get_ports {j14} ]
 ldc_set_location -site {9} [ get_ports {j15} ]
 ldc_set_location -site {10} [ get_ports {j16} ]
 ldc_set_location -site {11} [ get_ports {j17} ]
+ldc_set_location -site {12} [ get_ports {j18} ]
 
 
 
 
 
 Copyright 2015 Lattice Semiconductor Corporation, All Rights Reserved
-Tue Nov 19 21:41:38 2019
+Wed Nov 20 16:27:22 2019
 
 
 

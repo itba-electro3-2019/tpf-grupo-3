@@ -36,7 +36,7 @@ Saving bit stream in "C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radian
 ibisgen "testled_impl_1.udb" "C:/lscc/radiant/1.1/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 1.1.0.165.1
 
-Tue Nov 19 21:41:55 2019
+Wed Nov 20 16:27:41 2019
 
 Loading testled_impl_1.udb ...
 Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.1/ispfpga.
@@ -75,6 +75,6 @@ Writing a verilog netlist based on the testled_impl_1 design file.
 Writing Verilog netlist to file testled_impl_1_vo.vo
 Writing SDF timing to file testled_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
-Total CPU Time: 4 secs 
-Total REAL Time: 5 secs 
-Peak Memory Usage: 128 MB
+Total CPU Time: 3 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 129 MB

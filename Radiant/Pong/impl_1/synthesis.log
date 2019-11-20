@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Nov 19 21:40:53 2019
+Wed Nov 20 16:26:32 2019
 
 
 Command Line:  C:\lscc\radiant\1.1\ispfpga\bin\nt64\synthesis.exe -f testled_impl_1_lattice.synproj -gui -msgset C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/promote.xml 
@@ -293,11 +293,11 @@ WARNING - synthesis: The preferred point for defining clocks is top level ports 
 Starting full timing analysis...
 
 ################### Begin Area Report (Pong)######################
-Number of register bits => 214 of 5280 (4 % )
+Number of register bits => 216 of 5280 (4 % )
 CCU2 => 213
-FD1P3XZ => 214
-IB => 6
-LUT4 => 874
+FD1P3XZ => 216
+IB => 7
+LUT4 => 885
 OB => 6
 PLL_B => 1
 ################### End Area Report ##################
@@ -313,21 +313,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : enable_gen/game_en, loads : 66
-  Net : pause_N_1207_c, loads : 45
+  Net : enable_gen/game_en, loads : 61
+  Net : vga_ctrl/xpix[3], loads : 43
   Net : vga_ctrl/ypix[4], loads : 43
   Net : vga_ctrl/ypix[3], loads : 43
+  Net : enable_gen/n4334, loads : 43
   Net : vga_ctrl/xpix[4], loads : 42
-  Net : vga_ctrl/xpix[3], loads : 40
+  Net : vga_ctrl/xpix[5], loads : 39
   Net : vga_ctrl/ypix[6], loads : 38
-  Net : vga_ctrl/ypix[7], loads : 37
-  Net : rst_gen_inst/rst_cnt[25], loads : 37
-  Net : vga_ctrl/xpix[5], loads : 36
+  Net : vga_ctrl/xpix[9], loads : 37
+  Net : vga_ctrl/ypix[7], loads : 36
 ################### End Clock Report ##################
 
-Peak Memory Usage: 169.918  MB
+Peak Memory Usage: 169.930  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 7.656  secs
-Total REAL time for LSE flow : 8.000  secs
+Total CPU time for LSE flow : 7.547  secs
+Total REAL time for LSE flow : 12.000  secs
 --------------------------------------------------------------

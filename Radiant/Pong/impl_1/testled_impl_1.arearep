@@ -1,13 +1,13 @@
 ----------------------------------------------------------------------
 Report for cell Pong.TECH
-Register bits:  214 of 5280 (4.053%)
-I/O cells:      12
+Register bits:  216 of 5280 (4.091%)
+I/O cells:      13
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2       213          100.0
-                            FD1P3XZ       214          100.0
-                                 IB         6          100.0
-                               LUT4       874          100.0
+                            FD1P3XZ       216          100.0
+                                 IB         7          100.0
+                               LUT4       885          100.0
                                  OB         6          100.0
                               PLL_B         1          100.0
 SUB MODULES
@@ -20,16 +20,16 @@ SUB MODULES
                             rst_gen         1
                                spll         1
 spll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
-                              TOTAL      1323
+                              TOTAL      1337
 ----------------------------------------------------------------------
 Report for cell EnableGenerator.v1
 Instance Path : enable_gen
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        22           10.3
-                            FD1P3XZ        44           20.6
-                               LUT4        13            1.5
-                              TOTAL        79
+                            FD1P3XZ        46           21.3
+                               LUT4        15            1.7
+                              TOTAL        83
 ----------------------------------------------------------------------
 Report for cell spll.v1
 Instance Path : mypll
@@ -52,49 +52,49 @@ Instance Path : disp_ctrl
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2       111           52.1
-                               LUT4       325           37.2
+                               LUT4       380           42.9
 SUB MODULES
                       CounterModule         1
             CounterModule(PLAYER=1)         1
-                              TOTAL       438
+                              TOTAL       493
 ----------------------------------------------------------------------
 Report for cell CounterModule(PLAYER=1).v1
 Instance Path : disp_ctrl.scrB_mod
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         8            0.9
-                              TOTAL         8
+                               LUT4        29            3.3
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell CounterModule.v1
 Instance Path : disp_ctrl.scrA_mod
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4        22            2.5
-                              TOTAL        22
-----------------------------------------------------------------------
-Report for cell CollisionController.v1
-Instance Path : col_ctrl
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                                FA2        54           25.4
-                            FD1P3XZ       119           55.6
-                               LUT4       242           27.7
-                              TOTAL       415
-----------------------------------------------------------------------
-Report for cell rst_gen.v1
-Instance Path : rst_gen_inst
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                                FA2        14            6.6
-                            FD1P3XZ        26           12.1
-                               LUT4        23            2.6
-                              TOTAL        63
+                               LUT4        37            4.2
+                              TOTAL        37
 ----------------------------------------------------------------------
 Report for cell VGAController.v1
 Instance Path : vga_ctrl
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        12            5.6
-                            FD1P3XZ        25           11.7
-                               LUT4        81            9.3
-                              TOTAL       118
+                            FD1P3XZ        25           11.6
+                               LUT4        43            4.9
+                              TOTAL        80
+----------------------------------------------------------------------
+Report for cell CollisionController.v1
+Instance Path : col_ctrl
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        54           25.4
+                            FD1P3XZ       119           55.1
+                               LUT4       236           26.7
+                              TOTAL       409
+----------------------------------------------------------------------
+Report for cell rst_gen.v1
+Instance Path : rst_gen_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        14            6.6
+                            FD1P3XZ        26           12.0
+                               LUT4        19            2.1
+                              TOTAL        59

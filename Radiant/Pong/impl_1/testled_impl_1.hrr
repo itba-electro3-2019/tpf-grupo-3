@@ -3,24 +3,24 @@ Report for cell Pong
    Instance path: Pong
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	       1308        100.0
-                                 IOBUF	         12        100.0
-                                PFUREG	        214        100.0
+                                  LUT4	       1327        100.0
+                                 IOBUF	         13        100.0
+                                PFUREG	        216        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                   CollisionController	          1        25.2
-                     DisplayController	          1        38.7
+                   CollisionController	          1        24.2
+                     DisplayController	          1        42.1
                        EnableGenerator	          1         4.4
-                         VGAController	          1         7.6
-                               rst_gen	          1         3.9
+                         VGAController	          1         5.0
+                               rst_gen	          1         3.5
                                   spll	          1         0.0
 ---------------------------------------------------
 Report for cell EnableGenerator
    Instance path: Pong/enable_gen
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         57         4.4
-                                PFUREG	         44        20.6
+                                  LUT4	         59         4.4
+                                PFUREG	         46        21.3
 ---------------------------------------------------
 Report for cell spll
    Instance path: Pong/mypll
@@ -39,41 +39,41 @@ Report for cell DisplayController
    Instance path: Pong/disp_ctrl
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        506        38.7
+                                  LUT4	        559        42.1
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                         CounterModule	          1         1.5
-               CounterModule(PLAYER=1)	          1         0.6
+                         CounterModule	          1         2.6
+               CounterModule(PLAYER=1)	          1         2.1
 ---------------------------------------------------
 Report for cell CounterModule(PLAYER=1)
    Instance path: Pong/disp_ctrl/scrB_mod
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          8         0.6
+                                  LUT4	         28         2.1
 ---------------------------------------------------
 Report for cell CounterModule
    Instance path: Pong/disp_ctrl/scrA_mod
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         20         1.5
----------------------------------------------------
-Report for cell CollisionController
-   Instance path: Pong/col_ctrl
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	        329        25.2
-                                PFUREG	        119        55.6
----------------------------------------------------
-Report for cell rst_gen
-   Instance path: Pong/rst_gen_inst
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         51         3.9
-                                PFUREG	         26        12.1
+                                  LUT4	         34         2.6
 ---------------------------------------------------
 Report for cell VGAController
    Instance path: Pong/vga_ctrl
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        100         7.6
-                                PFUREG	         25        11.7
+                                  LUT4	         66         5.0
+                                PFUREG	         25        11.6
+---------------------------------------------------
+Report for cell CollisionController
+   Instance path: Pong/col_ctrl
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        321        24.2
+                                PFUREG	        119        55.1
+---------------------------------------------------
+Report for cell rst_gen
+   Instance path: Pong/rst_gen_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         47         3.5
+                                PFUREG	         26        12.0
