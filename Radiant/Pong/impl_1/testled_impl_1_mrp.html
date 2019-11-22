@@ -47,23 +47,23 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 1.1.0.165.1
-Mapped on: Wed Nov 20 16:26:47 2019
+Mapped on: Thu Nov 21 18:17:02 2019
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
 Command line:   map testled_impl_1_syn.udb
-     C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/test.pdc
-     -o testled_impl_1.udb -gui
+     C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena
+     buena( - Copy/Radiant/Pong/test.pdc -o testled_impl_1.udb -gui
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of slice registers: 216 out of  5280 (4%)
+   Number of slice registers: 245 out of  5280 (5%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           1327 out of  5280 (25%)
-      Number of logic LUT4s:             887
-      Number of inserted feedthru LUT4s:  12
-      Number of replicated LUT4s:          2
-      Number of ripple logic:            213 (426 LUT4s)
+   Number of LUT4s:           1372 out of  5280 (26%)
+      Number of logic LUT4s:             913
+      Number of inserted feedthru LUT4s:   6
+      Number of replicated LUT4s:          3
+      Number of ripple logic:            225 (450 LUT4s)
    Number of IO sites used:   13 out of 39 (33%)
       Number of IO sites used for general PIOs: 13
       Number of IO sites used for I3Cs: 0 out of 2 (0%)
@@ -83,83 +83,85 @@ Command line:   map testled_impl_1_syn.udb
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             1 out of 1 (100%)
    Number of Clocks:  2
-      Net clk: 157 loads, 157 rising, 0 falling (Driver: Pin
+      Net clk: 173 loads, 173 rising, 0 falling (Driver: Pin
      mypll.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
       Net clk_in_c: 1 loads, 1 rising, 0 falling (Driver: Port clk_in)
    Number of Clock Enables:  23
+      Net n5095: 14 loads, 14 SLICEs
+      Net n2007: 1 loads, 1 SLICEs
       Net game_en: 15 loads, 15 SLICEs
-      Net enable_gen/n4334: 23 loads, 23 SLICEs
+      Net n2009: 1 loads, 1 SLICEs
+      Net enable_gen/pause_N_1246: 36 loads, 36 SLICEs
       Net enable_gen/pause_en: 1 loads, 1 SLICEs
-      Net n16521: 1 loads, 1 SLICEs
-      Net n16667: 1 loads, 1 SLICEs
-      Net vga_ctrl/n4348: 6 loads, 6 SLICEs
-      Net vga_ctrl/n17644: 1 loads, 1 SLICEs
-      Net col_ctrl/n4337: 7 loads, 7 SLICEs
-      Net col_ctrl/n780: 2 loads, 2 SLICEs
-      Net col_ctrl/n750: 3 loads, 3 SLICEs
-      Net col_ctrl/n748: 3 loads, 3 SLICEs
-      Net col_ctrl/n4321: 8 loads, 8 SLICEs
-      Net col_ctrl/n4339: 6 loads, 6 SLICEs
+      Net n4635: 2 loads, 2 SLICEs
+      Net n4646: 6 loads, 6 SLICEs
+      Net n4631: 8 loads, 8 SLICEs
+      Net n33677: 1 loads, 1 SLICEs
+      Net vga_ctrl/n4655: 6 loads, 6 SLICEs
+      Net vga_ctrl/n34433: 1 loads, 1 SLICEs
+      Net n33516: 1 loads, 1 SLICEs
 
-      Net col_ctrl/n4344: 2 loads, 2 SLICEs
-      Net col_ctrl/n4324: 6 loads, 6 SLICEs
-      Net col_ctrl/n5169: 4 loads, 4 SLICEs
-      Net col_ctrl/n1911: 2 loads, 2 SLICEs
-      Net col_ctrl/n4326: 9 loads, 9 SLICEs
-      Net col_ctrl/n4327: 9 loads, 9 SLICEs
-      Net col_ctrl/n1915: 2 loads, 2 SLICEs
-      Net col_ctrl/n1909: 2 loads, 2 SLICEs
-      Net col_ctrl/n1913: 2 loads, 2 SLICEs
-      Net rst_gen_inst/n1925: 14 loads, 14 SLICEs
-   Number of LSRs:  28
-      Net n4555: 10 loads, 10 SLICEs
-      Net enable_gen/n4435: 12 loads, 12 SLICEs
-      Net n1953: 9 loads, 9 SLICEs
-      Net vga_ctrl/n4474: 6 loads, 6 SLICEs
-      Net vga_ctrl/n10_c: 1 loads, 1 SLICEs
-      Net vga_ctrl/n3352: 2 loads, 2 SLICEs
-      Net vga_ctrl/n3353: 1 loads, 1 SLICEs
-      Net vga_ctrl/n4429: 6 loads, 6 SLICEs
-      Net vga_ctrl/n8746: 1 loads, 1 SLICEs
-      Net col_ctrl/n4408: 7 loads, 7 SLICEs
-      Net col_ctrl/n4393: 8 loads, 8 SLICEs
-      Net col_ctrl/n4541: 6 loads, 6 SLICEs
-      Net col_ctrl/n4427: 5 loads, 5 SLICEs
-      Net col_ctrl/n4536: 3 loads, 3 SLICEs
-      Net col_ctrl/n4406: 2 loads, 2 SLICEs
-      Net col_ctrl/n4388: 6 loads, 6 SLICEs
-      Net col_ctrl/n5174: 8 loads, 8 SLICEs
-      Net col_ctrl/n16478: 1 loads, 1 SLICEs
-      Net col_ctrl/n16657: 1 loads, 1 SLICEs
-      Net col_ctrl/n4514: 6 loads, 6 SLICEs
-      Net col_ctrl/n4508: 6 loads, 6 SLICEs
-      Net col_ctrl/n16423: 1 loads, 1 SLICEs
-      Net col_ctrl/n16422: 1 loads, 1 SLICEs
-      Net col_ctrl/n7890: 1 loads, 1 SLICEs
-      Net col_ctrl/n7898: 1 loads, 1 SLICEs
-      Net col_ctrl/n7896: 1 loads, 1 SLICEs
-      Net col_ctrl/n7894: 1 loads, 1 SLICEs
-      Net rst_gen_inst/rst_cnt_25__N_58: 14 loads, 14 SLICEs
+      Net col_ctrl/n4628: 8 loads, 8 SLICEs
+      Net col_ctrl/n4642: 7 loads, 7 SLICEs
+      Net col_ctrl/n4633: 9 loads, 9 SLICEs
+      Net col_ctrl/n2013: 2 loads, 2 SLICEs
+      Net col_ctrl/n4634: 9 loads, 9 SLICEs
+      Net col_ctrl/n1981: 3 loads, 3 SLICEs
+      Net col_ctrl/n10432: 3 loads, 3 SLICEs
+      Net n10430: 3 loads, 3 SLICEs
+      Net col_ctrl/n4645: 3 loads, 3 SLICEs
+      Net col_ctrl/n4651: 2 loads, 2 SLICEs
+   Number of LSRs:  30
+      Net rst_cnt_25__N_58: 14 loads, 14 SLICEs
+      Net n4867: 3 loads, 3 SLICEs
+      Net n11434: 1 loads, 1 SLICEs
+      Net n4863: 10 loads, 10 SLICEs
+      Net n11430: 1 loads, 1 SLICEs
+      Net enable_gen/n4753: 12 loads, 12 SLICEs
+      Net enable_gen/n4696: 12 loads, 12 SLICEs
+      Net n4783: 10 loads, 10 SLICEs
+      Net n34499: 1 loads, 1 SLICEs
+      Net n12495: 6 loads, 6 SLICEs
+      Net vga_ctrl/n14819: 6 loads, 6 SLICEs
+      Net vga_ctrl/n4747: 6 loads, 6 SLICEs
+      Net vga_ctrl/n3295: 1 loads, 1 SLICEs
+      Net vga_ctrl/n3296: 1 loads, 1 SLICEs
+      Net vga_ctrl/n97: 1 loads, 1 SLICEs
+      Net n33643: 1 loads, 1 SLICEs
+      Net vga_ctrl/n34628: 1 loads, 1 SLICEs
+      Net col_ctrl/n4719: 7 loads, 7 SLICEs
+      Net col_ctrl/n11019: 1 loads, 1 SLICEs
+      Net col_ctrl/n4847: 6 loads, 6 SLICEs
+      Net col_ctrl/n4812: 6 loads, 6 SLICEs
+      Net col_ctrl/n4841: 6 loads, 6 SLICEs
+      Net col_ctrl/n4707: 8 loads, 8 SLICEs
+      Net col_ctrl/n2060: 3 loads, 3 SLICEs
+      Net col_ctrl/n4744: 5 loads, 5 SLICEs
+      Net n10390: 3 loads, 3 SLICEs
+      Net col_ctrl/n10420: 3 loads, 3 SLICEs
+      Net col_ctrl/n11099: 1 loads, 1 SLICEs
+      Net col_ctrl/n4738: 2 loads, 2 SLICEs
+      Net col_ctrl/n4692: 1 loads, 1 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net j06_pad.vcc: 127 loads
-      Net game_en: 55 loads
-      Net xpix[4]: 46 loads
+      Net j06_pad.vcc: 128 loads
+      Net game_en: 62 loads
+      Net xpix[5]: 46 loads
       Net ypix[4]: 46 loads
-      Net xpix[3]: 45 loads
-      Net ypix[3]: 44 loads
-      Net xpix[5]: 42 loads
+      Net ypix[3]: 45 loads
+      Net xpix[6]: 42 loads
+      Net ypix[5]: 42 loads
       Net ypix[6]: 42 loads
-      Net ypix[7]: 40 loads
-      Net ypix[5]: 39 loads
+      Net ypix[7]: 41 loads
+      Net xpix[4]: 39 loads
 
 
 
 
    Number of warnings:  0
+
+
+
    Number of errors:    0
-
-
-
 
 
 
@@ -178,8 +180,6 @@ Command line:   map testled_impl_1_syn.udb
 | j01                 | OUTPUT    | LVCMOS33  |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | j02                 | OUTPUT    | LVCMOS33  |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| clk_in              | INPUT     | LVCMOS33  |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | j03                 | OUTPUT    | LVCMOS33  |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -201,6 +201,8 @@ Command line:   map testled_impl_1_syn.udb
 +---------------------+-----------+-----------+-------+-------+-----------+
 | j18                 | INPUT     | LVCMOS33  |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| clk_in              | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 
 
 
@@ -221,11 +223,11 @@ PLL 1:                                 Pin/Node Value
   Output Clock(CoreA):                          NONE
   Output Clock(GlobalA):               NODE     clk
   Output Clock(CoreB):                          NONE
+
   Output Clock(GlobalB):                        NONE
   Feedback input:                      NODE     mypll/lscc_pll_inst/feedback_w
   Internal Feedback output:            NODE     mypll/lscc_pll_inst/feedback_w
   BYPASS signal:                                GND
-
   LATCH signal:                                 GND
   Lock Signal:                         NODE     NULL/sig_000/FeedThruLUT
   Input Clock Frequency (MHz):                  12.0000
@@ -260,12 +262,8 @@ Instance Name: mypll.lscc_pll_inst.u_PLL_B
 -------------------------
 
    Total CPU Time: 1 secs
-   Total REAL Time: 2 secs
-   Peak Memory Usage: 90 MB
-
-
-
-
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 93 MB
 
 
 

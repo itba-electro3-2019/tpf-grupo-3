@@ -1,1 +1,2 @@
 create_clock -name {clk_in} -period 83.3333333333333 [get_ports clk_in]
+create_clock -name {ran_gen/clk2} -period 20.8333333333333 [get_nets ran_gen/clk2]

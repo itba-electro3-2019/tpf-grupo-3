@@ -18,7 +18,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/testled_impl_1.bin</File>
-			<FileTime>11/13/19 10:26:05</FileTime>
+			<FileTime>11/21/19 16:31:50</FileTime>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>

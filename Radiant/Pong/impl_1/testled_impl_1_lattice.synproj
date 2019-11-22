@@ -33,24 +33,24 @@
 
 -use_io_insertion 1
 -resolve_mixed_drivers 0
--sdc "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/timeconstraint.ldc"
--path "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/spll"
--path "C:/lscc/radiant/1.1/ispfpga/ice40tp/data" "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/impl_1" "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong"
+-sdc "C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/timeconstraint.ldc"
+-path "C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/spll"
+-path "C:/lscc/radiant/1.1/ispfpga/ice40tp/data" "C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/impl_1" "C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong"
 -ver "C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/1.1/ip/pmi/pmi_iCE40UP.vhd"
--ver "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/spll/rtl/spll.v"
-"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/rst_gen.v"
-"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/Controller.v"
-"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/CounterModule.v"
-"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/DisplayController.v"
-"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/col_ctrl.v"
-"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/enablegen.v"
-"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/BuzzerModule.v"
-"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/top.v"
-"C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/RandomNumberGenerator.v"
+-ver "C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/spll/rtl/spll.v"
+"C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/rst_gen.v"
+"C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/Controller.v"
+"C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/CounterModule.v"
+"C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/DisplayController.v"
+"C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/col_ctrl.v"
+"C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/enablegen.v"
+"C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/BuzzerModule.v"
+"C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/top.v"
+"C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/RandomNumberGenerator.v"
 
 
--path "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong"
+-path "C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong"
 -top Pong
 -udb "testled_impl_1.udb"
 -output_hdl "testled_impl_1.vm"

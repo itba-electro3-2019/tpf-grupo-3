@@ -22,7 +22,14 @@ module DisplayController (
 	input [9:0] power_pos_x,
 	input [8:0] power_pos_y,
 	input powerA,
-	input powerB
+	input powerB,
+	input affectedA,
+	input affectedB,
+	output altcol3,
+	input affectpowerup,
+	input flickpadA,
+	input flickpadB,
+	input flick
 );
 
 `include "game_config.vh"
@@ -31,19 +38,18 @@ wire altcolA;
 wire altcolB;
 wire altcolC;
 
-
 //Pelota
 assign p_ball = (xpix >= x_ball) && (xpix < x_ball+BALL_W) && (ypix >= y_ball) && (ypix < y_ball+BALL_H);
 
 //Paleta A
-assign p_padA = ((xpix > x_padA) && (xpix < x_padA+PAD_W) && (ypix > y_padA + 3) && (ypix < y_padA+padA_h - 3)) ||
+assign p_padA = (((xpix > x_padA) && (xpix < x_padA+PAD_W) && (ypix > y_padA + 3) && (ypix < y_padA+padA_h - 3)) ||
 ((xpix> x_padA + 2) && (xpix < x_padA + PAD_W - 2) && (ypix>y_padA) && (ypix <= y_padA + 3)) ||
-((xpix> x_padA + 2) && (xpix < x_padA + PAD_W - 2) && (ypix>=y_padA+padA_h - 3) && (ypix < y_padA + padA_h));
+((xpix> x_padA + 2) && (xpix < x_padA + PAD_W - 2) && (ypix>=y_padA+padA_h - 3) && (ypix < y_padA + padA_h)));
 
 //PaletaB
-assign p_padB = ((xpix > x_padB) && (xpix < x_padB+PAD_W) && (ypix > y_padB + 3) && (ypix < y_padB+padB_h - 3)) ||
+assign p_padB = (((xpix > x_padB) && (xpix < x_padB+PAD_W) && (ypix > y_padB + 3) && (ypix < y_padB+padB_h - 3)) ||
 ((xpix> x_padB + 2) && (xpix < x_padB + PAD_W - 2) && (ypix>y_padB) && (ypix <= y_padB + 3)) ||
-((xpix> x_padB + 2) && (xpix < x_padB + PAD_W - 2) && (ypix>=y_padB+padB_h - 3) && (ypix < y_padB + padB_h));
+((xpix> x_padB + 2) && (xpix < x_padB + PAD_W - 2) && (ypix>=y_padB+padB_h - 3) && (ypix < y_padB + padB_h)));
 
 //"Pantalla" de gameover
 wire left;
@@ -86,8 +92,8 @@ defparam scrB_mod.PLAYER = 1;
 assign p_powerup = (power_en && gmv_flash)? ((xpix >= power_pos_x) && (xpix < power_pos_x+POWER_UP_W) && (ypix >= power_pos_y) && (ypix < power_pos_y+POWER_UP_H)) : (0);
 
 //Compuerta OR grande con todas las señales de prender pixel de todos los modulos
-assign pixval = (p_ball||p_padA||p_padB||p_gameover||p_scrA||p_scrB||
-				 p_ball_s1||p_ball_s2||p_padA_s||p_padB_s||p_powerup
+assign pixval = (p_ball||(flickpadA? (p_padA && flick) : (p_padA))||(flickpadB? (p_padB && flick) : p_padB)||p_gameover||p_scrA||p_scrB||
+				 p_ball_s1||p_ball_s2||(flickpadA?(p_padA_s && flick):(p_padA_s))||(flickpadB?(p_padB_s && flick):(p_padB_s))||p_powerup
 				);
 
 //Compuerta OR con todas las señales de altcol
@@ -96,6 +102,6 @@ assign altcol = ((altcolA||altcolB||p_gameover||
 				 ~(p_ball||p_padA||p_padB)
 				);
 				
-assign altcol2 = p_powerup || (powerA && p_padA) || (powerB && p_padB);
-
+assign altcol2 = (p_powerup && ~affectpowerup) || (powerA && p_padA) || (powerB && p_padB);
+assign altcol3 = (p_padA && affectedA) || (p_padB && affectedB) || (p_powerup && affectpowerup);
 endmodule

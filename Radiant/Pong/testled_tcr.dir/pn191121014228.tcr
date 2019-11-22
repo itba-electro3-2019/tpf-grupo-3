@@ -1,0 +1,5 @@
+#Start recording tcl command: 11/21/2019 00:21:56
+#Project Location: C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong; Project name: testled
+prj_open "C:/Users/Acer/Desktop/GitHub/ElectroIII/tpf-grupo-3/Radiant/Pong/PONG.rdf"
+prj_run Synthesis -impl impl_1
+#Stop recording: 11/21/2019 01:42:28

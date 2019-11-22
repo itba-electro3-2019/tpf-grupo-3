@@ -8,7 +8,8 @@ module VGAController(
 	output reg vsync = 1'b1,
 	output reg [9:0] xpix = 10'd0,
 	output reg [9:0] ypix = 10'd0 ,
-	output reg [2:0] rgb = 3'd0
+	output reg [2:0] rgb = 3'd0,
+	input altcolor3
 );
 
 wire ypix_enable;
@@ -59,9 +60,9 @@ end
 
 always @(posedge clk) begin
 	if(xpix < 640  && ypix < 480) begin
-		rgb[2] <= altcolor?  0 : pixval;	//Prendido es rojo
-		rgb[1] <= pixval? ( altcolor2? 1 : 0 ) : 1;			//Apagado es cyan
-		rgb[0] <= pixval? 0 : 1;
+		rgb[2] <= altcolor3? (0):(altcolor?  0 : pixval);	//Prendido es rojo
+		rgb[1] <= altcolor3? (1):(pixval? ( altcolor2? 1 : 0 ) : 1);			//Apagado es cyan
+		rgb[0] <= altcolor3? (0):(pixval? 0 : 1);
 	end
 	else
 		rgb <= 3'd0; //Afuera de la pantalla se pone negro

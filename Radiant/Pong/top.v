@@ -50,13 +50,14 @@ module Pong (
 
 //WIRE SIGNALS
 wire lock, clk, rst_n, hsync, vsync, pixval, altcol, lossA, lossB, game_en, pad_buzz_en, wall_buzz_en, wall_col, pad_col;
-wire A_up, A_down, B_up, B_down, gmv, gmv_flash, power_en, powerA, powerB;
+wire A_up, A_down, B_up, B_down, gmv, gmv_flash, power_en, powerA, powerB, affectedA, affectedB, altcol3, affectpowerup, flickpadA, flickpadB;
 wire [2:0] rgb, scrA, scrB;
 wire [9:0] xpix, ypix, x_padA, y_padA, x_padB, y_padB, x_ball, y_ball, power_pos_x;
-wire [1:0] Astatus, Bstatus, rand_type;
+wire [2:0] Astatus, Bstatus;
+wire [1:0] rand_type;
 wire [7:0] padA_h, padB_h;
 wire [8:0] power_pos_y, rand_pos;
-wire [1:0] powerup_type;
+wire [2:0] powerup_type;
 
 //OUTPUT ASSIGNMENT
 assign j01 = hsync;
@@ -94,6 +95,7 @@ rst_gen rst_gen_inst(.clk(clk),
 VGAController vga_ctrl (.clk(clk),
 						.altcolor(altcol),
 						.altcolor2(altcol2),
+						.altcolor3(altcol3),
 						.pixval(pixval),
 						.hsync(hsync),
 						.vsync(vsync),
@@ -126,7 +128,14 @@ DisplayController  disp_ctrl(.gmv_flash(gmv_flash),
 							 .power_pos_x(power_pos_x),
 							 .power_pos_y(power_pos_y),
 							 .powerA(powerA),
-							 .powerB(powerB)
+							 .powerB(powerB),
+							 .affectedA(affectedA),
+							 .affectedB(affectedB),
+							 .altcol3(altcol3),
+							 .affectpowerup(affectpowerup),
+							 .flickpadA(flickpadA),
+							 .flickpadB(flickpadB),
+							 .flick(flick)
 );
 
 EnableGenerator enable_gen(.clk(clk),
@@ -134,7 +143,8 @@ EnableGenerator enable_gen(.clk(clk),
 						   .game_en(game_en),
 						   .gmv_flash(gmv_flash),
 						   .pad_buzz_en(pad_buzz_en),
-						   .wall_buzz_en(wall_buzz_en)
+						   .wall_buzz_en(wall_buzz_en),
+						   .flick(flick)
 						  );
 
 //TODO: generate powerups and catch them
@@ -168,7 +178,12 @@ CollisionController col_ctrl(.clk(clk),
 							 .power_pos_x(power_pos_x),
 							 .power_pos_y(power_pos_y),
 							 .powerA(powerA),
-							 .powerB(powerB)
+							 .powerB(powerB),
+							 .affectedA(affectedA),
+							 .affectedB(affectedB),
+							 .affectpowerup(affectpowerup),
+							 .flickpadA(flickpadA),
+							 .flickpadB(flickpadB)
 							);
 							
 BuzzerModule buzzer_crtl(.clk(clk),
@@ -180,8 +195,8 @@ BuzzerModule buzzer_crtl(.clk(clk),
 						);
 						
 RandomNumGen ran_gen(.clk(clk),
-					 .rand_pos(rand_pos),
-					 .rand_power(rand_type)
+					 .b1(rand_pos),
+					 .b2(rand_type)
 					 );
 					
 endmodule

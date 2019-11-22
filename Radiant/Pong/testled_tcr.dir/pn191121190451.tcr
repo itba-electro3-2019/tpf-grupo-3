@@ -1,0 +1,25 @@
+#Start recording tcl command: 11/21/2019 17:11:27
+#Project Location: C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong; Project name: testled
+prj_open "C:/Users/Acer/Desktop/tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy/Radiant/Pong/Pong.rdf"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.1"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 11/21/2019 19:04:51

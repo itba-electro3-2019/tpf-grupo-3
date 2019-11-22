@@ -19,8 +19,8 @@ module CollisionController(
 		output reg pad_col,
 		output lossA,
 		output lossB,
-		output reg [1:0] Astatus,
-		output reg [1:0] Bstatus,
+		output reg [2:0] Astatus,
+		output reg [2:0] Bstatus,
 		output reg [7:0] padA_h,
 		output reg [7:0] padB_h,
 		input [8:0] rand_pos,
@@ -29,7 +29,12 @@ module CollisionController(
 		output powerA,
 		output powerB,
 		output reg [8:0] power_pos_y,
-		output reg [9:0] power_pos_x
+		output reg [9:0] power_pos_x,
+		output affectedA,
+		output affectedB,
+		output affectpowerup,
+		output flickpadA,
+		output flickpadB
 );
 
 reg x_ball_dir;	
@@ -42,7 +47,7 @@ reg [14:0] powercount;
 reg [11:0] poweroffcount;
 reg power_spawn;
 
-reg [1:0] power_type;
+reg [2:0] power_type;
 reg power_dir;
 reg [4:0] buzzcount;
 	
@@ -53,6 +58,11 @@ assign lossA = (scrA == 7 ?  1 : 0);
 assign lossB = (scrB == 7 ?  1 : 0);
 assign powerA = ~(Astatus == NORMAL);
 assign powerB = ~(Bstatus == NORMAL);
+assign affectedA = (Astatus == INVERTED_PAD || Astatus == SMALL_PAD || Astatus == QUICK_PAD);
+assign affectedB = (Bstatus == INVERTED_PAD || Bstatus == SMALL_PAD || Bstatus == QUICK_PAD);
+assign affectpowerup = (power_en && ((power_type == INVERTED_PAD) || (power_type == SMALL_PAD || power_type == QUICK_PAD || power_type == FLICK_PAD)));
+assign flickpadA = (Astatus == FLICK_PAD);
+assign flickpadB = (Bstatus == FLICK_PAD);
 
 always @(posedge clk) begin
 	if(game_en) begin
@@ -172,7 +182,7 @@ always @(posedge clk) begin
 	//PADDLES
 		//A
 			if(Astatus != NORMAL) begin
-				if(poweroffcount < 1000) begin
+				if(poweroffcount < POWER_OFF_COUNT) begin
 					poweroffcount <= poweroffcount + 12'd1;
 				end
 				else begin
@@ -181,12 +191,24 @@ always @(posedge clk) begin
 				end
 			end
 			if(A_up) begin										//Si el usuario mueve la paleta hacia arriba
-				if (y_padA > Y_CEIL)				//Y la paleta mas un offset no esta tocando el techo
-					y_padA <= y_padA - y_padA_vel;			//Mueve la paleta hacia arriba dependiendo su velocidad
+				if(Astatus == INVERTED_PAD) begin
+					if (y_padA + padA_h < Y_FLOOR)
+						y_padA <= y_padA + y_padA_vel;
+				end
+				else begin
+					if (y_padA > Y_CEIL)
+						y_padA <= y_padA - y_padA_vel;	
+				end
 			end
 			else if(A_down) begin									//Si el usuario mueve la paleta hacia abajo
-				if (y_padA + padA_h < Y_FLOOR)	//Y la paleta mas un offset no esta tocando el suelo
-					y_padA <= y_padA + y_padA_vel;				//Mueve la paleta hacia abajo dependiendo su velocidad
+				if(Astatus == INVERTED_PAD) begin
+					if (y_padA > Y_CEIL)
+						y_padA <= y_padA - y_padA_vel;
+				end
+				else begin
+					if (y_padA + padA_h < Y_FLOOR)
+						y_padA <= y_padA + y_padA_vel;
+				end
 			end
 			//Powerups	
 			if(Astatus == LONG_PAD) begin
@@ -198,6 +220,9 @@ always @(posedge clk) begin
 			else if(Astatus == QUICK_BALL) begin
 				x_r_ball_vel = ALT_X_BALL_VEL;
 			end
+			else if(Astatus == SMALL_PAD) begin
+				padA_h = ALT2_PAD_H;
+			end
 			else if (Astatus == NORMAL) begin
 				padA_h = PAD_H;
 				y_padA_vel = Y_PAD_VEL;
@@ -205,7 +230,7 @@ always @(posedge clk) begin
 			end
 		//B
 			if(Bstatus != NORMAL) begin
-				if(poweroffcount < 1000) begin
+				if(poweroffcount < POWER_OFF_COUNT) begin
 					poweroffcount <= poweroffcount + 12'd1;
 				end
 				else begin
@@ -214,12 +239,24 @@ always @(posedge clk) begin
 				end
 			end
 			if(B_up) begin										//Si el usuario mueve la paleta hacia arriba
-				if (y_padB > Y_CEIL)				//Y la paleta mas un offset no esta tocando el techo
-					y_padB <= y_padB - y_padB_vel;			//Mueve la paleta hacia arriba dependiendo su velocidad
+				if(Bstatus == INVERTED_PAD) begin
+					if (y_padB + padB_h < Y_FLOOR)
+						y_padB <= y_padB + y_padB_vel;
+				end
+				else begin
+					if (y_padB > Y_CEIL)
+						y_padB <= y_padB - y_padB_vel;	
+				end
 			end
 			else if(B_down) begin									//Si el usuario mueve la paleta hacia abajo
-				if (y_padB + padB_h < Y_FLOOR)	//Y la paleta mas un offset no esta tocando el suelo
-					y_padB <= y_padB + y_padB_vel;				//Mueve la paleta hacia abajo dependiendo su velocidad
+				if(Bstatus == INVERTED_PAD) begin
+					if (y_padB > Y_CEIL)
+						y_padB <= y_padB - y_padB_vel;
+				end
+				else begin
+					if (y_padB + padB_h < Y_FLOOR)
+						y_padB <= y_padB + y_padB_vel;
+				end
 			end
 			//Powerups	
 			if(Bstatus == LONG_PAD) begin
@@ -231,17 +268,20 @@ always @(posedge clk) begin
 			else if(Bstatus == QUICK_BALL) begin
 				x_l_ball_vel = ALT_X_BALL_VEL;
 			end
+			else if(Bstatus == SMALL_PAD) begin
+				padB_h = ALT2_PAD_H;
+			end
 			else if (Bstatus == NORMAL) begin
 				padB_h = PAD_H;
 				y_padB_vel = Y_PAD_VEL;
 				x_l_ball_vel = X_BALL_VEL;
 			end
 		//POWERUPS
-			if(powercount < 2000) begin
+			if(powercount < POWER_SPAWN_COUNT) begin
 				powercount <= powercount + 15'd1;
 				power_spawn <= 1'b0;
 			end
-			else if (powercount >= 2000) begin
+			else if (powercount >= POWER_SPAWN_COUNT) begin
 				powercount <= 15'd0;
 				power_spawn <= 1'b1;
 				power_pos_x <= 320;
@@ -249,7 +289,7 @@ always @(posedge clk) begin
 			if(power_spawn) begin
 				power_spawn <= 1'b0;
 				power_en <= 1'b1;
-				if(power_type == 3) begin
+				if(power_type == 6) begin
 					power_type <= 2'd1;
 				end
 				else begin
@@ -267,7 +307,10 @@ always @(posedge clk) begin
 				end
 				else if ((power_pos_x < x_padA + PAD_W) && (power_pos_x > x_padA) && (power_pos_y>y_padA) && 
 					((power_pos_y + POWER_UP_H) < (y_padA + padA_h))) begin
-					Astatus <= power_type;
+					if(power_type == INVERTED_PAD || power_type == SMALL_PAD || power_type == QUICK_PAD || power_type == FLICK_PAD)
+						Bstatus <= power_type;
+					else
+						Astatus <= power_type;
 					power_en <= 1'b0;
 					power_pos_x <= 320;
 					power_pos_y <= 240;
@@ -275,7 +318,10 @@ always @(posedge clk) begin
 				end
 				else if((power_pos_x + POWER_UP_W> x_padB) && (power_pos_x < x_padB+PAD_W) && ((power_pos_y>y_padB ) && 
 				   ((power_pos_y + POWER_UP_H) < (y_padB + padB_h) ))) begin
-					Bstatus <= power_type;
+					if(power_type == INVERTED_PAD || power_type == SMALL_PAD || power_type == QUICK_PAD || power_type == FLICK_PAD)
+						Astatus <= power_type;
+					else
+						Bstatus <= power_type;
 					power_en <= 1'b0;
 					power_pos_x <= 320;
 					power_pos_y <= 240;

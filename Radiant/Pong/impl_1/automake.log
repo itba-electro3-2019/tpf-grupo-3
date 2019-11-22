@@ -31,12 +31,12 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\impl_1\testled_impl_1.bin".
+Saving bit stream in "C:\Users\Acer\Desktop\tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy\Radiant\Pong\impl_1\testled_impl_1.bin".
 
 ibisgen "testled_impl_1.udb" "C:/lscc/radiant/1.1/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 1.1.0.165.1
 
-Wed Nov 20 16:27:41 2019
+Thu Nov 21 18:17:57 2019
 
 Loading testled_impl_1.udb ...
 Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.1/ispfpga.
@@ -50,7 +50,7 @@ Successfully loading udb from disks and to up-layer in CPU time: 0 secs , REAL t
 Created design models.
 
 
-Generating: C:\Users\Acer\Desktop\GitHub\ElectroIII\tpf-grupo-3\Radiant\Pong\impl_1\IBIS\testled_impl_1.ibs
+Generating: C:\Users\Acer\Desktop\tpf-grupo-3(backup buena) - Copy - Copy(la buena buena( - Copy\Radiant\Pong\impl_1\IBIS\testled_impl_1.ibs
 
 
     <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
@@ -75,6 +75,6 @@ Writing a verilog netlist based on the testled_impl_1 design file.
 Writing Verilog netlist to file testled_impl_1_vo.vo
 Writing SDF timing to file testled_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
-Total CPU Time: 3 secs 
-Total REAL Time: 4 secs 
-Peak Memory Usage: 129 MB
+Total CPU Time: 4 secs 
+Total REAL Time: 5 secs 
+Peak Memory Usage: 131 MB
